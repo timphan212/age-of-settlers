@@ -40,11 +40,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="norseButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="60" max="32767" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="greekButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="egyptianButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -54,9 +54,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="norseButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="greekButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="egyptianButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="49" max="32767" attributes="0"/>
               </Group>
@@ -64,28 +64,28 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="norseButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Norse"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="norseButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="greekButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Greek"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="greekButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="egyptianButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Egyptian"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="egyptianButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

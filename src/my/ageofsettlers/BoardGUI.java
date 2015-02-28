@@ -5,6 +5,7 @@
  */
 package my.ageofsettlers;
 
+
 /**
  *
  * @author Tim
@@ -17,6 +18,20 @@ public class BoardGUI extends javax.swing.JFrame {
     public BoardGUI() {
         initComponents();
     }
+    
+    public BoardGUI(String boardType) {
+        initComponents();
+        
+        if(boardType.compareTo("Norse") == 0) {
+            jTabbedPane1.setSelectedIndex(0);
+        }
+        else if(boardType.compareTo("Greek") == 0) {
+            jTabbedPane1.setSelectedIndex(1);
+        }
+        else if(boardType.compareTo("Egyptian") == 0) {
+            jTabbedPane1.setSelectedIndex(2);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,84 +43,70 @@ public class BoardGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        norseBoard = new javax.swing.JLabel();
+        greekBoard = new javax.swing.JLabel();
+        egyptBoard = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1100, 768));
 
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(800, 600));
+        norseBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
+        jTabbedPane1.addTab("Norse", norseBoard);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoard9x7.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        greekBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoardResized.png"))); // NOI18N
+        jTabbedPane1.addTab("Greek", greekBoard);
+
+        egyptBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoardResized.png"))); // NOI18N
+        jTabbedPane1.addTab("Egyptian", egyptBoard);
+
+        jButton1.setText("jButton1");
+
+        jButton2.setText("jButton2");
+
+        jButton3.setText("jButton3");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jTabbedPane1.addTab("Norse", jPanel1);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoard9x7.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 38, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Greek", jPanel2);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoard9x7.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addGap(0, 38, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Egyptian", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -147,12 +148,13 @@ public class BoardGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel egyptBoard;
+    private javax.swing.JLabel greekBoard;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel norseBoard;
     // End of variables declaration//GEN-END:variables
 }

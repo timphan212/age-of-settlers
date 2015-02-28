@@ -5,6 +5,8 @@
  */
 package my.ageofsettlers;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author Tim
@@ -28,30 +30,30 @@ public class CultureSelectGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        norseButton = new javax.swing.JButton();
+        greekButton = new javax.swing.JButton();
+        egyptianButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Norse");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        norseButton.setText("Norse");
+        norseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                norseButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Greek");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        greekButton.setText("Greek");
+        greekButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                greekButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Egyptian");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        egyptianButton.setText("Egyptian");
+        egyptianButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                egyptianButtonActionPerformed(evt);
             }
         });
 
@@ -61,11 +63,11 @@ public class CultureSelectGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jButton1)
+                .addComponent(norseButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(greekButton)
                 .addGap(56, 56, 56)
-                .addComponent(jButton3)
+                .addComponent(egyptianButton)
                 .addGap(46, 46, 46))
         );
         jPanel1Layout.setVerticalGroup(
@@ -73,9 +75,9 @@ public class CultureSelectGUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(norseButton)
+                    .addComponent(greekButton)
+                    .addComponent(egyptianButton))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
@@ -93,26 +95,24 @@ public class CultureSelectGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        System.out.println("Player has chosen Egyptian");
+    private void egyptianButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_egyptianButtonActionPerformed
         this.setVisible(false);
-        BoardGUI frame = new BoardGUI();
-        frame.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+        BoardGUI board = new BoardGUI("Egyptian");
+        board.setVisible(true);
+        
+    }//GEN-LAST:event_egyptianButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.out.println("Player has chosen Greek");
+    private void greekButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greekButtonActionPerformed
         this.setVisible(false);
-        BoardGUI frame = new BoardGUI();
-        frame.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        BoardGUI board = new BoardGUI("Greek");
+        board.setVisible(true);
+    }//GEN-LAST:event_greekButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("Player has chosen Norse");
+    private void norseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_norseButtonActionPerformed
         this.setVisible(false);
-        BoardGUI frame = new BoardGUI();
-        frame.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        BoardGUI board = new BoardGUI("Norse");
+        board.setVisible(true);
+    }//GEN-LAST:event_norseButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,9 +150,9 @@ public class CultureSelectGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton egyptianButton;
+    private javax.swing.JButton greekButton;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton norseButton;
     // End of variables declaration//GEN-END:variables
 }
