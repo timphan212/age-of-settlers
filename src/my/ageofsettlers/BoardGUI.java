@@ -5,6 +5,10 @@
  */
 package my.ageofsettlers;
 
+import java.awt.Image;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
 
 /**
  *
@@ -32,7 +36,7 @@ public class BoardGUI extends javax.swing.JFrame {
             jTabbedPane1.setSelectedIndex(2);
         }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,9 +47,12 @@ public class BoardGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        norseBoard = new javax.swing.JLabel();
-        greekBoard = new javax.swing.JLabel();
-        egyptBoard = new javax.swing.JLabel();
+        norseBoard = new javax.swing.JPanel();
+        norseBoardImg = new javax.swing.JLabel();
+        greekBoard = new javax.swing.JPanel();
+        greekBoardImg = new javax.swing.JLabel();
+        egyptianBoard = new javax.swing.JPanel();
+        egyptianBoardImg = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -55,14 +62,29 @@ public class BoardGUI extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(1100, 768));
 
-        norseBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
+        norseBoard.setLayout(null);
+
+        norseBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
+        norseBoard.add(norseBoardImg);
+        norseBoardImg.setBounds(0, 0, 790, 700);
+
         jTabbedPane1.addTab("Norse", norseBoard);
 
-        greekBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoardResized.png"))); // NOI18N
+        greekBoard.setLayout(null);
+
+        greekBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoardResized.png"))); // NOI18N
+        greekBoard.add(greekBoardImg);
+        greekBoardImg.setBounds(0, 0, 790, 700);
+
         jTabbedPane1.addTab("Greek", greekBoard);
 
-        egyptBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoardResized.png"))); // NOI18N
-        jTabbedPane1.addTab("Egyptian", egyptBoard);
+        egyptianBoard.setLayout(null);
+
+        egyptianBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoardResized.png"))); // NOI18N
+        egyptianBoard.add(egyptianBoardImg);
+        egyptianBoardImg.setBounds(0, 0, 790, 710);
+
+        jTabbedPane1.addTab("Egyptian", egyptianBoard);
 
         jButton1.setText("jButton1");
 
@@ -99,13 +121,13 @@ public class BoardGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 792, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -148,13 +170,16 @@ public class BoardGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel egyptBoard;
-    private javax.swing.JLabel greekBoard;
+    private javax.swing.JPanel egyptianBoard;
+    private javax.swing.JLabel egyptianBoardImg;
+    private javax.swing.JPanel greekBoard;
+    private javax.swing.JLabel greekBoardImg;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel norseBoard;
+    private javax.swing.JPanel norseBoard;
+    private javax.swing.JLabel norseBoardImg;
     // End of variables declaration//GEN-END:variables
 }
