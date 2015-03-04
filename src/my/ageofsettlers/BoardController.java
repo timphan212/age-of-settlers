@@ -78,27 +78,93 @@ public class BoardController {
     
     private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList, BoardGUI board) {
         List<TerrainTiles> randomTerrain = new ArrayList<TerrainTiles>();
-        int count = 0, num = 0;
+        int count = 0, num = 0, ndx = 0;
         
         for(int i = 0; i < 18; i++) {
             Random rand = new Random(System.nanoTime());
-            num = rand.nextInt(terrainList.size());
-            TerrainTiles terrain = terrainList.get(num);
+            num = rand.nextInt(90)+1;
+            ndx = getTerrainListIndex(num);
+            TerrainTiles terrain = terrainList.get(ndx);
             count = terrain.getTileCount();
             
             while(count == 0) {
-                num = rand.nextInt(terrainList.size());
-                terrain = terrainList.get(num);
+                num = rand.nextInt(90)+1;
+                ndx = getTerrainListIndex(num);
+                terrain = terrainList.get(ndx);
                 count = terrain.getTileCount();
             }
             
             terrain.setTileCount(count - 1);
-            terrainList.set(num, terrain);
+            terrainList.set(ndx, terrain);
             randomTerrain.add(terrain);
         }
         
         board.setTerrainTabLabelIcon(randomTerrain);
         
         return terrainList;
+    }
+    
+    private static int getTerrainListIndex(int num) {
+        if(num >= 1 && num <= 12) {
+            return 0;
+        }
+        else if(num >= 13 && num <= 15) {
+            return 1;
+        }
+        else if(num >= 16 && num <= 18) {
+            return 2;
+        }
+        else if(num >= 19 && num <= 21) {
+            return 3;
+        }
+        else if(num >= 22 && num <= 30) {
+            return 4;
+        }
+        else if(num >= 31 && num <= 32) {
+            return 5;
+        }
+        else if(num >= 33 && num <= 34) {
+            return 6;
+        }
+        else if(num >= 35 && num <= 36) {
+            return 7;
+        }
+        else if(num >= 37 && num <= 40) {
+            return 8;
+        }
+        else if(num >= 41 && num <= 44) {
+            return 9;
+        }
+        else if(num >= 45 && num <= 48) {
+            return 10;
+        }
+        else if(num >= 49 && num <= 52) {
+            return 11;
+        }
+        else if(num >= 53 && num <= 58) {
+            return 12;
+        }
+        else if(num >= 59 && num <= 61) {
+            return 13;
+        }
+        else if(num >= 62 && num <= 64) {
+            return 14;
+        }
+        else if(num >= 65 && num <= 71) {
+            return 15;
+        }
+        else if(num >= 72 && num <= 78) {
+            return 16;
+        }
+        else if(num >= 79 && num <= 82) {
+            return 17;
+        }
+        else if(num >= 83 && num <= 86) {
+            return 18;
+        }
+        else if(num >= 87 && num <= 90) {
+            return 19;
+        }
+        return 0;
     }
 }
