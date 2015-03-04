@@ -5,9 +5,12 @@
  */
 package my.ageofsettlers;
 
+import java.awt.Component;
 import java.awt.Image;
 import java.io.IOException;
+import java.util.List;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -54,30 +57,47 @@ public class BoardGUI extends javax.swing.JFrame {
         egyptianBoard = new javax.swing.JPanel();
         egyptianBoardImg = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
+        terrain = new javax.swing.JPanel();
         terrain1 = new javax.swing.JPanel();
+        terrain1_img = new javax.swing.JLabel();
         terrain2 = new javax.swing.JPanel();
+        terrain2_img = new javax.swing.JLabel();
         terrain3 = new javax.swing.JPanel();
+        terrain3_img = new javax.swing.JLabel();
         terrain4 = new javax.swing.JPanel();
+        terrain4_img = new javax.swing.JLabel();
         terrain5 = new javax.swing.JPanel();
+        terrain5_img = new javax.swing.JLabel();
         terrain6 = new javax.swing.JPanel();
+        terrain6_img = new javax.swing.JLabel();
         terrain7 = new javax.swing.JPanel();
+        terrain7_img = new javax.swing.JLabel();
         terrain8 = new javax.swing.JPanel();
+        terrain8_img = new javax.swing.JLabel();
         terrain9 = new javax.swing.JPanel();
+        terrain9_img = new javax.swing.JLabel();
         terrain10 = new javax.swing.JPanel();
+        terrain10_img = new javax.swing.JLabel();
         terrain11 = new javax.swing.JPanel();
+        terrain11_img = new javax.swing.JLabel();
         terrain12 = new javax.swing.JPanel();
+        terrain12_img = new javax.swing.JLabel();
         terrain13 = new javax.swing.JPanel();
+        terrain13_img = new javax.swing.JLabel();
         terrain14 = new javax.swing.JPanel();
+        terrain14_img = new javax.swing.JLabel();
         terrain15 = new javax.swing.JPanel();
+        terrain15_img = new javax.swing.JLabel();
         terrain16 = new javax.swing.JPanel();
+        terrain16_img = new javax.swing.JLabel();
         terrain17 = new javax.swing.JPanel();
+        terrain17_img = new javax.swing.JLabel();
         terrain18 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        terrain18_img = new javax.swing.JLabel();
+        options = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(1100, 768));
 
         norseBoard.setLayout(null);
 
@@ -103,43 +123,53 @@ public class BoardGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Egyptian", egyptianBoard);
 
+        terrain1.setName("terrain1"); // NOI18N
         terrain1.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain1_img.setName("terrain1_img"); // NOI18N
 
         javax.swing.GroupLayout terrain1Layout = new javax.swing.GroupLayout(terrain1);
         terrain1.setLayout(terrain1Layout);
         terrain1Layout.setHorizontalGroup(
             terrain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain1Layout.setVerticalGroup(
             terrain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        terrain1_img.getAccessibleContext().setAccessibleName("terrain1_img");
+        terrain1_img.getAccessibleContext().setAccessibleDescription("");
+
         terrain2.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain2_img.setName("terrain2_img"); // NOI18N
 
         javax.swing.GroupLayout terrain2Layout = new javax.swing.GroupLayout(terrain2);
         terrain2.setLayout(terrain2Layout);
         terrain2Layout.setHorizontalGroup(
             terrain2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain2Layout.setVerticalGroup(
             terrain2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain3.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain3_img.setName("terrain3_img"); // NOI18N
 
         javax.swing.GroupLayout terrain3Layout = new javax.swing.GroupLayout(terrain3);
         terrain3.setLayout(terrain3Layout);
         terrain3Layout.setHorizontalGroup(
             terrain3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain3Layout.setVerticalGroup(
             terrain3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain4.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -148,11 +178,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain4.setLayout(terrain4Layout);
         terrain4Layout.setHorizontalGroup(
             terrain4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain4Layout.setVerticalGroup(
             terrain4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain5.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -161,11 +191,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain5.setLayout(terrain5Layout);
         terrain5Layout.setHorizontalGroup(
             terrain5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain5Layout.setVerticalGroup(
             terrain5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain6.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -174,11 +204,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain6.setLayout(terrain6Layout);
         terrain6Layout.setHorizontalGroup(
             terrain6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain6Layout.setVerticalGroup(
             terrain6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain7.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -187,11 +217,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain7.setLayout(terrain7Layout);
         terrain7Layout.setHorizontalGroup(
             terrain7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain7_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain7Layout.setVerticalGroup(
             terrain7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain7_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain8.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -200,11 +230,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain8.setLayout(terrain8Layout);
         terrain8Layout.setHorizontalGroup(
             terrain8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain8_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain8Layout.setVerticalGroup(
             terrain8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain8_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain9.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -213,11 +243,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain9.setLayout(terrain9Layout);
         terrain9Layout.setHorizontalGroup(
             terrain9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain9_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain9Layout.setVerticalGroup(
             terrain9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain9_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain10.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -226,11 +256,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain10.setLayout(terrain10Layout);
         terrain10Layout.setHorizontalGroup(
             terrain10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain10_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain10Layout.setVerticalGroup(
             terrain10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain10_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain11.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -239,11 +269,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain11.setLayout(terrain11Layout);
         terrain11Layout.setHorizontalGroup(
             terrain11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain11_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain11Layout.setVerticalGroup(
             terrain11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain11_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain12.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -252,11 +282,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain12.setLayout(terrain12Layout);
         terrain12Layout.setHorizontalGroup(
             terrain12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain12_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain12Layout.setVerticalGroup(
             terrain12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain12_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain13.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -265,11 +295,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain13.setLayout(terrain13Layout);
         terrain13Layout.setHorizontalGroup(
             terrain13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain13_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain13Layout.setVerticalGroup(
             terrain13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain13_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain14.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -278,11 +308,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain14.setLayout(terrain14Layout);
         terrain14Layout.setHorizontalGroup(
             terrain14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain14_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain14Layout.setVerticalGroup(
             terrain14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain14_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain15.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -291,11 +321,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain15.setLayout(terrain15Layout);
         terrain15Layout.setHorizontalGroup(
             terrain15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain15_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain15Layout.setVerticalGroup(
             terrain15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain15_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain16.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -304,11 +334,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain16.setLayout(terrain16Layout);
         terrain16Layout.setHorizontalGroup(
             terrain16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain16_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain16Layout.setVerticalGroup(
             terrain16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain16_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain17.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -317,11 +347,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain17.setLayout(terrain17Layout);
         terrain17Layout.setHorizontalGroup(
             terrain17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain17_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain17Layout.setVerticalGroup(
             terrain17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain17_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         terrain18.setPreferredSize(new java.awt.Dimension(90, 90));
@@ -330,51 +360,51 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain18.setLayout(terrain18Layout);
         terrain18Layout.setHorizontalGroup(
             terrain18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain18_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         terrain18Layout.setVerticalGroup(
             terrain18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(terrain18_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout terrainLayout = new javax.swing.GroupLayout(terrain);
+        terrain.setLayout(terrainLayout);
+        terrainLayout.setHorizontalGroup(
+            terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(terrainLayout.createSequentialGroup()
                 .addContainerGap(14, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -382,56 +412,57 @@ public class BoardGUI extends javax.swing.JFrame {
                         .addComponent(terrain18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        terrainLayout.setVerticalGroup(
+            terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(terrainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terrain1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terrain4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terrain7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terrain10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terrain13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(terrain16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Terrain", jPanel2);
+        jTabbedPane2.addTab("Terrain", terrain);
+        terrain.getAccessibleContext().setAccessibleName("terrain");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout optionsLayout = new javax.swing.GroupLayout(options);
+        options.setLayout(optionsLayout);
+        optionsLayout.setHorizontalGroup(
+            optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 306, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        optionsLayout.setVerticalGroup(
+            optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 740, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("Options", jPanel3);
+        jTabbedPane2.addTab("Options", options);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -448,44 +479,19 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(jTabbedPane2)
         );
 
-        jTabbedPane2.getAccessibleContext().setAccessibleName("Terrain");
+        jTabbedPane2.getAccessibleContext().setAccessibleName("TerrainTab");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BoardGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BoardGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BoardGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BoardGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    public void setTerrainTabLabelIcon(List<TerrainTiles> terrainList) {
+        Component[] terrainComponents = terrain.getComponents();
+        
+        for(int i = 0; i < terrainComponents.length; i++) {
+            javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponents[i];
+            javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+            label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainList.get(i).getFileName())));
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BoardGUI().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -493,29 +499,47 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel egyptianBoardImg;
     private javax.swing.JPanel greekBoard;
     private javax.swing.JLabel greekBoardImg;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel norseBoard;
     private javax.swing.JLabel norseBoardImg;
+    private javax.swing.JPanel options;
+    private javax.swing.JPanel terrain;
     private javax.swing.JPanel terrain1;
     private javax.swing.JPanel terrain10;
+    private javax.swing.JLabel terrain10_img;
     private javax.swing.JPanel terrain11;
+    private javax.swing.JLabel terrain11_img;
     private javax.swing.JPanel terrain12;
+    private javax.swing.JLabel terrain12_img;
     private javax.swing.JPanel terrain13;
+    private javax.swing.JLabel terrain13_img;
     private javax.swing.JPanel terrain14;
+    private javax.swing.JLabel terrain14_img;
     private javax.swing.JPanel terrain15;
+    private javax.swing.JLabel terrain15_img;
     private javax.swing.JPanel terrain16;
+    private javax.swing.JLabel terrain16_img;
     private javax.swing.JPanel terrain17;
+    private javax.swing.JLabel terrain17_img;
     private javax.swing.JPanel terrain18;
+    private javax.swing.JLabel terrain18_img;
+    private javax.swing.JLabel terrain1_img;
     private javax.swing.JPanel terrain2;
+    private javax.swing.JLabel terrain2_img;
     private javax.swing.JPanel terrain3;
+    private javax.swing.JLabel terrain3_img;
     private javax.swing.JPanel terrain4;
+    private javax.swing.JLabel terrain4_img;
     private javax.swing.JPanel terrain5;
+    private javax.swing.JLabel terrain5_img;
     private javax.swing.JPanel terrain6;
+    private javax.swing.JLabel terrain6_img;
     private javax.swing.JPanel terrain7;
+    private javax.swing.JLabel terrain7_img;
     private javax.swing.JPanel terrain8;
+    private javax.swing.JLabel terrain8_img;
     private javax.swing.JPanel terrain9;
+    private javax.swing.JLabel terrain9_img;
     // End of variables declaration//GEN-END:variables
 }

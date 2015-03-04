@@ -17,6 +17,7 @@ public class CultureSelectGUI extends javax.swing.JFrame {
      * Creates new form CultureSelectGUI
      */
     public CultureSelectGUI() {
+        initStyle();
         initComponents();
     }
 
@@ -99,6 +100,7 @@ public class CultureSelectGUI extends javax.swing.JFrame {
         this.setVisible(false);
         BoardGUI board = new BoardGUI("Egyptian");
         board.setVisible(true);
+        BoardController.boardSetup(board);
         
     }//GEN-LAST:event_egyptianButtonActionPerformed
 
@@ -106,23 +108,17 @@ public class CultureSelectGUI extends javax.swing.JFrame {
         this.setVisible(false);
         BoardGUI board = new BoardGUI("Greek");
         board.setVisible(true);
+        BoardController.boardSetup(board);
     }//GEN-LAST:event_greekButtonActionPerformed
 
     private void norseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_norseButtonActionPerformed
         this.setVisible(false);
         BoardGUI board = new BoardGUI("Norse");
         board.setVisible(true);
+        BoardController.boardSetup(board);
     }//GEN-LAST:event_norseButtonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    private void initStyle() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -139,16 +135,8 @@ public class CultureSelectGUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CultureSelectGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CultureSelectGUI().setVisible(true);
-            }
-        });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton egyptianButton;
     private javax.swing.JButton greekButton;
