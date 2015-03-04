@@ -27,7 +27,6 @@ public class BoardController {
     public static void boardSetup(BoardGUI board) {
         List<TerrainTiles> terrainList = terrainSetup();
         terrainList = randomTerrainTiles(terrainList, board);
-        //board.setLabelComponent();
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -77,7 +76,7 @@ public class BoardController {
     }
     
     private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList, BoardGUI board) {
-        List<TerrainTiles> randomTerrain = new ArrayList<TerrainTiles>();
+        List<TerrainTiles> randomTerrain = new ArrayList<>();
         int count = 0, num = 0, ndx = 0;
         
         for(int i = 0; i < 18; i++) {
@@ -166,5 +165,9 @@ public class BoardController {
             return 19;
         }
         return 0;
+    }
+    
+    private static void playerTurn() {
+        int count = 0;
     }
 }
