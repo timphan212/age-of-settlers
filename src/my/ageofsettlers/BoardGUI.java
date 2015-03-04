@@ -94,6 +94,7 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain17_img = new javax.swing.JLabel();
         terrain18 = new javax.swing.JPanel();
         terrain18_img = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         options = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -367,12 +368,14 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(terrain18_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        jButton1.setText("Pass");
+
         javax.swing.GroupLayout terrainLayout = new javax.swing.GroupLayout(terrain);
         terrain.setLayout(terrainLayout);
         terrainLayout.setHorizontalGroup(
             terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(terrainLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
                         .addComponent(terrain1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -405,9 +408,14 @@ public class BoardGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, terrainLayout.createSequentialGroup()
-                        .addComponent(terrain16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(terrain17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(terrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(terrainLayout.createSequentialGroup()
+                                .addComponent(terrain16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(terrain17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(terrainLayout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(12, 12, 12)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(terrain18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -445,7 +453,9 @@ public class BoardGUI extends javax.swing.JFrame {
                     .addComponent(terrain16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(terrain18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(53, 53, 53))
         );
 
         jTabbedPane2.addTab("Terrain", terrain);
@@ -486,11 +496,26 @@ public class BoardGUI extends javax.swing.JFrame {
 
     public void setTerrainTabLabelIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrain.getComponents();
+        int count = 0;
         
-        for(int i = 0; i < terrainComponents.length; i++) {
-            javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponents[i];
-            javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-            label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainList.get(i).getFileName())));
+        for (Component terrainComponent : terrainComponents) {
+            /*if (terrainComponent instanceof javax.swing.JButton) {
+                count--;
+            } else {
+                javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainList.get(count).getFileName())));
+            }*/
+            if (terrainComponent instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainList.get(count).getFileName())));
+            } 
+            else {
+                count--;
+            }
+            
+            count++;
         }
     }
 
@@ -499,6 +524,7 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel egyptianBoardImg;
     private javax.swing.JPanel greekBoard;
     private javax.swing.JLabel greekBoardImg;
+    private javax.swing.JButton jButton1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel norseBoard;
