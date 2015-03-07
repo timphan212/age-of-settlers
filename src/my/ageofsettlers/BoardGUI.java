@@ -6,11 +6,7 @@
 package my.ageofsettlers;
 
 import java.awt.Component;
-import java.awt.Image;
-import java.io.IOException;
 import java.util.List;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
 
 /**
@@ -51,10 +47,109 @@ public class BoardGUI extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         norseBoard = new javax.swing.JPanel();
+        norseTerrain = new javax.swing.JPanel();
+        fertile_n1 = new javax.swing.JPanel();
+        fertile_n1_img = new javax.swing.JLabel();
+        mountain_n1 = new javax.swing.JPanel();
+        mountain_n1_img = new javax.swing.JLabel();
+        mountain_n2 = new javax.swing.JPanel();
+        mountain_n2_img = new javax.swing.JLabel();
+        mountain_n3 = new javax.swing.JPanel();
+        mountain_n3_img = new javax.swing.JLabel();
+        fertile_n2 = new javax.swing.JPanel();
+        fertile_n2_img = new javax.swing.JLabel();
+        forest_n1 = new javax.swing.JPanel();
+        forest_n1_img = new javax.swing.JLabel();
+        hills_n1 = new javax.swing.JPanel();
+        hills_n1_img = new javax.swing.JLabel();
+        mountain_n4 = new javax.swing.JPanel();
+        mountain_n4_img = new javax.swing.JLabel();
+        hills_n2 = new javax.swing.JPanel();
+        hills_n2_img = new javax.swing.JLabel();
+        swamp_n1 = new javax.swing.JPanel();
+        swamp_n1_img = new javax.swing.JLabel();
+        forest_n2 = new javax.swing.JPanel();
+        forest_n2_img = new javax.swing.JLabel();
+        hills_n3 = new javax.swing.JPanel();
+        hills_n3_img = new javax.swing.JLabel();
+        desert_n1 = new javax.swing.JPanel();
+        desert_n1_img = new javax.swing.JLabel();
+        forest_n3 = new javax.swing.JPanel();
+        forest_n3_img = new javax.swing.JLabel();
+        forest_n4 = new javax.swing.JPanel();
+        forest_n4_img = new javax.swing.JLabel();
+        fertile_n3 = new javax.swing.JPanel();
+        fertile_n3_img = new javax.swing.JLabel();
         norseBoardImg = new javax.swing.JLabel();
         greekBoard = new javax.swing.JPanel();
+        greekTerrain = new javax.swing.JPanel();
+        fertile_g1 = new javax.swing.JPanel();
+        fertile_g1_img = new javax.swing.JLabel();
+        fertile_g2 = new javax.swing.JPanel();
+        fertile_g2_img = new javax.swing.JLabel();
+        forest_g1 = new javax.swing.JPanel();
+        forest_g1_img = new javax.swing.JLabel();
+        swamp_g1 = new javax.swing.JPanel();
+        swamp_g1_img = new javax.swing.JLabel();
+        hills_g1 = new javax.swing.JPanel();
+        hills_g1_img = new javax.swing.JLabel();
+        mountain_g1 = new javax.swing.JPanel();
+        mountain_g1_img = new javax.swing.JLabel();
+        fertile_g3 = new javax.swing.JPanel();
+        fertile_g3_img = new javax.swing.JLabel();
+        forest_g2 = new javax.swing.JPanel();
+        forest_g2_img = new javax.swing.JLabel();
+        hills_g2 = new javax.swing.JPanel();
+        hills_g2_img = new javax.swing.JLabel();
+        hills_g3 = new javax.swing.JPanel();
+        hills_g3_img = new javax.swing.JLabel();
+        hills_g4 = new javax.swing.JPanel();
+        hills_g4_img = new javax.swing.JLabel();
+        hills_g5 = new javax.swing.JPanel();
+        hills_g5_img = new javax.swing.JLabel();
+        desert_g1 = new javax.swing.JPanel();
+        desert_g1_img = new javax.swing.JLabel();
+        hills_g6 = new javax.swing.JPanel();
+        hills_g6_img = new javax.swing.JLabel();
+        hills_g7 = new javax.swing.JPanel();
+        hills_g7_img = new javax.swing.JLabel();
+        hills_g8 = new javax.swing.JPanel();
+        hills_g8_img = new javax.swing.JLabel();
         greekBoardImg = new javax.swing.JLabel();
         egyptianBoard = new javax.swing.JPanel();
+        egyptTerrain = new javax.swing.JPanel();
+        desert_e1 = new javax.swing.JPanel();
+        desert_e1_img = new javax.swing.JLabel();
+        desert_e2 = new javax.swing.JPanel();
+        desert_e2_img = new javax.swing.JLabel();
+        swamp_e1 = new javax.swing.JPanel();
+        swamp_e1_img = new javax.swing.JLabel();
+        swamp_e2 = new javax.swing.JPanel();
+        swamp_e2_img = new javax.swing.JLabel();
+        forest_e1 = new javax.swing.JPanel();
+        forest_e1_img = new javax.swing.JLabel();
+        desert_e3 = new javax.swing.JPanel();
+        desert_e3_img = new javax.swing.JLabel();
+        fertile_e1 = new javax.swing.JPanel();
+        fertile_e1_img = new javax.swing.JLabel();
+        fertile_e2 = new javax.swing.JPanel();
+        fertile_e2_img = new javax.swing.JLabel();
+        desert_e4 = new javax.swing.JPanel();
+        desert_e4_img = new javax.swing.JLabel();
+        desert_e5 = new javax.swing.JPanel();
+        desert_e5_img = new javax.swing.JLabel();
+        fertile_e3 = new javax.swing.JPanel();
+        fertile_e3_img = new javax.swing.JLabel();
+        fertile_e4 = new javax.swing.JPanel();
+        fertile_e4_img = new javax.swing.JLabel();
+        desert_e6 = new javax.swing.JPanel();
+        desert_e6_img = new javax.swing.JLabel();
+        hills_e1 = new javax.swing.JPanel();
+        hills_e1_img = new javax.swing.JLabel();
+        fertile_e5 = new javax.swing.JPanel();
+        fertile_e5_img = new javax.swing.JLabel();
+        hills_e2 = new javax.swing.JPanel();
+        hills_e2_img = new javax.swing.JLabel();
         egyptianBoardImg = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         terrain = new javax.swing.JPanel();
@@ -100,27 +195,780 @@ public class BoardGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 600));
 
-        norseBoard.setLayout(null);
+        norseBoard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        norseTerrain.setOpaque(false);
+        norseTerrain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fertile_n1.setMinimumSize(new java.awt.Dimension(90, 90));
+        fertile_n1.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_n1Layout = new javax.swing.GroupLayout(fertile_n1);
+        fertile_n1.setLayout(fertile_n1Layout);
+        fertile_n1Layout.setHorizontalGroup(
+            fertile_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_n1Layout.setVerticalGroup(
+            fertile_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(fertile_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, -1, -1));
+
+        mountain_n1.setMinimumSize(new java.awt.Dimension(90, 90));
+        mountain_n1.setOpaque(false);
+
+        javax.swing.GroupLayout mountain_n1Layout = new javax.swing.GroupLayout(mountain_n1);
+        mountain_n1.setLayout(mountain_n1Layout);
+        mountain_n1Layout.setHorizontalGroup(
+            mountain_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        mountain_n1Layout.setVerticalGroup(
+            mountain_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(mountain_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 5, 90, -1));
+
+        mountain_n2.setMinimumSize(new java.awt.Dimension(90, 90));
+        mountain_n2.setOpaque(false);
+
+        javax.swing.GroupLayout mountain_n2Layout = new javax.swing.GroupLayout(mountain_n2);
+        mountain_n2.setLayout(mountain_n2Layout);
+        mountain_n2Layout.setHorizontalGroup(
+            mountain_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        mountain_n2Layout.setVerticalGroup(
+            mountain_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(mountain_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 5, -1, -1));
+
+        mountain_n3.setMinimumSize(new java.awt.Dimension(90, 90));
+        mountain_n3.setOpaque(false);
+
+        javax.swing.GroupLayout mountain_n3Layout = new javax.swing.GroupLayout(mountain_n3);
+        mountain_n3.setLayout(mountain_n3Layout);
+        mountain_n3Layout.setHorizontalGroup(
+            mountain_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        mountain_n3Layout.setVerticalGroup(
+            mountain_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(mountain_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 5, -1, -1));
+
+        fertile_n2.setMinimumSize(new java.awt.Dimension(90, 90));
+        fertile_n2.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_n2Layout = new javax.swing.GroupLayout(fertile_n2);
+        fertile_n2.setLayout(fertile_n2Layout);
+        fertile_n2Layout.setHorizontalGroup(
+            fertile_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_n2Layout.setVerticalGroup(
+            fertile_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(fertile_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, -1, -1));
+
+        forest_n1.setMinimumSize(new java.awt.Dimension(90, 90));
+        forest_n1.setOpaque(false);
+
+        javax.swing.GroupLayout forest_n1Layout = new javax.swing.GroupLayout(forest_n1);
+        forest_n1.setLayout(forest_n1Layout);
+        forest_n1Layout.setHorizontalGroup(
+            forest_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_n1Layout.setVerticalGroup(
+            forest_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(forest_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 95, -1, -1));
+
+        hills_n1.setMinimumSize(new java.awt.Dimension(90, 90));
+        hills_n1.setOpaque(false);
+
+        javax.swing.GroupLayout hills_n1Layout = new javax.swing.GroupLayout(hills_n1);
+        hills_n1.setLayout(hills_n1Layout);
+        hills_n1Layout.setHorizontalGroup(
+            hills_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_n1Layout.setVerticalGroup(
+            hills_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(hills_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 95, -1, -1));
+
+        mountain_n4.setMinimumSize(new java.awt.Dimension(90, 90));
+        mountain_n4.setOpaque(false);
+
+        javax.swing.GroupLayout mountain_n4Layout = new javax.swing.GroupLayout(mountain_n4);
+        mountain_n4.setLayout(mountain_n4Layout);
+        mountain_n4Layout.setHorizontalGroup(
+            mountain_n4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        mountain_n4Layout.setVerticalGroup(
+            mountain_n4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_n4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(mountain_n4, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 95, -1, -1));
+
+        hills_n2.setMinimumSize(new java.awt.Dimension(90, 90));
+        hills_n2.setOpaque(false);
+
+        javax.swing.GroupLayout hills_n2Layout = new javax.swing.GroupLayout(hills_n2);
+        hills_n2.setLayout(hills_n2Layout);
+        hills_n2Layout.setHorizontalGroup(
+            hills_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_n2Layout.setVerticalGroup(
+            hills_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(hills_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 185, -1, -1));
+
+        swamp_n1.setMinimumSize(new java.awt.Dimension(90, 90));
+        swamp_n1.setOpaque(false);
+
+        javax.swing.GroupLayout swamp_n1Layout = new javax.swing.GroupLayout(swamp_n1);
+        swamp_n1.setLayout(swamp_n1Layout);
+        swamp_n1Layout.setHorizontalGroup(
+            swamp_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        swamp_n1Layout.setVerticalGroup(
+            swamp_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(swamp_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 185, -1, -1));
+
+        forest_n2.setMinimumSize(new java.awt.Dimension(90, 90));
+        forest_n2.setOpaque(false);
+
+        javax.swing.GroupLayout forest_n2Layout = new javax.swing.GroupLayout(forest_n2);
+        forest_n2.setLayout(forest_n2Layout);
+        forest_n2Layout.setHorizontalGroup(
+            forest_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_n2Layout.setVerticalGroup(
+            forest_n2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(forest_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, -1));
+
+        hills_n3.setMinimumSize(new java.awt.Dimension(90, 90));
+        hills_n3.setOpaque(false);
+
+        javax.swing.GroupLayout hills_n3Layout = new javax.swing.GroupLayout(hills_n3);
+        hills_n3.setLayout(hills_n3Layout);
+        hills_n3Layout.setHorizontalGroup(
+            hills_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_n3Layout.setVerticalGroup(
+            hills_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(hills_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 185, -1, -1));
+
+        desert_n1.setMinimumSize(new java.awt.Dimension(90, 90));
+        desert_n1.setOpaque(false);
+        desert_n1.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        javax.swing.GroupLayout desert_n1Layout = new javax.swing.GroupLayout(desert_n1);
+        desert_n1.setLayout(desert_n1Layout);
+        desert_n1Layout.setHorizontalGroup(
+            desert_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_n1Layout.setVerticalGroup(
+            desert_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(desert_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 275, -1, -1));
+
+        forest_n3.setMinimumSize(new java.awt.Dimension(90, 90));
+        forest_n3.setOpaque(false);
+
+        javax.swing.GroupLayout forest_n3Layout = new javax.swing.GroupLayout(forest_n3);
+        forest_n3.setLayout(forest_n3Layout);
+        forest_n3Layout.setHorizontalGroup(
+            forest_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_n3Layout.setVerticalGroup(
+            forest_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(forest_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 275, -1, -1));
+
+        forest_n4.setMinimumSize(new java.awt.Dimension(90, 90));
+        forest_n4.setOpaque(false);
+
+        javax.swing.GroupLayout forest_n4Layout = new javax.swing.GroupLayout(forest_n4);
+        forest_n4.setLayout(forest_n4Layout);
+        forest_n4Layout.setHorizontalGroup(
+            forest_n4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_n4Layout.setVerticalGroup(
+            forest_n4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_n4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(forest_n4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 275, -1, -1));
+
+        fertile_n3.setMinimumSize(new java.awt.Dimension(90, 90));
+        fertile_n3.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_n3Layout = new javax.swing.GroupLayout(fertile_n3);
+        fertile_n3.setLayout(fertile_n3Layout);
+        fertile_n3Layout.setHorizontalGroup(
+            fertile_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_n3Layout.setVerticalGroup(
+            fertile_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseTerrain.add(fertile_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 275, -1, -1));
+
+        norseBoard.add(norseTerrain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 400, 370));
 
         norseBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
-        norseBoard.add(norseBoardImg);
-        norseBoardImg.setBounds(0, 0, 800, 700);
+        norseBoard.add(norseBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
         jTabbedPane1.addTab("Norse", norseBoard);
 
-        greekBoard.setLayout(null);
+        greekBoard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        greekTerrain.setOpaque(false);
+        greekTerrain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fertile_g1.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_g1Layout = new javax.swing.GroupLayout(fertile_g1);
+        fertile_g1.setLayout(fertile_g1Layout);
+        fertile_g1Layout.setHorizontalGroup(
+            fertile_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_g1Layout.setVerticalGroup(
+            fertile_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(fertile_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, -1, -1));
+
+        fertile_g2.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_g2Layout = new javax.swing.GroupLayout(fertile_g2);
+        fertile_g2.setLayout(fertile_g2Layout);
+        fertile_g2Layout.setHorizontalGroup(
+            fertile_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_g2Layout.setVerticalGroup(
+            fertile_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(fertile_g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 5, -1, -1));
+
+        forest_g1.setOpaque(false);
+
+        javax.swing.GroupLayout forest_g1Layout = new javax.swing.GroupLayout(forest_g1);
+        forest_g1.setLayout(forest_g1Layout);
+        forest_g1Layout.setHorizontalGroup(
+            forest_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_g1Layout.setVerticalGroup(
+            forest_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(forest_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 5, -1, -1));
+
+        swamp_g1.setOpaque(false);
+
+        javax.swing.GroupLayout swamp_g1Layout = new javax.swing.GroupLayout(swamp_g1);
+        swamp_g1.setLayout(swamp_g1Layout);
+        swamp_g1Layout.setHorizontalGroup(
+            swamp_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        swamp_g1Layout.setVerticalGroup(
+            swamp_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(swamp_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 5, -1, -1));
+
+        hills_g1.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g1Layout = new javax.swing.GroupLayout(hills_g1);
+        hills_g1.setLayout(hills_g1Layout);
+        hills_g1Layout.setHorizontalGroup(
+            hills_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g1Layout.setVerticalGroup(
+            hills_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, -1, -1));
+
+        mountain_g1.setOpaque(false);
+
+        javax.swing.GroupLayout mountain_g1Layout = new javax.swing.GroupLayout(mountain_g1);
+        mountain_g1.setLayout(mountain_g1Layout);
+        mountain_g1Layout.setHorizontalGroup(
+            mountain_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        mountain_g1Layout.setVerticalGroup(
+            mountain_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(mountain_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(mountain_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 95, -1, -1));
+
+        fertile_g3.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_g3Layout = new javax.swing.GroupLayout(fertile_g3);
+        fertile_g3.setLayout(fertile_g3Layout);
+        fertile_g3Layout.setHorizontalGroup(
+            fertile_g3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_g3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_g3Layout.setVerticalGroup(
+            fertile_g3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_g3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(fertile_g3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 95, -1, -1));
+
+        forest_g2.setOpaque(false);
+
+        javax.swing.GroupLayout forest_g2Layout = new javax.swing.GroupLayout(forest_g2);
+        forest_g2.setLayout(forest_g2Layout);
+        forest_g2Layout.setHorizontalGroup(
+            forest_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_g2Layout.setVerticalGroup(
+            forest_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(forest_g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 95, -1, -1));
+
+        hills_g2.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g2Layout = new javax.swing.GroupLayout(hills_g2);
+        hills_g2.setLayout(hills_g2Layout);
+        hills_g2Layout.setHorizontalGroup(
+            hills_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g2Layout.setVerticalGroup(
+            hills_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 185, -1, -1));
+
+        hills_g3.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g3Layout = new javax.swing.GroupLayout(hills_g3);
+        hills_g3.setLayout(hills_g3Layout);
+        hills_g3Layout.setHorizontalGroup(
+            hills_g3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g3Layout.setVerticalGroup(
+            hills_g3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 185, -1, -1));
+
+        hills_g4.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g4Layout = new javax.swing.GroupLayout(hills_g4);
+        hills_g4.setLayout(hills_g4Layout);
+        hills_g4Layout.setHorizontalGroup(
+            hills_g4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g4Layout.setVerticalGroup(
+            hills_g4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, -1));
+
+        hills_g5.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g5Layout = new javax.swing.GroupLayout(hills_g5);
+        hills_g5.setLayout(hills_g5Layout);
+        hills_g5Layout.setHorizontalGroup(
+            hills_g5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g5Layout.setVerticalGroup(
+            hills_g5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g5, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 185, -1, -1));
+
+        desert_g1.setOpaque(false);
+
+        javax.swing.GroupLayout desert_g1Layout = new javax.swing.GroupLayout(desert_g1);
+        desert_g1.setLayout(desert_g1Layout);
+        desert_g1Layout.setHorizontalGroup(
+            desert_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_g1Layout.setVerticalGroup(
+            desert_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(desert_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 275, -1, -1));
+
+        hills_g6.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g6Layout = new javax.swing.GroupLayout(hills_g6);
+        hills_g6.setLayout(hills_g6Layout);
+        hills_g6Layout.setHorizontalGroup(
+            hills_g6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g6Layout.setVerticalGroup(
+            hills_g6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g6, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 275, -1, -1));
+
+        hills_g7.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g7Layout = new javax.swing.GroupLayout(hills_g7);
+        hills_g7.setLayout(hills_g7Layout);
+        hills_g7Layout.setHorizontalGroup(
+            hills_g7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g7_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g7Layout.setVerticalGroup(
+            hills_g7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g7_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 275, -1, -1));
+
+        hills_g8.setOpaque(false);
+
+        javax.swing.GroupLayout hills_g8Layout = new javax.swing.GroupLayout(hills_g8);
+        hills_g8.setLayout(hills_g8Layout);
+        hills_g8Layout.setHorizontalGroup(
+            hills_g8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g8_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_g8Layout.setVerticalGroup(
+            hills_g8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_g8_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekTerrain.add(hills_g8, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 275, -1, -1));
+
+        greekBoard.add(greekTerrain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 390, 370));
 
         greekBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoardResized.png"))); // NOI18N
-        greekBoard.add(greekBoardImg);
-        greekBoardImg.setBounds(0, 0, 790, 700);
+        greekBoard.add(greekBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
         jTabbedPane1.addTab("Greek", greekBoard);
 
-        egyptianBoard.setLayout(null);
+        egyptianBoard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        egyptTerrain.setOpaque(false);
+        egyptTerrain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        desert_e1.setMinimumSize(new java.awt.Dimension(90, 90));
+        desert_e1.setOpaque(false);
+        desert_e1.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        javax.swing.GroupLayout desert_e1Layout = new javax.swing.GroupLayout(desert_e1);
+        desert_e1.setLayout(desert_e1Layout);
+        desert_e1Layout.setHorizontalGroup(
+            desert_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        desert_e1Layout.setVerticalGroup(
+            desert_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(desert_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 90, 90));
+
+        desert_e2.setOpaque(false);
+
+        javax.swing.GroupLayout desert_e2Layout = new javax.swing.GroupLayout(desert_e2);
+        desert_e2.setLayout(desert_e2Layout);
+        desert_e2Layout.setHorizontalGroup(
+            desert_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_e2Layout.setVerticalGroup(
+            desert_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(desert_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 15, -1, -1));
+
+        swamp_e1.setOpaque(false);
+
+        javax.swing.GroupLayout swamp_e1Layout = new javax.swing.GroupLayout(swamp_e1);
+        swamp_e1.setLayout(swamp_e1Layout);
+        swamp_e1Layout.setHorizontalGroup(
+            swamp_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        swamp_e1Layout.setVerticalGroup(
+            swamp_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(swamp_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 15, -1, -1));
+
+        swamp_e2.setOpaque(false);
+
+        javax.swing.GroupLayout swamp_e2Layout = new javax.swing.GroupLayout(swamp_e2);
+        swamp_e2.setLayout(swamp_e2Layout);
+        swamp_e2Layout.setHorizontalGroup(
+            swamp_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        swamp_e2Layout.setVerticalGroup(
+            swamp_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(swamp_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(swamp_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 15, -1, -1));
+
+        forest_e1.setOpaque(false);
+
+        javax.swing.GroupLayout forest_e1Layout = new javax.swing.GroupLayout(forest_e1);
+        forest_e1.setLayout(forest_e1Layout);
+        forest_e1Layout.setHorizontalGroup(
+            forest_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        forest_e1Layout.setVerticalGroup(
+            forest_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(forest_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(forest_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, -1, -1));
+
+        desert_e3.setOpaque(false);
+
+        javax.swing.GroupLayout desert_e3Layout = new javax.swing.GroupLayout(desert_e3);
+        desert_e3.setLayout(desert_e3Layout);
+        desert_e3Layout.setHorizontalGroup(
+            desert_e3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_e3Layout.setVerticalGroup(
+            desert_e3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(desert_e3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 105, -1, -1));
+
+        fertile_e1.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_e1Layout = new javax.swing.GroupLayout(fertile_e1);
+        fertile_e1.setLayout(fertile_e1Layout);
+        fertile_e1Layout.setHorizontalGroup(
+            fertile_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_e1Layout.setVerticalGroup(
+            fertile_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(fertile_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 105, -1, -1));
+
+        fertile_e2.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_e2Layout = new javax.swing.GroupLayout(fertile_e2);
+        fertile_e2.setLayout(fertile_e2Layout);
+        fertile_e2Layout.setHorizontalGroup(
+            fertile_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_e2Layout.setVerticalGroup(
+            fertile_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(fertile_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 105, -1, -1));
+
+        desert_e4.setAlignmentY(0.25F);
+        desert_e4.setOpaque(false);
+
+        javax.swing.GroupLayout desert_e4Layout = new javax.swing.GroupLayout(desert_e4);
+        desert_e4.setLayout(desert_e4Layout);
+        desert_e4Layout.setHorizontalGroup(
+            desert_e4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_e4Layout.setVerticalGroup(
+            desert_e4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(desert_e4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 195, -1, -1));
+
+        desert_e5.setOpaque(false);
+
+        javax.swing.GroupLayout desert_e5Layout = new javax.swing.GroupLayout(desert_e5);
+        desert_e5.setLayout(desert_e5Layout);
+        desert_e5Layout.setHorizontalGroup(
+            desert_e5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_e5Layout.setVerticalGroup(
+            desert_e5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(desert_e5, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 195, -1, -1));
+
+        fertile_e3.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_e3Layout = new javax.swing.GroupLayout(fertile_e3);
+        fertile_e3.setLayout(fertile_e3Layout);
+        fertile_e3Layout.setHorizontalGroup(
+            fertile_e3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_e3Layout.setVerticalGroup(
+            fertile_e3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(fertile_e3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 195, -1, -1));
+
+        fertile_e4.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_e4Layout = new javax.swing.GroupLayout(fertile_e4);
+        fertile_e4.setLayout(fertile_e4Layout);
+        fertile_e4Layout.setHorizontalGroup(
+            fertile_e4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_e4Layout.setVerticalGroup(
+            fertile_e4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(fertile_e4, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 195, -1, -1));
+
+        desert_e6.setAlignmentY(0.25F);
+        desert_e6.setOpaque(false);
+
+        javax.swing.GroupLayout desert_e6Layout = new javax.swing.GroupLayout(desert_e6);
+        desert_e6.setLayout(desert_e6Layout);
+        desert_e6Layout.setHorizontalGroup(
+            desert_e6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        desert_e6Layout.setVerticalGroup(
+            desert_e6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desert_e6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(desert_e6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 285, -1, -1));
+
+        hills_e1.setOpaque(false);
+
+        javax.swing.GroupLayout hills_e1Layout = new javax.swing.GroupLayout(hills_e1);
+        hills_e1.setLayout(hills_e1Layout);
+        hills_e1Layout.setHorizontalGroup(
+            hills_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_e1Layout.setVerticalGroup(
+            hills_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(hills_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 285, -1, -1));
+
+        fertile_e5.setOpaque(false);
+
+        javax.swing.GroupLayout fertile_e5Layout = new javax.swing.GroupLayout(fertile_e5);
+        fertile_e5.setLayout(fertile_e5Layout);
+        fertile_e5Layout.setHorizontalGroup(
+            fertile_e5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        fertile_e5Layout.setVerticalGroup(
+            fertile_e5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fertile_e5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(fertile_e5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 285, -1, -1));
+
+        hills_e2.setOpaque(false);
+
+        javax.swing.GroupLayout hills_e2Layout = new javax.swing.GroupLayout(hills_e2);
+        hills_e2.setLayout(hills_e2Layout);
+        hills_e2Layout.setHorizontalGroup(
+            hills_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        hills_e2Layout.setVerticalGroup(
+            hills_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hills_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptTerrain.add(hills_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 285, -1, -1));
+
+        egyptianBoard.add(egyptTerrain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 390, 380));
 
         egyptianBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoardResized.png"))); // NOI18N
-        egyptianBoard.add(egyptianBoardImg);
-        egyptianBoardImg.setBounds(0, 0, 790, 710);
+        egyptianBoard.add(egyptianBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 710));
 
         jTabbedPane1.addTab("Egyptian", egyptianBoard);
 
@@ -128,6 +976,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain1.setPreferredSize(new java.awt.Dimension(90, 90));
 
         terrain1_img.setName("terrain1_img"); // NOI18N
+        terrain1_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain1_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain1Layout = new javax.swing.GroupLayout(terrain1);
         terrain1.setLayout(terrain1Layout);
@@ -143,9 +996,15 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain1_img.getAccessibleContext().setAccessibleName("terrain1_img");
         terrain1_img.getAccessibleContext().setAccessibleDescription("");
 
+        terrain2.setName(""); // NOI18N
         terrain2.setPreferredSize(new java.awt.Dimension(90, 90));
 
         terrain2_img.setName("terrain2_img"); // NOI18N
+        terrain2_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain2_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain2Layout = new javax.swing.GroupLayout(terrain2);
         terrain2.setLayout(terrain2Layout);
@@ -479,7 +1338,7 @@ public class BoardGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 784, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -494,18 +1353,20 @@ public class BoardGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void terrain1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain1_imgMouseClicked
+        System.out.println(evt.getComponent().getName());
+        //evt.getComponent().setVisible(false);
+    }//GEN-LAST:event_terrain1_imgMouseClicked
+
+    private void terrain2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain2_imgMouseClicked
+        System.out.println(evt.getComponent().getName());
+    }//GEN-LAST:event_terrain2_imgMouseClicked
+
     public void setTerrainTabLabelIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrain.getComponents();
         int count = 0;
         
         for (Component terrainComponent : terrainComponents) {
-            /*if (terrainComponent instanceof javax.swing.JButton) {
-                count--;
-            } else {
-                javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
-                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainList.get(count).getFileName())));
-            }*/
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
@@ -519,17 +1380,119 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
 
+    private int[] maxTerrainNorse = {3, 4, 3, 4, 1, 1};
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel desert_e1;
+    private javax.swing.JLabel desert_e1_img;
+    private javax.swing.JPanel desert_e2;
+    private javax.swing.JLabel desert_e2_img;
+    private javax.swing.JPanel desert_e3;
+    private javax.swing.JLabel desert_e3_img;
+    private javax.swing.JPanel desert_e4;
+    private javax.swing.JLabel desert_e4_img;
+    private javax.swing.JPanel desert_e5;
+    private javax.swing.JLabel desert_e5_img;
+    private javax.swing.JPanel desert_e6;
+    private javax.swing.JLabel desert_e6_img;
+    private javax.swing.JPanel desert_g1;
+    private javax.swing.JLabel desert_g1_img;
+    private javax.swing.JPanel desert_n1;
+    private javax.swing.JLabel desert_n1_img;
+    private javax.swing.JPanel egyptTerrain;
     private javax.swing.JPanel egyptianBoard;
     private javax.swing.JLabel egyptianBoardImg;
+    private javax.swing.JPanel fertile_e1;
+    private javax.swing.JLabel fertile_e1_img;
+    private javax.swing.JPanel fertile_e2;
+    private javax.swing.JLabel fertile_e2_img;
+    private javax.swing.JPanel fertile_e3;
+    private javax.swing.JLabel fertile_e3_img;
+    private javax.swing.JPanel fertile_e4;
+    private javax.swing.JLabel fertile_e4_img;
+    private javax.swing.JPanel fertile_e5;
+    private javax.swing.JLabel fertile_e5_img;
+    private javax.swing.JPanel fertile_g1;
+    private javax.swing.JLabel fertile_g1_img;
+    private javax.swing.JPanel fertile_g2;
+    private javax.swing.JLabel fertile_g2_img;
+    private javax.swing.JPanel fertile_g3;
+    private javax.swing.JLabel fertile_g3_img;
+    private javax.swing.JPanel fertile_n1;
+    private javax.swing.JLabel fertile_n1_img;
+    private javax.swing.JPanel fertile_n2;
+    private javax.swing.JLabel fertile_n2_img;
+    private javax.swing.JPanel fertile_n3;
+    private javax.swing.JLabel fertile_n3_img;
+    private javax.swing.JPanel forest_e1;
+    private javax.swing.JLabel forest_e1_img;
+    private javax.swing.JPanel forest_g1;
+    private javax.swing.JLabel forest_g1_img;
+    private javax.swing.JPanel forest_g2;
+    private javax.swing.JLabel forest_g2_img;
+    private javax.swing.JPanel forest_n1;
+    private javax.swing.JLabel forest_n1_img;
+    private javax.swing.JPanel forest_n2;
+    private javax.swing.JLabel forest_n2_img;
+    private javax.swing.JPanel forest_n3;
+    private javax.swing.JLabel forest_n3_img;
+    private javax.swing.JPanel forest_n4;
+    private javax.swing.JLabel forest_n4_img;
     private javax.swing.JPanel greekBoard;
     private javax.swing.JLabel greekBoardImg;
+    private javax.swing.JPanel greekTerrain;
+    private javax.swing.JPanel hills_e1;
+    private javax.swing.JLabel hills_e1_img;
+    private javax.swing.JPanel hills_e2;
+    private javax.swing.JLabel hills_e2_img;
+    private javax.swing.JPanel hills_g1;
+    private javax.swing.JLabel hills_g1_img;
+    private javax.swing.JPanel hills_g2;
+    private javax.swing.JLabel hills_g2_img;
+    private javax.swing.JPanel hills_g3;
+    private javax.swing.JLabel hills_g3_img;
+    private javax.swing.JPanel hills_g4;
+    private javax.swing.JLabel hills_g4_img;
+    private javax.swing.JPanel hills_g5;
+    private javax.swing.JLabel hills_g5_img;
+    private javax.swing.JPanel hills_g6;
+    private javax.swing.JLabel hills_g6_img;
+    private javax.swing.JPanel hills_g7;
+    private javax.swing.JLabel hills_g7_img;
+    private javax.swing.JPanel hills_g8;
+    private javax.swing.JLabel hills_g8_img;
+    private javax.swing.JPanel hills_n1;
+    private javax.swing.JLabel hills_n1_img;
+    private javax.swing.JPanel hills_n2;
+    private javax.swing.JLabel hills_n2_img;
+    private javax.swing.JPanel hills_n3;
+    private javax.swing.JLabel hills_n3_img;
     private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JPanel mountain_g1;
+    private javax.swing.JLabel mountain_g1_img;
+    private javax.swing.JPanel mountain_n1;
+    private javax.swing.JLabel mountain_n1_img;
+    private javax.swing.JPanel mountain_n2;
+    private javax.swing.JLabel mountain_n2_img;
+    private javax.swing.JPanel mountain_n3;
+    private javax.swing.JLabel mountain_n3_img;
+    private javax.swing.JPanel mountain_n4;
+    private javax.swing.JLabel mountain_n4_img;
     private javax.swing.JPanel norseBoard;
     private javax.swing.JLabel norseBoardImg;
+    private javax.swing.JPanel norseTerrain;
     private javax.swing.JPanel options;
+    private javax.swing.JPanel swamp_e1;
+    private javax.swing.JLabel swamp_e1_img;
+    private javax.swing.JPanel swamp_e2;
+    private javax.swing.JLabel swamp_e2_img;
+    private javax.swing.JPanel swamp_g1;
+    private javax.swing.JLabel swamp_g1_img;
+    private javax.swing.JPanel swamp_n1;
+    private javax.swing.JLabel swamp_n1_img;
     private javax.swing.JPanel terrain;
     private javax.swing.JPanel terrain1;
     private javax.swing.JPanel terrain10;
