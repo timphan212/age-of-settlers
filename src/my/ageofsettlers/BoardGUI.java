@@ -6,6 +6,7 @@
 package my.ageofsettlers;
 
 import java.awt.Component;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,15 +25,19 @@ public class BoardGUI extends javax.swing.JFrame {
     
     public BoardGUI(String boardType) {
         initComponents();
+        this.boardController = new BoardController();
         
         if(boardType.compareTo("Norse") == 0) {
             jTabbedPane1.setSelectedIndex(0);
+            this.boardController.setPlayerCulture(boardType);
         }
         else if(boardType.compareTo("Greek") == 0) {
             jTabbedPane1.setSelectedIndex(1);
+            this.boardController.setPlayerCulture(boardType);
         }
         else if(boardType.compareTo("Egyptian") == 0) {
             jTabbedPane1.setSelectedIndex(2);
+            this.boardController.setPlayerCulture(boardType);
         }
     }
     
@@ -736,6 +741,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        desert_e1_img.getAccessibleContext().setAccessibleDescription("");
+
         egyptTerrain.add(desert_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 90, 90));
 
         desert_e2.setOpaque(false);
@@ -1020,6 +1027,11 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain3.setPreferredSize(new java.awt.Dimension(90, 90));
 
         terrain3_img.setName("terrain3_img"); // NOI18N
+        terrain3_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain3_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain3Layout = new javax.swing.GroupLayout(terrain3);
         terrain3.setLayout(terrain3Layout);
@@ -1034,6 +1046,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain4.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain4_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain4_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain4Layout = new javax.swing.GroupLayout(terrain4);
         terrain4.setLayout(terrain4Layout);
         terrain4Layout.setHorizontalGroup(
@@ -1046,6 +1064,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain5.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain5_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain5_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain5Layout = new javax.swing.GroupLayout(terrain5);
         terrain5.setLayout(terrain5Layout);
@@ -1060,6 +1084,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain6.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain6_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain6_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain6Layout = new javax.swing.GroupLayout(terrain6);
         terrain6.setLayout(terrain6Layout);
         terrain6Layout.setHorizontalGroup(
@@ -1072,6 +1102,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain7.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain7_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain7_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain7Layout = new javax.swing.GroupLayout(terrain7);
         terrain7.setLayout(terrain7Layout);
@@ -1086,6 +1122,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain8.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain8_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain8_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain8Layout = new javax.swing.GroupLayout(terrain8);
         terrain8.setLayout(terrain8Layout);
         terrain8Layout.setHorizontalGroup(
@@ -1098,6 +1140,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain9.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain9_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain9_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain9Layout = new javax.swing.GroupLayout(terrain9);
         terrain9.setLayout(terrain9Layout);
@@ -1112,6 +1160,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain10.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain10_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain10_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain10Layout = new javax.swing.GroupLayout(terrain10);
         terrain10.setLayout(terrain10Layout);
         terrain10Layout.setHorizontalGroup(
@@ -1124,6 +1178,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain11.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain11_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain11_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain11Layout = new javax.swing.GroupLayout(terrain11);
         terrain11.setLayout(terrain11Layout);
@@ -1138,6 +1198,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain12.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain12_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain12_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain12Layout = new javax.swing.GroupLayout(terrain12);
         terrain12.setLayout(terrain12Layout);
         terrain12Layout.setHorizontalGroup(
@@ -1150,6 +1216,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain13.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain13_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain13_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain13Layout = new javax.swing.GroupLayout(terrain13);
         terrain13.setLayout(terrain13Layout);
@@ -1164,6 +1236,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain14.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain14_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain14_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain14Layout = new javax.swing.GroupLayout(terrain14);
         terrain14.setLayout(terrain14Layout);
         terrain14Layout.setHorizontalGroup(
@@ -1176,6 +1254,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain15.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain15_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain15_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain15Layout = new javax.swing.GroupLayout(terrain15);
         terrain15.setLayout(terrain15Layout);
@@ -1190,6 +1274,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain16.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain16_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain16_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain16Layout = new javax.swing.GroupLayout(terrain16);
         terrain16.setLayout(terrain16Layout);
         terrain16Layout.setHorizontalGroup(
@@ -1203,6 +1293,12 @@ public class BoardGUI extends javax.swing.JFrame {
 
         terrain17.setPreferredSize(new java.awt.Dimension(90, 90));
 
+        terrain17_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain17_imgMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout terrain17Layout = new javax.swing.GroupLayout(terrain17);
         terrain17.setLayout(terrain17Layout);
         terrain17Layout.setHorizontalGroup(
@@ -1215,6 +1311,12 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         terrain18.setPreferredSize(new java.awt.Dimension(90, 90));
+
+        terrain18_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terrain18_imgMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrain18Layout = new javax.swing.GroupLayout(terrain18);
         terrain18.setLayout(terrain18Layout);
@@ -1354,14 +1456,77 @@ public class BoardGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void terrain1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain1_imgMouseClicked
-        System.out.println(evt.getComponent().getName());
-        //evt.getComponent().setVisible(false);
+        this.boardController.terrainHandler(evt);
     }//GEN-LAST:event_terrain1_imgMouseClicked
 
     private void terrain2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain2_imgMouseClicked
-        System.out.println(evt.getComponent().getName());
+        this.boardController.terrainHandler(evt);
     }//GEN-LAST:event_terrain2_imgMouseClicked
 
+    private void terrain3_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain3_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain3_imgMouseClicked
+
+    private void terrain4_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain4_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain4_imgMouseClicked
+
+    private void terrain5_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain5_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain5_imgMouseClicked
+
+    private void terrain6_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain6_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain6_imgMouseClicked
+
+    private void terrain7_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain7_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain7_imgMouseClicked
+
+    private void terrain8_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain8_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain8_imgMouseClicked
+
+    private void terrain9_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain9_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain9_imgMouseClicked
+
+    private void terrain10_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain10_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain10_imgMouseClicked
+
+    private void terrain11_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain11_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain11_imgMouseClicked
+
+    private void terrain12_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain12_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain12_imgMouseClicked
+
+    private void terrain13_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain13_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain13_imgMouseClicked
+
+    private void terrain14_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain14_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain14_imgMouseClicked
+
+    private void terrain15_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain15_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain15_imgMouseClicked
+
+    private void terrain16_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain16_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain16_imgMouseClicked
+
+    private void terrain17_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain17_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain17_imgMouseClicked
+
+    private void terrain18_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain18_imgMouseClicked
+        this.boardController.terrainHandler(evt);
+    }//GEN-LAST:event_terrain18_imgMouseClicked
+    
     public void setTerrainTabLabelIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrain.getComponents();
         int count = 0;
@@ -1370,7 +1535,9 @@ public class BoardGUI extends javax.swing.JFrame {
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainList.get(count).getFileName())));
+                TerrainTiles terrainSetup = terrainList.get(count);
+                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainSetup.getFileName())));
+                label.getAccessibleContext().setAccessibleDescription(Integer.toString(terrainSetup.getIndex()));
             } 
             else {
                 count--;
@@ -1380,7 +1547,7 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
 
-    private int[] maxTerrainNorse = {3, 4, 3, 4, 1, 1};
+    private BoardController boardController;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel desert_e1;
     private javax.swing.JLabel desert_e1_img;
@@ -1467,8 +1634,6 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JPanel hills_n3;
     private javax.swing.JLabel hills_n3_img;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel mountain_g1;

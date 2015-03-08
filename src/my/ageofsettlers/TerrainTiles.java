@@ -14,13 +14,15 @@ package my.ageofsettlers;
 public class TerrainTiles {
    private String terrainType;
    private String fileName;
+   private int index;
    private int tileCount;
    private int foodCount;
    private int favorCount;
    private int woodCount;
    private int goldCount;
    
-   public TerrainTiles(String type, String fileName, int tile, int food, int favor, int wood, int gold) {
+   public TerrainTiles(int ndx, String type, String fileName, int tile, int food, int favor, int wood, int gold) {
+       this.index = ndx;
        this.terrainType = type;
        this.fileName = fileName;
        this.tileCount = tile;
@@ -85,4 +87,14 @@ public class TerrainTiles {
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+    
+    
 }

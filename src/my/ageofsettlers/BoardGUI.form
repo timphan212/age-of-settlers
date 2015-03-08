@@ -1103,6 +1103,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1751,6 +1754,9 @@
                   <Properties>
                     <Property name="name" type="java.lang.String" value="terrain3_img" noResource="true"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain3_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1775,6 +1781,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain4_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain4_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1799,6 +1808,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain5_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain5_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1823,6 +1835,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain6_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain6_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1847,6 +1862,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain7_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain7_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1871,6 +1889,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain8_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain8_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1895,6 +1916,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain9_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain9_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1919,6 +1943,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain10_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain10_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1943,6 +1970,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain11_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain11_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1967,6 +1997,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain12_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain12_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1991,6 +2024,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain13_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain13_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -2015,6 +2051,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain14_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain14_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -2039,6 +2078,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain15_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain15_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -2063,6 +2105,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain16_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain16_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -2087,6 +2132,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain17_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain17_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -2111,6 +2159,9 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="terrain18_img">
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="terrain18_imgMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
