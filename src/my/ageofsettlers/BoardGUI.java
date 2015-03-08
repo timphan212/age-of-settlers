@@ -219,6 +219,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_n1_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         norseTerrain.add(fertile_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, -1, -1));
 
         mountain_n1.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -234,6 +236,8 @@ public class BoardGUI extends javax.swing.JFrame {
             mountain_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(mountain_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        mountain_n1_img.getAccessibleContext().setAccessibleDescription("mountain");
 
         norseTerrain.add(mountain_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 5, 90, -1));
 
@@ -251,6 +255,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(mountain_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        mountain_n2_img.getAccessibleContext().setAccessibleDescription("mountain");
+
         norseTerrain.add(mountain_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 5, -1, -1));
 
         mountain_n3.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -266,6 +272,8 @@ public class BoardGUI extends javax.swing.JFrame {
             mountain_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(mountain_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        mountain_n3_img.getAccessibleContext().setAccessibleDescription("mountain");
 
         norseTerrain.add(mountain_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 5, -1, -1));
 
@@ -283,6 +291,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_n2_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         norseTerrain.add(fertile_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, -1, -1));
 
         forest_n1.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -298,6 +308,8 @@ public class BoardGUI extends javax.swing.JFrame {
             forest_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(forest_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        forest_n1_img.getAccessibleContext().setAccessibleDescription("forest");
 
         norseTerrain.add(forest_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 95, -1, -1));
 
@@ -315,6 +327,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(hills_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        hills_n1_img.getAccessibleContext().setAccessibleDescription("hill");
+
         norseTerrain.add(hills_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 95, -1, -1));
 
         mountain_n4.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -330,6 +344,8 @@ public class BoardGUI extends javax.swing.JFrame {
             mountain_n4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(mountain_n4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        mountain_n4_img.getAccessibleContext().setAccessibleDescription("mountain");
 
         norseTerrain.add(mountain_n4, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 95, -1, -1));
 
@@ -347,6 +363,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(hills_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        hills_n2_img.getAccessibleContext().setAccessibleDescription("hill");
+
         norseTerrain.add(hills_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 185, -1, -1));
 
         swamp_n1.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -362,6 +380,8 @@ public class BoardGUI extends javax.swing.JFrame {
             swamp_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(swamp_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        swamp_n1_img.getAccessibleContext().setAccessibleDescription("swamp");
 
         norseTerrain.add(swamp_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 185, -1, -1));
 
@@ -379,6 +399,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(forest_n2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        forest_n2_img.getAccessibleContext().setAccessibleDescription("forest");
+
         norseTerrain.add(forest_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, -1));
 
         hills_n3.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -394,6 +416,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_n3_img.getAccessibleContext().setAccessibleDescription("hill");
 
         norseTerrain.add(hills_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 185, -1, -1));
 
@@ -412,6 +436,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        desert_n1_img.getAccessibleContext().setAccessibleDescription("desert");
+
         norseTerrain.add(desert_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 275, -1, -1));
 
         forest_n3.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -427,6 +453,8 @@ public class BoardGUI extends javax.swing.JFrame {
             forest_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(forest_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        forest_n3_img.getAccessibleContext().setAccessibleDescription("forest");
 
         norseTerrain.add(forest_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 275, -1, -1));
 
@@ -444,6 +472,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(forest_n4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        forest_n4_img.getAccessibleContext().setAccessibleDescription("forest");
+
         norseTerrain.add(forest_n4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 275, -1, -1));
 
         fertile_n3.setMinimumSize(new java.awt.Dimension(90, 90));
@@ -459,6 +489,8 @@ public class BoardGUI extends javax.swing.JFrame {
             fertile_n3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(fertile_n3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        fertile_n3_img.getAccessibleContext().setAccessibleDescription("fertile");
 
         norseTerrain.add(fertile_n3, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 275, -1, -1));
 
@@ -487,6 +519,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_g1_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         greekTerrain.add(fertile_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, -1, -1));
 
         fertile_g2.setOpaque(false);
@@ -501,6 +535,8 @@ public class BoardGUI extends javax.swing.JFrame {
             fertile_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(fertile_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        fertile_g2_img.getAccessibleContext().setAccessibleDescription("fertile");
 
         greekTerrain.add(fertile_g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 5, -1, -1));
 
@@ -517,6 +553,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(forest_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        forest_g1_img.getAccessibleContext().setAccessibleDescription("forest");
+
         greekTerrain.add(forest_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 5, -1, -1));
 
         swamp_g1.setOpaque(false);
@@ -531,6 +569,8 @@ public class BoardGUI extends javax.swing.JFrame {
             swamp_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(swamp_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        swamp_g1_img.getAccessibleContext().setAccessibleDescription("swamp");
 
         greekTerrain.add(swamp_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 5, -1, -1));
 
@@ -547,6 +587,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(hills_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        hills_g1_img.getAccessibleContext().setAccessibleDescription("hill");
+
         greekTerrain.add(hills_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, -1, -1));
 
         mountain_g1.setOpaque(false);
@@ -561,6 +603,8 @@ public class BoardGUI extends javax.swing.JFrame {
             mountain_g1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(mountain_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        mountain_g1_img.getAccessibleContext().setAccessibleDescription("mountain");
 
         greekTerrain.add(mountain_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 95, -1, -1));
 
@@ -577,6 +621,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_g3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_g3_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         greekTerrain.add(fertile_g3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 95, -1, -1));
 
         forest_g2.setOpaque(false);
@@ -591,6 +637,8 @@ public class BoardGUI extends javax.swing.JFrame {
             forest_g2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(forest_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        forest_g2_img.getAccessibleContext().setAccessibleDescription("forest");
 
         greekTerrain.add(forest_g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 95, -1, -1));
 
@@ -607,6 +655,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(hills_g2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        hills_g2_img.getAccessibleContext().setAccessibleDescription("hill");
+
         greekTerrain.add(hills_g2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 185, -1, -1));
 
         hills_g3.setOpaque(false);
@@ -621,6 +671,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_g3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_g3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_g3_img.getAccessibleContext().setAccessibleDescription("hill");
 
         greekTerrain.add(hills_g3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 185, -1, -1));
 
@@ -637,6 +689,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(hills_g4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        hills_g4_img.getAccessibleContext().setAccessibleDescription("hill");
+
         greekTerrain.add(hills_g4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 185, -1, -1));
 
         hills_g5.setOpaque(false);
@@ -651,6 +705,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_g5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_g5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_g5_img.getAccessibleContext().setAccessibleDescription("hill");
 
         greekTerrain.add(hills_g5, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 185, -1, -1));
 
@@ -667,6 +723,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_g1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        desert_g1_img.getAccessibleContext().setAccessibleDescription("desert");
+
         greekTerrain.add(desert_g1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 275, -1, -1));
 
         hills_g6.setOpaque(false);
@@ -681,6 +739,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_g6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_g6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_g6_img.getAccessibleContext().setAccessibleDescription("hill");
 
         greekTerrain.add(hills_g6, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 275, -1, -1));
 
@@ -697,6 +757,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(hills_g7_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        hills_g7_img.getAccessibleContext().setAccessibleDescription("hill");
+
         greekTerrain.add(hills_g7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 275, -1, -1));
 
         hills_g8.setOpaque(false);
@@ -711,6 +773,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_g8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_g8_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_g8_img.getAccessibleContext().setAccessibleDescription("hill");
 
         greekTerrain.add(hills_g8, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 275, -1, -1));
 
@@ -741,7 +805,7 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        desert_e1_img.getAccessibleContext().setAccessibleDescription("");
+        desert_e1_img.getAccessibleContext().setAccessibleDescription("desert");
 
         egyptTerrain.add(desert_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 90, 90));
 
@@ -758,6 +822,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        desert_e2_img.getAccessibleContext().setAccessibleDescription("desert");
+
         egyptTerrain.add(desert_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 15, -1, -1));
 
         swamp_e1.setOpaque(false);
@@ -772,6 +838,8 @@ public class BoardGUI extends javax.swing.JFrame {
             swamp_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(swamp_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        swamp_e1_img.getAccessibleContext().setAccessibleDescription("swamp");
 
         egyptTerrain.add(swamp_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 15, -1, -1));
 
@@ -788,6 +856,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(swamp_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        swamp_e2_img.getAccessibleContext().setAccessibleDescription("swamp");
+
         egyptTerrain.add(swamp_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 15, -1, -1));
 
         forest_e1.setOpaque(false);
@@ -802,6 +872,8 @@ public class BoardGUI extends javax.swing.JFrame {
             forest_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(forest_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        forest_e1_img.getAccessibleContext().setAccessibleDescription("forest");
 
         egyptTerrain.add(forest_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, -1, -1));
 
@@ -818,6 +890,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_e3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        desert_e3_img.getAccessibleContext().setAccessibleDescription("desert");
+
         egyptTerrain.add(desert_e3, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 105, -1, -1));
 
         fertile_e1.setOpaque(false);
@@ -833,6 +907,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_e1_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         egyptTerrain.add(fertile_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 105, -1, -1));
 
         fertile_e2.setOpaque(false);
@@ -847,6 +923,8 @@ public class BoardGUI extends javax.swing.JFrame {
             fertile_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(fertile_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        fertile_e2_img.getAccessibleContext().setAccessibleDescription("fertile");
 
         egyptTerrain.add(fertile_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 105, -1, -1));
 
@@ -864,6 +942,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_e4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        desert_e4_img.getAccessibleContext().setAccessibleDescription("desert");
+
         egyptTerrain.add(desert_e4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 195, -1, -1));
 
         desert_e5.setOpaque(false);
@@ -878,6 +958,8 @@ public class BoardGUI extends javax.swing.JFrame {
             desert_e5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(desert_e5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        desert_e5_img.getAccessibleContext().setAccessibleDescription("desert");
 
         egyptTerrain.add(desert_e5, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 195, -1, -1));
 
@@ -894,6 +976,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_e3_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_e3_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         egyptTerrain.add(fertile_e3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 195, -1, -1));
 
         fertile_e4.setOpaque(false);
@@ -908,6 +992,8 @@ public class BoardGUI extends javax.swing.JFrame {
             fertile_e4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(fertile_e4_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        fertile_e4_img.getAccessibleContext().setAccessibleDescription("fertile");
 
         egyptTerrain.add(fertile_e4, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 195, -1, -1));
 
@@ -925,6 +1011,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(desert_e6_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        desert_e6_img.getAccessibleContext().setAccessibleDescription("desert");
+
         egyptTerrain.add(desert_e6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 285, -1, -1));
 
         hills_e1.setOpaque(false);
@@ -939,6 +1027,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_e1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_e1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_e1_img.getAccessibleContext().setAccessibleDescription("hill");
 
         egyptTerrain.add(hills_e1, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 285, -1, -1));
 
@@ -955,6 +1045,8 @@ public class BoardGUI extends javax.swing.JFrame {
             .addComponent(fertile_e5_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
+        fertile_e5_img.getAccessibleContext().setAccessibleDescription("fertile");
+
         egyptTerrain.add(fertile_e5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 285, -1, -1));
 
         hills_e2.setOpaque(false);
@@ -969,6 +1061,8 @@ public class BoardGUI extends javax.swing.JFrame {
             hills_e2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(hills_e2_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
+
+        hills_e2_img.getAccessibleContext().setAccessibleDescription("hill");
 
         egyptTerrain.add(hills_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 285, -1, -1));
 
@@ -1457,75 +1551,128 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain1_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain1_imgMouseClicked
 
     private void terrain2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain2_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain2_imgMouseClicked
 
     private void terrain3_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain3_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain3_imgMouseClicked
 
     private void terrain4_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain4_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain4_imgMouseClicked
 
     private void terrain5_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain5_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain5_imgMouseClicked
 
     private void terrain6_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain6_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain6_imgMouseClicked
 
     private void terrain7_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain7_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain7_imgMouseClicked
 
     private void terrain8_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain8_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain8_imgMouseClicked
 
     private void terrain9_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain9_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain9_imgMouseClicked
 
     private void terrain10_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain10_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain10_imgMouseClicked
 
     private void terrain11_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain11_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain11_imgMouseClicked
 
     private void terrain12_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain12_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain12_imgMouseClicked
 
     private void terrain13_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain13_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain13_imgMouseClicked
 
     private void terrain14_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain14_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain14_imgMouseClicked
 
     private void terrain15_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain15_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain15_imgMouseClicked
 
     private void terrain16_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain16_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain16_imgMouseClicked
 
     private void terrain17_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain17_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain17_imgMouseClicked
 
     private void terrain18_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain18_imgMouseClicked
         this.boardController.terrainHandler(evt);
+        this.selectCultureTerrain(evt);
     }//GEN-LAST:event_terrain18_imgMouseClicked
+    
+    public void selectCultureTerrain(java.awt.event.MouseEvent evt) {
+        String index = evt.getComponent().getAccessibleContext().getAccessibleDescription();
+        TerrainTiles selectedTerrain = boardController.getTerrainTile(Integer.parseInt(index));
+        
+        if(boardController.getPlayerCulture().compareTo("Norse") == 0) {
+            Component[] norseTerrainBoard = norseTerrain.getComponents();
+            this.drawCultureTerrain(norseTerrainBoard, selectedTerrain);            
+        }
+        else if(boardController.getPlayerCulture().compareTo("Greek") == 0) {
+            Component[] greekTerrainBoard = greekTerrain.getComponents();
+            this.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+        }
+        else if(boardController.getPlayerCulture().compareTo("Egyptian") == 0) {
+            Component[] egyptianTerrainBoard = egyptTerrain.getComponents();
+            this.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+        }
+    }
+    
+    public void drawCultureTerrain(Component[] cultureTerrainBoard, TerrainTiles selectedTerrain) {
+        for(Component terrainComponent : cultureTerrainBoard) {
+                if(terrainComponent instanceof javax.swing.JPanel) {
+                    javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
+                    javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                    
+                    if(label.getAccessibleContext().getAccessibleDescription() != null) {
+                        if(selectedTerrain.getTerrainType().compareTo(label.getAccessibleContext().getAccessibleDescription()) == 0) {
+                            label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + selectedTerrain.getFileName())));
+                            label.getAccessibleContext().setAccessibleDescription("");
+                            return;
+                        }
+                    }
+                }
+            }
+    }
     
     public void setTerrainTabLabelIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrain.getComponents();

@@ -99,6 +99,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_n1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -129,6 +132,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="mountain_n1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="mountain"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -159,6 +165,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="mountain_n2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="mountain"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -189,6 +198,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="mountain_n3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="mountain"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -219,6 +231,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_n2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -249,6 +264,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_n1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -279,6 +297,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_n1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -309,6 +330,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="mountain_n4_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="mountain"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -339,6 +363,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_n2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -369,6 +396,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="swamp_n1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="swamp"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -399,6 +429,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_n2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -429,6 +462,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_n3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -462,6 +498,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_n1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -492,6 +531,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_n3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -522,6 +564,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_n4_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -552,6 +597,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_n3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -622,6 +670,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_g1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -649,6 +700,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_g2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -676,6 +730,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_g1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -703,6 +760,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="swamp_g1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="swamp"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -730,6 +790,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -757,6 +820,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="mountain_g1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="mountain"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -784,6 +850,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_g3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -811,6 +880,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_g2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -838,6 +910,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -865,6 +940,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -892,6 +970,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g4_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -919,6 +1000,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g5_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -946,6 +1030,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_g1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -973,6 +1060,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g6_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1000,6 +1090,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g7_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1027,6 +1120,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_g8_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1104,7 +1200,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e1_img">
                       <AccessibilityProperties>
-                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
                       </AccessibilityProperties>
                     </Component>
                   </SubComponents>
@@ -1133,6 +1229,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1160,6 +1259,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="swamp_e1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="swamp"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1187,6 +1289,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="swamp_e2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="swamp"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1214,6 +1319,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="forest_e1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="forest"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1241,6 +1349,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1268,6 +1379,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_e1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1295,6 +1409,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_e2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1323,6 +1440,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e4_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1350,6 +1470,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e5_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1377,6 +1500,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_e3_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1404,6 +1530,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_e4_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1432,6 +1561,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="desert_e6_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="desert"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1459,6 +1591,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_e1_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1486,6 +1621,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="fertile_e5_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="fertile"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1513,6 +1651,9 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="hills_e2_img">
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="hill"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
