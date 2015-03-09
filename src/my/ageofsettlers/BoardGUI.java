@@ -1424,6 +1424,11 @@ public class BoardGUI extends javax.swing.JFrame {
         );
 
         jButton1.setText("Pass");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout terrainLayout = new javax.swing.GroupLayout(terrain);
         terrain.setLayout(terrainLayout);
@@ -1552,92 +1557,144 @@ public class BoardGUI extends javax.swing.JFrame {
     private void terrain1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain1_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain1_imgMouseClicked
 
     private void terrain2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain2_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain2_imgMouseClicked
 
     private void terrain3_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain3_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain3_imgMouseClicked
 
     private void terrain4_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain4_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain4_imgMouseClicked
 
     private void terrain5_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain5_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain5_imgMouseClicked
 
     private void terrain6_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain6_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain6_imgMouseClicked
 
     private void terrain7_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain7_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain7_imgMouseClicked
 
     private void terrain8_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain8_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain8_imgMouseClicked
 
     private void terrain9_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain9_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain9_imgMouseClicked
 
     private void terrain10_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain10_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain10_imgMouseClicked
 
     private void terrain11_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain11_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain11_imgMouseClicked
 
     private void terrain12_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain12_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain12_imgMouseClicked
 
     private void terrain13_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain13_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain13_imgMouseClicked
 
     private void terrain14_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain14_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain14_imgMouseClicked
 
     private void terrain15_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain15_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain15_imgMouseClicked
 
     private void terrain16_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain16_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain16_imgMouseClicked
 
     private void terrain17_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain17_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain17_imgMouseClicked
 
     private void terrain18_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain18_imgMouseClicked
         this.boardController.terrainHandler(evt);
         this.selectCultureTerrain(evt);
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
     }//GEN-LAST:event_terrain18_imgMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        boardController.incrementPlayerTurnCount();
+        callAIHandler();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    private void callAIHandler() {
+        if(boardController.getPlayerTurnCount() == 6) {
+            jTabbedPane2.remove(0);
+            ReadyGUI ready = new ReadyGUI();
+            ready.setVisible(true);
+        }
+        else if(boardController.getPlayerTurnCount() % 2 != 0) {
+            boardController.aiTurnHandler(jTabbedPane2, terrain.getComponents(), norseTerrain.getComponents(), greekTerrain.getComponents(), egyptTerrain.getComponents());
+        }
+    }
     
     public void selectCultureTerrain(java.awt.event.MouseEvent evt) {
         String index = evt.getComponent().getAccessibleContext().getAccessibleDescription();
