@@ -176,7 +176,7 @@ public class BoardController {
         return 0;
     }
     
-    public void terrainHandler(java.awt.event.MouseEvent evt) {
+    public boolean terrainHandler(java.awt.event.MouseEvent evt) {
         String index = evt.getComponent().getAccessibleContext().getAccessibleDescription();
         TerrainTiles selectedTerrain = getTerrainTile(Integer.parseInt(index));
         boolean terrainSuccess = checkMaxTerrain(selectedTerrain);
@@ -184,6 +184,8 @@ public class BoardController {
         if(terrainSuccess == true) {
             evt.getComponent().setVisible(false);
         }
+        
+        return terrainSuccess;
     }
     
     private boolean checkMaxTerrain(TerrainTiles terrain) {
