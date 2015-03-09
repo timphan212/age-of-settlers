@@ -6,6 +6,7 @@
 
 package my.ageofsettlers;
 
+import java.awt.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -23,7 +24,7 @@ public class BoardController {
     private final int[] maxTerrainNorse = {3, 4, 3, 4, 1, 1};
     private final int[] maxTerrainGreek = {3, 2, 8, 1, 1, 1};
     private final int[] maxTerrainEgyptian = {5, 1, 2, 0, 6, 2};
-    
+    private int playerTurnCount = 0;
     /**
      * @param args the command line arguments
      */
@@ -241,9 +242,95 @@ public class BoardController {
         error.setVisible(true);
     }
     
-    private static void playerTurn() {
-        int count = 0;
+    public void aiTurnHandler(javax.swing.JTabbedPane tabpanel, Component[] terrainComponents, Component[] norseTerrain, Component[] greekTerrain, Component[] egyptianTerrain) {
+        List<String> aiPlayers = findAIPlayers();
+
+        for(int i = 0; i < 2; i++) {
+            if(aiPlayers.get(i).compareTo("norse") == 0) {
+                findAITerrain(norseTerrain, terrainComponents, norseTerrains);
+            }
+            else if(aiPlayers.get(i).compareTo("greek") == 0) {
+                findAITerrain(greekTerrain, terrainComponents, greekTerrains);
+            }
+            else if(aiPlayers.get(i).compareTo("egyptian") == 0) {
+                findAITerrain(egyptianTerrain, terrainComponents, egyptianTerrains);
+            }
+        }
+        for(int j = 1; j >= 0; j--) {
+            if(aiPlayers.get(j).compareTo("norse") == 0) {
+                findAITerrain(norseTerrain, terrainComponents, norseTerrains);
+            }
+            else if(aiPlayers.get(j).compareTo("greek") == 0) {
+                findAITerrain(greekTerrain, terrainComponents, greekTerrains);
+            }
+            else if(aiPlayers.get(j).compareTo("egyptian") == 0) {
+                findAITerrain(egyptianTerrain, terrainComponents, egyptianTerrains);
+            }
+        }
     }
+    
+    private List<String> findAIPlayers() {
+        List<String> aiList = new ArrayList<>();
+        
+        if(playerCulture.compareTo("Norse") == 0) {
+            aiList.add("greek");
+            aiList.add("egyptian");
+        }
+        else if(playerCulture.compareTo("Greek") == 0) {
+            aiList.add("norse");
+            aiList.add("egyptian");
+        }
+        else if(playerCulture.compareTo("Egyptian") == 0) {
+            aiList.add("norse");
+            aiList.add("greek");
+        }
+        
+        return aiList;
+    }
+    
+    private void findAITerrain(Component[] boardTerrains, Component[] tabTerrains, List<TerrainTiles> cultureTerrains) {
+        for(Component tabTerrain : tabTerrains) {
+            if(tabTerrain instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) tabTerrain;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                if(label.isVisible()) {
+                    TerrainTiles tabTile = terrainList.get(Integer.parseInt(label.getAccessibleContext().getAccessibleDescription()));
+                    for(Component boardTerrain : boardTerrains) {
+                        javax.swing.JPanel panel2 = (javax.swing.JPanel) boardTerrain;
+                        javax.swing.JLabel label2 = (javax.swing.JLabel) panel2.getComponent(0);
+                        if(label2.getAccessibleContext().getAccessibleDescription().compareTo(tabTile.getTerrainType()) == 0) {
+                            cultureTerrains.add(tabTile);
+                            label.setVisible(false);
+                            label2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + tabTile.getFileName())));
+                            label2.getAccessibleContext().setAccessibleDescription("");
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+   /* private void placeAITerrain(TerrainTiles tabTile, int[] arr, javax.swing.JLabel tabTerrain, javax.swing.JLabel boardTerrain) {
+        if(tabTile.getTerrainType().compareTo("fertile") == 0) {
+            
+        }
+        else if(tabTile.getTerrainType().compareTo("forest") == 0) {
+            
+        }
+        else if(tabTile.getTerrainType().compareTo("hill") == 0) {
+            
+        }
+        else if(tabTile.getTerrainType().compareTo("mountain") == 0) {
+            
+        }
+        else if(tabTile.getTerrainType().compareTo("desert") == 0) {
+            
+        }
+        else if(tabTile.getTerrainType().compareTo("swamp") == 0) {
+            
+        }
+    }*/
     
     public TerrainTiles getTerrainTile(int index) {
         return terrainList.get(index);
@@ -279,5 +366,13 @@ public class BoardController {
 
     public void setPlayerCulture(String playerCulture) {
         this.playerCulture = playerCulture;
+    }
+
+    public int getPlayerTurnCount() {
+        return this.playerTurnCount;
+    }
+    
+    public void incrementPlayerTurnCount() {
+        this.playerTurnCount += 1;
     }
 }
