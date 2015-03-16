@@ -50,6 +50,7 @@ public class BoardGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         norseBoard = new javax.swing.JPanel();
         norseTerrain = new javax.swing.JPanel();
@@ -196,6 +197,10 @@ public class BoardGUI extends javax.swing.JFrame {
         terrain18_img = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         options = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+
+        jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 600));
@@ -1521,15 +1526,39 @@ public class BoardGUI extends javax.swing.JFrame {
         jTabbedPane2.addTab("Terrain", terrain);
         terrain.getAccessibleContext().setAccessibleName("terrain");
 
+        jButton3.setText("Victory Cards");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton3)
+                .addContainerGap(198, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jButton3)
+                .addContainerGap(694, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout optionsLayout = new javax.swing.GroupLayout(options);
         options.setLayout(optionsLayout);
         optionsLayout.setHorizontalGroup(
             optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 306, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         optionsLayout.setVerticalGroup(
             optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Options", options);
@@ -1720,6 +1749,13 @@ public class BoardGUI extends javax.swing.JFrame {
         boardController.incrementPlayerTurnCount();
         callAIHandler();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        victoryCardGUI victoryCard = new victoryCardGUI();
+        //should hide text and disable clicking
+        victoryCard.setVisible(true);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
     
     private void callAIHandler() {
         if(boardController.getPlayerTurnCount() == 6) {
@@ -1874,6 +1910,9 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JPanel hills_n3;
     private javax.swing.JLabel hills_n3_img;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel mountain_g1;

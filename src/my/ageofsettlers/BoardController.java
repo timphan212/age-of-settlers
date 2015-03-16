@@ -25,6 +25,7 @@ public class BoardController {
     private final int[] maxTerrainGreek = {3, 2, 8, 1, 1, 1};
     private final int[] maxTerrainEgyptian = {5, 1, 2, 0, 6, 2};
     private int playerTurnCount = 0;
+    private List<victoryCard> victoryCardList = new ArrayList<>();
     /**
      * @param args the command line arguments
      */
@@ -36,6 +37,11 @@ public class BoardController {
     public static void boardSetup(BoardGUI board) {
         terrainList = terrainSetup();
         terrainList = randomTerrainTiles(terrainList, board);
+    }
+    
+    public static void setupRounds() {
+        victoryCardGUI victoryRounds = new victoryCardGUI();
+        victoryRounds.setVisible(true);
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -85,7 +91,7 @@ public class BoardController {
     }
     
     private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList, BoardGUI board) {
-        List<TerrainTiles> randomTerrain = new ArrayList<>();
+        List<TerrainTiles> randomTerrain = new ArrayList<>(); //select random tiles
         int count = 0, num = 0, ndx = 0;
         
         for(int i = 0; i < 18; i++) {
