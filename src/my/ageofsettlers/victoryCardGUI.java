@@ -343,9 +343,6 @@ public class victoryCardGUI extends javax.swing.JFrame {
         return this.jTextField1;
     }
     
-    public void setBoardController(BoardController boardcontroller) {
-        this.board = boardcontroller;
-    }
     /**
      * @param args the command line arguments
      */
