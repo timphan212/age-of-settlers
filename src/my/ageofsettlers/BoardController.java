@@ -385,4 +385,9 @@ public class BoardController {
     public void incrementPlayerTurnCount() {
         this.playerTurnCount += 1;
     }
+
+    void saveDetails() {
+        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
