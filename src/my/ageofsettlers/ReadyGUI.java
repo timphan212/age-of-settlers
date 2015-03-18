@@ -18,7 +18,11 @@ public class ReadyGUI extends javax.swing.JFrame {
     public ReadyGUI() {
         initComponents();
     }
-
+    
+    public ReadyGUI(BoardController board) {
+        initComponents();
+        this.board = board;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -89,8 +93,8 @@ public class ReadyGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
-        BoardController board = new BoardController();
-        board.setupRounds();
+        victoryCardGUI vcGUI = new victoryCardGUI(board);
+        vcGUI.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -128,6 +132,7 @@ public class ReadyGUI extends javax.swing.JFrame {
         });
     }
 
+    private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;

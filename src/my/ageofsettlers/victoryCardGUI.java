@@ -17,7 +17,11 @@ public class victoryCardGUI extends javax.swing.JFrame {
     public victoryCardGUI() {
         initComponents();
     }
-
+    
+    public victoryCardGUI(BoardController board) {
+        initComponents();
+        this.board = board;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -332,11 +336,15 @@ public class victoryCardGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        
-    }//GEN-LAST:event_jLabel1MouseClicked
 
+    }//GEN-LAST:event_jLabel1MouseClicked
+    
+    public javax.swing.JTextField getTextField() {
+        return this.jTextField1;
+    }
+    
     public void setBoardController(BoardController boardcontroller) {
-        this.boardController = boardcontroller;
+        this.board = boardcontroller;
     }
     /**
      * @param args the command line arguments
@@ -373,7 +381,7 @@ public class victoryCardGUI extends javax.swing.JFrame {
         });
     }
 
-    private BoardController boardController;
+    private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Card11;
     private javax.swing.JLabel Card11_image;

@@ -26,6 +26,7 @@ public class BoardController {
     private final int[] maxTerrainEgyptian = {5, 1, 2, 0, 6, 2};
     private int playerTurnCount = 0;
     private List<victoryCard> victoryCardList = new ArrayList<>();
+    
     /**
      * @param args the command line arguments
      */
@@ -41,6 +42,7 @@ public class BoardController {
     
     public static void setupRounds() {
         victoryCardGUI victoryRounds = new victoryCardGUI();
+        victoryRounds.getTextField().setVisible(true);
         victoryRounds.setVisible(true);
     }
     
