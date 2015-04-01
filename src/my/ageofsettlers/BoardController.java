@@ -8,6 +8,7 @@ package my.ageofsettlers;
 
 import java.awt.Component;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -17,15 +18,12 @@ import java.util.Random;
  */
 public class BoardController {
     private static List<TerrainTiles> terrainList = new ArrayList<>();
-    private List<TerrainTiles> norseTerrains = new ArrayList<>();
-    private List<TerrainTiles> greekTerrains = new ArrayList<>();
-    private List<TerrainTiles> egyptianTerrains = new ArrayList<>();
     private String playerCulture;
-    private final int[] maxTerrainNorse = {3, 4, 3, 4, 1, 1};
-    private final int[] maxTerrainGreek = {3, 2, 8, 1, 1, 1};
-    private final int[] maxTerrainEgyptian = {5, 1, 2, 0, 6, 2};
     private int playerTurnCount = 0;
     private List<victoryCard> victoryCardList = new ArrayList<>();
+    private static Norse norsePlayer;
+    private static Egyptian egyptianPlayer;
+    private static Greek greekPlayer;
     
     /**
      * @param args the command line arguments
@@ -36,6 +34,9 @@ public class BoardController {
     }
     
     public static void boardSetup(BoardGUI board) {
+        norsePlayer = Norse.getInstance();
+        egyptianPlayer = Egyptian.getInstance();
+        greekPlayer = Greek.getInstance();
         terrainList = terrainSetup();
         terrainList = randomTerrainTiles(terrainList, board);
     }
@@ -201,16 +202,16 @@ public class BoardController {
         int[] arr = {};
         
         if(this.playerCulture.compareTo("Norse") == 0) {
-            cultureTerrain = this.getNorseTerrains();
-            arr = this.maxTerrainNorse;
+            cultureTerrain = norsePlayer.getNorseTerrains();
+            arr = norsePlayer.getMaxTerrains();
         }
         else if(this.playerCulture.compareTo("Greek") == 0) {
-            cultureTerrain = this.getGreekTerrains();
-            arr = this.maxTerrainGreek;
+            cultureTerrain = greekPlayer.getGreekTerrains();
+            arr = greekPlayer.getMaxTerrains();
         }
         else if(this.playerCulture.compareTo("Egyptian") == 0) {
-            cultureTerrain = this.getEgyptianTerrains();
-            arr = this.maxTerrainEgyptian;
+            cultureTerrain = egyptianPlayer.getEgyptianTerrains();
+            arr = egyptianPlayer.getMaxTerrains();
         }
         
         if(terrain.getTerrainType().compareTo("fertile") == 0) {
@@ -257,24 +258,24 @@ public class BoardController {
 
         for(int i = 0; i < 2; i++) {
             if(aiPlayers.get(i).compareTo("norse") == 0) {
-                findAITerrain(norseTerrain, terrainComponents, norseTerrains);
+                findAITerrain(norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
             }
             else if(aiPlayers.get(i).compareTo("greek") == 0) {
-                findAITerrain(greekTerrain, terrainComponents, greekTerrains);
+                findAITerrain(greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
             }
             else if(aiPlayers.get(i).compareTo("egyptian") == 0) {
-                findAITerrain(egyptianTerrain, terrainComponents, egyptianTerrains);
+                findAITerrain(egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
         for(int j = 1; j >= 0; j--) {
             if(aiPlayers.get(j).compareTo("norse") == 0) {
-                findAITerrain(norseTerrain, terrainComponents, norseTerrains);
+                findAITerrain(norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
             }
             else if(aiPlayers.get(j).compareTo("greek") == 0) {
-                findAITerrain(greekTerrain, terrainComponents, greekTerrains);
+                findAITerrain(greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
             }
             else if(aiPlayers.get(j).compareTo("egyptian") == 0) {
-                findAITerrain(egyptianTerrain, terrainComponents, egyptianTerrains);
+                findAITerrain(egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
     }
@@ -321,53 +322,8 @@ public class BoardController {
         }
     }
     
-   /* private void placeAITerrain(TerrainTiles tabTile, int[] arr, javax.swing.JLabel tabTerrain, javax.swing.JLabel boardTerrain) {
-        if(tabTile.getTerrainType().compareTo("fertile") == 0) {
-            
-        }
-        else if(tabTile.getTerrainType().compareTo("forest") == 0) {
-            
-        }
-        else if(tabTile.getTerrainType().compareTo("hill") == 0) {
-            
-        }
-        else if(tabTile.getTerrainType().compareTo("mountain") == 0) {
-            
-        }
-        else if(tabTile.getTerrainType().compareTo("desert") == 0) {
-            
-        }
-        else if(tabTile.getTerrainType().compareTo("swamp") == 0) {
-            
-        }
-    }*/
-    
     public TerrainTiles getTerrainTile(int index) {
         return terrainList.get(index);
-    }
-
-    public List<TerrainTiles> getNorseTerrains() {
-        return this.norseTerrains;
-    }
-
-    public void addNorseTerrain(TerrainTiles terrain) {
-        this.norseTerrains.add(terrain);
-    }
-
-    public List<TerrainTiles> getGreekTerrains() {
-        return this.greekTerrains;
-    }
-
-    public void addGreekTerrain(TerrainTiles terrain) {
-        this.greekTerrains.add(terrain);
-    }
-
-    public List<TerrainTiles> getEgyptianTerrains() {
-        return this.egyptianTerrains;
-    }
-
-    public void addEgyptianTerrains(TerrainTiles terrain) {
-        this.egyptianTerrains.add(terrain);
     }
 
     public String getPlayerCulture() {
@@ -387,7 +343,8 @@ public class BoardController {
     }
 
     void saveDetails() {
-        
+        Bank bank = Bank.getInstance();
+        System.out.println(bank.getVictory());
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

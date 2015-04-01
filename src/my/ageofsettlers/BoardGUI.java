@@ -86,6 +86,187 @@ public class BoardGUI extends javax.swing.JFrame {
         forest_n4_img = new javax.swing.JLabel();
         fertile_n3 = new javax.swing.JPanel();
         fertile_n3_img = new javax.swing.JLabel();
+        norseResources = new javax.swing.JPanel();
+        norseFoodResources = new javax.swing.JPanel();
+        food_Norse_1 = new javax.swing.JPanel();
+        food_Norse_2 = new javax.swing.JPanel();
+        food_Norse_3 = new javax.swing.JPanel();
+        food_Norse_4 = new javax.swing.JPanel();
+        food_Norse_5 = new javax.swing.JPanel();
+        food_Norse_5.setVisible(false);
+        food_Norse_6 = new javax.swing.JPanel();
+        food_Norse_6.setVisible(false);
+        food_Norse_7 = new javax.swing.JPanel();
+        food_Norse_7.setVisible(false);
+        food_Norse_8 = new javax.swing.JPanel();
+        food_Norse_8.setVisible(false);
+        food_Norse_9 = new javax.swing.JPanel();
+        food_Norse_9.setVisible(false);
+        food_Norse_10 = new javax.swing.JPanel();
+        food_Norse_10.setVisible(false);
+        food_Norse_11 = new javax.swing.JPanel();
+        food_Norse_11.setVisible(false);
+        food_Norse_12 = new javax.swing.JPanel();
+        food_Norse_12.setVisible(false);
+        food_Norse_13 = new javax.swing.JPanel();
+        food_Norse_13.setVisible(false);
+        food_Norse_14 = new javax.swing.JPanel();
+        food_Norse_14.setVisible(false);
+        food_Norse_15 = new javax.swing.JPanel();
+        food_Norse_15.setVisible(false);
+        food_Norse_16 = new javax.swing.JPanel();
+        food_Norse_16.setVisible(false);
+        food_Norse_17 = new javax.swing.JPanel();
+        food_Norse_17.setVisible(false);
+        food_Norse_18 = new javax.swing.JPanel();
+        food_Norse_18.setVisible(false);
+        food_Norse_19 = new javax.swing.JPanel();
+        food_Norse_19.setVisible(false);
+        norseFavorResources = new javax.swing.JPanel();
+        favor_Norse_1 = new javax.swing.JPanel();
+        favor_Norse_2 = new javax.swing.JPanel();
+        favor_Norse_3 = new javax.swing.JPanel();
+        favor_Norse_4 = new javax.swing.JPanel();
+        favor_Norse_5 = new javax.swing.JPanel();
+        favor_Norse_5.setVisible(false);
+        favor_Norse_6 = new javax.swing.JPanel();
+        favor_Norse_6.setVisible(false);
+        favor_Norse_7 = new javax.swing.JPanel();
+        favor_Norse_7.setVisible(false);
+        favor_Norse_8 = new javax.swing.JPanel();
+        favor_Norse_8.setVisible(false);
+        favor_Norse_9 = new javax.swing.JPanel();
+        favor_Norse_9.setVisible(false);
+        favor_Norse_10 = new javax.swing.JPanel();
+        favor_Norse_10.setVisible(false);
+        favor_Norse_11 = new javax.swing.JPanel();
+        favor_Norse_11.setVisible(false);
+        favor_Norse_12 = new javax.swing.JPanel();
+        favor_Norse_12.setVisible(false);
+        favor_Norse_13 = new javax.swing.JPanel();
+        favor_Norse_13.setVisible(false);
+        favor_Norse_14 = new javax.swing.JPanel();
+        favor_Norse_14.setVisible(false);
+        favor_Norse_15 = new javax.swing.JPanel();
+        favor_Norse_15.setVisible(false);
+        favor_Norse_16 = new javax.swing.JPanel();
+        favor_Norse_16.setVisible(false);
+        favor_Norse_17 = new javax.swing.JPanel();
+        favor_Norse_17.setVisible(false);
+        favor_Norse_18 = new javax.swing.JPanel();
+        favor_Norse_18.setVisible(false);
+        favor_Norse_19 = new javax.swing.JPanel();
+        favor_Norse_19.setVisible(false);
+        norseWoodResources = new javax.swing.JPanel();
+        wood_Norse_1 = new javax.swing.JPanel();
+        wood_Norse_2 = new javax.swing.JPanel();
+        wood_Norse_3 = new javax.swing.JPanel();
+        wood_Norse_4 = new javax.swing.JPanel();
+        wood_Norse_5 = new javax.swing.JPanel();
+        wood_Norse_5.setVisible(false);
+        wood_Norse_6 = new javax.swing.JPanel();
+        wood_Norse_6.setVisible(false);
+        wood_Norse_7 = new javax.swing.JPanel();
+        wood_Norse_7.setVisible(false);
+        wood_Norse_8 = new javax.swing.JPanel();
+        wood_Norse_8.setVisible(false);
+        wood_Norse_9 = new javax.swing.JPanel();
+        wood_Norse_9.setVisible(false);
+        wood_Norse_10 = new javax.swing.JPanel();
+        wood_Norse_10.setVisible(false);
+        wood_Norse_11 = new javax.swing.JPanel();
+        wood_Norse_11.setVisible(false);
+        wood_Norse_12 = new javax.swing.JPanel();
+        wood_Norse_12.setVisible(false);
+        wood_Norse_13 = new javax.swing.JPanel();
+        wood_Norse_13.setVisible(false);
+        wood_Norse_14 = new javax.swing.JPanel();
+        wood_Norse_14.setVisible(false);
+        wood_Norse_15 = new javax.swing.JPanel();
+        wood_Norse_15.setVisible(false);
+        wood_Norse_16 = new javax.swing.JPanel();
+        wood_Norse_16.setVisible(false);
+        wood_Norse_17 = new javax.swing.JPanel();
+        wood_Norse_17.setVisible(false);
+        wood_Norse_18 = new javax.swing.JPanel();
+        wood_Norse_18.setVisible(false);
+        wood_Norse_19 = new javax.swing.JPanel();
+        wood_Norse_19.setVisible(false);
+        norseGoldResources = new javax.swing.JPanel();
+        gold_Norse_1 = new javax.swing.JPanel();
+        gold_Norse_2 = new javax.swing.JPanel();
+        gold_Norse_3 = new javax.swing.JPanel();
+        gold_Norse_4 = new javax.swing.JPanel();
+        gold_Norse_5 = new javax.swing.JPanel();
+        gold_Norse_5.setVisible(false);
+        gold_Norse_6 = new javax.swing.JPanel();
+        gold_Norse_6.setVisible(false);
+        gold_Norse_7 = new javax.swing.JPanel();
+        gold_Norse_7.setVisible(false);
+        gold_Norse_8 = new javax.swing.JPanel();
+        gold_Norse_8.setVisible(false);
+        gold_Norse_9 = new javax.swing.JPanel();
+        gold_Norse_9.setVisible(false);
+        gold_Norse_10 = new javax.swing.JPanel();
+        gold_Norse_10.setVisible(false);
+        gold_Norse_11 = new javax.swing.JPanel();
+        gold_Norse_11.setVisible(false);
+        gold_Norse_12 = new javax.swing.JPanel();
+        gold_Norse_12.setVisible(false);
+        gold_Norse_13 = new javax.swing.JPanel();
+        gold_Norse_13.setVisible(false);
+        gold_Norse_14 = new javax.swing.JPanel();
+        gold_Norse_14.setVisible(false);
+        gold_Norse_15 = new javax.swing.JPanel();
+        gold_Norse_15.setVisible(false);
+        gold_Norse_16 = new javax.swing.JPanel();
+        gold_Norse_16.setVisible(false);
+        gold_Norse_17 = new javax.swing.JPanel();
+        gold_Norse_17.setVisible(false);
+        gold_Norse_18 = new javax.swing.JPanel();
+        gold_Norse_18.setVisible(false);
+        gold_Norse_19 = new javax.swing.JPanel();
+        gold_Norse_19.setVisible(false);
+        norseVictoryResources = new javax.swing.JPanel();
+        victory_Norse_1 = new javax.swing.JPanel();
+        victory_Norse_1.setVisible(false);
+        victory_Norse_2 = new javax.swing.JPanel();
+        victory_Norse_2.setVisible(false);
+        victory_Norse_3 = new javax.swing.JPanel();
+        victory_Norse_3.setVisible(false);
+        victory_Norse_4 = new javax.swing.JPanel();
+        victory_Norse_4.setVisible(false);
+        victory_Norse_5 = new javax.swing.JPanel();
+        victory_Norse_5.setVisible(false);
+        victory_Norse_6 = new javax.swing.JPanel();
+        victory_Norse_6.setVisible(false);
+        victory_Norse_7 = new javax.swing.JPanel();
+        victory_Norse_7.setVisible(false);
+        victory_Norse_8 = new javax.swing.JPanel();
+        victory_Norse_8.setVisible(false);
+        victory_Norse_9 = new javax.swing.JPanel();
+        victory_Norse_9.setVisible(false);
+        victory_Norse_10 = new javax.swing.JPanel();
+        victory_Norse_10.setVisible(false);
+        victory_Norse_11 = new javax.swing.JPanel();
+        victory_Norse_11.setVisible(false);
+        victory_Norse_12 = new javax.swing.JPanel();
+        victory_Norse_12.setVisible(false);
+        victory_Norse_13 = new javax.swing.JPanel();
+        victory_Norse_13.setVisible(false);
+        victory_Norse_14 = new javax.swing.JPanel();
+        victory_Norse_14.setVisible(false);
+        victory_Norse_15 = new javax.swing.JPanel();
+        victory_Norse_15.setVisible(false);
+        victory_Norse_16 = new javax.swing.JPanel();
+        victory_Norse_16.setVisible(false);
+        victory_Norse_17 = new javax.swing.JPanel();
+        victory_Norse_17.setVisible(false);
+        victory_Norse_18 = new javax.swing.JPanel();
+        victory_Norse_18.setVisible(false);
+        victory_Norse_19 = new javax.swing.JPanel();
+        victory_Norse_19.setVisible(false);
+        norseAge = new javax.swing.JTextField();
         norseBoardImg = new javax.swing.JLabel();
         greekBoard = new javax.swing.JPanel();
         greekTerrain = new javax.swing.JPanel();
@@ -121,6 +302,187 @@ public class BoardGUI extends javax.swing.JFrame {
         hills_g7_img = new javax.swing.JLabel();
         hills_g8 = new javax.swing.JPanel();
         hills_g8_img = new javax.swing.JLabel();
+        greekResources = new javax.swing.JPanel();
+        greekFoodResources = new javax.swing.JPanel();
+        food_Greek_1 = new javax.swing.JPanel();
+        food_Greek_2 = new javax.swing.JPanel();
+        food_Greek_3 = new javax.swing.JPanel();
+        food_Greek_4 = new javax.swing.JPanel();
+        food_Greek_5 = new javax.swing.JPanel();
+        food_Greek_5.setVisible(false);
+        food_Greek_6 = new javax.swing.JPanel();
+        food_Greek_6.setVisible(false);
+        food_Greek_7 = new javax.swing.JPanel();
+        food_Greek_7.setVisible(false);
+        food_Greek_8 = new javax.swing.JPanel();
+        food_Greek_8.setVisible(false);
+        food_Greek_9 = new javax.swing.JPanel();
+        food_Greek_9.setVisible(false);
+        food_Greek_10 = new javax.swing.JPanel();
+        food_Greek_10.setVisible(false);
+        food_Greek_11 = new javax.swing.JPanel();
+        food_Greek_11.setVisible(false);
+        food_Greek_12 = new javax.swing.JPanel();
+        food_Greek_12.setVisible(false);
+        food_Greek_13 = new javax.swing.JPanel();
+        food_Greek_13.setVisible(false);
+        food_Greek_14 = new javax.swing.JPanel();
+        food_Greek_14.setVisible(false);
+        food_Greek_15 = new javax.swing.JPanel();
+        food_Greek_15.setVisible(false);
+        food_Greek_16 = new javax.swing.JPanel();
+        food_Greek_16.setVisible(false);
+        food_Greek_17 = new javax.swing.JPanel();
+        food_Greek_17.setVisible(false);
+        food_Greek_18 = new javax.swing.JPanel();
+        food_Greek_18.setVisible(false);
+        food_Greek_19 = new javax.swing.JPanel();
+        food_Greek_19.setVisible(false);
+        greekFavorResources = new javax.swing.JPanel();
+        favor_Greek_1 = new javax.swing.JPanel();
+        favor_Greek_2 = new javax.swing.JPanel();
+        favor_Greek_3 = new javax.swing.JPanel();
+        favor_Greek_4 = new javax.swing.JPanel();
+        favor_Greek_5 = new javax.swing.JPanel();
+        favor_Greek_5.setVisible(false);
+        favor_Greek_6 = new javax.swing.JPanel();
+        favor_Greek_6.setVisible(false);
+        favor_Greek_7 = new javax.swing.JPanel();
+        favor_Greek_7.setVisible(false);
+        favor_Greek_8 = new javax.swing.JPanel();
+        favor_Greek_8.setVisible(false);
+        favor_Greek_9 = new javax.swing.JPanel();
+        favor_Greek_9.setVisible(false);
+        favor_Greek_10 = new javax.swing.JPanel();
+        favor_Greek_10.setVisible(false);
+        favor_Greek_11 = new javax.swing.JPanel();
+        favor_Greek_11.setVisible(false);
+        favor_Greek_12 = new javax.swing.JPanel();
+        favor_Greek_12.setVisible(false);
+        favor_Greek_13 = new javax.swing.JPanel();
+        favor_Greek_13.setVisible(false);
+        favor_Greek_14 = new javax.swing.JPanel();
+        favor_Greek_14.setVisible(false);
+        favor_Greek_15 = new javax.swing.JPanel();
+        favor_Greek_15.setVisible(false);
+        favor_Greek_16 = new javax.swing.JPanel();
+        favor_Greek_16.setVisible(false);
+        favor_Greek_17 = new javax.swing.JPanel();
+        favor_Greek_17.setVisible(false);
+        favor_Greek_18 = new javax.swing.JPanel();
+        favor_Greek_18.setVisible(false);
+        favor_Greek_19 = new javax.swing.JPanel();
+        favor_Greek_19.setVisible(false);
+        greekWoodResources = new javax.swing.JPanel();
+        wood_Greek_1 = new javax.swing.JPanel();
+        wood_Greek_2 = new javax.swing.JPanel();
+        wood_Greek_3 = new javax.swing.JPanel();
+        wood_Greek_4 = new javax.swing.JPanel();
+        wood_Greek_5 = new javax.swing.JPanel();
+        wood_Greek_5.setVisible(false);
+        wood_Greek_6 = new javax.swing.JPanel();
+        wood_Greek_6.setVisible(false);
+        wood_Greek_7 = new javax.swing.JPanel();
+        wood_Greek_7.setVisible(false);
+        wood_Greek_8 = new javax.swing.JPanel();
+        wood_Greek_8.setVisible(false);
+        wood_Greek_9 = new javax.swing.JPanel();
+        wood_Greek_9.setVisible(false);
+        wood_Greek_10 = new javax.swing.JPanel();
+        wood_Greek_10.setVisible(false);
+        wood_Greek_11 = new javax.swing.JPanel();
+        wood_Greek_11.setVisible(false);
+        wood_Greek_12 = new javax.swing.JPanel();
+        wood_Greek_12.setVisible(false);
+        wood_Greek_13 = new javax.swing.JPanel();
+        wood_Greek_13.setVisible(false);
+        wood_Greek_14 = new javax.swing.JPanel();
+        wood_Greek_14.setVisible(false);
+        wood_Greek_15 = new javax.swing.JPanel();
+        wood_Greek_15.setVisible(false);
+        wood_Greek_16 = new javax.swing.JPanel();
+        wood_Greek_16.setVisible(false);
+        wood_Greek_17 = new javax.swing.JPanel();
+        wood_Greek_17.setVisible(false);
+        wood_Greek_18 = new javax.swing.JPanel();
+        wood_Greek_18.setVisible(false);
+        wood_Greek_19 = new javax.swing.JPanel();
+        wood_Greek_19.setVisible(false);
+        greekGoldResources = new javax.swing.JPanel();
+        gold_Greek_1 = new javax.swing.JPanel();
+        gold_Greek_2 = new javax.swing.JPanel();
+        gold_Greek_3 = new javax.swing.JPanel();
+        gold_Greek_4 = new javax.swing.JPanel();
+        gold_Greek_5 = new javax.swing.JPanel();
+        gold_Greek_5.setVisible(false);
+        gold_Greek_6 = new javax.swing.JPanel();
+        gold_Greek_6.setVisible(false);
+        gold_Greek_7 = new javax.swing.JPanel();
+        gold_Greek_7.setVisible(false);
+        gold_Greek_8 = new javax.swing.JPanel();
+        gold_Greek_8.setVisible(false);
+        gold_Greek_9 = new javax.swing.JPanel();
+        gold_Greek_9.setVisible(false);
+        gold_Greek_10 = new javax.swing.JPanel();
+        gold_Greek_10.setVisible(false);
+        gold_Greek_11 = new javax.swing.JPanel();
+        gold_Greek_11.setVisible(false);
+        gold_Greek_12 = new javax.swing.JPanel();
+        gold_Greek_12.setVisible(false);
+        gold_Greek_13 = new javax.swing.JPanel();
+        gold_Greek_13.setVisible(false);
+        gold_Greek_14 = new javax.swing.JPanel();
+        gold_Greek_14.setVisible(false);
+        gold_Greek_15 = new javax.swing.JPanel();
+        gold_Greek_15.setVisible(false);
+        gold_Greek_16 = new javax.swing.JPanel();
+        gold_Greek_16.setVisible(false);
+        gold_Greek_17 = new javax.swing.JPanel();
+        gold_Greek_17.setVisible(false);
+        gold_Greek_18 = new javax.swing.JPanel();
+        gold_Greek_18.setVisible(false);
+        gold_Greek_19 = new javax.swing.JPanel();
+        gold_Greek_19.setVisible(false);
+        greekVictoryResources = new javax.swing.JPanel();
+        victory_Greek_1 = new javax.swing.JPanel();
+        victory_Greek_1.setVisible(false);
+        victory_Greek_2 = new javax.swing.JPanel();
+        victory_Greek_2.setVisible(false);
+        victory_Greek_3 = new javax.swing.JPanel();
+        victory_Greek_3.setVisible(false);
+        victory_Greek_4 = new javax.swing.JPanel();
+        victory_Greek_4.setVisible(false);
+        victory_Greek_5 = new javax.swing.JPanel();
+        victory_Greek_5.setVisible(false);
+        victory_Greek_6 = new javax.swing.JPanel();
+        victory_Greek_6.setVisible(false);
+        victory_Greek_7 = new javax.swing.JPanel();
+        victory_Greek_7.setVisible(false);
+        victory_Greek_8 = new javax.swing.JPanel();
+        victory_Greek_8.setVisible(false);
+        victory_Greek_9 = new javax.swing.JPanel();
+        victory_Greek_9.setVisible(false);
+        victory_Greek_10 = new javax.swing.JPanel();
+        victory_Greek_10.setVisible(false);
+        victory_Greek_11 = new javax.swing.JPanel();
+        victory_Greek_11.setVisible(false);
+        victory_Greek_12 = new javax.swing.JPanel();
+        victory_Greek_12.setVisible(false);
+        victory_Greek_13 = new javax.swing.JPanel();
+        victory_Greek_13.setVisible(false);
+        victory_Greek_14 = new javax.swing.JPanel();
+        victory_Greek_14.setVisible(false);
+        victory_Greek_15 = new javax.swing.JPanel();
+        victory_Greek_15.setVisible(false);
+        victory_Greek_16 = new javax.swing.JPanel();
+        victory_Greek_16.setVisible(false);
+        victory_Greek_17 = new javax.swing.JPanel();
+        victory_Greek_17.setVisible(false);
+        victory_Greek_18 = new javax.swing.JPanel();
+        victory_Greek_18.setVisible(false);
+        victory_Greek_19 = new javax.swing.JPanel();
+        victory_Greek_19.setVisible(false);
+        greekAge = new javax.swing.JTextField();
         greekBoardImg = new javax.swing.JLabel();
         egyptianBoard = new javax.swing.JPanel();
         egyptTerrain = new javax.swing.JPanel();
@@ -156,6 +518,187 @@ public class BoardGUI extends javax.swing.JFrame {
         fertile_e5_img = new javax.swing.JLabel();
         hills_e2 = new javax.swing.JPanel();
         hills_e2_img = new javax.swing.JLabel();
+        egyptianResources = new javax.swing.JPanel();
+        egyptianFoodResources = new javax.swing.JPanel();
+        food_Egyptian_1 = new javax.swing.JPanel();
+        food_Egyptian_2 = new javax.swing.JPanel();
+        food_Egyptian_3 = new javax.swing.JPanel();
+        food_Egyptian_4 = new javax.swing.JPanel();
+        food_Egyptian_5 = new javax.swing.JPanel();
+        food_Egyptian_5.setVisible(false);
+        food_Egyptian_6 = new javax.swing.JPanel();
+        food_Egyptian_6.setVisible(false);
+        food_Egyptian_7 = new javax.swing.JPanel();
+        food_Egyptian_7.setVisible(false);
+        food_Egyptian_8 = new javax.swing.JPanel();
+        food_Egyptian_8.setVisible(false);
+        food_Egyptian_9 = new javax.swing.JPanel();
+        food_Egyptian_9.setVisible(false);
+        food_Egyptian_10 = new javax.swing.JPanel();
+        food_Egyptian_10.setVisible(false);
+        food_Egyptian_11 = new javax.swing.JPanel();
+        food_Egyptian_11.setVisible(false);
+        food_Egyptian_12 = new javax.swing.JPanel();
+        food_Egyptian_12.setVisible(false);
+        food_Egyptian_13 = new javax.swing.JPanel();
+        food_Egyptian_13.setVisible(false);
+        food_Egyptian_14 = new javax.swing.JPanel();
+        food_Egyptian_14.setVisible(false);
+        food_Egyptian_15 = new javax.swing.JPanel();
+        food_Egyptian_15.setVisible(false);
+        food_Egyptian_16 = new javax.swing.JPanel();
+        food_Egyptian_16.setVisible(false);
+        food_Egyptian_17 = new javax.swing.JPanel();
+        food_Egyptian_17.setVisible(false);
+        food_Egyptian_18 = new javax.swing.JPanel();
+        food_Egyptian_18.setVisible(false);
+        food_Egyptian_19 = new javax.swing.JPanel();
+        food_Egyptian_19.setVisible(false);
+        egyptianFavorResources = new javax.swing.JPanel();
+        favor_Egyptian_1 = new javax.swing.JPanel();
+        favor_Egyptian_2 = new javax.swing.JPanel();
+        favor_Egyptian_3 = new javax.swing.JPanel();
+        favor_Egyptian_4 = new javax.swing.JPanel();
+        favor_Egyptian_5 = new javax.swing.JPanel();
+        favor_Egyptian_5.setVisible(false);
+        favor_Egyptian_6 = new javax.swing.JPanel();
+        favor_Egyptian_6.setVisible(false);
+        favor_Egyptian_7 = new javax.swing.JPanel();
+        favor_Egyptian_7.setVisible(false);
+        favor_Egyptian_8 = new javax.swing.JPanel();
+        favor_Egyptian_8.setVisible(false);
+        favor_Egyptian_9 = new javax.swing.JPanel();
+        favor_Egyptian_9.setVisible(false);
+        favor_Egyptian_10 = new javax.swing.JPanel();
+        favor_Egyptian_10.setVisible(false);
+        favor_Egyptian_11 = new javax.swing.JPanel();
+        favor_Egyptian_11.setVisible(false);
+        favor_Egyptian_12 = new javax.swing.JPanel();
+        favor_Egyptian_12.setVisible(false);
+        favor_Egyptian_13 = new javax.swing.JPanel();
+        favor_Egyptian_13.setVisible(false);
+        favor_Egyptian_14 = new javax.swing.JPanel();
+        favor_Egyptian_14.setVisible(false);
+        favor_Egyptian_15 = new javax.swing.JPanel();
+        favor_Egyptian_15.setVisible(false);
+        favor_Egyptian_16 = new javax.swing.JPanel();
+        favor_Egyptian_16.setVisible(false);
+        favor_Egyptian_17 = new javax.swing.JPanel();
+        favor_Egyptian_17.setVisible(false);
+        favor_Egyptian_18 = new javax.swing.JPanel();
+        favor_Egyptian_18.setVisible(false);
+        favor_Egyptian_19 = new javax.swing.JPanel();
+        favor_Egyptian_19.setVisible(false);
+        egyptianWoodResources = new javax.swing.JPanel();
+        wood_Egyptian_1 = new javax.swing.JPanel();
+        wood_Egyptian_2 = new javax.swing.JPanel();
+        wood_Egyptian_3 = new javax.swing.JPanel();
+        wood_Egyptian_4 = new javax.swing.JPanel();
+        wood_Egyptian_5 = new javax.swing.JPanel();
+        wood_Egyptian_5.setVisible(false);
+        wood_Egyptian_6 = new javax.swing.JPanel();
+        wood_Egyptian_6.setVisible(false);
+        wood_Egyptian_7 = new javax.swing.JPanel();
+        wood_Egyptian_7.setVisible(false);
+        wood_Egyptian_8 = new javax.swing.JPanel();
+        wood_Egyptian_8.setVisible(false);
+        wood_Egyptian_9 = new javax.swing.JPanel();
+        wood_Egyptian_9.setVisible(false);
+        wood_Egyptian_10 = new javax.swing.JPanel();
+        wood_Egyptian_10.setVisible(false);
+        wood_Egyptian_11 = new javax.swing.JPanel();
+        wood_Egyptian_11.setVisible(false);
+        wood_Egyptian_12 = new javax.swing.JPanel();
+        wood_Egyptian_12.setVisible(false);
+        wood_Egyptian_13 = new javax.swing.JPanel();
+        wood_Egyptian_13.setVisible(false);
+        wood_Egyptian_14 = new javax.swing.JPanel();
+        wood_Egyptian_14.setVisible(false);
+        wood_Egyptian_15 = new javax.swing.JPanel();
+        wood_Egyptian_15.setVisible(false);
+        wood_Egyptian_16 = new javax.swing.JPanel();
+        wood_Egyptian_16.setVisible(false);
+        wood_Egyptian_17 = new javax.swing.JPanel();
+        wood_Egyptian_17.setVisible(false);
+        wood_Egyptian_18 = new javax.swing.JPanel();
+        wood_Egyptian_18.setVisible(false);
+        wood_Egyptian_19 = new javax.swing.JPanel();
+        wood_Egyptian_19.setVisible(false);
+        egyptianGoldResources = new javax.swing.JPanel();
+        gold_Egyptian_1 = new javax.swing.JPanel();
+        gold_Egyptian_2 = new javax.swing.JPanel();
+        gold_Egyptian_3 = new javax.swing.JPanel();
+        gold_Egyptian_4 = new javax.swing.JPanel();
+        gold_Egyptian_5 = new javax.swing.JPanel();
+        gold_Egyptian_5.setVisible(false);
+        gold_Egyptian_6 = new javax.swing.JPanel();
+        gold_Egyptian_6.setVisible(false);
+        gold_Egyptian_7 = new javax.swing.JPanel();
+        gold_Egyptian_7.setVisible(false);
+        gold_Egyptian_8 = new javax.swing.JPanel();
+        gold_Egyptian_8.setVisible(false);
+        gold_Egyptian_9 = new javax.swing.JPanel();
+        gold_Egyptian_9.setVisible(false);
+        gold_Egyptian_10 = new javax.swing.JPanel();
+        gold_Egyptian_10.setVisible(false);
+        gold_Egyptian_11 = new javax.swing.JPanel();
+        gold_Egyptian_11.setVisible(false);
+        gold_Egyptian_12 = new javax.swing.JPanel();
+        gold_Egyptian_12.setVisible(false);
+        gold_Egyptian_13 = new javax.swing.JPanel();
+        gold_Egyptian_13.setVisible(false);
+        gold_Egyptian_14 = new javax.swing.JPanel();
+        gold_Egyptian_14.setVisible(false);
+        gold_Egyptian_15 = new javax.swing.JPanel();
+        gold_Egyptian_15.setVisible(false);
+        gold_Egyptian_16 = new javax.swing.JPanel();
+        gold_Egyptian_16.setVisible(false);
+        gold_Egyptian_17 = new javax.swing.JPanel();
+        gold_Egyptian_17.setVisible(false);
+        gold_Egyptian_18 = new javax.swing.JPanel();
+        gold_Egyptian_18.setVisible(false);
+        gold_Egyptian_19 = new javax.swing.JPanel();
+        gold_Egyptian_19.setVisible(false);
+        egyptianVictoryResources = new javax.swing.JPanel();
+        victory_Egyptian_1 = new javax.swing.JPanel();
+        victory_Egyptian_1.setVisible(false);
+        victory_Egyptian_2 = new javax.swing.JPanel();
+        victory_Egyptian_2.setVisible(false);
+        victory_Egyptian_3 = new javax.swing.JPanel();
+        victory_Egyptian_3.setVisible(false);
+        victory_Egyptian_4 = new javax.swing.JPanel();
+        victory_Egyptian_4.setVisible(false);
+        victory_Egyptian_5 = new javax.swing.JPanel();
+        victory_Egyptian_5.setVisible(false);
+        victory_Egyptian_6 = new javax.swing.JPanel();
+        victory_Egyptian_6.setVisible(false);
+        victory_Egyptian_7 = new javax.swing.JPanel();
+        victory_Egyptian_7.setVisible(false);
+        victory_Egyptian_8 = new javax.swing.JPanel();
+        victory_Egyptian_8.setVisible(false);
+        victory_Egyptian_9 = new javax.swing.JPanel();
+        victory_Egyptian_9.setVisible(false);
+        victory_Egyptian_10 = new javax.swing.JPanel();
+        victory_Egyptian_10.setVisible(false);
+        victory_Egyptian_11 = new javax.swing.JPanel();
+        victory_Egyptian_11.setVisible(false);
+        victory_Egyptian_12 = new javax.swing.JPanel();
+        victory_Egyptian_12.setVisible(false);
+        victory_Egyptian_13 = new javax.swing.JPanel();
+        victory_Egyptian_13.setVisible(false);
+        victory_Egyptian_14 = new javax.swing.JPanel();
+        victory_Egyptian_14.setVisible(false);
+        victory_Egyptian_15 = new javax.swing.JPanel();
+        victory_Egyptian_15.setVisible(false);
+        victory_Egyptian_16 = new javax.swing.JPanel();
+        victory_Egyptian_16.setVisible(false);
+        victory_Egyptian_17 = new javax.swing.JPanel();
+        victory_Egyptian_17.setVisible(false);
+        victory_Egyptian_18 = new javax.swing.JPanel();
+        victory_Egyptian_18.setVisible(false);
+        victory_Egyptian_19 = new javax.swing.JPanel();
+        victory_Egyptian_19.setVisible(false);
+        egyptianAge = new javax.swing.JTextField();
         egyptianBoardImg = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         terrain = new javax.swing.JPanel();
@@ -501,6 +1044,1573 @@ public class BoardGUI extends javax.swing.JFrame {
 
         norseBoard.add(norseTerrain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 400, 370));
 
+        norseResources.setOpaque(false);
+        norseResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        norseFoodResources.setOpaque(false);
+        norseFoodResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        food_Norse_1.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_1Layout = new javax.swing.GroupLayout(food_Norse_1);
+        food_Norse_1.setLayout(food_Norse_1Layout);
+        food_Norse_1Layout.setHorizontalGroup(
+            food_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_1Layout.setVerticalGroup(
+            food_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        food_Norse_1.getAccessibleContext().setAccessibleName("food_Norse_1");
+
+        food_Norse_2.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_2Layout = new javax.swing.GroupLayout(food_Norse_2);
+        food_Norse_2.setLayout(food_Norse_2Layout);
+        food_Norse_2Layout.setHorizontalGroup(
+            food_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_2Layout.setVerticalGroup(
+            food_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        food_Norse_2.getAccessibleContext().setAccessibleName("food_Norse_2");
+
+        food_Norse_3.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_3Layout = new javax.swing.GroupLayout(food_Norse_3);
+        food_Norse_3.setLayout(food_Norse_3Layout);
+        food_Norse_3Layout.setHorizontalGroup(
+            food_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_3Layout.setVerticalGroup(
+            food_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        food_Norse_3.getAccessibleContext().setAccessibleName("food_Norse_3");
+
+        food_Norse_4.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_4Layout = new javax.swing.GroupLayout(food_Norse_4);
+        food_Norse_4.setLayout(food_Norse_4Layout);
+        food_Norse_4Layout.setHorizontalGroup(
+            food_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_4Layout.setVerticalGroup(
+            food_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        food_Norse_4.getAccessibleContext().setAccessibleName("food_Norse_4");
+
+        food_Norse_5.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_5Layout = new javax.swing.GroupLayout(food_Norse_5);
+        food_Norse_5.setLayout(food_Norse_5Layout);
+        food_Norse_5Layout.setHorizontalGroup(
+            food_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_5Layout.setVerticalGroup(
+            food_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        food_Norse_5.getAccessibleContext().setAccessibleName("food_Norse_5");
+
+        food_Norse_6.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_6Layout = new javax.swing.GroupLayout(food_Norse_6);
+        food_Norse_6.setLayout(food_Norse_6Layout);
+        food_Norse_6Layout.setHorizontalGroup(
+            food_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_6Layout.setVerticalGroup(
+            food_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        food_Norse_6.getAccessibleContext().setAccessibleName("food_Norse_6");
+
+        food_Norse_7.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_7Layout = new javax.swing.GroupLayout(food_Norse_7);
+        food_Norse_7.setLayout(food_Norse_7Layout);
+        food_Norse_7Layout.setHorizontalGroup(
+            food_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_7Layout.setVerticalGroup(
+            food_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        food_Norse_7.getAccessibleContext().setAccessibleName("food_Norse_7");
+
+        food_Norse_8.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_8Layout = new javax.swing.GroupLayout(food_Norse_8);
+        food_Norse_8.setLayout(food_Norse_8Layout);
+        food_Norse_8Layout.setHorizontalGroup(
+            food_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_8Layout.setVerticalGroup(
+            food_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        food_Norse_8.getAccessibleContext().setAccessibleName("food_Norse_8");
+
+        food_Norse_9.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_9Layout = new javax.swing.GroupLayout(food_Norse_9);
+        food_Norse_9.setLayout(food_Norse_9Layout);
+        food_Norse_9Layout.setHorizontalGroup(
+            food_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_9Layout.setVerticalGroup(
+            food_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        food_Norse_9.getAccessibleContext().setAccessibleName("food_Norse_9");
+
+        food_Norse_10.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_10Layout = new javax.swing.GroupLayout(food_Norse_10);
+        food_Norse_10.setLayout(food_Norse_10Layout);
+        food_Norse_10Layout.setHorizontalGroup(
+            food_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_10Layout.setVerticalGroup(
+            food_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        food_Norse_10.getAccessibleContext().setAccessibleName("food_Norse_10");
+
+        food_Norse_11.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_11Layout = new javax.swing.GroupLayout(food_Norse_11);
+        food_Norse_11.setLayout(food_Norse_11Layout);
+        food_Norse_11Layout.setHorizontalGroup(
+            food_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_11Layout.setVerticalGroup(
+            food_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        food_Norse_11.getAccessibleContext().setAccessibleName("food_Norse_11");
+        food_Norse_11.getAccessibleContext().setAccessibleDescription("");
+
+        food_Norse_12.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_12Layout = new javax.swing.GroupLayout(food_Norse_12);
+        food_Norse_12.setLayout(food_Norse_12Layout);
+        food_Norse_12Layout.setHorizontalGroup(
+            food_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_12Layout.setVerticalGroup(
+            food_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        food_Norse_12.getAccessibleContext().setAccessibleName("food_Norse_12");
+
+        food_Norse_13.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_13Layout = new javax.swing.GroupLayout(food_Norse_13);
+        food_Norse_13.setLayout(food_Norse_13Layout);
+        food_Norse_13Layout.setHorizontalGroup(
+            food_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_13Layout.setVerticalGroup(
+            food_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        food_Norse_13.getAccessibleContext().setAccessibleName("food_Norse_13");
+
+        food_Norse_14.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_14Layout = new javax.swing.GroupLayout(food_Norse_14);
+        food_Norse_14.setLayout(food_Norse_14Layout);
+        food_Norse_14Layout.setHorizontalGroup(
+            food_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_14Layout.setVerticalGroup(
+            food_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        food_Norse_14.getAccessibleContext().setAccessibleName("food_Norse_14");
+
+        food_Norse_15.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_15Layout = new javax.swing.GroupLayout(food_Norse_15);
+        food_Norse_15.setLayout(food_Norse_15Layout);
+        food_Norse_15Layout.setHorizontalGroup(
+            food_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_15Layout.setVerticalGroup(
+            food_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        food_Norse_15.getAccessibleContext().setAccessibleName("food_Norse_15");
+
+        food_Norse_16.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_16Layout = new javax.swing.GroupLayout(food_Norse_16);
+        food_Norse_16.setLayout(food_Norse_16Layout);
+        food_Norse_16Layout.setHorizontalGroup(
+            food_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_16Layout.setVerticalGroup(
+            food_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        food_Norse_16.getAccessibleContext().setAccessibleName("food_Norse_16");
+
+        food_Norse_17.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_17Layout = new javax.swing.GroupLayout(food_Norse_17);
+        food_Norse_17.setLayout(food_Norse_17Layout);
+        food_Norse_17Layout.setHorizontalGroup(
+            food_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_17Layout.setVerticalGroup(
+            food_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        food_Norse_17.getAccessibleContext().setAccessibleName("food_Norse_17");
+
+        food_Norse_18.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_18Layout = new javax.swing.GroupLayout(food_Norse_18);
+        food_Norse_18.setLayout(food_Norse_18Layout);
+        food_Norse_18Layout.setHorizontalGroup(
+            food_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_18Layout.setVerticalGroup(
+            food_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        food_Norse_18.getAccessibleContext().setAccessibleName("food_Norse_18");
+        food_Norse_18.getAccessibleContext().setAccessibleDescription("");
+
+        food_Norse_19.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Norse_19Layout = new javax.swing.GroupLayout(food_Norse_19);
+        food_Norse_19.setLayout(food_Norse_19Layout);
+        food_Norse_19Layout.setHorizontalGroup(
+            food_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Norse_19Layout.setVerticalGroup(
+            food_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFoodResources.add(food_Norse_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        food_Norse_19.getAccessibleContext().setAccessibleName("food_Norse_19");
+
+        norseResources.add(norseFoodResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 30));
+
+        norseFavorResources.setOpaque(false);
+        norseFavorResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        favor_Norse_1.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_1Layout = new javax.swing.GroupLayout(favor_Norse_1);
+        favor_Norse_1.setLayout(favor_Norse_1Layout);
+        favor_Norse_1Layout.setHorizontalGroup(
+            favor_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_1Layout.setVerticalGroup(
+            favor_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        favor_Norse_1.getAccessibleContext().setAccessibleName("favor_Norse_1");
+
+        favor_Norse_2.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_2Layout = new javax.swing.GroupLayout(favor_Norse_2);
+        favor_Norse_2.setLayout(favor_Norse_2Layout);
+        favor_Norse_2Layout.setHorizontalGroup(
+            favor_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_2Layout.setVerticalGroup(
+            favor_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        favor_Norse_2.getAccessibleContext().setAccessibleName("favor_Norse_2");
+
+        favor_Norse_3.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_3Layout = new javax.swing.GroupLayout(favor_Norse_3);
+        favor_Norse_3.setLayout(favor_Norse_3Layout);
+        favor_Norse_3Layout.setHorizontalGroup(
+            favor_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_3Layout.setVerticalGroup(
+            favor_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        favor_Norse_3.getAccessibleContext().setAccessibleName("favor_Norse_3");
+
+        favor_Norse_4.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_4Layout = new javax.swing.GroupLayout(favor_Norse_4);
+        favor_Norse_4.setLayout(favor_Norse_4Layout);
+        favor_Norse_4Layout.setHorizontalGroup(
+            favor_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_4Layout.setVerticalGroup(
+            favor_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        favor_Norse_4.getAccessibleContext().setAccessibleName("favor_Norse_4");
+
+        favor_Norse_5.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_5Layout = new javax.swing.GroupLayout(favor_Norse_5);
+        favor_Norse_5.setLayout(favor_Norse_5Layout);
+        favor_Norse_5Layout.setHorizontalGroup(
+            favor_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_5Layout.setVerticalGroup(
+            favor_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        favor_Norse_5.getAccessibleContext().setAccessibleName("favor_Norse_5");
+
+        favor_Norse_6.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_6Layout = new javax.swing.GroupLayout(favor_Norse_6);
+        favor_Norse_6.setLayout(favor_Norse_6Layout);
+        favor_Norse_6Layout.setHorizontalGroup(
+            favor_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_6Layout.setVerticalGroup(
+            favor_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        favor_Norse_6.getAccessibleContext().setAccessibleName("favor_Norse_6");
+
+        favor_Norse_7.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_7Layout = new javax.swing.GroupLayout(favor_Norse_7);
+        favor_Norse_7.setLayout(favor_Norse_7Layout);
+        favor_Norse_7Layout.setHorizontalGroup(
+            favor_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_7Layout.setVerticalGroup(
+            favor_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        favor_Norse_7.getAccessibleContext().setAccessibleName("favor_Norse_7");
+
+        favor_Norse_8.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_8Layout = new javax.swing.GroupLayout(favor_Norse_8);
+        favor_Norse_8.setLayout(favor_Norse_8Layout);
+        favor_Norse_8Layout.setHorizontalGroup(
+            favor_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_8Layout.setVerticalGroup(
+            favor_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        favor_Norse_8.getAccessibleContext().setAccessibleName("favor_Norse_8");
+
+        favor_Norse_9.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_9Layout = new javax.swing.GroupLayout(favor_Norse_9);
+        favor_Norse_9.setLayout(favor_Norse_9Layout);
+        favor_Norse_9Layout.setHorizontalGroup(
+            favor_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_9Layout.setVerticalGroup(
+            favor_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        favor_Norse_9.getAccessibleContext().setAccessibleName("favor_Norse_9");
+
+        favor_Norse_10.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_10Layout = new javax.swing.GroupLayout(favor_Norse_10);
+        favor_Norse_10.setLayout(favor_Norse_10Layout);
+        favor_Norse_10Layout.setHorizontalGroup(
+            favor_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_10Layout.setVerticalGroup(
+            favor_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        favor_Norse_10.getAccessibleContext().setAccessibleName("favor_Norse_10");
+
+        favor_Norse_11.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_11Layout = new javax.swing.GroupLayout(favor_Norse_11);
+        favor_Norse_11.setLayout(favor_Norse_11Layout);
+        favor_Norse_11Layout.setHorizontalGroup(
+            favor_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_11Layout.setVerticalGroup(
+            favor_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        favor_Norse_11.getAccessibleContext().setAccessibleName("favor_Norse_11");
+
+        favor_Norse_12.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_12Layout = new javax.swing.GroupLayout(favor_Norse_12);
+        favor_Norse_12.setLayout(favor_Norse_12Layout);
+        favor_Norse_12Layout.setHorizontalGroup(
+            favor_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_12Layout.setVerticalGroup(
+            favor_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        favor_Norse_12.getAccessibleContext().setAccessibleName("favor_Norse_12");
+
+        favor_Norse_13.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_13Layout = new javax.swing.GroupLayout(favor_Norse_13);
+        favor_Norse_13.setLayout(favor_Norse_13Layout);
+        favor_Norse_13Layout.setHorizontalGroup(
+            favor_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_13Layout.setVerticalGroup(
+            favor_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        favor_Norse_13.getAccessibleContext().setAccessibleName("favor_Norse_13");
+
+        favor_Norse_14.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_14Layout = new javax.swing.GroupLayout(favor_Norse_14);
+        favor_Norse_14.setLayout(favor_Norse_14Layout);
+        favor_Norse_14Layout.setHorizontalGroup(
+            favor_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_14Layout.setVerticalGroup(
+            favor_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        favor_Norse_14.getAccessibleContext().setAccessibleName("favor_Norse_14");
+
+        favor_Norse_15.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_15Layout = new javax.swing.GroupLayout(favor_Norse_15);
+        favor_Norse_15.setLayout(favor_Norse_15Layout);
+        favor_Norse_15Layout.setHorizontalGroup(
+            favor_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_15Layout.setVerticalGroup(
+            favor_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        favor_Norse_15.getAccessibleContext().setAccessibleName("favor_Norse_15");
+
+        favor_Norse_16.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_16Layout = new javax.swing.GroupLayout(favor_Norse_16);
+        favor_Norse_16.setLayout(favor_Norse_16Layout);
+        favor_Norse_16Layout.setHorizontalGroup(
+            favor_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_16Layout.setVerticalGroup(
+            favor_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        favor_Norse_16.getAccessibleContext().setAccessibleName("favor_Norse_16");
+
+        favor_Norse_17.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_17Layout = new javax.swing.GroupLayout(favor_Norse_17);
+        favor_Norse_17.setLayout(favor_Norse_17Layout);
+        favor_Norse_17Layout.setHorizontalGroup(
+            favor_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_17Layout.setVerticalGroup(
+            favor_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        favor_Norse_17.getAccessibleContext().setAccessibleName("favor_Norse_17");
+
+        favor_Norse_18.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_18Layout = new javax.swing.GroupLayout(favor_Norse_18);
+        favor_Norse_18.setLayout(favor_Norse_18Layout);
+        favor_Norse_18Layout.setHorizontalGroup(
+            favor_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_18Layout.setVerticalGroup(
+            favor_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        favor_Norse_18.getAccessibleContext().setAccessibleName("favor_Norse_18");
+
+        favor_Norse_19.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Norse_19Layout = new javax.swing.GroupLayout(favor_Norse_19);
+        favor_Norse_19.setLayout(favor_Norse_19Layout);
+        favor_Norse_19Layout.setHorizontalGroup(
+            favor_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Norse_19Layout.setVerticalGroup(
+            favor_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseFavorResources.add(favor_Norse_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        favor_Norse_19.getAccessibleContext().setAccessibleName("favor_Norse_19");
+
+        norseResources.add(norseFavorResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 770, 30));
+
+        norseWoodResources.setOpaque(false);
+        norseWoodResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        wood_Norse_1.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_1Layout = new javax.swing.GroupLayout(wood_Norse_1);
+        wood_Norse_1.setLayout(wood_Norse_1Layout);
+        wood_Norse_1Layout.setHorizontalGroup(
+            wood_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_1Layout.setVerticalGroup(
+            wood_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        wood_Norse_1.getAccessibleContext().setAccessibleName("wood_Norse_1");
+
+        wood_Norse_2.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_2Layout = new javax.swing.GroupLayout(wood_Norse_2);
+        wood_Norse_2.setLayout(wood_Norse_2Layout);
+        wood_Norse_2Layout.setHorizontalGroup(
+            wood_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_2Layout.setVerticalGroup(
+            wood_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        wood_Norse_2.getAccessibleContext().setAccessibleName("wood_Norse_2");
+
+        wood_Norse_3.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_3Layout = new javax.swing.GroupLayout(wood_Norse_3);
+        wood_Norse_3.setLayout(wood_Norse_3Layout);
+        wood_Norse_3Layout.setHorizontalGroup(
+            wood_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_3Layout.setVerticalGroup(
+            wood_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        wood_Norse_3.getAccessibleContext().setAccessibleName("wood_Norse_3");
+
+        wood_Norse_4.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_4Layout = new javax.swing.GroupLayout(wood_Norse_4);
+        wood_Norse_4.setLayout(wood_Norse_4Layout);
+        wood_Norse_4Layout.setHorizontalGroup(
+            wood_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_4Layout.setVerticalGroup(
+            wood_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        wood_Norse_4.getAccessibleContext().setAccessibleName("wood_Norse_4");
+        wood_Norse_4.getAccessibleContext().setAccessibleDescription("");
+
+        wood_Norse_5.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_5Layout = new javax.swing.GroupLayout(wood_Norse_5);
+        wood_Norse_5.setLayout(wood_Norse_5Layout);
+        wood_Norse_5Layout.setHorizontalGroup(
+            wood_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_5Layout.setVerticalGroup(
+            wood_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        wood_Norse_5.getAccessibleContext().setAccessibleName("wood_Norse_5");
+
+        wood_Norse_6.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_6Layout = new javax.swing.GroupLayout(wood_Norse_6);
+        wood_Norse_6.setLayout(wood_Norse_6Layout);
+        wood_Norse_6Layout.setHorizontalGroup(
+            wood_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_6Layout.setVerticalGroup(
+            wood_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        wood_Norse_6.getAccessibleContext().setAccessibleName("wood_Norse_6");
+
+        wood_Norse_7.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_7Layout = new javax.swing.GroupLayout(wood_Norse_7);
+        wood_Norse_7.setLayout(wood_Norse_7Layout);
+        wood_Norse_7Layout.setHorizontalGroup(
+            wood_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_7Layout.setVerticalGroup(
+            wood_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        wood_Norse_7.getAccessibleContext().setAccessibleName("wood_Norse_7");
+
+        wood_Norse_8.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_8Layout = new javax.swing.GroupLayout(wood_Norse_8);
+        wood_Norse_8.setLayout(wood_Norse_8Layout);
+        wood_Norse_8Layout.setHorizontalGroup(
+            wood_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_8Layout.setVerticalGroup(
+            wood_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        wood_Norse_8.getAccessibleContext().setAccessibleName("wood_Norse_8");
+
+        wood_Norse_9.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_9Layout = new javax.swing.GroupLayout(wood_Norse_9);
+        wood_Norse_9.setLayout(wood_Norse_9Layout);
+        wood_Norse_9Layout.setHorizontalGroup(
+            wood_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_9Layout.setVerticalGroup(
+            wood_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        wood_Norse_9.getAccessibleContext().setAccessibleName("wood_Norse_9");
+
+        wood_Norse_10.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_10Layout = new javax.swing.GroupLayout(wood_Norse_10);
+        wood_Norse_10.setLayout(wood_Norse_10Layout);
+        wood_Norse_10Layout.setHorizontalGroup(
+            wood_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_10Layout.setVerticalGroup(
+            wood_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        wood_Norse_10.getAccessibleContext().setAccessibleName("wood_Norse_10");
+
+        wood_Norse_11.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_11Layout = new javax.swing.GroupLayout(wood_Norse_11);
+        wood_Norse_11.setLayout(wood_Norse_11Layout);
+        wood_Norse_11Layout.setHorizontalGroup(
+            wood_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_11Layout.setVerticalGroup(
+            wood_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        wood_Norse_11.getAccessibleContext().setAccessibleName("wood_Norse_11");
+
+        wood_Norse_12.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_12Layout = new javax.swing.GroupLayout(wood_Norse_12);
+        wood_Norse_12.setLayout(wood_Norse_12Layout);
+        wood_Norse_12Layout.setHorizontalGroup(
+            wood_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_12Layout.setVerticalGroup(
+            wood_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        wood_Norse_12.getAccessibleContext().setAccessibleName("wood_Norse_12");
+
+        wood_Norse_13.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_13Layout = new javax.swing.GroupLayout(wood_Norse_13);
+        wood_Norse_13.setLayout(wood_Norse_13Layout);
+        wood_Norse_13Layout.setHorizontalGroup(
+            wood_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_13Layout.setVerticalGroup(
+            wood_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        wood_Norse_13.getAccessibleContext().setAccessibleName("wood_Norse_13");
+
+        wood_Norse_14.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_14Layout = new javax.swing.GroupLayout(wood_Norse_14);
+        wood_Norse_14.setLayout(wood_Norse_14Layout);
+        wood_Norse_14Layout.setHorizontalGroup(
+            wood_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_14Layout.setVerticalGroup(
+            wood_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        wood_Norse_14.getAccessibleContext().setAccessibleName("wood_Norse_14");
+
+        wood_Norse_15.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_15Layout = new javax.swing.GroupLayout(wood_Norse_15);
+        wood_Norse_15.setLayout(wood_Norse_15Layout);
+        wood_Norse_15Layout.setHorizontalGroup(
+            wood_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_15Layout.setVerticalGroup(
+            wood_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        wood_Norse_15.getAccessibleContext().setAccessibleName("wood_Norse_15");
+
+        wood_Norse_16.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_16Layout = new javax.swing.GroupLayout(wood_Norse_16);
+        wood_Norse_16.setLayout(wood_Norse_16Layout);
+        wood_Norse_16Layout.setHorizontalGroup(
+            wood_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_16Layout.setVerticalGroup(
+            wood_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        wood_Norse_16.getAccessibleContext().setAccessibleName("wood_Norse_16");
+
+        wood_Norse_17.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_17Layout = new javax.swing.GroupLayout(wood_Norse_17);
+        wood_Norse_17.setLayout(wood_Norse_17Layout);
+        wood_Norse_17Layout.setHorizontalGroup(
+            wood_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_17Layout.setVerticalGroup(
+            wood_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        wood_Norse_17.getAccessibleContext().setAccessibleName("wood_Norse_17");
+
+        wood_Norse_18.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_18Layout = new javax.swing.GroupLayout(wood_Norse_18);
+        wood_Norse_18.setLayout(wood_Norse_18Layout);
+        wood_Norse_18Layout.setHorizontalGroup(
+            wood_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_18Layout.setVerticalGroup(
+            wood_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        wood_Norse_18.getAccessibleContext().setAccessibleName("wood_Norse_18");
+
+        wood_Norse_19.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Norse_19Layout = new javax.swing.GroupLayout(wood_Norse_19);
+        wood_Norse_19.setLayout(wood_Norse_19Layout);
+        wood_Norse_19Layout.setHorizontalGroup(
+            wood_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Norse_19Layout.setVerticalGroup(
+            wood_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseWoodResources.add(wood_Norse_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        wood_Norse_19.getAccessibleContext().setAccessibleName("wood_Norse_19");
+
+        norseResources.add(norseWoodResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 30));
+
+        norseGoldResources.setOpaque(false);
+        norseGoldResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gold_Norse_1.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_1Layout = new javax.swing.GroupLayout(gold_Norse_1);
+        gold_Norse_1.setLayout(gold_Norse_1Layout);
+        gold_Norse_1Layout.setHorizontalGroup(
+            gold_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_1Layout.setVerticalGroup(
+            gold_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        gold_Norse_1.getAccessibleContext().setAccessibleName("gold_Norse_1");
+
+        gold_Norse_2.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_2Layout = new javax.swing.GroupLayout(gold_Norse_2);
+        gold_Norse_2.setLayout(gold_Norse_2Layout);
+        gold_Norse_2Layout.setHorizontalGroup(
+            gold_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_2Layout.setVerticalGroup(
+            gold_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        gold_Norse_2.getAccessibleContext().setAccessibleName("gold_Norse_2");
+
+        gold_Norse_3.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_3Layout = new javax.swing.GroupLayout(gold_Norse_3);
+        gold_Norse_3.setLayout(gold_Norse_3Layout);
+        gold_Norse_3Layout.setHorizontalGroup(
+            gold_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_3Layout.setVerticalGroup(
+            gold_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        gold_Norse_3.getAccessibleContext().setAccessibleName("gold_Norse_3");
+
+        gold_Norse_4.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_4Layout = new javax.swing.GroupLayout(gold_Norse_4);
+        gold_Norse_4.setLayout(gold_Norse_4Layout);
+        gold_Norse_4Layout.setHorizontalGroup(
+            gold_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_4Layout.setVerticalGroup(
+            gold_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        gold_Norse_4.getAccessibleContext().setAccessibleName("gold_Norse_4");
+
+        gold_Norse_5.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_5Layout = new javax.swing.GroupLayout(gold_Norse_5);
+        gold_Norse_5.setLayout(gold_Norse_5Layout);
+        gold_Norse_5Layout.setHorizontalGroup(
+            gold_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_5Layout.setVerticalGroup(
+            gold_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        gold_Norse_5.getAccessibleContext().setAccessibleName("gold_Norse_5");
+
+        gold_Norse_6.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_6Layout = new javax.swing.GroupLayout(gold_Norse_6);
+        gold_Norse_6.setLayout(gold_Norse_6Layout);
+        gold_Norse_6Layout.setHorizontalGroup(
+            gold_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_6Layout.setVerticalGroup(
+            gold_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        gold_Norse_6.getAccessibleContext().setAccessibleName("gold_Norse_6");
+
+        gold_Norse_7.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_7Layout = new javax.swing.GroupLayout(gold_Norse_7);
+        gold_Norse_7.setLayout(gold_Norse_7Layout);
+        gold_Norse_7Layout.setHorizontalGroup(
+            gold_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_7Layout.setVerticalGroup(
+            gold_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        gold_Norse_7.getAccessibleContext().setAccessibleName("gold_Norse_7");
+
+        gold_Norse_8.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_8Layout = new javax.swing.GroupLayout(gold_Norse_8);
+        gold_Norse_8.setLayout(gold_Norse_8Layout);
+        gold_Norse_8Layout.setHorizontalGroup(
+            gold_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_8Layout.setVerticalGroup(
+            gold_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        gold_Norse_8.getAccessibleContext().setAccessibleName("gold_Norse_8");
+
+        gold_Norse_9.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_9Layout = new javax.swing.GroupLayout(gold_Norse_9);
+        gold_Norse_9.setLayout(gold_Norse_9Layout);
+        gold_Norse_9Layout.setHorizontalGroup(
+            gold_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_9Layout.setVerticalGroup(
+            gold_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        gold_Norse_9.getAccessibleContext().setAccessibleName("gold_Norse_9");
+
+        gold_Norse_10.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_10Layout = new javax.swing.GroupLayout(gold_Norse_10);
+        gold_Norse_10.setLayout(gold_Norse_10Layout);
+        gold_Norse_10Layout.setHorizontalGroup(
+            gold_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_10Layout.setVerticalGroup(
+            gold_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        gold_Norse_10.getAccessibleContext().setAccessibleName("gold_Norse_10");
+
+        gold_Norse_11.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_11Layout = new javax.swing.GroupLayout(gold_Norse_11);
+        gold_Norse_11.setLayout(gold_Norse_11Layout);
+        gold_Norse_11Layout.setHorizontalGroup(
+            gold_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_11Layout.setVerticalGroup(
+            gold_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        gold_Norse_11.getAccessibleContext().setAccessibleName("gold_Norse_11");
+
+        gold_Norse_12.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_12Layout = new javax.swing.GroupLayout(gold_Norse_12);
+        gold_Norse_12.setLayout(gold_Norse_12Layout);
+        gold_Norse_12Layout.setHorizontalGroup(
+            gold_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_12Layout.setVerticalGroup(
+            gold_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        gold_Norse_12.getAccessibleContext().setAccessibleName("gold_Norse_12");
+
+        gold_Norse_13.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_13Layout = new javax.swing.GroupLayout(gold_Norse_13);
+        gold_Norse_13.setLayout(gold_Norse_13Layout);
+        gold_Norse_13Layout.setHorizontalGroup(
+            gold_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_13Layout.setVerticalGroup(
+            gold_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        gold_Norse_13.getAccessibleContext().setAccessibleName("gold_Norse_13");
+
+        gold_Norse_14.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_14Layout = new javax.swing.GroupLayout(gold_Norse_14);
+        gold_Norse_14.setLayout(gold_Norse_14Layout);
+        gold_Norse_14Layout.setHorizontalGroup(
+            gold_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_14Layout.setVerticalGroup(
+            gold_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        gold_Norse_14.getAccessibleContext().setAccessibleName("gold_Norse_14");
+
+        gold_Norse_15.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_15Layout = new javax.swing.GroupLayout(gold_Norse_15);
+        gold_Norse_15.setLayout(gold_Norse_15Layout);
+        gold_Norse_15Layout.setHorizontalGroup(
+            gold_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_15Layout.setVerticalGroup(
+            gold_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        gold_Norse_15.getAccessibleContext().setAccessibleName("gold_Norse_15");
+
+        gold_Norse_16.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_16Layout = new javax.swing.GroupLayout(gold_Norse_16);
+        gold_Norse_16.setLayout(gold_Norse_16Layout);
+        gold_Norse_16Layout.setHorizontalGroup(
+            gold_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_16Layout.setVerticalGroup(
+            gold_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        gold_Norse_16.getAccessibleContext().setAccessibleName("gold_Norse_16");
+
+        gold_Norse_17.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_17Layout = new javax.swing.GroupLayout(gold_Norse_17);
+        gold_Norse_17.setLayout(gold_Norse_17Layout);
+        gold_Norse_17Layout.setHorizontalGroup(
+            gold_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_17Layout.setVerticalGroup(
+            gold_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        gold_Norse_17.getAccessibleContext().setAccessibleName("gold_Norse_17");
+
+        gold_Norse_18.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_18Layout = new javax.swing.GroupLayout(gold_Norse_18);
+        gold_Norse_18.setLayout(gold_Norse_18Layout);
+        gold_Norse_18Layout.setHorizontalGroup(
+            gold_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_18Layout.setVerticalGroup(
+            gold_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        gold_Norse_18.getAccessibleContext().setAccessibleName("gold_Norse_18");
+
+        gold_Norse_19.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Norse_19Layout = new javax.swing.GroupLayout(gold_Norse_19);
+        gold_Norse_19.setLayout(gold_Norse_19Layout);
+        gold_Norse_19Layout.setHorizontalGroup(
+            gold_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Norse_19Layout.setVerticalGroup(
+            gold_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseGoldResources.add(gold_Norse_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        gold_Norse_19.getAccessibleContext().setAccessibleName("gold_Norse_19");
+
+        norseResources.add(norseGoldResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 770, 30));
+
+        norseVictoryResources.setOpaque(false);
+        norseVictoryResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        victory_Norse_1.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_1Layout = new javax.swing.GroupLayout(victory_Norse_1);
+        victory_Norse_1.setLayout(victory_Norse_1Layout);
+        victory_Norse_1Layout.setHorizontalGroup(
+            victory_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_1Layout.setVerticalGroup(
+            victory_Norse_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        victory_Norse_1.getAccessibleContext().setAccessibleName("victory_Norse_1");
+
+        victory_Norse_2.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_2Layout = new javax.swing.GroupLayout(victory_Norse_2);
+        victory_Norse_2.setLayout(victory_Norse_2Layout);
+        victory_Norse_2Layout.setHorizontalGroup(
+            victory_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_2Layout.setVerticalGroup(
+            victory_Norse_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        victory_Norse_2.getAccessibleContext().setAccessibleName("victory_Norse_2");
+
+        victory_Norse_3.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_3Layout = new javax.swing.GroupLayout(victory_Norse_3);
+        victory_Norse_3.setLayout(victory_Norse_3Layout);
+        victory_Norse_3Layout.setHorizontalGroup(
+            victory_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_3Layout.setVerticalGroup(
+            victory_Norse_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        victory_Norse_3.getAccessibleContext().setAccessibleName("victory_Norse_3");
+
+        victory_Norse_4.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_4Layout = new javax.swing.GroupLayout(victory_Norse_4);
+        victory_Norse_4.setLayout(victory_Norse_4Layout);
+        victory_Norse_4Layout.setHorizontalGroup(
+            victory_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_4Layout.setVerticalGroup(
+            victory_Norse_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        victory_Norse_4.getAccessibleContext().setAccessibleName("victory_Norse_4");
+
+        victory_Norse_5.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_5Layout = new javax.swing.GroupLayout(victory_Norse_5);
+        victory_Norse_5.setLayout(victory_Norse_5Layout);
+        victory_Norse_5Layout.setHorizontalGroup(
+            victory_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_5Layout.setVerticalGroup(
+            victory_Norse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        victory_Norse_5.getAccessibleContext().setAccessibleName("victory_Norse_5");
+
+        victory_Norse_6.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_6Layout = new javax.swing.GroupLayout(victory_Norse_6);
+        victory_Norse_6.setLayout(victory_Norse_6Layout);
+        victory_Norse_6Layout.setHorizontalGroup(
+            victory_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_6Layout.setVerticalGroup(
+            victory_Norse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        victory_Norse_6.getAccessibleContext().setAccessibleName("victory_Norse_6");
+
+        victory_Norse_7.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_7Layout = new javax.swing.GroupLayout(victory_Norse_7);
+        victory_Norse_7.setLayout(victory_Norse_7Layout);
+        victory_Norse_7Layout.setHorizontalGroup(
+            victory_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_7Layout.setVerticalGroup(
+            victory_Norse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        victory_Norse_7.getAccessibleContext().setAccessibleName("victory_Norse_7");
+
+        victory_Norse_8.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_8Layout = new javax.swing.GroupLayout(victory_Norse_8);
+        victory_Norse_8.setLayout(victory_Norse_8Layout);
+        victory_Norse_8Layout.setHorizontalGroup(
+            victory_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_8Layout.setVerticalGroup(
+            victory_Norse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        victory_Norse_8.getAccessibleContext().setAccessibleName("victory_Norse_8");
+
+        victory_Norse_9.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_9Layout = new javax.swing.GroupLayout(victory_Norse_9);
+        victory_Norse_9.setLayout(victory_Norse_9Layout);
+        victory_Norse_9Layout.setHorizontalGroup(
+            victory_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_9Layout.setVerticalGroup(
+            victory_Norse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        victory_Norse_9.getAccessibleContext().setAccessibleName("victory_Norse_9");
+
+        victory_Norse_10.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_10Layout = new javax.swing.GroupLayout(victory_Norse_10);
+        victory_Norse_10.setLayout(victory_Norse_10Layout);
+        victory_Norse_10Layout.setHorizontalGroup(
+            victory_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_10Layout.setVerticalGroup(
+            victory_Norse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        victory_Norse_10.getAccessibleContext().setAccessibleName("victory_Norse_10");
+
+        victory_Norse_11.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_11Layout = new javax.swing.GroupLayout(victory_Norse_11);
+        victory_Norse_11.setLayout(victory_Norse_11Layout);
+        victory_Norse_11Layout.setHorizontalGroup(
+            victory_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_11Layout.setVerticalGroup(
+            victory_Norse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        victory_Norse_11.getAccessibleContext().setAccessibleName("victory_Norse_11");
+
+        victory_Norse_12.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_12Layout = new javax.swing.GroupLayout(victory_Norse_12);
+        victory_Norse_12.setLayout(victory_Norse_12Layout);
+        victory_Norse_12Layout.setHorizontalGroup(
+            victory_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_12Layout.setVerticalGroup(
+            victory_Norse_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        victory_Norse_12.getAccessibleContext().setAccessibleName("victory_Norse_12");
+
+        victory_Norse_13.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_13Layout = new javax.swing.GroupLayout(victory_Norse_13);
+        victory_Norse_13.setLayout(victory_Norse_13Layout);
+        victory_Norse_13Layout.setHorizontalGroup(
+            victory_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_13Layout.setVerticalGroup(
+            victory_Norse_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        victory_Norse_13.getAccessibleContext().setAccessibleName("victory_Norse_13");
+
+        victory_Norse_14.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_14Layout = new javax.swing.GroupLayout(victory_Norse_14);
+        victory_Norse_14.setLayout(victory_Norse_14Layout);
+        victory_Norse_14Layout.setHorizontalGroup(
+            victory_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_14Layout.setVerticalGroup(
+            victory_Norse_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        victory_Norse_14.getAccessibleContext().setAccessibleName("victory_Norse_14");
+
+        victory_Norse_15.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_15Layout = new javax.swing.GroupLayout(victory_Norse_15);
+        victory_Norse_15.setLayout(victory_Norse_15Layout);
+        victory_Norse_15Layout.setHorizontalGroup(
+            victory_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_15Layout.setVerticalGroup(
+            victory_Norse_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        victory_Norse_15.getAccessibleContext().setAccessibleName("victory_Norse_15");
+
+        victory_Norse_16.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_16Layout = new javax.swing.GroupLayout(victory_Norse_16);
+        victory_Norse_16.setLayout(victory_Norse_16Layout);
+        victory_Norse_16Layout.setHorizontalGroup(
+            victory_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_16Layout.setVerticalGroup(
+            victory_Norse_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        victory_Norse_16.getAccessibleContext().setAccessibleName("victory_Norse_16");
+
+        victory_Norse_17.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_17Layout = new javax.swing.GroupLayout(victory_Norse_17);
+        victory_Norse_17.setLayout(victory_Norse_17Layout);
+        victory_Norse_17Layout.setHorizontalGroup(
+            victory_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_17Layout.setVerticalGroup(
+            victory_Norse_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        victory_Norse_17.getAccessibleContext().setAccessibleName("victory_Norse_17");
+
+        victory_Norse_18.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_18Layout = new javax.swing.GroupLayout(victory_Norse_18);
+        victory_Norse_18.setLayout(victory_Norse_18Layout);
+        victory_Norse_18Layout.setHorizontalGroup(
+            victory_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_18Layout.setVerticalGroup(
+            victory_Norse_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        victory_Norse_18.getAccessibleContext().setAccessibleName("victory_Norse_18");
+
+        victory_Norse_19.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Norse_19Layout = new javax.swing.GroupLayout(victory_Norse_19);
+        victory_Norse_19.setLayout(victory_Norse_19Layout);
+        victory_Norse_19Layout.setHorizontalGroup(
+            victory_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Norse_19Layout.setVerticalGroup(
+            victory_Norse_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        norseVictoryResources.add(victory_Norse_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        victory_Norse_19.getAccessibleContext().setAccessibleName("victory_Norse_19");
+
+        norseResources.add(norseVictoryResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 770, 30));
+
+        norseAge.setEditable(false);
+        norseAge.setBackground(new java.awt.Color(0, 0, 0));
+        norseAge.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        norseAge.setForeground(new java.awt.Color(255, 51, 51));
+        norseAge.setText("Archaic Age");
+        norseAge.setBorder(null);
+        norseAge.setOpaque(false);
+        norseAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                norseAgeActionPerformed(evt);
+            }
+        });
+        norseResources.add(norseAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 100, -1));
+
+        norseBoard.add(norseResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
+
         norseBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
         norseBoard.add(norseBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
@@ -784,6 +2894,1570 @@ public class BoardGUI extends javax.swing.JFrame {
         greekTerrain.add(hills_g8, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 275, -1, -1));
 
         greekBoard.add(greekTerrain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 390, 370));
+
+        greekResources.setOpaque(false);
+        greekResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        greekFoodResources.setOpaque(false);
+        greekFoodResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        food_Greek_1.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_1Layout = new javax.swing.GroupLayout(food_Greek_1);
+        food_Greek_1.setLayout(food_Greek_1Layout);
+        food_Greek_1Layout.setHorizontalGroup(
+            food_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_1Layout.setVerticalGroup(
+            food_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        food_Greek_1.getAccessibleContext().setAccessibleName("food_Greek_1");
+
+        food_Greek_2.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_2Layout = new javax.swing.GroupLayout(food_Greek_2);
+        food_Greek_2.setLayout(food_Greek_2Layout);
+        food_Greek_2Layout.setHorizontalGroup(
+            food_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_2Layout.setVerticalGroup(
+            food_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        food_Greek_2.getAccessibleContext().setAccessibleName("food_Greek_2");
+
+        food_Greek_3.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_3Layout = new javax.swing.GroupLayout(food_Greek_3);
+        food_Greek_3.setLayout(food_Greek_3Layout);
+        food_Greek_3Layout.setHorizontalGroup(
+            food_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_3Layout.setVerticalGroup(
+            food_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        food_Greek_3.getAccessibleContext().setAccessibleName("food_Greek_3");
+
+        food_Greek_4.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_4Layout = new javax.swing.GroupLayout(food_Greek_4);
+        food_Greek_4.setLayout(food_Greek_4Layout);
+        food_Greek_4Layout.setHorizontalGroup(
+            food_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_4Layout.setVerticalGroup(
+            food_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        food_Greek_4.getAccessibleContext().setAccessibleName("food_Greek_4");
+
+        food_Greek_5.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_5Layout = new javax.swing.GroupLayout(food_Greek_5);
+        food_Greek_5.setLayout(food_Greek_5Layout);
+        food_Greek_5Layout.setHorizontalGroup(
+            food_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_5Layout.setVerticalGroup(
+            food_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        food_Greek_5.getAccessibleContext().setAccessibleName("food_Greek_5");
+
+        food_Greek_6.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_6Layout = new javax.swing.GroupLayout(food_Greek_6);
+        food_Greek_6.setLayout(food_Greek_6Layout);
+        food_Greek_6Layout.setHorizontalGroup(
+            food_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_6Layout.setVerticalGroup(
+            food_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        food_Greek_6.getAccessibleContext().setAccessibleName("food_Greek_6");
+
+        food_Greek_7.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_7Layout = new javax.swing.GroupLayout(food_Greek_7);
+        food_Greek_7.setLayout(food_Greek_7Layout);
+        food_Greek_7Layout.setHorizontalGroup(
+            food_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_7Layout.setVerticalGroup(
+            food_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        food_Greek_7.getAccessibleContext().setAccessibleName("food_Greek_7");
+
+        food_Greek_8.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_8Layout = new javax.swing.GroupLayout(food_Greek_8);
+        food_Greek_8.setLayout(food_Greek_8Layout);
+        food_Greek_8Layout.setHorizontalGroup(
+            food_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_8Layout.setVerticalGroup(
+            food_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        food_Greek_8.getAccessibleContext().setAccessibleName("food_Greek_8");
+
+        food_Greek_9.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_9Layout = new javax.swing.GroupLayout(food_Greek_9);
+        food_Greek_9.setLayout(food_Greek_9Layout);
+        food_Greek_9Layout.setHorizontalGroup(
+            food_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_9Layout.setVerticalGroup(
+            food_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        food_Greek_9.getAccessibleContext().setAccessibleName("food_Greek_9");
+
+        food_Greek_10.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_10Layout = new javax.swing.GroupLayout(food_Greek_10);
+        food_Greek_10.setLayout(food_Greek_10Layout);
+        food_Greek_10Layout.setHorizontalGroup(
+            food_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_10Layout.setVerticalGroup(
+            food_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        food_Greek_10.getAccessibleContext().setAccessibleName("food_Greek_10");
+
+        food_Greek_11.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_11Layout = new javax.swing.GroupLayout(food_Greek_11);
+        food_Greek_11.setLayout(food_Greek_11Layout);
+        food_Greek_11Layout.setHorizontalGroup(
+            food_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_11Layout.setVerticalGroup(
+            food_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        food_Greek_11.getAccessibleContext().setAccessibleName("food_Greek_11");
+
+        food_Greek_12.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_12Layout = new javax.swing.GroupLayout(food_Greek_12);
+        food_Greek_12.setLayout(food_Greek_12Layout);
+        food_Greek_12Layout.setHorizontalGroup(
+            food_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_12Layout.setVerticalGroup(
+            food_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        food_Greek_12.getAccessibleContext().setAccessibleName("food_Greek_12");
+
+        food_Greek_13.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_13Layout = new javax.swing.GroupLayout(food_Greek_13);
+        food_Greek_13.setLayout(food_Greek_13Layout);
+        food_Greek_13Layout.setHorizontalGroup(
+            food_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_13Layout.setVerticalGroup(
+            food_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        food_Greek_13.getAccessibleContext().setAccessibleName("food_Greek_13");
+
+        food_Greek_14.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_14Layout = new javax.swing.GroupLayout(food_Greek_14);
+        food_Greek_14.setLayout(food_Greek_14Layout);
+        food_Greek_14Layout.setHorizontalGroup(
+            food_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_14Layout.setVerticalGroup(
+            food_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        food_Greek_14.getAccessibleContext().setAccessibleName("food_Greek_14");
+
+        food_Greek_15.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_15Layout = new javax.swing.GroupLayout(food_Greek_15);
+        food_Greek_15.setLayout(food_Greek_15Layout);
+        food_Greek_15Layout.setHorizontalGroup(
+            food_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_15Layout.setVerticalGroup(
+            food_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        food_Greek_15.getAccessibleContext().setAccessibleName("food_Greek_15");
+
+        food_Greek_16.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_16Layout = new javax.swing.GroupLayout(food_Greek_16);
+        food_Greek_16.setLayout(food_Greek_16Layout);
+        food_Greek_16Layout.setHorizontalGroup(
+            food_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_16Layout.setVerticalGroup(
+            food_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        food_Greek_16.getAccessibleContext().setAccessibleName("food_Greek_16");
+
+        food_Greek_17.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_17Layout = new javax.swing.GroupLayout(food_Greek_17);
+        food_Greek_17.setLayout(food_Greek_17Layout);
+        food_Greek_17Layout.setHorizontalGroup(
+            food_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_17Layout.setVerticalGroup(
+            food_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        food_Greek_17.getAccessibleContext().setAccessibleName("food_Greek_17");
+
+        food_Greek_18.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_18Layout = new javax.swing.GroupLayout(food_Greek_18);
+        food_Greek_18.setLayout(food_Greek_18Layout);
+        food_Greek_18Layout.setHorizontalGroup(
+            food_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_18Layout.setVerticalGroup(
+            food_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        food_Greek_18.getAccessibleContext().setAccessibleName("food_Greek_18");
+
+        food_Greek_19.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Greek_19Layout = new javax.swing.GroupLayout(food_Greek_19);
+        food_Greek_19.setLayout(food_Greek_19Layout);
+        food_Greek_19Layout.setHorizontalGroup(
+            food_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Greek_19Layout.setVerticalGroup(
+            food_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFoodResources.add(food_Greek_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        food_Greek_19.getAccessibleContext().setAccessibleName("food_Greek_19");
+
+        greekResources.add(greekFoodResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 30));
+
+        greekFavorResources.setOpaque(false);
+        greekFavorResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        favor_Greek_1.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_1Layout = new javax.swing.GroupLayout(favor_Greek_1);
+        favor_Greek_1.setLayout(favor_Greek_1Layout);
+        favor_Greek_1Layout.setHorizontalGroup(
+            favor_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_1Layout.setVerticalGroup(
+            favor_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        favor_Greek_1.getAccessibleContext().setAccessibleName("favor_Greek_1");
+
+        favor_Greek_2.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_2Layout = new javax.swing.GroupLayout(favor_Greek_2);
+        favor_Greek_2.setLayout(favor_Greek_2Layout);
+        favor_Greek_2Layout.setHorizontalGroup(
+            favor_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_2Layout.setVerticalGroup(
+            favor_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        favor_Greek_2.getAccessibleContext().setAccessibleName("favor_Greek_2");
+
+        favor_Greek_3.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_3Layout = new javax.swing.GroupLayout(favor_Greek_3);
+        favor_Greek_3.setLayout(favor_Greek_3Layout);
+        favor_Greek_3Layout.setHorizontalGroup(
+            favor_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_3Layout.setVerticalGroup(
+            favor_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        favor_Greek_3.getAccessibleContext().setAccessibleName("favor_Greek_3");
+
+        favor_Greek_4.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_4Layout = new javax.swing.GroupLayout(favor_Greek_4);
+        favor_Greek_4.setLayout(favor_Greek_4Layout);
+        favor_Greek_4Layout.setHorizontalGroup(
+            favor_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_4Layout.setVerticalGroup(
+            favor_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        favor_Greek_4.getAccessibleContext().setAccessibleName("favor_Greek_4");
+
+        favor_Greek_5.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_5Layout = new javax.swing.GroupLayout(favor_Greek_5);
+        favor_Greek_5.setLayout(favor_Greek_5Layout);
+        favor_Greek_5Layout.setHorizontalGroup(
+            favor_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_5Layout.setVerticalGroup(
+            favor_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        favor_Greek_5.getAccessibleContext().setAccessibleName("favor_Greek_5");
+
+        favor_Greek_6.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_6Layout = new javax.swing.GroupLayout(favor_Greek_6);
+        favor_Greek_6.setLayout(favor_Greek_6Layout);
+        favor_Greek_6Layout.setHorizontalGroup(
+            favor_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_6Layout.setVerticalGroup(
+            favor_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        favor_Greek_6.getAccessibleContext().setAccessibleName("favor_Greek_6");
+
+        favor_Greek_7.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_7Layout = new javax.swing.GroupLayout(favor_Greek_7);
+        favor_Greek_7.setLayout(favor_Greek_7Layout);
+        favor_Greek_7Layout.setHorizontalGroup(
+            favor_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_7Layout.setVerticalGroup(
+            favor_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        favor_Greek_7.getAccessibleContext().setAccessibleName("favor_Greek_7");
+
+        favor_Greek_8.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_8Layout = new javax.swing.GroupLayout(favor_Greek_8);
+        favor_Greek_8.setLayout(favor_Greek_8Layout);
+        favor_Greek_8Layout.setHorizontalGroup(
+            favor_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_8Layout.setVerticalGroup(
+            favor_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        favor_Greek_8.getAccessibleContext().setAccessibleName("favor_Greek_8");
+
+        favor_Greek_9.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_9Layout = new javax.swing.GroupLayout(favor_Greek_9);
+        favor_Greek_9.setLayout(favor_Greek_9Layout);
+        favor_Greek_9Layout.setHorizontalGroup(
+            favor_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_9Layout.setVerticalGroup(
+            favor_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        favor_Greek_9.getAccessibleContext().setAccessibleName("favor_Greek_9");
+
+        favor_Greek_10.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_10Layout = new javax.swing.GroupLayout(favor_Greek_10);
+        favor_Greek_10.setLayout(favor_Greek_10Layout);
+        favor_Greek_10Layout.setHorizontalGroup(
+            favor_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_10Layout.setVerticalGroup(
+            favor_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        favor_Greek_10.getAccessibleContext().setAccessibleName("favor_Greek_10");
+
+        favor_Greek_11.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_11Layout = new javax.swing.GroupLayout(favor_Greek_11);
+        favor_Greek_11.setLayout(favor_Greek_11Layout);
+        favor_Greek_11Layout.setHorizontalGroup(
+            favor_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_11Layout.setVerticalGroup(
+            favor_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        favor_Greek_11.getAccessibleContext().setAccessibleName("favor_Greek_11");
+
+        favor_Greek_12.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_12Layout = new javax.swing.GroupLayout(favor_Greek_12);
+        favor_Greek_12.setLayout(favor_Greek_12Layout);
+        favor_Greek_12Layout.setHorizontalGroup(
+            favor_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_12Layout.setVerticalGroup(
+            favor_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        favor_Greek_12.getAccessibleContext().setAccessibleName("favor_Greek_12");
+
+        favor_Greek_13.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_13Layout = new javax.swing.GroupLayout(favor_Greek_13);
+        favor_Greek_13.setLayout(favor_Greek_13Layout);
+        favor_Greek_13Layout.setHorizontalGroup(
+            favor_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_13Layout.setVerticalGroup(
+            favor_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        favor_Greek_13.getAccessibleContext().setAccessibleName("favor_Greek_13");
+
+        favor_Greek_14.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_14Layout = new javax.swing.GroupLayout(favor_Greek_14);
+        favor_Greek_14.setLayout(favor_Greek_14Layout);
+        favor_Greek_14Layout.setHorizontalGroup(
+            favor_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_14Layout.setVerticalGroup(
+            favor_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        favor_Greek_14.getAccessibleContext().setAccessibleName("favor_Greek_14");
+
+        favor_Greek_15.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_15Layout = new javax.swing.GroupLayout(favor_Greek_15);
+        favor_Greek_15.setLayout(favor_Greek_15Layout);
+        favor_Greek_15Layout.setHorizontalGroup(
+            favor_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_15Layout.setVerticalGroup(
+            favor_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        favor_Greek_15.getAccessibleContext().setAccessibleName("favor_Greek_15");
+
+        favor_Greek_16.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_16Layout = new javax.swing.GroupLayout(favor_Greek_16);
+        favor_Greek_16.setLayout(favor_Greek_16Layout);
+        favor_Greek_16Layout.setHorizontalGroup(
+            favor_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_16Layout.setVerticalGroup(
+            favor_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        favor_Greek_16.getAccessibleContext().setAccessibleName("favor_Greek_16");
+
+        favor_Greek_17.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_17Layout = new javax.swing.GroupLayout(favor_Greek_17);
+        favor_Greek_17.setLayout(favor_Greek_17Layout);
+        favor_Greek_17Layout.setHorizontalGroup(
+            favor_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_17Layout.setVerticalGroup(
+            favor_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        favor_Greek_17.getAccessibleContext().setAccessibleName("favor_Greek_17");
+
+        favor_Greek_18.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_18Layout = new javax.swing.GroupLayout(favor_Greek_18);
+        favor_Greek_18.setLayout(favor_Greek_18Layout);
+        favor_Greek_18Layout.setHorizontalGroup(
+            favor_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_18Layout.setVerticalGroup(
+            favor_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        favor_Greek_18.getAccessibleContext().setAccessibleName("favor_Greek_18");
+
+        favor_Greek_19.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Greek_19Layout = new javax.swing.GroupLayout(favor_Greek_19);
+        favor_Greek_19.setLayout(favor_Greek_19Layout);
+        favor_Greek_19Layout.setHorizontalGroup(
+            favor_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Greek_19Layout.setVerticalGroup(
+            favor_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekFavorResources.add(favor_Greek_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        favor_Greek_19.getAccessibleContext().setAccessibleName("favor_Greek_19");
+
+        greekResources.add(greekFavorResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 770, 30));
+
+        greekWoodResources.setOpaque(false);
+        greekWoodResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        wood_Greek_1.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_1Layout = new javax.swing.GroupLayout(wood_Greek_1);
+        wood_Greek_1.setLayout(wood_Greek_1Layout);
+        wood_Greek_1Layout.setHorizontalGroup(
+            wood_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_1Layout.setVerticalGroup(
+            wood_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        wood_Greek_1.getAccessibleContext().setAccessibleName("wood_Greek_1");
+
+        wood_Greek_2.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_2Layout = new javax.swing.GroupLayout(wood_Greek_2);
+        wood_Greek_2.setLayout(wood_Greek_2Layout);
+        wood_Greek_2Layout.setHorizontalGroup(
+            wood_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_2Layout.setVerticalGroup(
+            wood_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        wood_Greek_2.getAccessibleContext().setAccessibleName("wood_Greek_2");
+
+        wood_Greek_3.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_3Layout = new javax.swing.GroupLayout(wood_Greek_3);
+        wood_Greek_3.setLayout(wood_Greek_3Layout);
+        wood_Greek_3Layout.setHorizontalGroup(
+            wood_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_3Layout.setVerticalGroup(
+            wood_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        wood_Greek_3.getAccessibleContext().setAccessibleName("wood_Greek_3");
+
+        wood_Greek_4.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_4Layout = new javax.swing.GroupLayout(wood_Greek_4);
+        wood_Greek_4.setLayout(wood_Greek_4Layout);
+        wood_Greek_4Layout.setHorizontalGroup(
+            wood_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_4Layout.setVerticalGroup(
+            wood_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        wood_Greek_4.getAccessibleContext().setAccessibleName("wood_Greek_4");
+
+        wood_Greek_5.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_5Layout = new javax.swing.GroupLayout(wood_Greek_5);
+        wood_Greek_5.setLayout(wood_Greek_5Layout);
+        wood_Greek_5Layout.setHorizontalGroup(
+            wood_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_5Layout.setVerticalGroup(
+            wood_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        wood_Greek_5.getAccessibleContext().setAccessibleName("wood_Greek_5");
+
+        wood_Greek_6.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_6Layout = new javax.swing.GroupLayout(wood_Greek_6);
+        wood_Greek_6.setLayout(wood_Greek_6Layout);
+        wood_Greek_6Layout.setHorizontalGroup(
+            wood_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_6Layout.setVerticalGroup(
+            wood_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        wood_Greek_6.getAccessibleContext().setAccessibleName("wood_Greek_6");
+
+        wood_Greek_7.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_7Layout = new javax.swing.GroupLayout(wood_Greek_7);
+        wood_Greek_7.setLayout(wood_Greek_7Layout);
+        wood_Greek_7Layout.setHorizontalGroup(
+            wood_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_7Layout.setVerticalGroup(
+            wood_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        wood_Greek_7.getAccessibleContext().setAccessibleName("wood_Greek_7");
+
+        wood_Greek_8.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_8Layout = new javax.swing.GroupLayout(wood_Greek_8);
+        wood_Greek_8.setLayout(wood_Greek_8Layout);
+        wood_Greek_8Layout.setHorizontalGroup(
+            wood_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_8Layout.setVerticalGroup(
+            wood_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        wood_Greek_8.getAccessibleContext().setAccessibleName("wood_Greek_8");
+
+        wood_Greek_9.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_9Layout = new javax.swing.GroupLayout(wood_Greek_9);
+        wood_Greek_9.setLayout(wood_Greek_9Layout);
+        wood_Greek_9Layout.setHorizontalGroup(
+            wood_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_9Layout.setVerticalGroup(
+            wood_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        wood_Greek_9.getAccessibleContext().setAccessibleName("wood_Greek_9");
+
+        wood_Greek_10.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_10Layout = new javax.swing.GroupLayout(wood_Greek_10);
+        wood_Greek_10.setLayout(wood_Greek_10Layout);
+        wood_Greek_10Layout.setHorizontalGroup(
+            wood_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_10Layout.setVerticalGroup(
+            wood_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        wood_Greek_10.getAccessibleContext().setAccessibleName("wood_Greek_10");
+
+        wood_Greek_11.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_11Layout = new javax.swing.GroupLayout(wood_Greek_11);
+        wood_Greek_11.setLayout(wood_Greek_11Layout);
+        wood_Greek_11Layout.setHorizontalGroup(
+            wood_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_11Layout.setVerticalGroup(
+            wood_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        wood_Greek_11.getAccessibleContext().setAccessibleName("wood_Greek_11");
+
+        wood_Greek_12.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_12Layout = new javax.swing.GroupLayout(wood_Greek_12);
+        wood_Greek_12.setLayout(wood_Greek_12Layout);
+        wood_Greek_12Layout.setHorizontalGroup(
+            wood_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_12Layout.setVerticalGroup(
+            wood_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        wood_Greek_12.getAccessibleContext().setAccessibleName("wood_Greek_12");
+
+        wood_Greek_13.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_13Layout = new javax.swing.GroupLayout(wood_Greek_13);
+        wood_Greek_13.setLayout(wood_Greek_13Layout);
+        wood_Greek_13Layout.setHorizontalGroup(
+            wood_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_13Layout.setVerticalGroup(
+            wood_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        wood_Greek_13.getAccessibleContext().setAccessibleName("wood_Greek_13");
+
+        wood_Greek_14.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_14Layout = new javax.swing.GroupLayout(wood_Greek_14);
+        wood_Greek_14.setLayout(wood_Greek_14Layout);
+        wood_Greek_14Layout.setHorizontalGroup(
+            wood_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_14Layout.setVerticalGroup(
+            wood_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        wood_Greek_14.getAccessibleContext().setAccessibleName("wood_Greek_14");
+
+        wood_Greek_15.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_15Layout = new javax.swing.GroupLayout(wood_Greek_15);
+        wood_Greek_15.setLayout(wood_Greek_15Layout);
+        wood_Greek_15Layout.setHorizontalGroup(
+            wood_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_15Layout.setVerticalGroup(
+            wood_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        wood_Greek_15.getAccessibleContext().setAccessibleName("wood_Greek_15");
+
+        wood_Greek_16.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_16Layout = new javax.swing.GroupLayout(wood_Greek_16);
+        wood_Greek_16.setLayout(wood_Greek_16Layout);
+        wood_Greek_16Layout.setHorizontalGroup(
+            wood_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_16Layout.setVerticalGroup(
+            wood_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        wood_Greek_16.getAccessibleContext().setAccessibleName("wood_Greek_16");
+
+        wood_Greek_17.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_17Layout = new javax.swing.GroupLayout(wood_Greek_17);
+        wood_Greek_17.setLayout(wood_Greek_17Layout);
+        wood_Greek_17Layout.setHorizontalGroup(
+            wood_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_17Layout.setVerticalGroup(
+            wood_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        wood_Greek_17.getAccessibleContext().setAccessibleName("wood_Greek_17");
+
+        wood_Greek_18.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_18Layout = new javax.swing.GroupLayout(wood_Greek_18);
+        wood_Greek_18.setLayout(wood_Greek_18Layout);
+        wood_Greek_18Layout.setHorizontalGroup(
+            wood_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_18Layout.setVerticalGroup(
+            wood_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        wood_Greek_18.getAccessibleContext().setAccessibleName("wood_Greek_18");
+
+        wood_Greek_19.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Greek_19Layout = new javax.swing.GroupLayout(wood_Greek_19);
+        wood_Greek_19.setLayout(wood_Greek_19Layout);
+        wood_Greek_19Layout.setHorizontalGroup(
+            wood_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Greek_19Layout.setVerticalGroup(
+            wood_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekWoodResources.add(wood_Greek_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        wood_Greek_19.getAccessibleContext().setAccessibleName("wood_Greek_19");
+
+        greekResources.add(greekWoodResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 30));
+
+        greekGoldResources.setOpaque(false);
+        greekGoldResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gold_Greek_1.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_1Layout = new javax.swing.GroupLayout(gold_Greek_1);
+        gold_Greek_1.setLayout(gold_Greek_1Layout);
+        gold_Greek_1Layout.setHorizontalGroup(
+            gold_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_1Layout.setVerticalGroup(
+            gold_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        gold_Greek_1.getAccessibleContext().setAccessibleName("gold_Greek_1");
+
+        gold_Greek_2.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_2Layout = new javax.swing.GroupLayout(gold_Greek_2);
+        gold_Greek_2.setLayout(gold_Greek_2Layout);
+        gold_Greek_2Layout.setHorizontalGroup(
+            gold_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_2Layout.setVerticalGroup(
+            gold_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        gold_Greek_2.getAccessibleContext().setAccessibleName("gold_Greek_2");
+
+        gold_Greek_3.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_3Layout = new javax.swing.GroupLayout(gold_Greek_3);
+        gold_Greek_3.setLayout(gold_Greek_3Layout);
+        gold_Greek_3Layout.setHorizontalGroup(
+            gold_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_3Layout.setVerticalGroup(
+            gold_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        gold_Greek_3.getAccessibleContext().setAccessibleName("gold_Greek_3");
+
+        gold_Greek_4.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_4Layout = new javax.swing.GroupLayout(gold_Greek_4);
+        gold_Greek_4.setLayout(gold_Greek_4Layout);
+        gold_Greek_4Layout.setHorizontalGroup(
+            gold_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_4Layout.setVerticalGroup(
+            gold_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        gold_Greek_4.getAccessibleContext().setAccessibleName("gold_Greek_4");
+
+        gold_Greek_5.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_5Layout = new javax.swing.GroupLayout(gold_Greek_5);
+        gold_Greek_5.setLayout(gold_Greek_5Layout);
+        gold_Greek_5Layout.setHorizontalGroup(
+            gold_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_5Layout.setVerticalGroup(
+            gold_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        gold_Greek_5.getAccessibleContext().setAccessibleName("gold_Greek_5");
+
+        gold_Greek_6.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_6Layout = new javax.swing.GroupLayout(gold_Greek_6);
+        gold_Greek_6.setLayout(gold_Greek_6Layout);
+        gold_Greek_6Layout.setHorizontalGroup(
+            gold_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_6Layout.setVerticalGroup(
+            gold_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        gold_Greek_6.getAccessibleContext().setAccessibleName("gold_Greek_6");
+
+        gold_Greek_7.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_7Layout = new javax.swing.GroupLayout(gold_Greek_7);
+        gold_Greek_7.setLayout(gold_Greek_7Layout);
+        gold_Greek_7Layout.setHorizontalGroup(
+            gold_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_7Layout.setVerticalGroup(
+            gold_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        gold_Greek_7.getAccessibleContext().setAccessibleName("gold_Greek_7");
+
+        gold_Greek_8.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_8Layout = new javax.swing.GroupLayout(gold_Greek_8);
+        gold_Greek_8.setLayout(gold_Greek_8Layout);
+        gold_Greek_8Layout.setHorizontalGroup(
+            gold_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_8Layout.setVerticalGroup(
+            gold_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        gold_Greek_8.getAccessibleContext().setAccessibleName("gold_Greek_8");
+
+        gold_Greek_9.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_9Layout = new javax.swing.GroupLayout(gold_Greek_9);
+        gold_Greek_9.setLayout(gold_Greek_9Layout);
+        gold_Greek_9Layout.setHorizontalGroup(
+            gold_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_9Layout.setVerticalGroup(
+            gold_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        gold_Greek_9.getAccessibleContext().setAccessibleName("gold_Greek_9");
+
+        gold_Greek_10.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_10Layout = new javax.swing.GroupLayout(gold_Greek_10);
+        gold_Greek_10.setLayout(gold_Greek_10Layout);
+        gold_Greek_10Layout.setHorizontalGroup(
+            gold_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_10Layout.setVerticalGroup(
+            gold_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        gold_Greek_10.getAccessibleContext().setAccessibleName("gold_Greek_10");
+
+        gold_Greek_11.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_11Layout = new javax.swing.GroupLayout(gold_Greek_11);
+        gold_Greek_11.setLayout(gold_Greek_11Layout);
+        gold_Greek_11Layout.setHorizontalGroup(
+            gold_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_11Layout.setVerticalGroup(
+            gold_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        gold_Greek_11.getAccessibleContext().setAccessibleName("gold_Greek_11");
+
+        gold_Greek_12.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_12Layout = new javax.swing.GroupLayout(gold_Greek_12);
+        gold_Greek_12.setLayout(gold_Greek_12Layout);
+        gold_Greek_12Layout.setHorizontalGroup(
+            gold_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_12Layout.setVerticalGroup(
+            gold_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        gold_Greek_12.getAccessibleContext().setAccessibleName("gold_Greek_12");
+
+        gold_Greek_13.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_13Layout = new javax.swing.GroupLayout(gold_Greek_13);
+        gold_Greek_13.setLayout(gold_Greek_13Layout);
+        gold_Greek_13Layout.setHorizontalGroup(
+            gold_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_13Layout.setVerticalGroup(
+            gold_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        gold_Greek_13.getAccessibleContext().setAccessibleName("gold_Greek_13");
+
+        gold_Greek_14.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_14Layout = new javax.swing.GroupLayout(gold_Greek_14);
+        gold_Greek_14.setLayout(gold_Greek_14Layout);
+        gold_Greek_14Layout.setHorizontalGroup(
+            gold_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_14Layout.setVerticalGroup(
+            gold_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        gold_Greek_14.getAccessibleContext().setAccessibleName("gold_Greek_14");
+
+        gold_Greek_15.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_15Layout = new javax.swing.GroupLayout(gold_Greek_15);
+        gold_Greek_15.setLayout(gold_Greek_15Layout);
+        gold_Greek_15Layout.setHorizontalGroup(
+            gold_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_15Layout.setVerticalGroup(
+            gold_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        gold_Greek_15.getAccessibleContext().setAccessibleName("gold_Greek_15");
+
+        gold_Greek_16.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_16Layout = new javax.swing.GroupLayout(gold_Greek_16);
+        gold_Greek_16.setLayout(gold_Greek_16Layout);
+        gold_Greek_16Layout.setHorizontalGroup(
+            gold_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_16Layout.setVerticalGroup(
+            gold_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        gold_Greek_16.getAccessibleContext().setAccessibleName("gold_Greek_16");
+
+        gold_Greek_17.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_17Layout = new javax.swing.GroupLayout(gold_Greek_17);
+        gold_Greek_17.setLayout(gold_Greek_17Layout);
+        gold_Greek_17Layout.setHorizontalGroup(
+            gold_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_17Layout.setVerticalGroup(
+            gold_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        gold_Greek_17.getAccessibleContext().setAccessibleName("gold_Greek_17");
+
+        gold_Greek_18.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_18Layout = new javax.swing.GroupLayout(gold_Greek_18);
+        gold_Greek_18.setLayout(gold_Greek_18Layout);
+        gold_Greek_18Layout.setHorizontalGroup(
+            gold_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_18Layout.setVerticalGroup(
+            gold_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        gold_Greek_18.getAccessibleContext().setAccessibleName("gold_Greek_18");
+
+        gold_Greek_19.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Greek_19Layout = new javax.swing.GroupLayout(gold_Greek_19);
+        gold_Greek_19.setLayout(gold_Greek_19Layout);
+        gold_Greek_19Layout.setHorizontalGroup(
+            gold_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Greek_19Layout.setVerticalGroup(
+            gold_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekGoldResources.add(gold_Greek_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        gold_Greek_19.getAccessibleContext().setAccessibleName("gold_Greek_19");
+
+        greekResources.add(greekGoldResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 770, 30));
+
+        greekVictoryResources.setOpaque(false);
+        greekVictoryResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        victory_Greek_1.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_1Layout = new javax.swing.GroupLayout(victory_Greek_1);
+        victory_Greek_1.setLayout(victory_Greek_1Layout);
+        victory_Greek_1Layout.setHorizontalGroup(
+            victory_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_1Layout.setVerticalGroup(
+            victory_Greek_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        victory_Greek_1.getAccessibleContext().setAccessibleName("victory_Greek_1");
+
+        victory_Greek_2.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_2Layout = new javax.swing.GroupLayout(victory_Greek_2);
+        victory_Greek_2.setLayout(victory_Greek_2Layout);
+        victory_Greek_2Layout.setHorizontalGroup(
+            victory_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_2Layout.setVerticalGroup(
+            victory_Greek_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        victory_Greek_2.getAccessibleContext().setAccessibleName("victory_Greek_2");
+
+        victory_Greek_3.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_3Layout = new javax.swing.GroupLayout(victory_Greek_3);
+        victory_Greek_3.setLayout(victory_Greek_3Layout);
+        victory_Greek_3Layout.setHorizontalGroup(
+            victory_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_3Layout.setVerticalGroup(
+            victory_Greek_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        victory_Greek_3.getAccessibleContext().setAccessibleName("victory_Greek_3");
+
+        victory_Greek_4.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_4Layout = new javax.swing.GroupLayout(victory_Greek_4);
+        victory_Greek_4.setLayout(victory_Greek_4Layout);
+        victory_Greek_4Layout.setHorizontalGroup(
+            victory_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_4Layout.setVerticalGroup(
+            victory_Greek_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        victory_Greek_4.getAccessibleContext().setAccessibleName("victory_Greek_4");
+
+        victory_Greek_5.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_5Layout = new javax.swing.GroupLayout(victory_Greek_5);
+        victory_Greek_5.setLayout(victory_Greek_5Layout);
+        victory_Greek_5Layout.setHorizontalGroup(
+            victory_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_5Layout.setVerticalGroup(
+            victory_Greek_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        victory_Greek_5.getAccessibleContext().setAccessibleName("victory_Greek_5");
+
+        victory_Greek_6.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_6Layout = new javax.swing.GroupLayout(victory_Greek_6);
+        victory_Greek_6.setLayout(victory_Greek_6Layout);
+        victory_Greek_6Layout.setHorizontalGroup(
+            victory_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_6Layout.setVerticalGroup(
+            victory_Greek_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        victory_Greek_6.getAccessibleContext().setAccessibleName("victory_Greek_6");
+
+        victory_Greek_7.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_7Layout = new javax.swing.GroupLayout(victory_Greek_7);
+        victory_Greek_7.setLayout(victory_Greek_7Layout);
+        victory_Greek_7Layout.setHorizontalGroup(
+            victory_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_7Layout.setVerticalGroup(
+            victory_Greek_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        victory_Greek_7.getAccessibleContext().setAccessibleName("victory_Greek_7");
+
+        victory_Greek_8.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_8Layout = new javax.swing.GroupLayout(victory_Greek_8);
+        victory_Greek_8.setLayout(victory_Greek_8Layout);
+        victory_Greek_8Layout.setHorizontalGroup(
+            victory_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_8Layout.setVerticalGroup(
+            victory_Greek_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        victory_Greek_8.getAccessibleContext().setAccessibleName("victory_Greek_8");
+
+        victory_Greek_9.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_9Layout = new javax.swing.GroupLayout(victory_Greek_9);
+        victory_Greek_9.setLayout(victory_Greek_9Layout);
+        victory_Greek_9Layout.setHorizontalGroup(
+            victory_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_9Layout.setVerticalGroup(
+            victory_Greek_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        victory_Greek_9.getAccessibleContext().setAccessibleName("victory_Greek_9");
+
+        victory_Greek_10.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_10Layout = new javax.swing.GroupLayout(victory_Greek_10);
+        victory_Greek_10.setLayout(victory_Greek_10Layout);
+        victory_Greek_10Layout.setHorizontalGroup(
+            victory_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_10Layout.setVerticalGroup(
+            victory_Greek_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        victory_Greek_10.getAccessibleContext().setAccessibleName("victory_Greek_10");
+
+        victory_Greek_11.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_11Layout = new javax.swing.GroupLayout(victory_Greek_11);
+        victory_Greek_11.setLayout(victory_Greek_11Layout);
+        victory_Greek_11Layout.setHorizontalGroup(
+            victory_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_11Layout.setVerticalGroup(
+            victory_Greek_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        victory_Greek_11.getAccessibleContext().setAccessibleName("victory_Greek_11");
+
+        victory_Greek_12.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_12Layout = new javax.swing.GroupLayout(victory_Greek_12);
+        victory_Greek_12.setLayout(victory_Greek_12Layout);
+        victory_Greek_12Layout.setHorizontalGroup(
+            victory_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_12Layout.setVerticalGroup(
+            victory_Greek_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        victory_Greek_12.getAccessibleContext().setAccessibleName("victory_Greek_12");
+
+        victory_Greek_13.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_13Layout = new javax.swing.GroupLayout(victory_Greek_13);
+        victory_Greek_13.setLayout(victory_Greek_13Layout);
+        victory_Greek_13Layout.setHorizontalGroup(
+            victory_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_13Layout.setVerticalGroup(
+            victory_Greek_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        victory_Greek_13.getAccessibleContext().setAccessibleName("victory_Greek_13");
+
+        victory_Greek_14.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_14Layout = new javax.swing.GroupLayout(victory_Greek_14);
+        victory_Greek_14.setLayout(victory_Greek_14Layout);
+        victory_Greek_14Layout.setHorizontalGroup(
+            victory_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_14Layout.setVerticalGroup(
+            victory_Greek_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        victory_Greek_14.getAccessibleContext().setAccessibleName("victory_Greek_14");
+
+        victory_Greek_15.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_15Layout = new javax.swing.GroupLayout(victory_Greek_15);
+        victory_Greek_15.setLayout(victory_Greek_15Layout);
+        victory_Greek_15Layout.setHorizontalGroup(
+            victory_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_15Layout.setVerticalGroup(
+            victory_Greek_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        victory_Greek_15.getAccessibleContext().setAccessibleName("victory_Greek_15");
+
+        victory_Greek_16.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_16Layout = new javax.swing.GroupLayout(victory_Greek_16);
+        victory_Greek_16.setLayout(victory_Greek_16Layout);
+        victory_Greek_16Layout.setHorizontalGroup(
+            victory_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_16Layout.setVerticalGroup(
+            victory_Greek_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        victory_Greek_16.getAccessibleContext().setAccessibleName("victory_Greek_16");
+
+        victory_Greek_17.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_17Layout = new javax.swing.GroupLayout(victory_Greek_17);
+        victory_Greek_17.setLayout(victory_Greek_17Layout);
+        victory_Greek_17Layout.setHorizontalGroup(
+            victory_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_17Layout.setVerticalGroup(
+            victory_Greek_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        victory_Greek_17.getAccessibleContext().setAccessibleName("victory_Greek_17");
+
+        victory_Greek_18.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_18Layout = new javax.swing.GroupLayout(victory_Greek_18);
+        victory_Greek_18.setLayout(victory_Greek_18Layout);
+        victory_Greek_18Layout.setHorizontalGroup(
+            victory_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_18Layout.setVerticalGroup(
+            victory_Greek_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        victory_Greek_18.getAccessibleContext().setAccessibleName("victory_Greek_18");
+
+        victory_Greek_19.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Greek_19Layout = new javax.swing.GroupLayout(victory_Greek_19);
+        victory_Greek_19.setLayout(victory_Greek_19Layout);
+        victory_Greek_19Layout.setHorizontalGroup(
+            victory_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Greek_19Layout.setVerticalGroup(
+            victory_Greek_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        greekVictoryResources.add(victory_Greek_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        victory_Greek_19.getAccessibleContext().setAccessibleName("victory_Greek_19");
+
+        greekResources.add(greekVictoryResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 770, 30));
+
+        greekAge.setEditable(false);
+        greekAge.setBackground(new java.awt.Color(0, 0, 0));
+        greekAge.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        greekAge.setForeground(new java.awt.Color(255, 51, 51));
+        greekAge.setText("Archaic Age");
+        greekAge.setBorder(null);
+        greekAge.setOpaque(false);
+        greekAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                greekAgeActionPerformed(evt);
+            }
+        });
+        greekResources.add(greekAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 100, -1));
+
+        greekBoard.add(greekResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
 
         greekBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoardResized.png"))); // NOI18N
         greekBoard.add(greekBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
@@ -1072,6 +4746,1552 @@ public class BoardGUI extends javax.swing.JFrame {
         egyptTerrain.add(hills_e2, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 285, -1, -1));
 
         egyptianBoard.add(egyptTerrain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 390, 380));
+
+        egyptianResources.setOpaque(false);
+        egyptianResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        egyptianFoodResources.setOpaque(false);
+        egyptianFoodResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        food_Egyptian_1.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_1Layout = new javax.swing.GroupLayout(food_Egyptian_1);
+        food_Egyptian_1.setLayout(food_Egyptian_1Layout);
+        food_Egyptian_1Layout.setHorizontalGroup(
+            food_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_1Layout.setVerticalGroup(
+            food_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        food_Egyptian_1.getAccessibleContext().setAccessibleName("food_Egyptian_1");
+
+        food_Egyptian_2.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_2Layout = new javax.swing.GroupLayout(food_Egyptian_2);
+        food_Egyptian_2.setLayout(food_Egyptian_2Layout);
+        food_Egyptian_2Layout.setHorizontalGroup(
+            food_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_2Layout.setVerticalGroup(
+            food_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        food_Egyptian_2.getAccessibleContext().setAccessibleName("food_Egyptian_2");
+
+        food_Egyptian_3.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_3Layout = new javax.swing.GroupLayout(food_Egyptian_3);
+        food_Egyptian_3.setLayout(food_Egyptian_3Layout);
+        food_Egyptian_3Layout.setHorizontalGroup(
+            food_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_3Layout.setVerticalGroup(
+            food_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        food_Egyptian_3.getAccessibleContext().setAccessibleName("food_Egyptian_3");
+
+        food_Egyptian_4.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_4Layout = new javax.swing.GroupLayout(food_Egyptian_4);
+        food_Egyptian_4.setLayout(food_Egyptian_4Layout);
+        food_Egyptian_4Layout.setHorizontalGroup(
+            food_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_4Layout.setVerticalGroup(
+            food_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        food_Egyptian_4.getAccessibleContext().setAccessibleName("food_Egyptian_4");
+
+        food_Egyptian_5.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_5Layout = new javax.swing.GroupLayout(food_Egyptian_5);
+        food_Egyptian_5.setLayout(food_Egyptian_5Layout);
+        food_Egyptian_5Layout.setHorizontalGroup(
+            food_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_5Layout.setVerticalGroup(
+            food_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        food_Egyptian_5.getAccessibleContext().setAccessibleName("food_Egyptian_5");
+
+        food_Egyptian_6.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_6Layout = new javax.swing.GroupLayout(food_Egyptian_6);
+        food_Egyptian_6.setLayout(food_Egyptian_6Layout);
+        food_Egyptian_6Layout.setHorizontalGroup(
+            food_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_6Layout.setVerticalGroup(
+            food_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        food_Egyptian_6.getAccessibleContext().setAccessibleName("food_Egyptian_6");
+
+        food_Egyptian_7.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_7Layout = new javax.swing.GroupLayout(food_Egyptian_7);
+        food_Egyptian_7.setLayout(food_Egyptian_7Layout);
+        food_Egyptian_7Layout.setHorizontalGroup(
+            food_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_7Layout.setVerticalGroup(
+            food_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        food_Egyptian_7.getAccessibleContext().setAccessibleName("food_Egyptian_7");
+
+        food_Egyptian_8.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_8Layout = new javax.swing.GroupLayout(food_Egyptian_8);
+        food_Egyptian_8.setLayout(food_Egyptian_8Layout);
+        food_Egyptian_8Layout.setHorizontalGroup(
+            food_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_8Layout.setVerticalGroup(
+            food_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        food_Egyptian_8.getAccessibleContext().setAccessibleName("food_Egyptian_8");
+
+        food_Egyptian_9.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_9Layout = new javax.swing.GroupLayout(food_Egyptian_9);
+        food_Egyptian_9.setLayout(food_Egyptian_9Layout);
+        food_Egyptian_9Layout.setHorizontalGroup(
+            food_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_9Layout.setVerticalGroup(
+            food_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        food_Egyptian_9.getAccessibleContext().setAccessibleName("food_Egyptian_9");
+
+        food_Egyptian_10.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_10Layout = new javax.swing.GroupLayout(food_Egyptian_10);
+        food_Egyptian_10.setLayout(food_Egyptian_10Layout);
+        food_Egyptian_10Layout.setHorizontalGroup(
+            food_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_10Layout.setVerticalGroup(
+            food_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        food_Egyptian_10.getAccessibleContext().setAccessibleName("food_Egyptian_10");
+
+        food_Egyptian_11.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_11Layout = new javax.swing.GroupLayout(food_Egyptian_11);
+        food_Egyptian_11.setLayout(food_Egyptian_11Layout);
+        food_Egyptian_11Layout.setHorizontalGroup(
+            food_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_11Layout.setVerticalGroup(
+            food_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        food_Egyptian_11.getAccessibleContext().setAccessibleName("food_Egyptian_11");
+
+        food_Egyptian_12.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_12Layout = new javax.swing.GroupLayout(food_Egyptian_12);
+        food_Egyptian_12.setLayout(food_Egyptian_12Layout);
+        food_Egyptian_12Layout.setHorizontalGroup(
+            food_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_12Layout.setVerticalGroup(
+            food_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        food_Egyptian_12.getAccessibleContext().setAccessibleName("food_Egyptian_12");
+
+        food_Egyptian_13.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_13Layout = new javax.swing.GroupLayout(food_Egyptian_13);
+        food_Egyptian_13.setLayout(food_Egyptian_13Layout);
+        food_Egyptian_13Layout.setHorizontalGroup(
+            food_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_13Layout.setVerticalGroup(
+            food_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        food_Egyptian_13.getAccessibleContext().setAccessibleName("food_Egyptian_13");
+
+        food_Egyptian_14.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_14Layout = new javax.swing.GroupLayout(food_Egyptian_14);
+        food_Egyptian_14.setLayout(food_Egyptian_14Layout);
+        food_Egyptian_14Layout.setHorizontalGroup(
+            food_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_14Layout.setVerticalGroup(
+            food_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        food_Egyptian_14.getAccessibleContext().setAccessibleName("food_Egyptian_14");
+
+        food_Egyptian_15.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_15Layout = new javax.swing.GroupLayout(food_Egyptian_15);
+        food_Egyptian_15.setLayout(food_Egyptian_15Layout);
+        food_Egyptian_15Layout.setHorizontalGroup(
+            food_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_15Layout.setVerticalGroup(
+            food_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        food_Egyptian_15.getAccessibleContext().setAccessibleName("food_Egyptian_15");
+
+        food_Egyptian_16.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_16Layout = new javax.swing.GroupLayout(food_Egyptian_16);
+        food_Egyptian_16.setLayout(food_Egyptian_16Layout);
+        food_Egyptian_16Layout.setHorizontalGroup(
+            food_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_16Layout.setVerticalGroup(
+            food_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        food_Egyptian_16.getAccessibleContext().setAccessibleName("food_Egyptian_16");
+
+        food_Egyptian_17.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_17Layout = new javax.swing.GroupLayout(food_Egyptian_17);
+        food_Egyptian_17.setLayout(food_Egyptian_17Layout);
+        food_Egyptian_17Layout.setHorizontalGroup(
+            food_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_17Layout.setVerticalGroup(
+            food_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        food_Egyptian_17.getAccessibleContext().setAccessibleName("food_Egyptian_17");
+
+        food_Egyptian_18.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_18Layout = new javax.swing.GroupLayout(food_Egyptian_18);
+        food_Egyptian_18.setLayout(food_Egyptian_18Layout);
+        food_Egyptian_18Layout.setHorizontalGroup(
+            food_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_18Layout.setVerticalGroup(
+            food_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        food_Egyptian_18.getAccessibleContext().setAccessibleName("food_Egyptian_18");
+
+        food_Egyptian_19.setBackground(new java.awt.Color(51, 255, 51));
+
+        javax.swing.GroupLayout food_Egyptian_19Layout = new javax.swing.GroupLayout(food_Egyptian_19);
+        food_Egyptian_19.setLayout(food_Egyptian_19Layout);
+        food_Egyptian_19Layout.setHorizontalGroup(
+            food_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        food_Egyptian_19Layout.setVerticalGroup(
+            food_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFoodResources.add(food_Egyptian_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        food_Egyptian_19.getAccessibleContext().setAccessibleName("food_Egyptian_19");
+
+        egyptianResources.add(egyptianFoodResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 30));
+
+        egyptianFavorResources.setOpaque(false);
+        egyptianFavorResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        favor_Egyptian_1.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_1Layout = new javax.swing.GroupLayout(favor_Egyptian_1);
+        favor_Egyptian_1.setLayout(favor_Egyptian_1Layout);
+        favor_Egyptian_1Layout.setHorizontalGroup(
+            favor_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_1Layout.setVerticalGroup(
+            favor_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        favor_Egyptian_1.getAccessibleContext().setAccessibleName("favor_Egyptian_1");
+
+        favor_Egyptian_2.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_2Layout = new javax.swing.GroupLayout(favor_Egyptian_2);
+        favor_Egyptian_2.setLayout(favor_Egyptian_2Layout);
+        favor_Egyptian_2Layout.setHorizontalGroup(
+            favor_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_2Layout.setVerticalGroup(
+            favor_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        favor_Egyptian_2.getAccessibleContext().setAccessibleName("favor_Egyptian_2");
+
+        favor_Egyptian_3.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_3Layout = new javax.swing.GroupLayout(favor_Egyptian_3);
+        favor_Egyptian_3.setLayout(favor_Egyptian_3Layout);
+        favor_Egyptian_3Layout.setHorizontalGroup(
+            favor_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_3Layout.setVerticalGroup(
+            favor_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        favor_Egyptian_3.getAccessibleContext().setAccessibleName("favor_Egyptian_3");
+
+        favor_Egyptian_4.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_4Layout = new javax.swing.GroupLayout(favor_Egyptian_4);
+        favor_Egyptian_4.setLayout(favor_Egyptian_4Layout);
+        favor_Egyptian_4Layout.setHorizontalGroup(
+            favor_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_4Layout.setVerticalGroup(
+            favor_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        favor_Egyptian_4.getAccessibleContext().setAccessibleName("favor_Egyptian_4");
+
+        favor_Egyptian_5.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_5Layout = new javax.swing.GroupLayout(favor_Egyptian_5);
+        favor_Egyptian_5.setLayout(favor_Egyptian_5Layout);
+        favor_Egyptian_5Layout.setHorizontalGroup(
+            favor_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_5Layout.setVerticalGroup(
+            favor_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        favor_Egyptian_5.getAccessibleContext().setAccessibleName("favor_Egyptian_5");
+
+        favor_Egyptian_6.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_6Layout = new javax.swing.GroupLayout(favor_Egyptian_6);
+        favor_Egyptian_6.setLayout(favor_Egyptian_6Layout);
+        favor_Egyptian_6Layout.setHorizontalGroup(
+            favor_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_6Layout.setVerticalGroup(
+            favor_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        favor_Egyptian_6.getAccessibleContext().setAccessibleName("favor_Egyptian_6");
+
+        favor_Egyptian_7.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_7Layout = new javax.swing.GroupLayout(favor_Egyptian_7);
+        favor_Egyptian_7.setLayout(favor_Egyptian_7Layout);
+        favor_Egyptian_7Layout.setHorizontalGroup(
+            favor_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_7Layout.setVerticalGroup(
+            favor_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        favor_Egyptian_7.getAccessibleContext().setAccessibleName("favor_Egyptian_7");
+
+        favor_Egyptian_8.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_8Layout = new javax.swing.GroupLayout(favor_Egyptian_8);
+        favor_Egyptian_8.setLayout(favor_Egyptian_8Layout);
+        favor_Egyptian_8Layout.setHorizontalGroup(
+            favor_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_8Layout.setVerticalGroup(
+            favor_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        favor_Egyptian_8.getAccessibleContext().setAccessibleName("favor_Egyptian_8");
+
+        favor_Egyptian_9.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_9Layout = new javax.swing.GroupLayout(favor_Egyptian_9);
+        favor_Egyptian_9.setLayout(favor_Egyptian_9Layout);
+        favor_Egyptian_9Layout.setHorizontalGroup(
+            favor_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_9Layout.setVerticalGroup(
+            favor_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        favor_Egyptian_9.getAccessibleContext().setAccessibleName("favor_Egyptian_9");
+
+        favor_Egyptian_10.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_10Layout = new javax.swing.GroupLayout(favor_Egyptian_10);
+        favor_Egyptian_10.setLayout(favor_Egyptian_10Layout);
+        favor_Egyptian_10Layout.setHorizontalGroup(
+            favor_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_10Layout.setVerticalGroup(
+            favor_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        favor_Egyptian_10.getAccessibleContext().setAccessibleName("favor_Egyptian_10");
+
+        favor_Egyptian_11.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_11Layout = new javax.swing.GroupLayout(favor_Egyptian_11);
+        favor_Egyptian_11.setLayout(favor_Egyptian_11Layout);
+        favor_Egyptian_11Layout.setHorizontalGroup(
+            favor_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_11Layout.setVerticalGroup(
+            favor_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        favor_Egyptian_11.getAccessibleContext().setAccessibleName("favor_Egyptian_11");
+
+        favor_Egyptian_12.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_12Layout = new javax.swing.GroupLayout(favor_Egyptian_12);
+        favor_Egyptian_12.setLayout(favor_Egyptian_12Layout);
+        favor_Egyptian_12Layout.setHorizontalGroup(
+            favor_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_12Layout.setVerticalGroup(
+            favor_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        favor_Egyptian_12.getAccessibleContext().setAccessibleName("favor_Egyptian_12");
+
+        favor_Egyptian_13.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_13Layout = new javax.swing.GroupLayout(favor_Egyptian_13);
+        favor_Egyptian_13.setLayout(favor_Egyptian_13Layout);
+        favor_Egyptian_13Layout.setHorizontalGroup(
+            favor_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_13Layout.setVerticalGroup(
+            favor_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        favor_Egyptian_13.getAccessibleContext().setAccessibleName("favor_Egyptian_13");
+        favor_Egyptian_13.getAccessibleContext().setAccessibleDescription("");
+
+        favor_Egyptian_14.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_14Layout = new javax.swing.GroupLayout(favor_Egyptian_14);
+        favor_Egyptian_14.setLayout(favor_Egyptian_14Layout);
+        favor_Egyptian_14Layout.setHorizontalGroup(
+            favor_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_14Layout.setVerticalGroup(
+            favor_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        favor_Egyptian_14.getAccessibleContext().setAccessibleName("favor_Egyptian_14");
+
+        favor_Egyptian_15.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_15Layout = new javax.swing.GroupLayout(favor_Egyptian_15);
+        favor_Egyptian_15.setLayout(favor_Egyptian_15Layout);
+        favor_Egyptian_15Layout.setHorizontalGroup(
+            favor_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_15Layout.setVerticalGroup(
+            favor_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        favor_Egyptian_15.getAccessibleContext().setAccessibleName("favor_Egyptian_15");
+
+        favor_Egyptian_16.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_16Layout = new javax.swing.GroupLayout(favor_Egyptian_16);
+        favor_Egyptian_16.setLayout(favor_Egyptian_16Layout);
+        favor_Egyptian_16Layout.setHorizontalGroup(
+            favor_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_16Layout.setVerticalGroup(
+            favor_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        favor_Egyptian_16.getAccessibleContext().setAccessibleName("favor_Egyptian_16");
+
+        favor_Egyptian_17.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_17Layout = new javax.swing.GroupLayout(favor_Egyptian_17);
+        favor_Egyptian_17.setLayout(favor_Egyptian_17Layout);
+        favor_Egyptian_17Layout.setHorizontalGroup(
+            favor_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_17Layout.setVerticalGroup(
+            favor_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        favor_Egyptian_17.getAccessibleContext().setAccessibleName("favor_Egyptian_17");
+
+        favor_Egyptian_18.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_18Layout = new javax.swing.GroupLayout(favor_Egyptian_18);
+        favor_Egyptian_18.setLayout(favor_Egyptian_18Layout);
+        favor_Egyptian_18Layout.setHorizontalGroup(
+            favor_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_18Layout.setVerticalGroup(
+            favor_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        favor_Egyptian_18.getAccessibleContext().setAccessibleName("favor_Egyptian_18");
+
+        favor_Egyptian_19.setBackground(new java.awt.Color(51, 51, 255));
+
+        javax.swing.GroupLayout favor_Egyptian_19Layout = new javax.swing.GroupLayout(favor_Egyptian_19);
+        favor_Egyptian_19.setLayout(favor_Egyptian_19Layout);
+        favor_Egyptian_19Layout.setHorizontalGroup(
+            favor_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        favor_Egyptian_19Layout.setVerticalGroup(
+            favor_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianFavorResources.add(favor_Egyptian_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        favor_Egyptian_19.getAccessibleContext().setAccessibleName("favor_Egyptian_19");
+
+        egyptianResources.add(egyptianFavorResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 770, 30));
+
+        egyptianWoodResources.setOpaque(false);
+        egyptianWoodResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        wood_Egyptian_1.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_1Layout = new javax.swing.GroupLayout(wood_Egyptian_1);
+        wood_Egyptian_1.setLayout(wood_Egyptian_1Layout);
+        wood_Egyptian_1Layout.setHorizontalGroup(
+            wood_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_1Layout.setVerticalGroup(
+            wood_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        wood_Egyptian_1.getAccessibleContext().setAccessibleName("wood_Egyptian_1");
+
+        wood_Egyptian_2.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_2Layout = new javax.swing.GroupLayout(wood_Egyptian_2);
+        wood_Egyptian_2.setLayout(wood_Egyptian_2Layout);
+        wood_Egyptian_2Layout.setHorizontalGroup(
+            wood_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_2Layout.setVerticalGroup(
+            wood_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        wood_Egyptian_2.getAccessibleContext().setAccessibleName("wood_Egyptian_2");
+
+        wood_Egyptian_3.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_3Layout = new javax.swing.GroupLayout(wood_Egyptian_3);
+        wood_Egyptian_3.setLayout(wood_Egyptian_3Layout);
+        wood_Egyptian_3Layout.setHorizontalGroup(
+            wood_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_3Layout.setVerticalGroup(
+            wood_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        wood_Egyptian_3.getAccessibleContext().setAccessibleName("wood_Egyptian_3");
+
+        wood_Egyptian_4.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_4Layout = new javax.swing.GroupLayout(wood_Egyptian_4);
+        wood_Egyptian_4.setLayout(wood_Egyptian_4Layout);
+        wood_Egyptian_4Layout.setHorizontalGroup(
+            wood_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_4Layout.setVerticalGroup(
+            wood_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        wood_Egyptian_4.getAccessibleContext().setAccessibleName("wood_Egyptian_4");
+
+        wood_Egyptian_5.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_5Layout = new javax.swing.GroupLayout(wood_Egyptian_5);
+        wood_Egyptian_5.setLayout(wood_Egyptian_5Layout);
+        wood_Egyptian_5Layout.setHorizontalGroup(
+            wood_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_5Layout.setVerticalGroup(
+            wood_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        wood_Egyptian_5.getAccessibleContext().setAccessibleName("wood_Egyptian_5");
+
+        wood_Egyptian_6.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_6Layout = new javax.swing.GroupLayout(wood_Egyptian_6);
+        wood_Egyptian_6.setLayout(wood_Egyptian_6Layout);
+        wood_Egyptian_6Layout.setHorizontalGroup(
+            wood_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_6Layout.setVerticalGroup(
+            wood_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        wood_Egyptian_6.getAccessibleContext().setAccessibleName("wood_Egyptian_6");
+
+        wood_Egyptian_7.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_7Layout = new javax.swing.GroupLayout(wood_Egyptian_7);
+        wood_Egyptian_7.setLayout(wood_Egyptian_7Layout);
+        wood_Egyptian_7Layout.setHorizontalGroup(
+            wood_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_7Layout.setVerticalGroup(
+            wood_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        wood_Egyptian_7.getAccessibleContext().setAccessibleName("wood_Egyptian_7");
+
+        wood_Egyptian_8.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_8Layout = new javax.swing.GroupLayout(wood_Egyptian_8);
+        wood_Egyptian_8.setLayout(wood_Egyptian_8Layout);
+        wood_Egyptian_8Layout.setHorizontalGroup(
+            wood_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_8Layout.setVerticalGroup(
+            wood_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        wood_Egyptian_8.getAccessibleContext().setAccessibleName("wood_Egyptian_8");
+
+        wood_Egyptian_9.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_9Layout = new javax.swing.GroupLayout(wood_Egyptian_9);
+        wood_Egyptian_9.setLayout(wood_Egyptian_9Layout);
+        wood_Egyptian_9Layout.setHorizontalGroup(
+            wood_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_9Layout.setVerticalGroup(
+            wood_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        wood_Egyptian_9.getAccessibleContext().setAccessibleName("wood_Egyptian_9");
+
+        wood_Egyptian_10.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_10Layout = new javax.swing.GroupLayout(wood_Egyptian_10);
+        wood_Egyptian_10.setLayout(wood_Egyptian_10Layout);
+        wood_Egyptian_10Layout.setHorizontalGroup(
+            wood_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_10Layout.setVerticalGroup(
+            wood_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        wood_Egyptian_10.getAccessibleContext().setAccessibleName("wood_Egyptian_10");
+
+        wood_Egyptian_11.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_11Layout = new javax.swing.GroupLayout(wood_Egyptian_11);
+        wood_Egyptian_11.setLayout(wood_Egyptian_11Layout);
+        wood_Egyptian_11Layout.setHorizontalGroup(
+            wood_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_11Layout.setVerticalGroup(
+            wood_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        wood_Egyptian_11.getAccessibleContext().setAccessibleName("wood_Egyptian_11");
+
+        wood_Egyptian_12.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_12Layout = new javax.swing.GroupLayout(wood_Egyptian_12);
+        wood_Egyptian_12.setLayout(wood_Egyptian_12Layout);
+        wood_Egyptian_12Layout.setHorizontalGroup(
+            wood_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_12Layout.setVerticalGroup(
+            wood_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        wood_Egyptian_12.getAccessibleContext().setAccessibleName("wood_Egyptian_12");
+
+        wood_Egyptian_13.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_13Layout = new javax.swing.GroupLayout(wood_Egyptian_13);
+        wood_Egyptian_13.setLayout(wood_Egyptian_13Layout);
+        wood_Egyptian_13Layout.setHorizontalGroup(
+            wood_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_13Layout.setVerticalGroup(
+            wood_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        wood_Egyptian_13.getAccessibleContext().setAccessibleName("wood_Egyptian_13");
+
+        wood_Egyptian_14.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_14Layout = new javax.swing.GroupLayout(wood_Egyptian_14);
+        wood_Egyptian_14.setLayout(wood_Egyptian_14Layout);
+        wood_Egyptian_14Layout.setHorizontalGroup(
+            wood_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_14Layout.setVerticalGroup(
+            wood_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        wood_Egyptian_14.getAccessibleContext().setAccessibleName("wood_Egyptian_14");
+
+        wood_Egyptian_15.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_15Layout = new javax.swing.GroupLayout(wood_Egyptian_15);
+        wood_Egyptian_15.setLayout(wood_Egyptian_15Layout);
+        wood_Egyptian_15Layout.setHorizontalGroup(
+            wood_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_15Layout.setVerticalGroup(
+            wood_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        wood_Egyptian_15.getAccessibleContext().setAccessibleName("wood_Egyptian_15");
+
+        wood_Egyptian_16.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_16Layout = new javax.swing.GroupLayout(wood_Egyptian_16);
+        wood_Egyptian_16.setLayout(wood_Egyptian_16Layout);
+        wood_Egyptian_16Layout.setHorizontalGroup(
+            wood_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_16Layout.setVerticalGroup(
+            wood_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        wood_Egyptian_16.getAccessibleContext().setAccessibleName("wood_Egyptian_16");
+
+        wood_Egyptian_17.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_17Layout = new javax.swing.GroupLayout(wood_Egyptian_17);
+        wood_Egyptian_17.setLayout(wood_Egyptian_17Layout);
+        wood_Egyptian_17Layout.setHorizontalGroup(
+            wood_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_17Layout.setVerticalGroup(
+            wood_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        wood_Egyptian_17.getAccessibleContext().setAccessibleName("wood_Egyptian_17");
+
+        wood_Egyptian_18.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_18Layout = new javax.swing.GroupLayout(wood_Egyptian_18);
+        wood_Egyptian_18.setLayout(wood_Egyptian_18Layout);
+        wood_Egyptian_18Layout.setHorizontalGroup(
+            wood_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_18Layout.setVerticalGroup(
+            wood_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        wood_Egyptian_18.getAccessibleContext().setAccessibleName("wood_Egyptian_18");
+
+        wood_Egyptian_19.setBackground(new java.awt.Color(153, 51, 0));
+
+        javax.swing.GroupLayout wood_Egyptian_19Layout = new javax.swing.GroupLayout(wood_Egyptian_19);
+        wood_Egyptian_19.setLayout(wood_Egyptian_19Layout);
+        wood_Egyptian_19Layout.setHorizontalGroup(
+            wood_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        wood_Egyptian_19Layout.setVerticalGroup(
+            wood_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianWoodResources.add(wood_Egyptian_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        wood_Egyptian_19.getAccessibleContext().setAccessibleName("wood_Egyptian_19");
+
+        egyptianResources.add(egyptianWoodResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 30));
+
+        egyptianGoldResources.setOpaque(false);
+        egyptianGoldResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gold_Egyptian_1.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_1Layout = new javax.swing.GroupLayout(gold_Egyptian_1);
+        gold_Egyptian_1.setLayout(gold_Egyptian_1Layout);
+        gold_Egyptian_1Layout.setHorizontalGroup(
+            gold_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_1Layout.setVerticalGroup(
+            gold_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+        gold_Egyptian_1.getAccessibleContext().setAccessibleName("gold_Egyptian_1");
+
+        gold_Egyptian_2.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_2Layout = new javax.swing.GroupLayout(gold_Egyptian_2);
+        gold_Egyptian_2.setLayout(gold_Egyptian_2Layout);
+        gold_Egyptian_2Layout.setHorizontalGroup(
+            gold_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_2Layout.setVerticalGroup(
+            gold_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+        gold_Egyptian_2.getAccessibleContext().setAccessibleName("gold_Egyptian_2");
+
+        gold_Egyptian_3.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_3Layout = new javax.swing.GroupLayout(gold_Egyptian_3);
+        gold_Egyptian_3.setLayout(gold_Egyptian_3Layout);
+        gold_Egyptian_3Layout.setHorizontalGroup(
+            gold_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_3Layout.setVerticalGroup(
+            gold_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+        gold_Egyptian_3.getAccessibleContext().setAccessibleName("gold_Egyptian_3");
+
+        gold_Egyptian_4.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_4Layout = new javax.swing.GroupLayout(gold_Egyptian_4);
+        gold_Egyptian_4.setLayout(gold_Egyptian_4Layout);
+        gold_Egyptian_4Layout.setHorizontalGroup(
+            gold_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_4Layout.setVerticalGroup(
+            gold_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+        gold_Egyptian_4.getAccessibleContext().setAccessibleName("gold_Egyptian_4");
+
+        gold_Egyptian_5.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_5Layout = new javax.swing.GroupLayout(gold_Egyptian_5);
+        gold_Egyptian_5.setLayout(gold_Egyptian_5Layout);
+        gold_Egyptian_5Layout.setHorizontalGroup(
+            gold_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_5Layout.setVerticalGroup(
+            gold_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+        gold_Egyptian_5.getAccessibleContext().setAccessibleName("gold_Egyptian_5");
+
+        gold_Egyptian_6.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_6Layout = new javax.swing.GroupLayout(gold_Egyptian_6);
+        gold_Egyptian_6.setLayout(gold_Egyptian_6Layout);
+        gold_Egyptian_6Layout.setHorizontalGroup(
+            gold_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_6Layout.setVerticalGroup(
+            gold_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+        gold_Egyptian_6.getAccessibleContext().setAccessibleName("gold_Egyptian_6");
+
+        gold_Egyptian_7.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_7Layout = new javax.swing.GroupLayout(gold_Egyptian_7);
+        gold_Egyptian_7.setLayout(gold_Egyptian_7Layout);
+        gold_Egyptian_7Layout.setHorizontalGroup(
+            gold_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_7Layout.setVerticalGroup(
+            gold_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+        gold_Egyptian_7.getAccessibleContext().setAccessibleName("gold_Egyptian_7");
+
+        gold_Egyptian_8.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_8Layout = new javax.swing.GroupLayout(gold_Egyptian_8);
+        gold_Egyptian_8.setLayout(gold_Egyptian_8Layout);
+        gold_Egyptian_8Layout.setHorizontalGroup(
+            gold_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_8Layout.setVerticalGroup(
+            gold_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+        gold_Egyptian_8.getAccessibleContext().setAccessibleName("gold_Egyptian_8");
+
+        gold_Egyptian_9.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_9Layout = new javax.swing.GroupLayout(gold_Egyptian_9);
+        gold_Egyptian_9.setLayout(gold_Egyptian_9Layout);
+        gold_Egyptian_9Layout.setHorizontalGroup(
+            gold_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_9Layout.setVerticalGroup(
+            gold_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+        gold_Egyptian_9.getAccessibleContext().setAccessibleName("gold_Egyptian_9");
+
+        gold_Egyptian_10.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_10Layout = new javax.swing.GroupLayout(gold_Egyptian_10);
+        gold_Egyptian_10.setLayout(gold_Egyptian_10Layout);
+        gold_Egyptian_10Layout.setHorizontalGroup(
+            gold_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_10Layout.setVerticalGroup(
+            gold_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+        gold_Egyptian_10.getAccessibleContext().setAccessibleName("gold_Egyptian_10");
+
+        gold_Egyptian_11.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_11Layout = new javax.swing.GroupLayout(gold_Egyptian_11);
+        gold_Egyptian_11.setLayout(gold_Egyptian_11Layout);
+        gold_Egyptian_11Layout.setHorizontalGroup(
+            gold_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_11Layout.setVerticalGroup(
+            gold_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+        gold_Egyptian_11.getAccessibleContext().setAccessibleName("gold_Egyptian_11");
+
+        gold_Egyptian_12.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_12Layout = new javax.swing.GroupLayout(gold_Egyptian_12);
+        gold_Egyptian_12.setLayout(gold_Egyptian_12Layout);
+        gold_Egyptian_12Layout.setHorizontalGroup(
+            gold_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_12Layout.setVerticalGroup(
+            gold_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+        gold_Egyptian_12.getAccessibleContext().setAccessibleName("gold_Egyptian_12");
+
+        gold_Egyptian_13.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_13Layout = new javax.swing.GroupLayout(gold_Egyptian_13);
+        gold_Egyptian_13.setLayout(gold_Egyptian_13Layout);
+        gold_Egyptian_13Layout.setHorizontalGroup(
+            gold_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_13Layout.setVerticalGroup(
+            gold_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+        gold_Egyptian_13.getAccessibleContext().setAccessibleName("gold_Egyptian_13");
+
+        gold_Egyptian_14.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_14Layout = new javax.swing.GroupLayout(gold_Egyptian_14);
+        gold_Egyptian_14.setLayout(gold_Egyptian_14Layout);
+        gold_Egyptian_14Layout.setHorizontalGroup(
+            gold_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_14Layout.setVerticalGroup(
+            gold_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+        gold_Egyptian_14.getAccessibleContext().setAccessibleName("gold_Egyptian_14");
+
+        gold_Egyptian_15.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_15Layout = new javax.swing.GroupLayout(gold_Egyptian_15);
+        gold_Egyptian_15.setLayout(gold_Egyptian_15Layout);
+        gold_Egyptian_15Layout.setHorizontalGroup(
+            gold_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_15Layout.setVerticalGroup(
+            gold_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+        gold_Egyptian_15.getAccessibleContext().setAccessibleName("gold_Egyptian_15");
+
+        gold_Egyptian_16.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_16Layout = new javax.swing.GroupLayout(gold_Egyptian_16);
+        gold_Egyptian_16.setLayout(gold_Egyptian_16Layout);
+        gold_Egyptian_16Layout.setHorizontalGroup(
+            gold_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_16Layout.setVerticalGroup(
+            gold_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+        gold_Egyptian_16.getAccessibleContext().setAccessibleName("gold_Egyptian_16");
+
+        gold_Egyptian_17.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_17Layout = new javax.swing.GroupLayout(gold_Egyptian_17);
+        gold_Egyptian_17.setLayout(gold_Egyptian_17Layout);
+        gold_Egyptian_17Layout.setHorizontalGroup(
+            gold_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_17Layout.setVerticalGroup(
+            gold_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+        gold_Egyptian_17.getAccessibleContext().setAccessibleName("gold_Egyptian_17");
+
+        gold_Egyptian_18.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_18Layout = new javax.swing.GroupLayout(gold_Egyptian_18);
+        gold_Egyptian_18.setLayout(gold_Egyptian_18Layout);
+        gold_Egyptian_18Layout.setHorizontalGroup(
+            gold_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_18Layout.setVerticalGroup(
+            gold_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+        gold_Egyptian_18.getAccessibleContext().setAccessibleName("gold_Egyptian_18");
+
+        gold_Egyptian_19.setBackground(new java.awt.Color(255, 255, 51));
+
+        javax.swing.GroupLayout gold_Egyptian_19Layout = new javax.swing.GroupLayout(gold_Egyptian_19);
+        gold_Egyptian_19.setLayout(gold_Egyptian_19Layout);
+        gold_Egyptian_19Layout.setHorizontalGroup(
+            gold_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        gold_Egyptian_19Layout.setVerticalGroup(
+            gold_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianGoldResources.add(gold_Egyptian_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+        gold_Egyptian_19.getAccessibleContext().setAccessibleName("gold_Egyptian_19");
+
+        egyptianResources.add(egyptianGoldResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 770, 30));
+
+        egyptianVictoryResources.setOpaque(false);
+        egyptianVictoryResources.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        victory_Egyptian_1.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_1Layout = new javax.swing.GroupLayout(victory_Egyptian_1);
+        victory_Egyptian_1.setLayout(victory_Egyptian_1Layout);
+        victory_Egyptian_1Layout.setHorizontalGroup(
+            victory_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_1Layout.setVerticalGroup(
+            victory_Egyptian_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
+
+        victory_Egyptian_2.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_2Layout = new javax.swing.GroupLayout(victory_Egyptian_2);
+        victory_Egyptian_2.setLayout(victory_Egyptian_2Layout);
+        victory_Egyptian_2Layout.setHorizontalGroup(
+            victory_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_2Layout.setVerticalGroup(
+            victory_Egyptian_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 30, 30));
+
+        victory_Egyptian_3.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_3Layout = new javax.swing.GroupLayout(victory_Egyptian_3);
+        victory_Egyptian_3.setLayout(victory_Egyptian_3Layout);
+        victory_Egyptian_3Layout.setHorizontalGroup(
+            victory_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_3Layout.setVerticalGroup(
+            victory_Egyptian_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 30, 30));
+
+        victory_Egyptian_4.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_4Layout = new javax.swing.GroupLayout(victory_Egyptian_4);
+        victory_Egyptian_4.setLayout(victory_Egyptian_4Layout);
+        victory_Egyptian_4Layout.setHorizontalGroup(
+            victory_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_4Layout.setVerticalGroup(
+            victory_Egyptian_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 30, 30));
+
+        victory_Egyptian_5.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_5Layout = new javax.swing.GroupLayout(victory_Egyptian_5);
+        victory_Egyptian_5.setLayout(victory_Egyptian_5Layout);
+        victory_Egyptian_5Layout.setHorizontalGroup(
+            victory_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_5Layout.setVerticalGroup(
+            victory_Egyptian_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 30, 30));
+
+        victory_Egyptian_6.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_6Layout = new javax.swing.GroupLayout(victory_Egyptian_6);
+        victory_Egyptian_6.setLayout(victory_Egyptian_6Layout);
+        victory_Egyptian_6Layout.setHorizontalGroup(
+            victory_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_6Layout.setVerticalGroup(
+            victory_Egyptian_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 30, 30));
+
+        victory_Egyptian_7.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_7Layout = new javax.swing.GroupLayout(victory_Egyptian_7);
+        victory_Egyptian_7.setLayout(victory_Egyptian_7Layout);
+        victory_Egyptian_7Layout.setHorizontalGroup(
+            victory_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_7Layout.setVerticalGroup(
+            victory_Egyptian_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 30));
+
+        victory_Egyptian_8.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_8Layout = new javax.swing.GroupLayout(victory_Egyptian_8);
+        victory_Egyptian_8.setLayout(victory_Egyptian_8Layout);
+        victory_Egyptian_8Layout.setHorizontalGroup(
+            victory_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_8Layout.setVerticalGroup(
+            victory_Egyptian_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 30, 30));
+
+        victory_Egyptian_9.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_9Layout = new javax.swing.GroupLayout(victory_Egyptian_9);
+        victory_Egyptian_9.setLayout(victory_Egyptian_9Layout);
+        victory_Egyptian_9Layout.setHorizontalGroup(
+            victory_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_9Layout.setVerticalGroup(
+            victory_Egyptian_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 30, 30));
+
+        victory_Egyptian_10.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_10Layout = new javax.swing.GroupLayout(victory_Egyptian_10);
+        victory_Egyptian_10.setLayout(victory_Egyptian_10Layout);
+        victory_Egyptian_10Layout.setHorizontalGroup(
+            victory_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_10Layout.setVerticalGroup(
+            victory_Egyptian_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
+
+        victory_Egyptian_11.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_11Layout = new javax.swing.GroupLayout(victory_Egyptian_11);
+        victory_Egyptian_11.setLayout(victory_Egyptian_11Layout);
+        victory_Egyptian_11Layout.setHorizontalGroup(
+            victory_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_11Layout.setVerticalGroup(
+            victory_Egyptian_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 30));
+
+        victory_Egyptian_12.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_12Layout = new javax.swing.GroupLayout(victory_Egyptian_12);
+        victory_Egyptian_12.setLayout(victory_Egyptian_12Layout);
+        victory_Egyptian_12Layout.setHorizontalGroup(
+            victory_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_12Layout.setVerticalGroup(
+            victory_Egyptian_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 30, 30));
+
+        victory_Egyptian_13.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_13Layout = new javax.swing.GroupLayout(victory_Egyptian_13);
+        victory_Egyptian_13.setLayout(victory_Egyptian_13Layout);
+        victory_Egyptian_13Layout.setHorizontalGroup(
+            victory_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_13Layout.setVerticalGroup(
+            victory_Egyptian_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 30, 30));
+
+        victory_Egyptian_14.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_14Layout = new javax.swing.GroupLayout(victory_Egyptian_14);
+        victory_Egyptian_14.setLayout(victory_Egyptian_14Layout);
+        victory_Egyptian_14Layout.setHorizontalGroup(
+            victory_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_14Layout.setVerticalGroup(
+            victory_Egyptian_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 30, 30));
+
+        victory_Egyptian_15.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_15Layout = new javax.swing.GroupLayout(victory_Egyptian_15);
+        victory_Egyptian_15.setLayout(victory_Egyptian_15Layout);
+        victory_Egyptian_15Layout.setHorizontalGroup(
+            victory_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_15Layout.setVerticalGroup(
+            victory_Egyptian_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 30, 30));
+
+        victory_Egyptian_16.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_16Layout = new javax.swing.GroupLayout(victory_Egyptian_16);
+        victory_Egyptian_16.setLayout(victory_Egyptian_16Layout);
+        victory_Egyptian_16Layout.setHorizontalGroup(
+            victory_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_16Layout.setVerticalGroup(
+            victory_Egyptian_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
+
+        victory_Egyptian_17.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_17Layout = new javax.swing.GroupLayout(victory_Egyptian_17);
+        victory_Egyptian_17.setLayout(victory_Egyptian_17Layout);
+        victory_Egyptian_17Layout.setHorizontalGroup(
+            victory_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_17Layout.setVerticalGroup(
+            victory_Egyptian_17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 30, 30));
+
+        victory_Egyptian_18.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_18Layout = new javax.swing.GroupLayout(victory_Egyptian_18);
+        victory_Egyptian_18.setLayout(victory_Egyptian_18Layout);
+        victory_Egyptian_18Layout.setHorizontalGroup(
+            victory_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_18Layout.setVerticalGroup(
+            victory_Egyptian_18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 30, 30));
+
+        victory_Egyptian_19.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout victory_Egyptian_19Layout = new javax.swing.GroupLayout(victory_Egyptian_19);
+        victory_Egyptian_19.setLayout(victory_Egyptian_19Layout);
+        victory_Egyptian_19Layout.setHorizontalGroup(
+            victory_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        victory_Egyptian_19Layout.setVerticalGroup(
+            victory_Egyptian_19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        egyptianVictoryResources.add(victory_Egyptian_19, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 30, 30));
+
+        egyptianResources.add(egyptianVictoryResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 770, 30));
+
+        egyptianAge.setEditable(false);
+        egyptianAge.setBackground(new java.awt.Color(0, 0, 0));
+        egyptianAge.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        egyptianAge.setForeground(new java.awt.Color(255, 51, 51));
+        egyptianAge.setText("Archaic Age");
+        egyptianAge.setBorder(null);
+        egyptianAge.setOpaque(false);
+        egyptianAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                egyptianAgeActionPerformed(evt);
+            }
+        });
+        egyptianResources.add(egyptianAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 100, -1));
+
+        egyptianBoard.add(egyptianResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
 
         egyptianBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoardResized.png"))); // NOI18N
         egyptianBoard.add(egyptianBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 710));
@@ -1756,6 +6976,18 @@ public class BoardGUI extends javax.swing.JFrame {
         victoryCard.setVisible(true);
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void norseAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_norseAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_norseAgeActionPerformed
+
+    private void greekAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greekAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_greekAgeActionPerformed
+
+    private void egyptianAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_egyptianAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_egyptianAgeActionPerformed
     
     private void callAIHandler() {
         if(boardController.getPlayerTurnCount() == 6) {
@@ -1842,8 +7074,72 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JPanel desert_n1;
     private javax.swing.JLabel desert_n1_img;
     private javax.swing.JPanel egyptTerrain;
+    private javax.swing.JTextField egyptianAge;
     private javax.swing.JPanel egyptianBoard;
     private javax.swing.JLabel egyptianBoardImg;
+    private javax.swing.JPanel egyptianFavorResources;
+    private javax.swing.JPanel egyptianFoodResources;
+    private javax.swing.JPanel egyptianGoldResources;
+    private javax.swing.JPanel egyptianResources;
+    private javax.swing.JPanel egyptianVictoryResources;
+    private javax.swing.JPanel egyptianWoodResources;
+    private javax.swing.JPanel favor_Egyptian_1;
+    private javax.swing.JPanel favor_Egyptian_10;
+    private javax.swing.JPanel favor_Egyptian_11;
+    private javax.swing.JPanel favor_Egyptian_12;
+    private javax.swing.JPanel favor_Egyptian_13;
+    private javax.swing.JPanel favor_Egyptian_14;
+    private javax.swing.JPanel favor_Egyptian_15;
+    private javax.swing.JPanel favor_Egyptian_16;
+    private javax.swing.JPanel favor_Egyptian_17;
+    private javax.swing.JPanel favor_Egyptian_18;
+    private javax.swing.JPanel favor_Egyptian_19;
+    private javax.swing.JPanel favor_Egyptian_2;
+    private javax.swing.JPanel favor_Egyptian_3;
+    private javax.swing.JPanel favor_Egyptian_4;
+    private javax.swing.JPanel favor_Egyptian_5;
+    private javax.swing.JPanel favor_Egyptian_6;
+    private javax.swing.JPanel favor_Egyptian_7;
+    private javax.swing.JPanel favor_Egyptian_8;
+    private javax.swing.JPanel favor_Egyptian_9;
+    private javax.swing.JPanel favor_Greek_1;
+    private javax.swing.JPanel favor_Greek_10;
+    private javax.swing.JPanel favor_Greek_11;
+    private javax.swing.JPanel favor_Greek_12;
+    private javax.swing.JPanel favor_Greek_13;
+    private javax.swing.JPanel favor_Greek_14;
+    private javax.swing.JPanel favor_Greek_15;
+    private javax.swing.JPanel favor_Greek_16;
+    private javax.swing.JPanel favor_Greek_17;
+    private javax.swing.JPanel favor_Greek_18;
+    private javax.swing.JPanel favor_Greek_19;
+    private javax.swing.JPanel favor_Greek_2;
+    private javax.swing.JPanel favor_Greek_3;
+    private javax.swing.JPanel favor_Greek_4;
+    private javax.swing.JPanel favor_Greek_5;
+    private javax.swing.JPanel favor_Greek_6;
+    private javax.swing.JPanel favor_Greek_7;
+    private javax.swing.JPanel favor_Greek_8;
+    private javax.swing.JPanel favor_Greek_9;
+    private javax.swing.JPanel favor_Norse_1;
+    private javax.swing.JPanel favor_Norse_10;
+    private javax.swing.JPanel favor_Norse_11;
+    private javax.swing.JPanel favor_Norse_12;
+    private javax.swing.JPanel favor_Norse_13;
+    private javax.swing.JPanel favor_Norse_14;
+    private javax.swing.JPanel favor_Norse_15;
+    private javax.swing.JPanel favor_Norse_16;
+    private javax.swing.JPanel favor_Norse_17;
+    private javax.swing.JPanel favor_Norse_18;
+    private javax.swing.JPanel favor_Norse_19;
+    private javax.swing.JPanel favor_Norse_2;
+    private javax.swing.JPanel favor_Norse_3;
+    private javax.swing.JPanel favor_Norse_4;
+    private javax.swing.JPanel favor_Norse_5;
+    private javax.swing.JPanel favor_Norse_6;
+    private javax.swing.JPanel favor_Norse_7;
+    private javax.swing.JPanel favor_Norse_8;
+    private javax.swing.JPanel favor_Norse_9;
     private javax.swing.JPanel fertile_e1;
     private javax.swing.JLabel fertile_e1_img;
     private javax.swing.JPanel fertile_e2;
@@ -1866,6 +7162,63 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel fertile_n2_img;
     private javax.swing.JPanel fertile_n3;
     private javax.swing.JLabel fertile_n3_img;
+    private javax.swing.JPanel food_Egyptian_1;
+    private javax.swing.JPanel food_Egyptian_10;
+    private javax.swing.JPanel food_Egyptian_11;
+    private javax.swing.JPanel food_Egyptian_12;
+    private javax.swing.JPanel food_Egyptian_13;
+    private javax.swing.JPanel food_Egyptian_14;
+    private javax.swing.JPanel food_Egyptian_15;
+    private javax.swing.JPanel food_Egyptian_16;
+    private javax.swing.JPanel food_Egyptian_17;
+    private javax.swing.JPanel food_Egyptian_18;
+    private javax.swing.JPanel food_Egyptian_19;
+    private javax.swing.JPanel food_Egyptian_2;
+    private javax.swing.JPanel food_Egyptian_3;
+    private javax.swing.JPanel food_Egyptian_4;
+    private javax.swing.JPanel food_Egyptian_5;
+    private javax.swing.JPanel food_Egyptian_6;
+    private javax.swing.JPanel food_Egyptian_7;
+    private javax.swing.JPanel food_Egyptian_8;
+    private javax.swing.JPanel food_Egyptian_9;
+    private javax.swing.JPanel food_Greek_1;
+    private javax.swing.JPanel food_Greek_10;
+    private javax.swing.JPanel food_Greek_11;
+    private javax.swing.JPanel food_Greek_12;
+    private javax.swing.JPanel food_Greek_13;
+    private javax.swing.JPanel food_Greek_14;
+    private javax.swing.JPanel food_Greek_15;
+    private javax.swing.JPanel food_Greek_16;
+    private javax.swing.JPanel food_Greek_17;
+    private javax.swing.JPanel food_Greek_18;
+    private javax.swing.JPanel food_Greek_19;
+    private javax.swing.JPanel food_Greek_2;
+    private javax.swing.JPanel food_Greek_3;
+    private javax.swing.JPanel food_Greek_4;
+    private javax.swing.JPanel food_Greek_5;
+    private javax.swing.JPanel food_Greek_6;
+    private javax.swing.JPanel food_Greek_7;
+    private javax.swing.JPanel food_Greek_8;
+    private javax.swing.JPanel food_Greek_9;
+    private javax.swing.JPanel food_Norse_1;
+    private javax.swing.JPanel food_Norse_10;
+    private javax.swing.JPanel food_Norse_11;
+    private javax.swing.JPanel food_Norse_12;
+    private javax.swing.JPanel food_Norse_13;
+    private javax.swing.JPanel food_Norse_14;
+    private javax.swing.JPanel food_Norse_15;
+    private javax.swing.JPanel food_Norse_16;
+    private javax.swing.JPanel food_Norse_17;
+    private javax.swing.JPanel food_Norse_18;
+    private javax.swing.JPanel food_Norse_19;
+    private javax.swing.JPanel food_Norse_2;
+    private javax.swing.JPanel food_Norse_3;
+    private javax.swing.JPanel food_Norse_4;
+    private javax.swing.JPanel food_Norse_5;
+    private javax.swing.JPanel food_Norse_6;
+    private javax.swing.JPanel food_Norse_7;
+    private javax.swing.JPanel food_Norse_8;
+    private javax.swing.JPanel food_Norse_9;
     private javax.swing.JPanel forest_e1;
     private javax.swing.JLabel forest_e1_img;
     private javax.swing.JPanel forest_g1;
@@ -1880,9 +7233,73 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel forest_n3_img;
     private javax.swing.JPanel forest_n4;
     private javax.swing.JLabel forest_n4_img;
+    private javax.swing.JPanel gold_Egyptian_1;
+    private javax.swing.JPanel gold_Egyptian_10;
+    private javax.swing.JPanel gold_Egyptian_11;
+    private javax.swing.JPanel gold_Egyptian_12;
+    private javax.swing.JPanel gold_Egyptian_13;
+    private javax.swing.JPanel gold_Egyptian_14;
+    private javax.swing.JPanel gold_Egyptian_15;
+    private javax.swing.JPanel gold_Egyptian_16;
+    private javax.swing.JPanel gold_Egyptian_17;
+    private javax.swing.JPanel gold_Egyptian_18;
+    private javax.swing.JPanel gold_Egyptian_19;
+    private javax.swing.JPanel gold_Egyptian_2;
+    private javax.swing.JPanel gold_Egyptian_3;
+    private javax.swing.JPanel gold_Egyptian_4;
+    private javax.swing.JPanel gold_Egyptian_5;
+    private javax.swing.JPanel gold_Egyptian_6;
+    private javax.swing.JPanel gold_Egyptian_7;
+    private javax.swing.JPanel gold_Egyptian_8;
+    private javax.swing.JPanel gold_Egyptian_9;
+    private javax.swing.JPanel gold_Greek_1;
+    private javax.swing.JPanel gold_Greek_10;
+    private javax.swing.JPanel gold_Greek_11;
+    private javax.swing.JPanel gold_Greek_12;
+    private javax.swing.JPanel gold_Greek_13;
+    private javax.swing.JPanel gold_Greek_14;
+    private javax.swing.JPanel gold_Greek_15;
+    private javax.swing.JPanel gold_Greek_16;
+    private javax.swing.JPanel gold_Greek_17;
+    private javax.swing.JPanel gold_Greek_18;
+    private javax.swing.JPanel gold_Greek_19;
+    private javax.swing.JPanel gold_Greek_2;
+    private javax.swing.JPanel gold_Greek_3;
+    private javax.swing.JPanel gold_Greek_4;
+    private javax.swing.JPanel gold_Greek_5;
+    private javax.swing.JPanel gold_Greek_6;
+    private javax.swing.JPanel gold_Greek_7;
+    private javax.swing.JPanel gold_Greek_8;
+    private javax.swing.JPanel gold_Greek_9;
+    private javax.swing.JPanel gold_Norse_1;
+    private javax.swing.JPanel gold_Norse_10;
+    private javax.swing.JPanel gold_Norse_11;
+    private javax.swing.JPanel gold_Norse_12;
+    private javax.swing.JPanel gold_Norse_13;
+    private javax.swing.JPanel gold_Norse_14;
+    private javax.swing.JPanel gold_Norse_15;
+    private javax.swing.JPanel gold_Norse_16;
+    private javax.swing.JPanel gold_Norse_17;
+    private javax.swing.JPanel gold_Norse_18;
+    private javax.swing.JPanel gold_Norse_19;
+    private javax.swing.JPanel gold_Norse_2;
+    private javax.swing.JPanel gold_Norse_3;
+    private javax.swing.JPanel gold_Norse_4;
+    private javax.swing.JPanel gold_Norse_5;
+    private javax.swing.JPanel gold_Norse_6;
+    private javax.swing.JPanel gold_Norse_7;
+    private javax.swing.JPanel gold_Norse_8;
+    private javax.swing.JPanel gold_Norse_9;
+    private javax.swing.JTextField greekAge;
     private javax.swing.JPanel greekBoard;
     private javax.swing.JLabel greekBoardImg;
+    private javax.swing.JPanel greekFavorResources;
+    private javax.swing.JPanel greekFoodResources;
+    private javax.swing.JPanel greekGoldResources;
+    private javax.swing.JPanel greekResources;
     private javax.swing.JPanel greekTerrain;
+    private javax.swing.JPanel greekVictoryResources;
+    private javax.swing.JPanel greekWoodResources;
     private javax.swing.JPanel hills_e1;
     private javax.swing.JLabel hills_e1_img;
     private javax.swing.JPanel hills_e2;
@@ -1925,9 +7342,16 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel mountain_n3_img;
     private javax.swing.JPanel mountain_n4;
     private javax.swing.JLabel mountain_n4_img;
+    private javax.swing.JTextField norseAge;
     private javax.swing.JPanel norseBoard;
     private javax.swing.JLabel norseBoardImg;
+    private javax.swing.JPanel norseFavorResources;
+    private javax.swing.JPanel norseFoodResources;
+    private javax.swing.JPanel norseGoldResources;
+    private javax.swing.JPanel norseResources;
     private javax.swing.JPanel norseTerrain;
+    private javax.swing.JPanel norseVictoryResources;
+    private javax.swing.JPanel norseWoodResources;
     private javax.swing.JPanel options;
     private javax.swing.JPanel swamp_e1;
     private javax.swing.JLabel swamp_e1_img;
@@ -1974,5 +7398,119 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel terrain8_img;
     private javax.swing.JPanel terrain9;
     private javax.swing.JLabel terrain9_img;
+    private javax.swing.JPanel victory_Egyptian_1;
+    private javax.swing.JPanel victory_Egyptian_10;
+    private javax.swing.JPanel victory_Egyptian_11;
+    private javax.swing.JPanel victory_Egyptian_12;
+    private javax.swing.JPanel victory_Egyptian_13;
+    private javax.swing.JPanel victory_Egyptian_14;
+    private javax.swing.JPanel victory_Egyptian_15;
+    private javax.swing.JPanel victory_Egyptian_16;
+    private javax.swing.JPanel victory_Egyptian_17;
+    private javax.swing.JPanel victory_Egyptian_18;
+    private javax.swing.JPanel victory_Egyptian_19;
+    private javax.swing.JPanel victory_Egyptian_2;
+    private javax.swing.JPanel victory_Egyptian_3;
+    private javax.swing.JPanel victory_Egyptian_4;
+    private javax.swing.JPanel victory_Egyptian_5;
+    private javax.swing.JPanel victory_Egyptian_6;
+    private javax.swing.JPanel victory_Egyptian_7;
+    private javax.swing.JPanel victory_Egyptian_8;
+    private javax.swing.JPanel victory_Egyptian_9;
+    private javax.swing.JPanel victory_Greek_1;
+    private javax.swing.JPanel victory_Greek_10;
+    private javax.swing.JPanel victory_Greek_11;
+    private javax.swing.JPanel victory_Greek_12;
+    private javax.swing.JPanel victory_Greek_13;
+    private javax.swing.JPanel victory_Greek_14;
+    private javax.swing.JPanel victory_Greek_15;
+    private javax.swing.JPanel victory_Greek_16;
+    private javax.swing.JPanel victory_Greek_17;
+    private javax.swing.JPanel victory_Greek_18;
+    private javax.swing.JPanel victory_Greek_19;
+    private javax.swing.JPanel victory_Greek_2;
+    private javax.swing.JPanel victory_Greek_3;
+    private javax.swing.JPanel victory_Greek_4;
+    private javax.swing.JPanel victory_Greek_5;
+    private javax.swing.JPanel victory_Greek_6;
+    private javax.swing.JPanel victory_Greek_7;
+    private javax.swing.JPanel victory_Greek_8;
+    private javax.swing.JPanel victory_Greek_9;
+    private javax.swing.JPanel victory_Norse_1;
+    private javax.swing.JPanel victory_Norse_10;
+    private javax.swing.JPanel victory_Norse_11;
+    private javax.swing.JPanel victory_Norse_12;
+    private javax.swing.JPanel victory_Norse_13;
+    private javax.swing.JPanel victory_Norse_14;
+    private javax.swing.JPanel victory_Norse_15;
+    private javax.swing.JPanel victory_Norse_16;
+    private javax.swing.JPanel victory_Norse_17;
+    private javax.swing.JPanel victory_Norse_18;
+    private javax.swing.JPanel victory_Norse_19;
+    private javax.swing.JPanel victory_Norse_2;
+    private javax.swing.JPanel victory_Norse_3;
+    private javax.swing.JPanel victory_Norse_4;
+    private javax.swing.JPanel victory_Norse_5;
+    private javax.swing.JPanel victory_Norse_6;
+    private javax.swing.JPanel victory_Norse_7;
+    private javax.swing.JPanel victory_Norse_8;
+    private javax.swing.JPanel victory_Norse_9;
+    private javax.swing.JPanel wood_Egyptian_1;
+    private javax.swing.JPanel wood_Egyptian_10;
+    private javax.swing.JPanel wood_Egyptian_11;
+    private javax.swing.JPanel wood_Egyptian_12;
+    private javax.swing.JPanel wood_Egyptian_13;
+    private javax.swing.JPanel wood_Egyptian_14;
+    private javax.swing.JPanel wood_Egyptian_15;
+    private javax.swing.JPanel wood_Egyptian_16;
+    private javax.swing.JPanel wood_Egyptian_17;
+    private javax.swing.JPanel wood_Egyptian_18;
+    private javax.swing.JPanel wood_Egyptian_19;
+    private javax.swing.JPanel wood_Egyptian_2;
+    private javax.swing.JPanel wood_Egyptian_3;
+    private javax.swing.JPanel wood_Egyptian_4;
+    private javax.swing.JPanel wood_Egyptian_5;
+    private javax.swing.JPanel wood_Egyptian_6;
+    private javax.swing.JPanel wood_Egyptian_7;
+    private javax.swing.JPanel wood_Egyptian_8;
+    private javax.swing.JPanel wood_Egyptian_9;
+    private javax.swing.JPanel wood_Greek_1;
+    private javax.swing.JPanel wood_Greek_10;
+    private javax.swing.JPanel wood_Greek_11;
+    private javax.swing.JPanel wood_Greek_12;
+    private javax.swing.JPanel wood_Greek_13;
+    private javax.swing.JPanel wood_Greek_14;
+    private javax.swing.JPanel wood_Greek_15;
+    private javax.swing.JPanel wood_Greek_16;
+    private javax.swing.JPanel wood_Greek_17;
+    private javax.swing.JPanel wood_Greek_18;
+    private javax.swing.JPanel wood_Greek_19;
+    private javax.swing.JPanel wood_Greek_2;
+    private javax.swing.JPanel wood_Greek_3;
+    private javax.swing.JPanel wood_Greek_4;
+    private javax.swing.JPanel wood_Greek_5;
+    private javax.swing.JPanel wood_Greek_6;
+    private javax.swing.JPanel wood_Greek_7;
+    private javax.swing.JPanel wood_Greek_8;
+    private javax.swing.JPanel wood_Greek_9;
+    private javax.swing.JPanel wood_Norse_1;
+    private javax.swing.JPanel wood_Norse_10;
+    private javax.swing.JPanel wood_Norse_11;
+    private javax.swing.JPanel wood_Norse_12;
+    private javax.swing.JPanel wood_Norse_13;
+    private javax.swing.JPanel wood_Norse_14;
+    private javax.swing.JPanel wood_Norse_15;
+    private javax.swing.JPanel wood_Norse_16;
+    private javax.swing.JPanel wood_Norse_17;
+    private javax.swing.JPanel wood_Norse_18;
+    private javax.swing.JPanel wood_Norse_19;
+    private javax.swing.JPanel wood_Norse_2;
+    private javax.swing.JPanel wood_Norse_3;
+    private javax.swing.JPanel wood_Norse_4;
+    private javax.swing.JPanel wood_Norse_5;
+    private javax.swing.JPanel wood_Norse_6;
+    private javax.swing.JPanel wood_Norse_7;
+    private javax.swing.JPanel wood_Norse_8;
+    private javax.swing.JPanel wood_Norse_9;
     // End of variables declaration//GEN-END:variables
 }

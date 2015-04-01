@@ -59,12 +59,12 @@ public class victoryCardGUI extends javax.swing.JFrame {
         Card33_image = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         card4Layout = new javax.swing.JPanel();
-        Card4a = new javax.swing.JPanel();
-        Card4a_image = new javax.swing.JLabel();
-        Card4b = new javax.swing.JPanel();
-        Card4b_image = new javax.swing.JLabel();
-        Card4c = new javax.swing.JPanel();
-        Card4c_image = new javax.swing.JLabel();
+        Card41 = new javax.swing.JPanel();
+        Card41_image = new javax.swing.JLabel();
+        Card42 = new javax.swing.JPanel();
+        Card42_image = new javax.swing.JLabel();
+        Card43 = new javax.swing.JPanel();
+        Card43_image = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
@@ -177,7 +177,7 @@ public class victoryCardGUI extends javax.swing.JFrame {
             .addComponent(Card22_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        card2Layout.add(Card22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 30, 30));
+        card2Layout.add(Card22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 30, 30));
 
         Card23.setOpaque(false);
 
@@ -196,7 +196,7 @@ public class victoryCardGUI extends javax.swing.JFrame {
             .addComponent(Card23_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        card2Layout.add(Card23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 105, 30, 30));
+        card2Layout.add(Card23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 30, 30));
         Card23.getAccessibleContext().setAccessibleName("");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/rsz_1rsz_1cardvictorybuilding.png"))); // NOI18N
@@ -245,7 +245,7 @@ public class victoryCardGUI extends javax.swing.JFrame {
             .addComponent(Card32_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        card3Layout.add(Card32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 30, 30));
+        card3Layout.add(Card32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 30, 30));
 
         Card33.setOpaque(false);
 
@@ -264,7 +264,7 @@ public class victoryCardGUI extends javax.swing.JFrame {
             .addComponent(Card33_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        card3Layout.add(Card33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 105, 30, 30));
+        card3Layout.add(Card33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 30, 30));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/rsz_cardvictorywonder.png"))); // NOI18N
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -276,62 +276,62 @@ public class victoryCardGUI extends javax.swing.JFrame {
 
         card4Layout.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Card4a.setOpaque(false);
+        Card41.setOpaque(false);
 
-        Card4a_image.setBackground(new java.awt.Color(255, 51, 0));
-        Card4a_image.setOpaque(true);
-        Card4a_image.setVisible(false);
+        Card41_image.setBackground(new java.awt.Color(255, 51, 0));
+        Card41_image.setOpaque(true);
+        Card41_image.setVisible(false);
 
-        javax.swing.GroupLayout Card4aLayout = new javax.swing.GroupLayout(Card4a);
-        Card4a.setLayout(Card4aLayout);
-        Card4aLayout.setHorizontalGroup(
-            Card4aLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Card4a_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        javax.swing.GroupLayout Card41Layout = new javax.swing.GroupLayout(Card41);
+        Card41.setLayout(Card41Layout);
+        Card41Layout.setHorizontalGroup(
+            Card41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Card41_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
-        Card4aLayout.setVerticalGroup(
-            Card4aLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Card4a_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-        );
-
-        card4Layout.add(Card4a, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 30, 30));
-
-        Card4b.setOpaque(false);
-
-        Card4b_image.setBackground(new java.awt.Color(255, 0, 0));
-        Card4b_image.setOpaque(true);
-        Card4b_image.setVisible(false);
-
-        javax.swing.GroupLayout Card4bLayout = new javax.swing.GroupLayout(Card4b);
-        Card4b.setLayout(Card4bLayout);
-        Card4bLayout.setHorizontalGroup(
-            Card4bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Card4b_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-        );
-        Card4bLayout.setVerticalGroup(
-            Card4bLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Card4b_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        Card41Layout.setVerticalGroup(
+            Card41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Card41_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        card4Layout.add(Card4b, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 30, 30));
+        card4Layout.add(Card41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 30, 30));
 
-        Card4c.setOpaque(false);
+        Card42.setOpaque(false);
 
-        Card4c_image.setBackground(new java.awt.Color(255, 0, 0));
-        Card4c_image.setOpaque(true);
-        Card4c_image.setVisible(false);
+        Card42_image.setBackground(new java.awt.Color(255, 0, 0));
+        Card42_image.setOpaque(true);
+        Card42_image.setVisible(false);
 
-        javax.swing.GroupLayout Card4cLayout = new javax.swing.GroupLayout(Card4c);
-        Card4c.setLayout(Card4cLayout);
-        Card4cLayout.setHorizontalGroup(
-            Card4cLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Card4c_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        javax.swing.GroupLayout Card42Layout = new javax.swing.GroupLayout(Card42);
+        Card42.setLayout(Card42Layout);
+        Card42Layout.setHorizontalGroup(
+            Card42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Card42_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
-        Card4cLayout.setVerticalGroup(
-            Card4cLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Card4c_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        Card42Layout.setVerticalGroup(
+            Card42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Card42_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        card4Layout.add(Card4c, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 105, 30, 30));
+        card4Layout.add(Card42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 65, 30, 30));
+
+        Card43.setOpaque(false);
+
+        Card43_image.setBackground(new java.awt.Color(255, 0, 0));
+        Card43_image.setOpaque(true);
+        Card43_image.setVisible(false);
+
+        javax.swing.GroupLayout Card43Layout = new javax.swing.GroupLayout(Card43);
+        Card43.setLayout(Card43Layout);
+        Card43Layout.setHorizontalGroup(
+            Card43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Card43_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        );
+        Card43Layout.setVerticalGroup(
+            Card43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Card43_image, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        );
+
+        card4Layout.add(Card43, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 30, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/rsz_cardvictorybattle.png"))); // NOI18N
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -397,7 +397,8 @@ public class victoryCardGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+        Bank bank = Bank.getInstance();
+        bank.setVictory(bank.getVictory()-3);
         board.saveDetails();
         this.setVisible(false);
        
@@ -409,6 +410,9 @@ public class victoryCardGUI extends javax.swing.JFrame {
         else
         {
             Card11_image.setVisible(true);
+            Card21_image.setVisible(false);
+            Card31_image.setVisible(false);
+            Card41_image.setVisible(false);
         }
             
 
@@ -420,21 +424,32 @@ public class victoryCardGUI extends javax.swing.JFrame {
         else
         {
             Card21_image.setVisible(true);
+            Card11_image.setVisible(false);
+            Card31_image.setVisible(false);
+            Card41_image.setVisible(false);
         }
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         if(Card31_image.isVisible() == true)
             Card31_image.setVisible(false);
-        else
+        else {
             Card31_image.setVisible(true);
+            Card21_image.setVisible(false);
+            Card11_image.setVisible(false);
+            Card41_image.setVisible(false);
+        }
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        if(Card4a_image.isVisible() == true)
-            Card4a_image.setVisible(false);
-        else
-            Card4a_image.setVisible(true);
+        if(Card41_image.isVisible() == true)
+            Card41_image.setVisible(false);
+        else {
+            Card41_image.setVisible(true);
+            Card11_image.setVisible(false);
+            Card21_image.setVisible(false);
+            Card31_image.setVisible(false);
+        }
     }//GEN-LAST:event_jLabel4MouseClicked
     
     public javax.swing.JTextField getTextField() {
@@ -496,12 +511,12 @@ public class victoryCardGUI extends javax.swing.JFrame {
     private javax.swing.JLabel Card32_image;
     private javax.swing.JPanel Card33;
     private javax.swing.JLabel Card33_image;
-    private javax.swing.JPanel Card4a;
-    private javax.swing.JLabel Card4a_image;
-    private javax.swing.JPanel Card4b;
-    private javax.swing.JLabel Card4b_image;
-    private javax.swing.JPanel Card4c;
-    private javax.swing.JLabel Card4c_image;
+    private javax.swing.JPanel Card41;
+    private javax.swing.JLabel Card41_image;
+    private javax.swing.JPanel Card42;
+    private javax.swing.JLabel Card42_image;
+    private javax.swing.JPanel Card43;
+    private javax.swing.JLabel Card43_image;
     private javax.swing.JPanel VClayout;
     private javax.swing.JPanel card1Layout;
     private javax.swing.JPanel card2Layout;
