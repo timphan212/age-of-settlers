@@ -25,8 +25,7 @@ public class BoardGUI extends javax.swing.JFrame {
     
     public BoardGUI(String boardType) {
         initComponents();
-        this.boardController = new BoardController();
-        
+        this.boardController = BoardController.getInstance();
         if(boardType.compareTo("Norse") == 0) {
             jTabbedPane1.setSelectedIndex(0);
             this.boardController.setPlayerCulture(boardType);
@@ -6971,10 +6970,11 @@ public class BoardGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        victoryCardGUI victoryCard = new victoryCardGUI(boardController);
+        victoryCardGUI victoryCard = victoryCardGUI.getInstance();
         victoryCard.getTextField().setVisible(false);
+        boardController.drawVictoryCubes();
         victoryCard.setVisible(true);
-        
+        victoryCard.hideButtons();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void norseAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_norseAgeActionPerformed
@@ -6992,7 +6992,7 @@ public class BoardGUI extends javax.swing.JFrame {
     private void callAIHandler() {
         if(boardController.getPlayerTurnCount() == 6) {
             jTabbedPane2.remove(0);
-            ReadyGUI ready = new ReadyGUI(boardController);
+            ReadyGUI ready = new ReadyGUI();
             ready.setVisible(true);
         }
         else if(boardController.getPlayerTurnCount() % 2 != 0) {

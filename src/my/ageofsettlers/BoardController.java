@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import javax.swing.JPanel;
 
 /**
  *
@@ -20,14 +21,23 @@ public class BoardController {
     private static List<TerrainTiles> terrainList = new ArrayList<>();
     private String playerCulture;
     private int playerTurnCount = 0;
-    private List<victoryCard> victoryCardList = new ArrayList<>();
     private static Norse norsePlayer;
     private static Egyptian egyptianPlayer;
     private static Greek greekPlayer;
-    
+    private int[] victoryCards = new int[4];
+    private static BoardController instance = null;
     /**
      * @param args the command line arguments
      */
+    
+    public static synchronized BoardController getInstance() {
+        if(instance == null) {
+            instance = new BoardController();
+        }
+        
+        return instance;
+    }
+    
     public static void main(String[] args) {
         CultureSelectGUI culSelect = new CultureSelectGUI();
         culSelect.setVisible(true);
@@ -42,9 +52,14 @@ public class BoardController {
     }
     
     public static void setupRounds() {
-        victoryCardGUI victoryRounds = new victoryCardGUI();
+        victoryCardGUI victoryRounds = victoryCardGUI.getInstance();
         victoryRounds.getTextField().setVisible(true);
         victoryRounds.setVisible(true);
+    }
+    
+    public void initVictoryCards() {
+        victoryCardGUI vcGUI = victoryCardGUI.getInstance();
+        vcGUI.setVisible(true);
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -248,6 +263,7 @@ public class BoardController {
         
         return false;
     }
+    
     private void displayError() {
         TerrainErrorGUI error = new TerrainErrorGUI();
         error.setVisible(true);
@@ -322,6 +338,24 @@ public class BoardController {
         }
     }
     
+    public void drawVictoryCard(int cardClicked, int previousClick) {
+        victoryCards[cardClicked] += 1;
+        
+        if(previousClick > -1) {
+            victoryCards[previousClick] -= 1;
+        }
+        
+        drawVictoryCubes();
+    }
+    
+    public void drawVictoryCubes() {
+        victoryCardGUI vcGUI = victoryCardGUI.getInstance();
+        vcGUI.drawPanelsOne(victoryCards[0]);
+        vcGUI.drawPanelsTwo(victoryCards[1]);
+        vcGUI.drawPanelsThree(victoryCards[2]);
+        vcGUI.drawPanelsFour(victoryCards[3]);
+    }
+    
     public TerrainTiles getTerrainTile(int index) {
         return terrainList.get(index);
     }
@@ -340,11 +374,5 @@ public class BoardController {
     
     public void incrementPlayerTurnCount() {
         this.playerTurnCount += 1;
-    }
-
-    void saveDetails() {
-        Bank bank = Bank.getInstance();
-        System.out.println(bank.getVictory());
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
