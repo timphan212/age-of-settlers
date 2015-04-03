@@ -209,25 +209,25 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         List<String> actionList = new ArrayList<>();
         if(attackMarked.isVisible() == true) {
-            actionList.add("attack");
+            actionList.add(PermanentAttack_img.getAccessibleContext().getAccessibleName());
         }
         if(buildMarked.isVisible() == true) {
-            actionList.add("build");
+            actionList.add(PermanentBuild_img.getAccessibleContext().getAccessibleName());
         }
         if(exploreMarked.isVisible() == true) {
-            actionList.add("explore");
+            actionList.add(PermanentExplore_img.getAccessibleContext().getAccessibleName());
         }
         if(nextAgeMarked.isVisible() == true) {
-            actionList.add("nextAge");
+            actionList.add(PermanentNextAge_img.getAccessibleContext().getAccessibleName());
         }
         if(recruitMarked.isVisible() == true) {
-            actionList.add("recruit");
+            actionList.add(PermanentRecruit_img.getAccessibleContext().getAccessibleName());
         }
         if(tradeMarked.isVisible() == true) {
-            actionList.add("trade");
+            actionList.add(PermanentTrade_img.getAccessibleContext().getAccessibleName());
         }
         if(gatherMarked.isVisible() == true) {
-            actionList.add("gather");
+            actionList.add(PermanentGather_img.getAccessibleContext().getAccessibleName());
         }
         
         board.setPlayerPermCards(actionList);
@@ -330,30 +330,51 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
     public void setupCards() {
         if(board.getPlayerCulture().compareTo("Egyptian") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptAttack.png")));
+            PermanentAttack_img.getAccessibleContext().setAccessibleName("CardPermEgyptAttack.png");
             PermanentBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptBuild.png")));
+            PermanentBuild_img.getAccessibleContext().setAccessibleName("CardPermEgyptBuild.png");
             PermanentExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptExplore.png")));
+            PermanentExplore_img.getAccessibleContext().setAccessibleName("CardPermEgyptExplore.png");
             PermanentGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptGather.png")));
+            PermanentGather_img.getAccessibleContext().setAccessibleName("CardPermEgyptGather.png");
             PermanentNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptAge.png")));
+            PermanentNextAge_img.getAccessibleContext().setAccessibleName("CardPermEgyptAge.png");
             PermanentRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptRecruit.png")));
+            PermanentRecruit_img.getAccessibleContext().setAccessibleName("CardPermEgyptRecruit.png");
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptTrade.png")));
+            PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermEgyptTrade.png");
         }
         else if(board.getPlayerCulture().compareTo("Greek") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekAttack.png")));
+            PermanentAttack_img.getAccessibleContext().setAccessibleName("CardPermGreekAttack.png");
             PermanentBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekBuild.png")));
+            PermanentBuild_img.getAccessibleContext().setAccessibleName("CardPermGreekBuild.png");
             PermanentExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekExplore.png")));
+            PermanentExplore_img.getAccessibleContext().setAccessibleName("CardPermGreekExplore.png");
             PermanentGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekGather.png")));
+            PermanentGather_img.getAccessibleContext().setAccessibleName("CardPermGreekGather.png");
             PermanentNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekAge.png")));
+            PermanentNextAge_img.getAccessibleContext().setAccessibleName("CardPermGreekAge.png");
             PermanentRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekRecruit.png")));
+            PermanentRecruit_img.getAccessibleContext().setAccessibleName("CardPermGreekRecruit.png");
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekTrade.png")));
+            PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermGreekTrade.png");
         }
         else if(board.getPlayerCulture().compareTo("Norse") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseAttack.png")));
+            PermanentAttack_img.getAccessibleContext().setAccessibleName("CardPermNorseAttack.png");
             PermanentBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseBuild.png")));
+            PermanentBuild_img.getAccessibleContext().setAccessibleName("CardPermNorseBuild.png");
             PermanentExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseExplore.png")));
+            PermanentExplore_img.getAccessibleContext().setAccessibleName("CardPermNorseExplore.png");
             PermanentGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseGather.png")));
+            PermanentGather_img.getAccessibleContext().setAccessibleName("CardPermNorseGather.png");
             PermanentNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseAge.png")));
+            PermanentNextAge_img.getAccessibleContext().setAccessibleName("CardPermNorseAge.png");
             PermanentRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseRecruit.png")));
+            PermanentRecruit_img.getAccessibleContext().setAccessibleName("CardPermNorseRecruit.png");
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseTrade.png")));
+            PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermNorseTrade.png");
         }
     }
     /**

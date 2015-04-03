@@ -72,9 +72,14 @@ public class BoardController {
     }
     
     public void initPlayPermCards() {
-        for(int i = 0; i < playerPermCards.size(); i++) {
-            System.out.println(playerPermCards.get(i));
-        }
+        SelectedPermanentCardsGUI spCards = new SelectedPermanentCardsGUI();
+        spCards.setMaxCards(playerPermCards.size());
+        spCards.setupCards();
+        spCards.setVisible(true);
+    }
+    
+    public void playCard(String str) {
+        //play card here
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -397,5 +402,9 @@ public class BoardController {
 
     public void setPlayerPermCards(List<String> playerPermCards) {
         this.playerPermCards = playerPermCards;
+    }
+    
+    public void removePlayerPermCards(String card) {
+        playerPermCards.remove(card);
     }
 }
