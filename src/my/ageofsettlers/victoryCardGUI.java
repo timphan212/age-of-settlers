@@ -369,6 +369,7 @@ public class victoryCardGUI extends javax.swing.JFrame {
         num = rand.nextInt(4);
         board.drawVictoryCard(num, -1);
         bank.setVictory(bank.getVictory()-3);
+        board.initPermanentCards();
         this.disabledClick = true;
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -22,6 +22,7 @@ public class Norse {
     private int wood = 4;
     private int gold = 4;
     private int victory = 0;
+    private int age = 0;
     
     public static synchronized Norse getInstance() {
         if(instance == null) {
@@ -81,5 +82,13 @@ public class Norse {
 
     public void setVictory(int victory) {
         this.victory = victory;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

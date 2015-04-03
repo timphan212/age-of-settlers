@@ -20,12 +20,15 @@ import javax.swing.JPanel;
 public class BoardController {
     private static List<TerrainTiles> terrainList = new ArrayList<>();
     private String playerCulture;
+    private int playerAge = 0;
     private int playerTurnCount = 0;
     private static Norse norsePlayer;
     private static Egyptian egyptianPlayer;
     private static Greek greekPlayer;
     private int[] victoryCards = new int[4];
     private static BoardController instance = null;
+    private List<String> playerPermCards = new ArrayList<>();
+    
     /**
      * @param args the command line arguments
      */
@@ -60,6 +63,18 @@ public class BoardController {
     public void initVictoryCards() {
         victoryCardGUI vcGUI = victoryCardGUI.getInstance();
         vcGUI.setVisible(true);
+    }
+    
+    public void initPermanentCards() {
+        PermanentCardsGUI pcGUI = new PermanentCardsGUI();
+        pcGUI.setMaxCards(4);
+        pcGUI.setVisible(true);
+    }
+    
+    public void initPlayPermCards() {
+        for(int i = 0; i < playerPermCards.size(); i++) {
+            System.out.println(playerPermCards.get(i));
+        }
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -374,5 +389,13 @@ public class BoardController {
     
     public void incrementPlayerTurnCount() {
         this.playerTurnCount += 1;
+    }
+
+    public List<String> getPlayerPermCards() {
+        return playerPermCards;
+    }
+
+    public void setPlayerPermCards(List<String> playerPermCards) {
+        this.playerPermCards = playerPermCards;
     }
 }
