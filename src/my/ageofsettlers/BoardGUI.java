@@ -272,7 +272,39 @@ public class BoardGUI extends javax.swing.JFrame {
         victory_Norse_19 = new javax.swing.JPanel();
         victory_Norse_19.setVisible(false);
         norseAge = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
+        norseBuildingPanel = new javax.swing.JPanel();
+        norseBuildingPanel_1 = new javax.swing.JPanel();
+        norseBuilding_img_1 = new javax.swing.JLabel();
+        norseBuildingPanel_2 = new javax.swing.JPanel();
+        norseBuilding_img_2 = new javax.swing.JLabel();
+        norseBuildingPanel_3 = new javax.swing.JPanel();
+        norseBuilding_img_3 = new javax.swing.JLabel();
+        norseBuildingPanel_4 = new javax.swing.JPanel();
+        building_img_4 = new javax.swing.JLabel();
+        norseBuildingPanel_5 = new javax.swing.JPanel();
+        norseBuilding_img_5 = new javax.swing.JLabel();
+        norseBuildingPanel_6 = new javax.swing.JPanel();
+        norseBuilding_img_6 = new javax.swing.JLabel();
+        norseBuildingPanel_7 = new javax.swing.JPanel();
+        norseBuilding_img_7 = new javax.swing.JLabel();
+        norseBuildingPanel_8 = new javax.swing.JPanel();
+        norseBuilding_img_8 = new javax.swing.JLabel();
+        norseBuildingPanel_9 = new javax.swing.JPanel();
+        norseBuilding_img_9 = new javax.swing.JLabel();
+        norseBuildingPanel_10 = new javax.swing.JPanel();
+        norseBuilding_img_10 = new javax.swing.JLabel();
+        norseBuildingPanel_11 = new javax.swing.JPanel();
+        norseBuilding_img_11 = new javax.swing.JLabel();
+        norseBuildingPanel_12 = new javax.swing.JPanel();
+        norseBuilding_img_12 = new javax.swing.JLabel();
+        norseBuildingPanel_13 = new javax.swing.JPanel();
+        norseBuilding_img_13 = new javax.swing.JLabel();
+        norseBuildingPanel_14 = new javax.swing.JPanel();
+        norseBuilding_img_14 = new javax.swing.JLabel();
+        norseBuildingPanel_15 = new javax.swing.JPanel();
+        norseBuilding_img_15 = new javax.swing.JLabel();
+        norseBuildingPanel_16 = new javax.swing.JPanel();
+        norseBuilding_img_16 = new javax.swing.JLabel();
         norseBoardImg = new javax.swing.JLabel();
         greekBoard = new javax.swing.JPanel();
         greekTerrain = new javax.swing.JPanel();
@@ -489,6 +521,39 @@ public class BoardGUI extends javax.swing.JFrame {
         victory_Greek_19 = new javax.swing.JPanel();
         victory_Greek_19.setVisible(false);
         greekAge = new javax.swing.JTextField();
+        greekBuildingPanel = new javax.swing.JPanel();
+        greekBuildingPanel_1 = new javax.swing.JPanel();
+        greekBuilding_img_1 = new javax.swing.JLabel();
+        greekBuildingPanel_2 = new javax.swing.JPanel();
+        greekBuilding_img_2 = new javax.swing.JLabel();
+        greekBuildingPanel_3 = new javax.swing.JPanel();
+        greekBuilding_img_3 = new javax.swing.JLabel();
+        greekBuildingPanel_4 = new javax.swing.JPanel();
+        greekBuilding_img_4 = new javax.swing.JLabel();
+        greekBuildingPanel_5 = new javax.swing.JPanel();
+        greekBuilding_img_5 = new javax.swing.JLabel();
+        greekBuildingPanel_6 = new javax.swing.JPanel();
+        greekBuilding_img_6 = new javax.swing.JLabel();
+        greekBuildingPanel_7 = new javax.swing.JPanel();
+        greekBuilding_img_7 = new javax.swing.JLabel();
+        greekBuildingPanel_8 = new javax.swing.JPanel();
+        greekBuilding_img_8 = new javax.swing.JLabel();
+        greekBuildingPanel_9 = new javax.swing.JPanel();
+        greekBuilding_img_9 = new javax.swing.JLabel();
+        greekBuildingPanel_10 = new javax.swing.JPanel();
+        greekBuilding_img_10 = new javax.swing.JLabel();
+        greekBuildingPanel_11 = new javax.swing.JPanel();
+        greekBuilding_img_11 = new javax.swing.JLabel();
+        greekBuildingPanel_12 = new javax.swing.JPanel();
+        greekBuilding_img_12 = new javax.swing.JLabel();
+        greekBuildingPanel_13 = new javax.swing.JPanel();
+        greekBuilding_img_13 = new javax.swing.JLabel();
+        greekBuildingPanel_14 = new javax.swing.JPanel();
+        greekBuilding_img_14 = new javax.swing.JLabel();
+        greekBuildingPanel_15 = new javax.swing.JPanel();
+        greekBuilding_img_15 = new javax.swing.JLabel();
+        greekBuildingPanel_16 = new javax.swing.JPanel();
+        greekBuilding_img_16 = new javax.swing.JLabel();
         greekBoardImg = new javax.swing.JLabel();
         egyptianBoard = new javax.swing.JPanel();
         egyptTerrain = new javax.swing.JPanel();
@@ -705,6 +770,39 @@ public class BoardGUI extends javax.swing.JFrame {
         victory_Egyptian_19 = new javax.swing.JPanel();
         victory_Egyptian_19.setVisible(false);
         egyptianAge = new javax.swing.JTextField();
+        egyptianBuildingPanel = new javax.swing.JPanel();
+        egyptianBuildingPanel_1 = new javax.swing.JPanel();
+        egyptianBuilding_img_1 = new javax.swing.JLabel();
+        egyptianBuildingPanel_2 = new javax.swing.JPanel();
+        egyptianBuilding_img_2 = new javax.swing.JLabel();
+        egyptianBuildingPanel_3 = new javax.swing.JPanel();
+        egyptianBuilding_img_3 = new javax.swing.JLabel();
+        egyptianBuildingPanel_4 = new javax.swing.JPanel();
+        egyptianBuilding_img_4 = new javax.swing.JLabel();
+        egyptianBuildingPanel_5 = new javax.swing.JPanel();
+        egyptianBuilding_img_5 = new javax.swing.JLabel();
+        egyptianBuildingPanel_6 = new javax.swing.JPanel();
+        egyptianBuilding_img_6 = new javax.swing.JLabel();
+        egyptianBuildingPanel_7 = new javax.swing.JPanel();
+        egyptianBuilding_img_7 = new javax.swing.JLabel();
+        egyptianBuildingPanel_8 = new javax.swing.JPanel();
+        egyptianBuilding_img_8 = new javax.swing.JLabel();
+        egyptianBuildingPanel_9 = new javax.swing.JPanel();
+        egyptianBuilding_img_9 = new javax.swing.JLabel();
+        egyptianBuildingPanel_10 = new javax.swing.JPanel();
+        egyptianBuilding_img_10 = new javax.swing.JLabel();
+        egyptianBuildingPanel_11 = new javax.swing.JPanel();
+        egyptianBuilding_img_11 = new javax.swing.JLabel();
+        egyptianBuildingPanel_12 = new javax.swing.JPanel();
+        egyptianBuilding_img_12 = new javax.swing.JLabel();
+        egyptianBuildingPanel_13 = new javax.swing.JPanel();
+        egyptianBuilding_img_13 = new javax.swing.JLabel();
+        egyptianBuildingPanel_14 = new javax.swing.JPanel();
+        egyptianBuilding_img_14 = new javax.swing.JLabel();
+        egyptianBuildingPanel_15 = new javax.swing.JPanel();
+        egyptianBuilding_img_15 = new javax.swing.JLabel();
+        egyptianBuildingPanel_16 = new javax.swing.JPanel();
+        egyptianBuilding_img_16 = new javax.swing.JLabel();
         egyptianBoardImg = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         terrain = new javax.swing.JPanel();
@@ -2617,20 +2715,250 @@ public class BoardGUI extends javax.swing.JFrame {
 
         norseBoard.add(norseResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
 
-        jPanel2.setOpaque(false);
+        norseBuildingPanel.setOpaque(false);
+        norseBuildingPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+        norseBuildingPanel_1.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_1Layout = new javax.swing.GroupLayout(norseBuildingPanel_1);
+        norseBuildingPanel_1.setLayout(norseBuildingPanel_1Layout);
+        norseBuildingPanel_1Layout.setHorizontalGroup(
+            norseBuildingPanel_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+        norseBuildingPanel_1Layout.setVerticalGroup(
+            norseBuildingPanel_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
-        norseBoard.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 390, 350));
+        norseBuildingPanel.add(norseBuildingPanel_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 90));
+
+        norseBuildingPanel_2.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_2Layout = new javax.swing.GroupLayout(norseBuildingPanel_2);
+        norseBuildingPanel_2.setLayout(norseBuildingPanel_2Layout);
+        norseBuildingPanel_2Layout.setHorizontalGroup(
+            norseBuildingPanel_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_2Layout.setVerticalGroup(
+            norseBuildingPanel_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 90, 90));
+
+        norseBuildingPanel_3.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_3Layout = new javax.swing.GroupLayout(norseBuildingPanel_3);
+        norseBuildingPanel_3.setLayout(norseBuildingPanel_3Layout);
+        norseBuildingPanel_3Layout.setHorizontalGroup(
+            norseBuildingPanel_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_3Layout.setVerticalGroup(
+            norseBuildingPanel_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 90, 90));
+
+        norseBuildingPanel_4.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_4Layout = new javax.swing.GroupLayout(norseBuildingPanel_4);
+        norseBuildingPanel_4.setLayout(norseBuildingPanel_4Layout);
+        norseBuildingPanel_4Layout.setHorizontalGroup(
+            norseBuildingPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(building_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_4Layout.setVerticalGroup(
+            norseBuildingPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(building_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 90, 90));
+
+        norseBuildingPanel_5.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_5Layout = new javax.swing.GroupLayout(norseBuildingPanel_5);
+        norseBuildingPanel_5.setLayout(norseBuildingPanel_5Layout);
+        norseBuildingPanel_5Layout.setHorizontalGroup(
+            norseBuildingPanel_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_5Layout.setVerticalGroup(
+            norseBuildingPanel_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 90, 90));
+
+        norseBuildingPanel_6.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_6Layout = new javax.swing.GroupLayout(norseBuildingPanel_6);
+        norseBuildingPanel_6.setLayout(norseBuildingPanel_6Layout);
+        norseBuildingPanel_6Layout.setHorizontalGroup(
+            norseBuildingPanel_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_6Layout.setVerticalGroup(
+            norseBuildingPanel_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 90, 90));
+
+        norseBuildingPanel_7.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_7Layout = new javax.swing.GroupLayout(norseBuildingPanel_7);
+        norseBuildingPanel_7.setLayout(norseBuildingPanel_7Layout);
+        norseBuildingPanel_7Layout.setHorizontalGroup(
+            norseBuildingPanel_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_7Layout.setVerticalGroup(
+            norseBuildingPanel_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 90, 90));
+
+        norseBuildingPanel_8.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_8Layout = new javax.swing.GroupLayout(norseBuildingPanel_8);
+        norseBuildingPanel_8.setLayout(norseBuildingPanel_8Layout);
+        norseBuildingPanel_8Layout.setHorizontalGroup(
+            norseBuildingPanel_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_8Layout.setVerticalGroup(
+            norseBuildingPanel_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 90, 90));
+
+        norseBuildingPanel_9.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_9Layout = new javax.swing.GroupLayout(norseBuildingPanel_9);
+        norseBuildingPanel_9.setLayout(norseBuildingPanel_9Layout);
+        norseBuildingPanel_9Layout.setHorizontalGroup(
+            norseBuildingPanel_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_9Layout.setVerticalGroup(
+            norseBuildingPanel_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 90, 90));
+
+        norseBuildingPanel_10.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_10Layout = new javax.swing.GroupLayout(norseBuildingPanel_10);
+        norseBuildingPanel_10.setLayout(norseBuildingPanel_10Layout);
+        norseBuildingPanel_10Layout.setHorizontalGroup(
+            norseBuildingPanel_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_10Layout.setVerticalGroup(
+            norseBuildingPanel_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 90, 90));
+
+        norseBuildingPanel_11.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_11Layout = new javax.swing.GroupLayout(norseBuildingPanel_11);
+        norseBuildingPanel_11.setLayout(norseBuildingPanel_11Layout);
+        norseBuildingPanel_11Layout.setHorizontalGroup(
+            norseBuildingPanel_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_11, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_11Layout.setVerticalGroup(
+            norseBuildingPanel_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_11, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 90, 90));
+
+        norseBuildingPanel_12.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_12Layout = new javax.swing.GroupLayout(norseBuildingPanel_12);
+        norseBuildingPanel_12.setLayout(norseBuildingPanel_12Layout);
+        norseBuildingPanel_12Layout.setHorizontalGroup(
+            norseBuildingPanel_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_12Layout.setVerticalGroup(
+            norseBuildingPanel_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 90, 90));
+
+        norseBuildingPanel_13.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_13Layout = new javax.swing.GroupLayout(norseBuildingPanel_13);
+        norseBuildingPanel_13.setLayout(norseBuildingPanel_13Layout);
+        norseBuildingPanel_13Layout.setHorizontalGroup(
+            norseBuildingPanel_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_13Layout.setVerticalGroup(
+            norseBuildingPanel_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 90, 90));
+
+        norseBuildingPanel_14.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_14Layout = new javax.swing.GroupLayout(norseBuildingPanel_14);
+        norseBuildingPanel_14.setLayout(norseBuildingPanel_14Layout);
+        norseBuildingPanel_14Layout.setHorizontalGroup(
+            norseBuildingPanel_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_14Layout.setVerticalGroup(
+            norseBuildingPanel_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 90, 90));
+
+        norseBuildingPanel_15.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_15Layout = new javax.swing.GroupLayout(norseBuildingPanel_15);
+        norseBuildingPanel_15.setLayout(norseBuildingPanel_15Layout);
+        norseBuildingPanel_15Layout.setHorizontalGroup(
+            norseBuildingPanel_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_15, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_15Layout.setVerticalGroup(
+            norseBuildingPanel_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_15, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 90, 90));
+
+        norseBuildingPanel_16.setOpaque(false);
+
+        javax.swing.GroupLayout norseBuildingPanel_16Layout = new javax.swing.GroupLayout(norseBuildingPanel_16);
+        norseBuildingPanel_16.setLayout(norseBuildingPanel_16Layout);
+        norseBuildingPanel_16Layout.setHorizontalGroup(
+            norseBuildingPanel_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_16, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        norseBuildingPanel_16Layout.setVerticalGroup(
+            norseBuildingPanel_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(norseBuilding_img_16, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        norseBuildingPanel.add(norseBuildingPanel_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 90, 90));
+
+        norseBoard.add(norseBuildingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 390, 370));
 
         norseBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
         norseBoard.add(norseBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
@@ -4480,6 +4808,251 @@ public class BoardGUI extends javax.swing.JFrame {
 
         greekBoard.add(greekResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
 
+        greekBuildingPanel.setOpaque(false);
+        greekBuildingPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        greekBuildingPanel_1.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_1Layout = new javax.swing.GroupLayout(greekBuildingPanel_1);
+        greekBuildingPanel_1.setLayout(greekBuildingPanel_1Layout);
+        greekBuildingPanel_1Layout.setHorizontalGroup(
+            greekBuildingPanel_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_1Layout.setVerticalGroup(
+            greekBuildingPanel_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 90, 90));
+
+        greekBuildingPanel_2.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_2Layout = new javax.swing.GroupLayout(greekBuildingPanel_2);
+        greekBuildingPanel_2.setLayout(greekBuildingPanel_2Layout);
+        greekBuildingPanel_2Layout.setHorizontalGroup(
+            greekBuildingPanel_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_2Layout.setVerticalGroup(
+            greekBuildingPanel_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 90, 90));
+
+        greekBuildingPanel_3.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_3Layout = new javax.swing.GroupLayout(greekBuildingPanel_3);
+        greekBuildingPanel_3.setLayout(greekBuildingPanel_3Layout);
+        greekBuildingPanel_3Layout.setHorizontalGroup(
+            greekBuildingPanel_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_3Layout.setVerticalGroup(
+            greekBuildingPanel_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 90, 90));
+
+        greekBuildingPanel_4.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_4Layout = new javax.swing.GroupLayout(greekBuildingPanel_4);
+        greekBuildingPanel_4.setLayout(greekBuildingPanel_4Layout);
+        greekBuildingPanel_4Layout.setHorizontalGroup(
+            greekBuildingPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_4Layout.setVerticalGroup(
+            greekBuildingPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 0, 90, 90));
+
+        greekBuildingPanel_5.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_5Layout = new javax.swing.GroupLayout(greekBuildingPanel_5);
+        greekBuildingPanel_5.setLayout(greekBuildingPanel_5Layout);
+        greekBuildingPanel_5Layout.setHorizontalGroup(
+            greekBuildingPanel_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_5Layout.setVerticalGroup(
+            greekBuildingPanel_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 90, 90, 90));
+
+        greekBuildingPanel_6.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_6Layout = new javax.swing.GroupLayout(greekBuildingPanel_6);
+        greekBuildingPanel_6.setLayout(greekBuildingPanel_6Layout);
+        greekBuildingPanel_6Layout.setHorizontalGroup(
+            greekBuildingPanel_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_6Layout.setVerticalGroup(
+            greekBuildingPanel_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 90, 90));
+
+        greekBuildingPanel_7.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_7Layout = new javax.swing.GroupLayout(greekBuildingPanel_7);
+        greekBuildingPanel_7.setLayout(greekBuildingPanel_7Layout);
+        greekBuildingPanel_7Layout.setHorizontalGroup(
+            greekBuildingPanel_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_7Layout.setVerticalGroup(
+            greekBuildingPanel_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, 90));
+
+        greekBuildingPanel_8.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_8Layout = new javax.swing.GroupLayout(greekBuildingPanel_8);
+        greekBuildingPanel_8.setLayout(greekBuildingPanel_8Layout);
+        greekBuildingPanel_8Layout.setHorizontalGroup(
+            greekBuildingPanel_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_8Layout.setVerticalGroup(
+            greekBuildingPanel_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 90, 90, 90));
+
+        greekBuildingPanel_9.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_9Layout = new javax.swing.GroupLayout(greekBuildingPanel_9);
+        greekBuildingPanel_9.setLayout(greekBuildingPanel_9Layout);
+        greekBuildingPanel_9Layout.setHorizontalGroup(
+            greekBuildingPanel_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_9Layout.setVerticalGroup(
+            greekBuildingPanel_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 180, 90, 90));
+
+        greekBuildingPanel_10.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_10Layout = new javax.swing.GroupLayout(greekBuildingPanel_10);
+        greekBuildingPanel_10.setLayout(greekBuildingPanel_10Layout);
+        greekBuildingPanel_10Layout.setHorizontalGroup(
+            greekBuildingPanel_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_10Layout.setVerticalGroup(
+            greekBuildingPanel_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 90, 90));
+
+        greekBuildingPanel_11.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_11Layout = new javax.swing.GroupLayout(greekBuildingPanel_11);
+        greekBuildingPanel_11.setLayout(greekBuildingPanel_11Layout);
+        greekBuildingPanel_11Layout.setHorizontalGroup(
+            greekBuildingPanel_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_11, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_11Layout.setVerticalGroup(
+            greekBuildingPanel_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_11, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 90, 90));
+
+        greekBuildingPanel_12.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_12Layout = new javax.swing.GroupLayout(greekBuildingPanel_12);
+        greekBuildingPanel_12.setLayout(greekBuildingPanel_12Layout);
+        greekBuildingPanel_12Layout.setHorizontalGroup(
+            greekBuildingPanel_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_12Layout.setVerticalGroup(
+            greekBuildingPanel_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 180, 90, 90));
+
+        greekBuildingPanel_13.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_13Layout = new javax.swing.GroupLayout(greekBuildingPanel_13);
+        greekBuildingPanel_13.setLayout(greekBuildingPanel_13Layout);
+        greekBuildingPanel_13Layout.setHorizontalGroup(
+            greekBuildingPanel_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_13Layout.setVerticalGroup(
+            greekBuildingPanel_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 270, 90, 90));
+
+        greekBuildingPanel_14.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_14Layout = new javax.swing.GroupLayout(greekBuildingPanel_14);
+        greekBuildingPanel_14.setLayout(greekBuildingPanel_14Layout);
+        greekBuildingPanel_14Layout.setHorizontalGroup(
+            greekBuildingPanel_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_14Layout.setVerticalGroup(
+            greekBuildingPanel_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 90, 90));
+
+        greekBuildingPanel_15.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_15Layout = new javax.swing.GroupLayout(greekBuildingPanel_15);
+        greekBuildingPanel_15.setLayout(greekBuildingPanel_15Layout);
+        greekBuildingPanel_15Layout.setHorizontalGroup(
+            greekBuildingPanel_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_15, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_15Layout.setVerticalGroup(
+            greekBuildingPanel_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_15, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 90, 90));
+
+        greekBuildingPanel_16.setOpaque(false);
+
+        javax.swing.GroupLayout greekBuildingPanel_16Layout = new javax.swing.GroupLayout(greekBuildingPanel_16);
+        greekBuildingPanel_16.setLayout(greekBuildingPanel_16Layout);
+        greekBuildingPanel_16Layout.setHorizontalGroup(
+            greekBuildingPanel_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_16, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        greekBuildingPanel_16Layout.setVerticalGroup(
+            greekBuildingPanel_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(greekBuilding_img_16, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        greekBuildingPanel.add(greekBuildingPanel_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 270, 90, 90));
+
+        greekBoard.add(greekBuildingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 390, 360));
+
         greekBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/GreekBoardResized.png"))); // NOI18N
         greekBoard.add(greekBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
@@ -6314,6 +6887,251 @@ public class BoardGUI extends javax.swing.JFrame {
 
         egyptianBoard.add(egyptianResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
 
+        egyptianBuildingPanel.setOpaque(false);
+        egyptianBuildingPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        egyptianBuildingPanel_1.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_1Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_1);
+        egyptianBuildingPanel_1.setLayout(egyptianBuildingPanel_1Layout);
+        egyptianBuildingPanel_1Layout.setHorizontalGroup(
+            egyptianBuildingPanel_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_1Layout.setVerticalGroup(
+            egyptianBuildingPanel_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 90, 90));
+
+        egyptianBuildingPanel_2.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_2Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_2);
+        egyptianBuildingPanel_2.setLayout(egyptianBuildingPanel_2Layout);
+        egyptianBuildingPanel_2Layout.setHorizontalGroup(
+            egyptianBuildingPanel_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_2Layout.setVerticalGroup(
+            egyptianBuildingPanel_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_2, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 90, 90));
+
+        egyptianBuildingPanel_3.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_3Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_3);
+        egyptianBuildingPanel_3.setLayout(egyptianBuildingPanel_3Layout);
+        egyptianBuildingPanel_3Layout.setHorizontalGroup(
+            egyptianBuildingPanel_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_3Layout.setVerticalGroup(
+            egyptianBuildingPanel_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_3, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 90, 90));
+
+        egyptianBuildingPanel_4.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_4Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_4);
+        egyptianBuildingPanel_4.setLayout(egyptianBuildingPanel_4Layout);
+        egyptianBuildingPanel_4Layout.setHorizontalGroup(
+            egyptianBuildingPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_4Layout.setVerticalGroup(
+            egyptianBuildingPanel_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 0, 90, 90));
+
+        egyptianBuildingPanel_5.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_5Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_5);
+        egyptianBuildingPanel_5.setLayout(egyptianBuildingPanel_5Layout);
+        egyptianBuildingPanel_5Layout.setHorizontalGroup(
+            egyptianBuildingPanel_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_5Layout.setVerticalGroup(
+            egyptianBuildingPanel_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 90, 90, 90));
+
+        egyptianBuildingPanel_6.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_6Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_6);
+        egyptianBuildingPanel_6.setLayout(egyptianBuildingPanel_6Layout);
+        egyptianBuildingPanel_6Layout.setHorizontalGroup(
+            egyptianBuildingPanel_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_6Layout.setVerticalGroup(
+            egyptianBuildingPanel_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_6, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 90, 90));
+
+        egyptianBuildingPanel_7.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_7Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_7);
+        egyptianBuildingPanel_7.setLayout(egyptianBuildingPanel_7Layout);
+        egyptianBuildingPanel_7Layout.setHorizontalGroup(
+            egyptianBuildingPanel_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_7Layout.setVerticalGroup(
+            egyptianBuildingPanel_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_7, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, 90));
+
+        egyptianBuildingPanel_8.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_8Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_8);
+        egyptianBuildingPanel_8.setLayout(egyptianBuildingPanel_8Layout);
+        egyptianBuildingPanel_8Layout.setHorizontalGroup(
+            egyptianBuildingPanel_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_8Layout.setVerticalGroup(
+            egyptianBuildingPanel_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 90, 90, 90));
+
+        egyptianBuildingPanel_9.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_9Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_9);
+        egyptianBuildingPanel_9.setLayout(egyptianBuildingPanel_9Layout);
+        egyptianBuildingPanel_9Layout.setHorizontalGroup(
+            egyptianBuildingPanel_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_9Layout.setVerticalGroup(
+            egyptianBuildingPanel_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_9, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 180, 90, 90));
+
+        egyptianBuildingPanel_10.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_10Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_10);
+        egyptianBuildingPanel_10.setLayout(egyptianBuildingPanel_10Layout);
+        egyptianBuildingPanel_10Layout.setHorizontalGroup(
+            egyptianBuildingPanel_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_10Layout.setVerticalGroup(
+            egyptianBuildingPanel_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_10, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 90, 90));
+
+        egyptianBuildingPanel_11.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_11Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_11);
+        egyptianBuildingPanel_11.setLayout(egyptianBuildingPanel_11Layout);
+        egyptianBuildingPanel_11Layout.setHorizontalGroup(
+            egyptianBuildingPanel_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_11, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_11Layout.setVerticalGroup(
+            egyptianBuildingPanel_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_11, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 90, 90));
+
+        egyptianBuildingPanel_12.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_12Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_12);
+        egyptianBuildingPanel_12.setLayout(egyptianBuildingPanel_12Layout);
+        egyptianBuildingPanel_12Layout.setHorizontalGroup(
+            egyptianBuildingPanel_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_12Layout.setVerticalGroup(
+            egyptianBuildingPanel_12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_12, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 180, 90, 90));
+
+        egyptianBuildingPanel_13.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_13Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_13);
+        egyptianBuildingPanel_13.setLayout(egyptianBuildingPanel_13Layout);
+        egyptianBuildingPanel_13Layout.setHorizontalGroup(
+            egyptianBuildingPanel_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_13Layout.setVerticalGroup(
+            egyptianBuildingPanel_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_13, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 270, 90, 90));
+
+        egyptianBuildingPanel_14.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_14Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_14);
+        egyptianBuildingPanel_14.setLayout(egyptianBuildingPanel_14Layout);
+        egyptianBuildingPanel_14Layout.setHorizontalGroup(
+            egyptianBuildingPanel_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_14Layout.setVerticalGroup(
+            egyptianBuildingPanel_14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_14, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 90, 90));
+
+        egyptianBuildingPanel_15.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_15Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_15);
+        egyptianBuildingPanel_15.setLayout(egyptianBuildingPanel_15Layout);
+        egyptianBuildingPanel_15Layout.setHorizontalGroup(
+            egyptianBuildingPanel_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_15, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_15Layout.setVerticalGroup(
+            egyptianBuildingPanel_15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_15, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 90, 90));
+
+        egyptianBuildingPanel_16.setOpaque(false);
+
+        javax.swing.GroupLayout egyptianBuildingPanel_16Layout = new javax.swing.GroupLayout(egyptianBuildingPanel_16);
+        egyptianBuildingPanel_16.setLayout(egyptianBuildingPanel_16Layout);
+        egyptianBuildingPanel_16Layout.setHorizontalGroup(
+            egyptianBuildingPanel_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_16, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+        egyptianBuildingPanel_16Layout.setVerticalGroup(
+            egyptianBuildingPanel_16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(egyptianBuilding_img_16, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+        );
+
+        egyptianBuildingPanel.add(egyptianBuildingPanel_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 270, 90, 90));
+
+        egyptianBoard.add(egyptianBuildingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, 390, 370));
+
         egyptianBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/EgyptBoardResized.png"))); // NOI18N
         egyptianBoard.add(egyptianBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 710));
 
@@ -7152,8 +7970,37 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
     
+    public void setupBuildingIcon(String culture, String building) {
+        if(culture.compareTo("Norse") == 0) {
+            setBuildingIcon(norseBuildingPanel, building);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            setBuildingIcon(greekBuildingPanel, building);
+        }
+        else {
+            setBuildingIcon(egyptianBuildingPanel, building);
+        }
+    }
+    
+    private void setBuildingIcon(javax.swing.JPanel buildingPanel, String building) {
+        Component[] buildComponents = buildingPanel.getComponents();
+        
+        for (Component buildComponent : buildComponents) {
+            if (buildComponent instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) buildComponent;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                if(label.getAccessibleContext().getAccessibleName().compareTo("") == 0) {
+                    label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + building)));
+                    label.getAccessibleContext().setAccessibleName(building);
+                    break;
+                }
+            } 
+        }
+    }
+    
     private BoardController boardController;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel building_img_4;
     private javax.swing.JPanel desert_e1;
     private javax.swing.JLabel desert_e1_img;
     private javax.swing.JPanel desert_e2;
@@ -7174,6 +8021,39 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JTextField egyptianAge;
     private javax.swing.JPanel egyptianBoard;
     private javax.swing.JLabel egyptianBoardImg;
+    private javax.swing.JPanel egyptianBuildingPanel;
+    private javax.swing.JPanel egyptianBuildingPanel_1;
+    private javax.swing.JPanel egyptianBuildingPanel_10;
+    private javax.swing.JPanel egyptianBuildingPanel_11;
+    private javax.swing.JPanel egyptianBuildingPanel_12;
+    private javax.swing.JPanel egyptianBuildingPanel_13;
+    private javax.swing.JPanel egyptianBuildingPanel_14;
+    private javax.swing.JPanel egyptianBuildingPanel_15;
+    private javax.swing.JPanel egyptianBuildingPanel_16;
+    private javax.swing.JPanel egyptianBuildingPanel_2;
+    private javax.swing.JPanel egyptianBuildingPanel_3;
+    private javax.swing.JPanel egyptianBuildingPanel_4;
+    private javax.swing.JPanel egyptianBuildingPanel_5;
+    private javax.swing.JPanel egyptianBuildingPanel_6;
+    private javax.swing.JPanel egyptianBuildingPanel_7;
+    private javax.swing.JPanel egyptianBuildingPanel_8;
+    private javax.swing.JPanel egyptianBuildingPanel_9;
+    private javax.swing.JLabel egyptianBuilding_img_1;
+    private javax.swing.JLabel egyptianBuilding_img_10;
+    private javax.swing.JLabel egyptianBuilding_img_11;
+    private javax.swing.JLabel egyptianBuilding_img_12;
+    private javax.swing.JLabel egyptianBuilding_img_13;
+    private javax.swing.JLabel egyptianBuilding_img_14;
+    private javax.swing.JLabel egyptianBuilding_img_15;
+    private javax.swing.JLabel egyptianBuilding_img_16;
+    private javax.swing.JLabel egyptianBuilding_img_2;
+    private javax.swing.JLabel egyptianBuilding_img_3;
+    private javax.swing.JLabel egyptianBuilding_img_4;
+    private javax.swing.JLabel egyptianBuilding_img_5;
+    private javax.swing.JLabel egyptianBuilding_img_6;
+    private javax.swing.JLabel egyptianBuilding_img_7;
+    private javax.swing.JLabel egyptianBuilding_img_8;
+    private javax.swing.JLabel egyptianBuilding_img_9;
     private javax.swing.JPanel egyptianFavorResources;
     private javax.swing.JPanel egyptianFoodResources;
     private javax.swing.JPanel egyptianGoldResources;
@@ -7390,6 +8270,39 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JTextField greekAge;
     private javax.swing.JPanel greekBoard;
     private javax.swing.JLabel greekBoardImg;
+    private javax.swing.JPanel greekBuildingPanel;
+    private javax.swing.JPanel greekBuildingPanel_1;
+    private javax.swing.JPanel greekBuildingPanel_10;
+    private javax.swing.JPanel greekBuildingPanel_11;
+    private javax.swing.JPanel greekBuildingPanel_12;
+    private javax.swing.JPanel greekBuildingPanel_13;
+    private javax.swing.JPanel greekBuildingPanel_14;
+    private javax.swing.JPanel greekBuildingPanel_15;
+    private javax.swing.JPanel greekBuildingPanel_16;
+    private javax.swing.JPanel greekBuildingPanel_2;
+    private javax.swing.JPanel greekBuildingPanel_3;
+    private javax.swing.JPanel greekBuildingPanel_4;
+    private javax.swing.JPanel greekBuildingPanel_5;
+    private javax.swing.JPanel greekBuildingPanel_6;
+    private javax.swing.JPanel greekBuildingPanel_7;
+    private javax.swing.JPanel greekBuildingPanel_8;
+    private javax.swing.JPanel greekBuildingPanel_9;
+    private javax.swing.JLabel greekBuilding_img_1;
+    private javax.swing.JLabel greekBuilding_img_10;
+    private javax.swing.JLabel greekBuilding_img_11;
+    private javax.swing.JLabel greekBuilding_img_12;
+    private javax.swing.JLabel greekBuilding_img_13;
+    private javax.swing.JLabel greekBuilding_img_14;
+    private javax.swing.JLabel greekBuilding_img_15;
+    private javax.swing.JLabel greekBuilding_img_16;
+    private javax.swing.JLabel greekBuilding_img_2;
+    private javax.swing.JLabel greekBuilding_img_3;
+    private javax.swing.JLabel greekBuilding_img_4;
+    private javax.swing.JLabel greekBuilding_img_5;
+    private javax.swing.JLabel greekBuilding_img_6;
+    private javax.swing.JLabel greekBuilding_img_7;
+    private javax.swing.JLabel greekBuilding_img_8;
+    private javax.swing.JLabel greekBuilding_img_9;
     private javax.swing.JPanel greekFavorResources;
     private javax.swing.JPanel greekFoodResources;
     private javax.swing.JPanel greekGoldResources;
@@ -7427,7 +8340,6 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel mountain_g1;
@@ -7443,6 +8355,38 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JTextField norseAge;
     private javax.swing.JPanel norseBoard;
     private javax.swing.JLabel norseBoardImg;
+    private javax.swing.JPanel norseBuildingPanel;
+    private javax.swing.JPanel norseBuildingPanel_1;
+    private javax.swing.JPanel norseBuildingPanel_10;
+    private javax.swing.JPanel norseBuildingPanel_11;
+    private javax.swing.JPanel norseBuildingPanel_12;
+    private javax.swing.JPanel norseBuildingPanel_13;
+    private javax.swing.JPanel norseBuildingPanel_14;
+    private javax.swing.JPanel norseBuildingPanel_15;
+    private javax.swing.JPanel norseBuildingPanel_16;
+    private javax.swing.JPanel norseBuildingPanel_2;
+    private javax.swing.JPanel norseBuildingPanel_3;
+    private javax.swing.JPanel norseBuildingPanel_4;
+    private javax.swing.JPanel norseBuildingPanel_5;
+    private javax.swing.JPanel norseBuildingPanel_6;
+    private javax.swing.JPanel norseBuildingPanel_7;
+    private javax.swing.JPanel norseBuildingPanel_8;
+    private javax.swing.JPanel norseBuildingPanel_9;
+    private javax.swing.JLabel norseBuilding_img_1;
+    private javax.swing.JLabel norseBuilding_img_10;
+    private javax.swing.JLabel norseBuilding_img_11;
+    private javax.swing.JLabel norseBuilding_img_12;
+    private javax.swing.JLabel norseBuilding_img_13;
+    private javax.swing.JLabel norseBuilding_img_14;
+    private javax.swing.JLabel norseBuilding_img_15;
+    private javax.swing.JLabel norseBuilding_img_16;
+    private javax.swing.JLabel norseBuilding_img_2;
+    private javax.swing.JLabel norseBuilding_img_3;
+    private javax.swing.JLabel norseBuilding_img_5;
+    private javax.swing.JLabel norseBuilding_img_6;
+    private javax.swing.JLabel norseBuilding_img_7;
+    private javax.swing.JLabel norseBuilding_img_8;
+    private javax.swing.JLabel norseBuilding_img_9;
     private javax.swing.JPanel norseFavorResources;
     private javax.swing.JPanel norseFoodResources;
     private javax.swing.JPanel norseGoldResources;

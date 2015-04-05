@@ -96,6 +96,13 @@ public class BoardController {
             tGUI.setVisible(true);
             tGUI.setupTradeGUI(playerCulture);
         }
+        else if(str.compareTo("build") == 0) {
+            buildingGUI buildGUI = new buildingGUI();
+            buildGUI.setVisible(true);
+        }
+        else if(str.compareTo("explore") == 0) {
+            
+        }
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -617,6 +624,10 @@ public class BoardController {
         else {
             bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
         }
+    }
+    
+    public void buildBuilding(String culture, String building) {
+        bGUI.setupBuildingIcon(culture, building);
     }
     
     public TerrainTiles getTerrainTile(int index) {
