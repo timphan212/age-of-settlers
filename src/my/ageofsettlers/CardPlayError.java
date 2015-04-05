@@ -16,6 +16,7 @@ public class CardPlayError extends javax.swing.JFrame {
      * Creates new form CardPlayError
      */
     public CardPlayError() {
+        this.board = BoardController.getInstance();
         initComponents();
     }
 
@@ -95,6 +96,7 @@ public class CardPlayError extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
+        board.initPlayPermCards();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -132,6 +134,7 @@ public class CardPlayError extends javax.swing.JFrame {
         });
     }
 
+    private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;

@@ -51,6 +51,7 @@ public class tradeGUI extends javax.swing.JFrame {
         bankGoldText = new javax.swing.JTextField();
         bankGoldSelection = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -152,7 +153,15 @@ public class tradeGUI extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, -1));
+
+        jButton2.setText("Cancel");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -210,12 +219,18 @@ public class tradeGUI extends javax.swing.JFrame {
             bank.setGold(bank.getGold() + playerGoldCount - bankGoldCount);
             board.updateResources(this.playerCulture);
             this.setVisible(false);
+            board.initPlayPermCards();
         }
         else {
             tradeErrorGUI teGUI = new tradeErrorGUI();
             teGUI.setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.setVisible(false);
+        board.initPlayPermCards();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setupTradeGUI(String culture) {
         String[] foodCount;
@@ -335,6 +350,7 @@ public class tradeGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox bankWoodSelection;
     private javax.swing.JTextField bankWoodText;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox playerFavorSelection;

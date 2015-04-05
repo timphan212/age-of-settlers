@@ -204,7 +204,8 @@ public class buildingGUI extends javax.swing.JFrame {
         boolean buildBool = checkBuildingSelection(this.playerCulture);
         
         if(buildBool == true) {
-            //this.setVisible(false);
+            this.setVisible(false);
+            board.initPlayPermCards();
         }
         else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -214,6 +215,7 @@ public class buildingGUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
+        board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private boolean checkBuildingSelection(String culture) {

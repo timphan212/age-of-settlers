@@ -151,6 +151,7 @@ public class gatherGUI extends javax.swing.JFrame {
         
         board.playGatherCard(str, board.getPlayerCulture());
         this.setVisible(false);
+        board.initPlayPermCards();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

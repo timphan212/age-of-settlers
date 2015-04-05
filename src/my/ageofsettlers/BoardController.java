@@ -31,6 +31,7 @@ public class BoardController {
     private static BoardController instance = null;
     private List<String> playerPermCards = new ArrayList<>();
     private static BoardGUI bGUI;
+    private int roundCount = 0;
     
     /**
      * @param args the command line arguments
@@ -71,15 +72,30 @@ public class BoardController {
     
     public void initPermanentCards() {
         PermanentCardsGUI pcGUI = new PermanentCardsGUI();
-        pcGUI.setMaxCards(4);
+        int num = getMaxCards();
+        pcGUI.setMaxCards(num);
         pcGUI.setVisible(true);
     }
     
     public void initPlayPermCards() {
         SelectedPermanentCardsGUI spCards = new SelectedPermanentCardsGUI();
-        spCards.setMaxCards(playerPermCards.size());
-        spCards.setupCards();
-        spCards.setVisible(true);
+        if(playerPermCards.size() > 0) {
+            spCards.setMaxCards(playerPermCards.size());
+            spCards.setupCards();
+        }
+        else {
+            roundCount = 3;
+        }
+        roundCount++;
+        if(roundCount > 3) {
+            spCards.setVisible(false);
+            spoilage();
+            TurnFinishGUI tfGUI = new TurnFinishGUI();
+            tfGUI.setVisible(true);
+        }
+        else {
+            spCards.setVisible(true);
+        }
     }
     
     public void playCard(String str) {
@@ -101,6 +117,11 @@ public class BoardController {
             buildGUI.setVisible(true);
         }
         else if(str.compareTo("explore") == 0) {
+            exploreGUI eGUI = new exploreGUI();
+            eGUI.setVisible(true);
+            terrainList = pickExploreTerrains(eGUI);
+        }
+        else if(str.compareTo("recruit") == 0) {
             
         }
     }
@@ -316,24 +337,24 @@ public class BoardController {
         List<String> aiPlayers = findAIPlayers();
 
         for(int i = 0; i < 2; i++) {
-            if(aiPlayers.get(i).compareTo("norse") == 0) {
+            if(aiPlayers.get(i).compareTo("Norse") == 0) {
                 findAITerrain(norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
             }
-            else if(aiPlayers.get(i).compareTo("greek") == 0) {
+            else if(aiPlayers.get(i).compareTo("Greek") == 0) {
                 findAITerrain(greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
             }
-            else if(aiPlayers.get(i).compareTo("egyptian") == 0) {
+            else if(aiPlayers.get(i).compareTo("Egyptian") == 0) {
                 findAITerrain(egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
         for(int j = 1; j >= 0; j--) {
-            if(aiPlayers.get(j).compareTo("norse") == 0) {
+            if(aiPlayers.get(j).compareTo("Norse") == 0) {
                 findAITerrain(norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
             }
-            else if(aiPlayers.get(j).compareTo("greek") == 0) {
+            else if(aiPlayers.get(j).compareTo("Greek") == 0) {
                 findAITerrain(greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
             }
-            else if(aiPlayers.get(j).compareTo("egyptian") == 0) {
+            else if(aiPlayers.get(j).compareTo("Egyptian") == 0) {
                 findAITerrain(egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
@@ -343,22 +364,22 @@ public class BoardController {
         List<String> aiList = new ArrayList<>();
         
         if(playerCulture.compareTo("Norse") == 0) {
-            aiList.add("greek");
-            aiList.add("egyptian");
+            aiList.add("Greek");
+            aiList.add("Egyptian");
         }
         else if(playerCulture.compareTo("Greek") == 0) {
-            aiList.add("norse");
-            aiList.add("egyptian");
+            aiList.add("Norse");
+            aiList.add("Egyptian");
         }
         else if(playerCulture.compareTo("Egyptian") == 0) {
-            aiList.add("norse");
-            aiList.add("greek");
+            aiList.add("Norse");
+            aiList.add("Greek");
         }
         
         return aiList;
     }
     
-    private void findAITerrain(Component[] boardTerrains, Component[] tabTerrains, List<TerrainTiles> cultureTerrains) {
+    public void findAITerrain(Component[] boardTerrains, Component[] tabTerrains, List<TerrainTiles> cultureTerrains) {
         for(Component tabTerrain : tabTerrains) {
             if(tabTerrain instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) tabTerrain;
@@ -397,6 +418,32 @@ public class BoardController {
         vcGUI.drawPanelsTwo(victoryCards[1]);
         vcGUI.drawPanelsThree(victoryCards[2]);
         vcGUI.drawPanelsFour(victoryCards[3]);
+    }
+    
+    private int getMaxCards() {
+        int age = 0;
+        if(playerCulture.compareTo("Norse") == 0) {
+            age = norsePlayer.getAge();
+        }
+        else if(playerCulture.compareTo("Greek") == 0) {
+            age = greekPlayer.getAge();
+        }
+        else {
+            age = egyptianPlayer.getAge();
+        }
+        
+        if(age == 0) {
+            return 4;
+        }
+        else if(age == 1) {
+            return 5;
+        }
+        else if(age == 2) {
+            return 6;
+        }
+        else {
+            return 7;
+        }
     }
     
     private void playNextAgeCard(String culture) {
@@ -626,8 +673,146 @@ public class BoardController {
         }
     }
     
+    private List<TerrainTiles> pickExploreTerrains(exploreGUI eGUI) {
+        List<TerrainTiles> randomTerrain = new ArrayList<>();
+        int count = 0, num = 0, ndx = 0;
+        
+        for(int i = 0; i < 4; i++) {
+            Random rand = new Random(System.nanoTime());
+            num = rand.nextInt(90)+1;
+            ndx = getTerrainListIndex(num);
+            TerrainTiles terrain = terrainList.get(ndx);
+            count = terrain.getTileCount();
+            
+            while(count == 0) {
+                num = rand.nextInt(90)+1;
+                ndx = getTerrainListIndex(num);
+                terrain = terrainList.get(ndx);
+                count = terrain.getTileCount();
+            }
+            
+            terrain.setTileCount(count - 1);
+            terrainList.set(ndx, terrain);
+            randomTerrain.add(terrain);
+        }
+        
+        eGUI.setTerrainIcon(randomTerrain);
+        
+        return terrainList;
+    }
+    
+    public void exploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
+            bGUI.selectCultureTerrain(evt);
+            exploreAiHandler(panel);
+    }
+    
+    public void exploreAiHandler(javax.swing.JPanel panel) {
+        bGUI.selectAiExploreTerrain(panel, aiCulture);
+        bGUI.selectAiExploreTerrain(panel, aiCulture2);
+    }
+    
     public void buildBuilding(String culture, String building) {
         bGUI.setupBuildingIcon(culture, building);
+    }
+    
+    private void spoilage() {
+        spoilageNorse();
+        spoilageGreek();
+        spoilageEgyptian();
+        //cleanup
+        //start new turn
+    }
+    
+    private void spoilageNorse() {
+        int max = 5;
+        Bank bank = Bank.getInstance();
+        
+        if(norsePlayer.isStorehouse() == true) {
+            max = 8;
+        }
+        if(norsePlayer.getFood() > max) {
+            int excess = norsePlayer.getFood() - max;
+            norsePlayer.setFood(norsePlayer.getFood() - excess);
+            bank.setFood(bank.getFood() + excess);
+        }
+        if(norsePlayer.getFavor() > max) {
+            int excess = norsePlayer.getFavor() - max;
+            norsePlayer.setFavor(norsePlayer.getFavor() - excess);
+        }
+        if(norsePlayer.getWood() > max) {
+            int excess = norsePlayer.getWood() - max;
+            norsePlayer.setWood(norsePlayer.getWood() - excess);
+            bank.setWood(bank.getWood() + excess);
+        }
+        if(norsePlayer.getGold() > max) {
+            int excess = norsePlayer.getGold() - max;
+            norsePlayer.setGold(norsePlayer.getGold() - excess);
+            bank.setGold(bank.getGold() + excess);
+        }
+        
+        updateResources("Norse");
+    }
+    
+        private void spoilageGreek() {
+        int max = 5;
+        Bank bank = Bank.getInstance();
+        
+        if(greekPlayer.isStorehouse() == true) {
+            max = 8;
+        }
+        if(greekPlayer.getFood() > max) {
+            int excess = greekPlayer.getFood() - max;
+            greekPlayer.setFood(greekPlayer.getFood() - excess);
+            bank.setFood(bank.getFood() + excess);
+        }
+        if(greekPlayer.getFavor() > max) {
+            int excess = greekPlayer.getFavor() - max;
+            greekPlayer.setFavor(greekPlayer.getFavor() - excess);
+            bank.setFavor(bank.getFavor() + excess);
+        }
+        if(greekPlayer.getWood() > max) {
+            int excess = greekPlayer.getWood() - max;
+            greekPlayer.setWood(greekPlayer.getWood() - excess);
+            bank.setWood(bank.getWood() + excess);
+        }
+        if(greekPlayer.getGold() > max) {
+            int excess = greekPlayer.getGold() - max;
+            greekPlayer.setGold(greekPlayer.getGold() - excess);
+            bank.setGold(bank.getGold() + excess);
+        }
+        
+        updateResources("Greek");
+    }
+        
+    private void spoilageEgyptian() {
+        int max = 5;
+        Bank bank = Bank.getInstance();
+        
+        if(egyptianPlayer.isStorehouse() == true) {
+            max = 8;
+        }
+        if(egyptianPlayer.getFood() > max) {
+            int excess = egyptianPlayer.getFood() - max;
+            egyptianPlayer.setFood(egyptianPlayer.getFood() - excess);
+            bank.setFood(bank.getFood() + excess);
+        }
+        if(egyptianPlayer.getFavor() > max) {
+            int excess = egyptianPlayer.getFavor() - max;
+            egyptianPlayer.setFavor(egyptianPlayer.getFavor() - excess);
+            bank.setFavor(bank.getFavor() + excess);
+        }
+        if(egyptianPlayer.getWood() > max) {
+            int excess = egyptianPlayer.getWood() - max;
+            egyptianPlayer.setWood(egyptianPlayer.getWood() - excess);
+            bank.setWood(bank.getWood() + excess);
+        }
+        if(egyptianPlayer.getGold() > max) {
+            int excess = egyptianPlayer.getGold() - max;
+            egyptianPlayer.setGold(egyptianPlayer.getGold() - excess);
+            bank.setGold(bank.getGold() + excess);
+        }
+        
+        updateResources("Egyptian");
     }
     
     public TerrainTiles getTerrainTile(int index) {

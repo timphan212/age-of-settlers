@@ -392,9 +392,8 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //ai should do their turns
-        //should pop up the selected perm cards 
         this.setVisible(false);
+        board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private String parseString(String str) {
@@ -417,6 +416,9 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
         }
         else if(str.toLowerCase().contains("build")) {
             str2 = "build";
+        }
+        else {
+            str2 = "explore";
         }
         
         return str2;

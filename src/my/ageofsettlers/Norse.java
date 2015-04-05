@@ -37,7 +37,7 @@ public class Norse {
     private boolean siegeworkshop = false;
     private boolean greattemple = false;
     private boolean wonder = false;
-    
+
     public static synchronized Norse getInstance() {
         if(instance == null) {
             instance = new Norse();

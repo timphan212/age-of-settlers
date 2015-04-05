@@ -7998,6 +7998,21 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
     
+    public void selectAiExploreTerrain(javax.swing.JPanel panel, String culture) {
+        if(culture.compareTo("Norse") == 0) {
+            Norse norsePlayer = Norse.getInstance();
+            boardController.findAITerrain(norseTerrain.getComponents(), panel.getComponents(), norsePlayer.getNorseTerrains());
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            Greek greekPlayer = Greek.getInstance();
+            boardController.findAITerrain(greekTerrain.getComponents(), panel.getComponents(), greekPlayer.getGreekTerrains());
+        }
+        else {
+            Egyptian egyptianPlayer = Egyptian.getInstance();
+            boardController.findAITerrain(egyptTerrain.getComponents(), panel.getComponents(), egyptianPlayer.getEgyptianTerrains());
+        }
+    }
+    
     private BoardController boardController;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel building_img_4;
