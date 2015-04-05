@@ -28,6 +28,7 @@ public class BoardController {
     private int[] victoryCards = new int[4];
     private static BoardController instance = null;
     private List<String> playerPermCards = new ArrayList<>();
+    private static BoardGUI bGUI;
     
     /**
      * @param args the command line arguments
@@ -47,11 +48,12 @@ public class BoardController {
     }
     
     public static void boardSetup(BoardGUI board) {
+        bGUI = board;
         norsePlayer = Norse.getInstance();
         egyptianPlayer = Egyptian.getInstance();
         greekPlayer = Greek.getInstance();
         terrainList = terrainSetup();
-        terrainList = randomTerrainTiles(terrainList, board);
+        terrainList = randomTerrainTiles(terrainList);
     }
     
     public static void setupRounds() {
@@ -79,7 +81,13 @@ public class BoardController {
     }
     
     public void playCard(String str) {
-        //play card here
+        if(str.compareTo("age") == 0) {
+            playNextAgeCard(playerCulture);
+        }
+        else if(str.compareTo("gather") == 0) {
+            gatherGUI gGUI = new gatherGUI();
+            gGUI.setVisible(true);
+        }
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -128,7 +136,7 @@ public class BoardController {
         return terrains;
     }
     
-    private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList, BoardGUI board) {
+    private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList) {
         List<TerrainTiles> randomTerrain = new ArrayList<>(); //select random tiles
         int count = 0, num = 0, ndx = 0;
         
@@ -151,7 +159,7 @@ public class BoardController {
             randomTerrain.add(terrain);
         }
         
-        board.setTerrainTabLabelIcon(randomTerrain);
+        bGUI.setTerrainTabLabelIcon(randomTerrain);
         
         return terrainList;
     }
@@ -374,6 +382,138 @@ public class BoardController {
         vcGUI.drawPanelsTwo(victoryCards[1]);
         vcGUI.drawPanelsThree(victoryCards[2]);
         vcGUI.drawPanelsFour(victoryCards[3]);
+    }
+    
+    private void playNextAgeCard(String culture) {
+        CardPlayError cardError = new CardPlayError();
+        if(culture.compareTo("Norse") == 0) {
+            int reqResources = findAge(norsePlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+            if(advanceAge == true && reqResources >= 3) {
+                norsePlayer.setWood(norsePlayer.getWood() - reqResources);
+                norsePlayer.setGold(norsePlayer.getGold() - reqResources);
+                norsePlayer.setFood(norsePlayer.getFood() - reqResources);
+                norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
+                norsePlayer.setAge(norsePlayer.getAge()+1);
+                bGUI.changeAgeText("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+            }
+            else {
+                cardError.setVisible(true);
+            }
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            int reqResources = findAge(greekPlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+            if(advanceAge == true && reqResources >= 3) {
+                greekPlayer.setWood(greekPlayer.getWood() - reqResources);
+                greekPlayer.setGold(greekPlayer.getGold() - reqResources);
+                greekPlayer.setFood(greekPlayer.getFood() - reqResources);
+                greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
+                greekPlayer.setAge(greekPlayer.getAge()+1);
+                bGUI.changeAgeText("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+            }
+            else {
+                cardError.setVisible(true);
+            }
+        }
+        else {
+            int reqResources = findAge(egyptianPlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+            if(advanceAge == true && reqResources >= 3) {
+                egyptianPlayer.setWood(egyptianPlayer.getWood() - reqResources);
+                egyptianPlayer.setGold(egyptianPlayer.getGold() - reqResources);
+                egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
+                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
+                egyptianPlayer.setAge(egyptianPlayer.getAge()+1);
+                bGUI.changeAgeText("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+            }
+            else {
+                cardError.setVisible(true);
+            }
+        }
+    }
+    
+    private int findAge(int currentAge) {
+        if(currentAge == 0) {
+            return 3;
+        }
+        else if(currentAge == 1) {
+            return 4;
+        }
+        else if(currentAge == 2){
+            return 5;
+        }
+        else {
+            return -1;
+        }
+    }
+    
+    private boolean checkAgeReqs(int reqResources, int wood, int gold, int food, int favor) {
+        if(wood >= reqResources && gold >= reqResources && food >= reqResources && favor >= reqResources) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    public void playGatherCard(String str, String culture) {
+        if(str == "mountain" || str == "hill" || str == "swamp" || str == "fertile" || str == "desert" || str == "forest") {
+            scanTerrainTypes(str, culture);
+        }
+        else {
+            //scanResourceType(str, culture);
+        }
+    }
+    
+    private void scanTerrainTypes(String str, String culture) {
+        List<TerrainTiles> terrains;
+        int[] arr;
+        
+        if(culture.compareTo("Norse") == 0) {
+            terrains = norsePlayer.getNorseTerrains();
+            arr = calculateTerrainResources(str, terrains);
+            norsePlayer.setFood(arr[0] + norsePlayer.getFood());
+            norsePlayer.setFavor(arr[1] + norsePlayer.getFavor());
+            norsePlayer.setWood(arr[2] + norsePlayer.getWood());
+            norsePlayer.setGold(arr[3] + norsePlayer.getGold());
+            bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+            
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            terrains = greekPlayer.getGreekTerrains();
+            arr = calculateTerrainResources(str, terrains);
+            greekPlayer.setFood(arr[0] + greekPlayer.getFood());
+            greekPlayer.setFavor(arr[1] + greekPlayer.getFavor());
+            greekPlayer.setWood(arr[2] + greekPlayer.getWood());
+            greekPlayer.setGold(arr[3] + greekPlayer.getGold());
+            bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+        }
+        else {
+            terrains = egyptianPlayer.getEgyptianTerrains();
+            arr = calculateTerrainResources(str, terrains);
+            egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
+            egyptianPlayer.setFavor(arr[1] + egyptianPlayer.getFavor());
+            egyptianPlayer.setWood(arr[2] + egyptianPlayer.getWood());
+            egyptianPlayer.setGold(arr[3] + egyptianPlayer.getGold());
+            bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+        }
+    }
+    
+    private int[] calculateTerrainResources(String str, List<TerrainTiles> terrains) {
+        int[] arr = {0,0,0,0};
+        
+        for(int i = 0; i < terrains.size(); i++) {
+            TerrainTiles tile = terrains.get(i);
+
+            if(str.compareTo(tile.getTerrainType()) == 0) {
+                arr[0] += tile.getFoodCount();
+                arr[1] += tile.getFavorCount();
+                arr[2] += tile.getWoodCount();
+                arr[3] += tile.getGoldCount();
+            }
+        }
+        
+        return arr;
     }
     
     public TerrainTiles getTerrainTile(int index) {

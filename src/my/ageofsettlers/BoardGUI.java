@@ -7054,7 +7054,82 @@ public class BoardGUI extends javax.swing.JFrame {
             count++;
         }
     }
+    
+    public void changeAgeText(String culture, int age, int wood, int gold, int food, int favor) {
+        nextAgeGUI naGUI = new nextAgeGUI();
+        javax.swing.JTextField field = naGUI.getTextField();
+        String str = "";
+        
+        if(culture.compareTo("Norse") == 0) {
+            str = setAgeText(norseAge, age);
+            changeBoardResources(culture, wood, gold, food, favor);
+        } 
+        else if(culture.compareTo("Greek") == 0) {
+            str = setAgeText(greekAge, age);
+            changeBoardResources(culture, wood, gold, food, favor);
+        }
+        else {
+            str = setAgeText(greekAge, age);
+            changeBoardResources(culture, wood, gold, food, favor);
+        }
+        
+        field.setText(field.getText() + " " + str);
+        naGUI.setVisible(true);
+    }
+    
+    public void changeBoardResources(String culture, int wood, int gold, int food, int favor) {
+        if(culture.compareTo("Norse") == 0) {
+            setResources(norseFoodResources, food);
+            setResources(norseWoodResources, wood);
+            setResources(norseGoldResources, gold);
+            setResources(norseFavorResources, favor);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            setResources(greekFoodResources, food);
+            setResources(greekWoodResources, wood);
+            setResources(greekGoldResources, gold);
+            setResources(greekFavorResources, favor);
+        }
+        else {
+            setResources(egyptianFoodResources, food);
+            setResources(egyptianWoodResources, wood);
+            setResources(egyptianGoldResources, gold);
+            setResources(egyptianFavorResources, favor);
+        }
+    }
+    
+    
+    private String setAgeText(javax.swing.JTextField textField, int age) {
+        if(age == 1) {
+            textField.setText("Classical Age");
+            return "Classical Age";
+        }
+        else if(age == 2) {
+            textField.setText("Heroic Age");
+            return "Heroic Age";
+        }
+        else {
+            textField.setText("Mythic Age");
+            return "Mythic Age";
+        }
+    }
+    
+    private void setResources(javax.swing.JPanel resourcePanel, int resourceCount) {
+        Component[] resourceComponents = resourcePanel.getComponents();
 
+        for (int i = 0; i < resourceComponents.length; i++) {
+            if (resourceComponents[i] instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) resourceComponents[i];
+                if(i < resourceCount) {
+                    panel.setVisible(true);
+                }
+                else {
+                    panel.setVisible(false);
+                }
+            } 
+        }
+    }
+    
     private BoardController boardController;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel desert_e1;
