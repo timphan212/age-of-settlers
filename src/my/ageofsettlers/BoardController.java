@@ -124,8 +124,9 @@ public class BoardController {
         }
         else if(str.compareTo("recruit") == 0) {
             recruitGUI rGUI = new recruitGUI();
-            rGUI.setVisible(true);
             rGUI.setupRecruitGUI(playerCulture);
+            rGUI.setMaxRecruits(2);
+            rGUI.setVisible(true);
         }
     }
     
@@ -139,18 +140,18 @@ public class BoardController {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
         
-        UnitCard norseUnit1 = new UnitCard(1, "Nidhogg", "CardBattleNorse1.png", 3, "Flyer", 7, 0, 1, 0, 4);
-        UnitCard norseUnit2 = new UnitCard(2, "Throwing Axeman", "CardBattleNorse2.png", 0, "Archer", 3, 1, 0, 1, 0);
-        UnitCard norseUnit3 = new UnitCard(3, "Jarl", "CardBattleNorse3.png", 0, "Calvalry", 3, 1, 0, 0, 1);
-        UnitCard norseUnit4 = new UnitCard(4, "Valkyrie", "CardBattleNorse4.png", 3, "Calvalry", 5, 0, 3, 0, 1);
-        UnitCard norseUnit5 = new UnitCard(5, "Troll", "CardBattleNorse5.png", 3, "Warrior", 6, 3, 0, 2, 0);
-        UnitCard norseUnit6 = new UnitCard(6, "Nidhogg", "CardBattleNorse6.png", 3, "Flyer", 7, 0, 1, 0, 4); //Incorrect Duplicate
-        UnitCard norseUnit7 = new UnitCard(7, "Dwarf", "CardBattleNorse7.png", 3, "Giant-Killer", 4, 2, 0, 0, 2);
-        UnitCard norseUnit8 = new UnitCard(8, "Huskarl", "CardBattleNorse8.png", 0, "Warrior", 3, 1, 0, 0, 2);
-        UnitCard norseUnit9 = new UnitCard(9, "Frost Giant", "CardBattleNorse9.png", 3, "Giant", 7, 4, 2, 0, 0);
-        UnitCard norseUnit10 = new UnitCard(10, "Classical Norse Hero", "CardBattleNorse10.png", 1, "Hero", 5, 3, 0, 0, 3);
-        UnitCard norseUnit11 = new UnitCard(11, "Heroic Norse Hero", "CardBattleNorse11.png", 2, "Hero", 6, 3, 0, 0, 3);
-        UnitCard norseUnit12 = new UnitCard(12, "Mythic Norse Hero", "CardBattleNorse12.png", 3, "Hero", 8, 4, 4, 0, 0);
+        UnitCard norseUnit1 = new UnitCard(0, "Nidhogg", "CardBattleNorse1.png", 3, "Flyer", 7, 0, 1, 0, 4);
+        UnitCard norseUnit2 = new UnitCard(1, "Throwing Axeman", "CardBattleNorse2.png", 0, "Archer", 3, 1, 0, 1, 0);
+        UnitCard norseUnit3 = new UnitCard(2, "Jarl", "CardBattleNorse3.png", 0, "Calvalry", 3, 1, 0, 0, 1);
+        UnitCard norseUnit4 = new UnitCard(3, "Valkyrie", "CardBattleNorse4.png", 3, "Calvalry", 5, 0, 3, 0, 1);
+        UnitCard norseUnit5 = new UnitCard(4, "Troll", "CardBattleNorse5.png", 3, "Warrior", 6, 3, 0, 2, 0);
+        UnitCard norseUnit6 = new UnitCard(5, "Nidhogg", "CardBattleNorse6.png", 3, "Flyer", 7, 0, 1, 0, 4); //Incorrect Duplicate
+        UnitCard norseUnit7 = new UnitCard(6, "Dwarf", "CardBattleNorse7.png", 3, "Giant-Killer", 4, 2, 0, 0, 2);
+        UnitCard norseUnit8 = new UnitCard(7, "Huskarl", "CardBattleNorse8.png", 0, "Warrior", 3, 1, 0, 0, 2);
+        UnitCard norseUnit9 = new UnitCard(8, "Frost Giant", "CardBattleNorse9.png", 3, "Giant", 7, 4, 2, 0, 0);
+        UnitCard norseUnit10 = new UnitCard(9, "Classical Norse Hero", "CardBattleNorse10.png", 1, "Hero", 5, 3, 0, 0, 3);
+        UnitCard norseUnit11 = new UnitCard(10, "Heroic Norse Hero", "CardBattleNorse11.png", 2, "Hero", 6, 3, 0, 0, 3);
+        UnitCard norseUnit12 = new UnitCard(11, "Mythic Norse Hero", "CardBattleNorse12.png", 3, "Hero", 8, 4, 4, 0, 0);
         unitList.add(norseUnit1);
         unitList.add(norseUnit2);
         unitList.add(norseUnit3);
@@ -178,18 +179,18 @@ public class BoardController {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
         
-        UnitCard greekUnit1 = new UnitCard(1, "Centaur", "CardBattleGreek1.png", 3, "Archer;Calvalry", 5, 0, 1, 3, 0);
-        UnitCard greekUnit2 = new UnitCard(2, "Cyclops", "CardBattleGreek2.png", 3, "Giant", 6, 3, 3, 0, 0);
-        UnitCard greekUnit3 = new UnitCard(3, "Manticore", "CardBattleGreek3.png", 3, "Flyer", 5, 2, 2, 0, 0);
-        UnitCard greekUnit4 = new UnitCard(4, "Classical Greek Hero", "CardBattleGreek4.png", 1, "Hero", 5, 3, 0, 0, 3);
-        UnitCard greekUnit5 = new UnitCard(5, "Toxotes", "CardBattleGreek5.png", 0, "Archer", 3, 1, 0, 1, 0);
-        UnitCard greekUnit6 = new UnitCard(6, "Heroic Greek Hero", "CardBattleGreek6.png", 2, "Hero", 6, 3, 0, 0, 4);
-        UnitCard greekUnit7 = new UnitCard(7, "Hydra", "CardBattleGreek7.png", 3, "Giant", 6, 0, 2, 0, 2);
-        UnitCard greekUnit8 = new UnitCard(8, "Minotaur", "CardBattleGreek8.png", 3, "Warrior", 5, 2, 0, 2, 0);
-        UnitCard greekUnit9 = new UnitCard(9, "Mythical Greek Hero", "CardBattleGreek9.png", 3, "Hero", 5, 0, 4, 0, 4);
-        UnitCard greekUnit10 = new UnitCard(10, "Hippokon", "CardBattleGreek10.png", 0, "Calvalry", 3, 1, 0, 0, 1);
-        UnitCard greekUnit11 = new UnitCard(11, "Hoplite", "CardBattleGreek11.png", 0, "Warrior", 3, 1, 0, 1, 0);
-        UnitCard greekUnit12 = new UnitCard(12, "Medusa", "CardBattleGreek12.png", 3, "Giant-Killer", 5, 1, 3, 0, 0);
+        UnitCard greekUnit1 = new UnitCard(0, "Centaur", "CardBattleGreek1.png", 3, "Archer;Calvalry", 5, 0, 1, 3, 0);
+        UnitCard greekUnit2 = new UnitCard(1, "Cyclops", "CardBattleGreek2.png", 3, "Giant", 6, 3, 3, 0, 0);
+        UnitCard greekUnit3 = new UnitCard(2, "Manticore", "CardBattleGreek3.png", 3, "Flyer", 5, 2, 2, 0, 0);
+        UnitCard greekUnit4 = new UnitCard(3, "Classical Greek Hero", "CardBattleGreek4.png", 1, "Hero", 5, 3, 0, 0, 3);
+        UnitCard greekUnit5 = new UnitCard(4, "Toxotes", "CardBattleGreek5.png", 0, "Archer", 3, 1, 0, 1, 0);
+        UnitCard greekUnit6 = new UnitCard(5, "Heroic Greek Hero", "CardBattleGreek6.png", 2, "Hero", 6, 3, 0, 0, 4);
+        UnitCard greekUnit7 = new UnitCard(6, "Hydra", "CardBattleGreek7.png", 3, "Giant", 6, 0, 2, 0, 2);
+        UnitCard greekUnit8 = new UnitCard(7, "Minotaur", "CardBattleGreek8.png", 3, "Warrior", 5, 2, 0, 2, 0);
+        UnitCard greekUnit9 = new UnitCard(8, "Mythical Greek Hero", "CardBattleGreek9.png", 3, "Hero", 5, 0, 4, 0, 4);
+        UnitCard greekUnit10 = new UnitCard(9, "Hippokon", "CardBattleGreek10.png", 0, "Calvalry", 3, 1, 0, 0, 1);
+        UnitCard greekUnit11 = new UnitCard(10, "Hoplite", "CardBattleGreek11.png", 0, "Warrior", 3, 1, 0, 1, 0);
+        UnitCard greekUnit12 = new UnitCard(11, "Medusa", "CardBattleGreek12.png", 3, "Giant-Killer", 5, 1, 3, 0, 0);
         unitList.add(greekUnit1);
         unitList.add(greekUnit2);
         unitList.add(greekUnit3);
@@ -217,18 +218,18 @@ public class BoardController {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
         
-        UnitCard egyptianUnit1 = new UnitCard(1, "Pharaoh", "CardBattleEgypt1.png", 2, "Hero", 6, 3, 0, 0, 3);
-        UnitCard egyptianUnit2 = new UnitCard(2, "Scorpion-Man", "CardBattleEgypt2.png", 3, "Giant", 5, 4, 0, 0, 2);
-        UnitCard egyptianUnit3 = new UnitCard(3, "Sphinx", "CardBattleEgypt3.png", 3, "Giant-Killer", 5, 0, 2, 0, 2);
-        UnitCard egyptianUnit4 = new UnitCard(4, "Anubite", "CardBattleEgypt4.png", 3, "Calvalry", 5, 0, 1, 0, 3);
-        UnitCard egyptianUnit5 = new UnitCard(5, "Son of Osiris", "CardBattleEgypt5.png", 3, "Hero", 8, 0, 4, 0, 4);
-        UnitCard egyptianUnit6 = new UnitCard(6, "Chariot Archer", "CardBattleEgypt6.png", 0, "Archer;Calvalry", 3, 0, 0, 1, 1);
-        UnitCard egyptianUnit7 = new UnitCard(7, "Priest", "CardBattleEgypt7.png", 1, "Hero", 4, 2, 0, 0, 4);
-        UnitCard egyptianUnit8 = new UnitCard(8, "Elephant", "CardBattleEgypt8.png", 0, "Giant", 3, 2, 0, 0, 1);
-        UnitCard egyptianUnit9 = new UnitCard(9, "Mummy", "CardBattleEgypt9.png", 3, "Myth", 5, 0, 2, 0, 3);
-        UnitCard egyptianUnit10 = new UnitCard(10, "Spearman", "CardBattleEgypt10.png", 0, "Warrior", 3, 1, 0, 1, 0);
-        UnitCard egyptianUnit11 = new UnitCard(11, "Phoenix", "CardBattleEgypt11.png", 3, "Flyer", 6, 0, 3, 2, 0);
-        UnitCard egyptianUnit12 = new UnitCard(12, "Wadjet", "CardBattleEgypt12.png", 3, "Warrior", 5, 2, 2, 0, 0);
+        UnitCard egyptianUnit1 = new UnitCard(0, "Pharaoh", "CardBattleEgypt1.png", 2, "Hero", 6, 3, 0, 0, 3);
+        UnitCard egyptianUnit2 = new UnitCard(1, "Scorpion-Man", "CardBattleEgypt2.png", 3, "Giant", 5, 4, 0, 0, 2);
+        UnitCard egyptianUnit3 = new UnitCard(2, "Sphinx", "CardBattleEgypt3.png", 3, "Giant-Killer", 5, 0, 2, 0, 2);
+        UnitCard egyptianUnit4 = new UnitCard(3, "Anubite", "CardBattleEgypt4.png", 3, "Calvalry", 5, 0, 1, 0, 3);
+        UnitCard egyptianUnit5 = new UnitCard(4, "Son of Osiris", "CardBattleEgypt5.png", 3, "Hero", 8, 0, 4, 0, 4);
+        UnitCard egyptianUnit6 = new UnitCard(5, "Chariot Archer", "CardBattleEgypt6.png", 0, "Archer;Calvalry", 3, 0, 0, 1, 1);
+        UnitCard egyptianUnit7 = new UnitCard(6, "Priest", "CardBattleEgypt7.png", 1, "Hero", 4, 2, 0, 0, 4);
+        UnitCard egyptianUnit8 = new UnitCard(7, "Elephant", "CardBattleEgypt8.png", 0, "Giant", 3, 2, 0, 0, 1);
+        UnitCard egyptianUnit9 = new UnitCard(8, "Mummy", "CardBattleEgypt9.png", 3, "Myth", 5, 0, 2, 0, 3);
+        UnitCard egyptianUnit10 = new UnitCard(9, "Spearman", "CardBattleEgypt10.png", 0, "Warrior", 3, 1, 0, 1, 0);
+        UnitCard egyptianUnit11 = new UnitCard(10, "Phoenix", "CardBattleEgypt11.png", 3, "Flyer", 6, 0, 3, 2, 0);
+        UnitCard egyptianUnit12 = new UnitCard(11, "Wadjet", "CardBattleEgypt12.png", 3, "Warrior", 5, 2, 2, 0, 0);
         unitList.add(egyptianUnit1);
         unitList.add(egyptianUnit2);
         unitList.add(egyptianUnit3);

@@ -8,6 +8,7 @@ package my.ageofsettlers;
 
 import java.awt.Component;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,6 +22,18 @@ public class recruitGUI extends javax.swing.JFrame {
      */
     public recruitGUI() {
         this.board = BoardController.getInstance();
+        if(this.board.getPlayerCulture().compareTo("Norse") == 0) {
+            Norse norsePlayer = Norse.getInstance();
+            this.age = norsePlayer.getAge();
+        }
+        else if(this.board.getPlayerCulture().compareTo("Greek") == 0) {
+            Greek greekPlayer = Greek.getInstance();
+            this.age = greekPlayer.getAge();
+        }
+        else {
+            Egyptian egyptianPlayer = Egyptian.getInstance();
+            this.age = egyptianPlayer.getAge();
+        }
         initComponents();
     }
 
@@ -282,6 +295,11 @@ public class recruitGUI extends javax.swing.JFrame {
         jPanel1.add(unitsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 980, 500));
 
         jButton1.setText("Confirm");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 540, -1, -1));
 
         jButton2.setText("Cancel");
@@ -314,53 +332,405 @@ public class recruitGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void unit_1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_1_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_1_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_1_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_1_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_1_marked.isVisible() == true) {
+                unit_1_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_1_imgMouseClicked
 
     private void unit_2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_2_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_2_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_2_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_2_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_2_marked.isVisible() == true) {
+                unit_2_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_2_imgMouseClicked
 
     private void unit_3_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_3_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_3_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_3_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_3_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_3_marked.isVisible() == true) {
+                unit_3_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_3_imgMouseClicked
 
     private void unit_4_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_4_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_4_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_4_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_4_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_4_marked.isVisible() == true) {
+                unit_4_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_4_imgMouseClicked
 
     private void unit_5_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_5_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_5_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_5_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_5_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_5_marked.isVisible() == true) {
+                unit_5_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_5_imgMouseClicked
 
     private void unit_6_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_6_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_6_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_6_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_6_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_6_marked.isVisible() == true) {
+                unit_6_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_6_imgMouseClicked
 
     private void unit_7_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_7_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_7_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_7_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_7_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_7_marked.isVisible() == true) {
+                unit_7_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_7_imgMouseClicked
 
     private void unit_8_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_8_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_8_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_8_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_8_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_8_marked.isVisible() == true) {
+                unit_8_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_8_imgMouseClicked
 
     private void unit_9_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_9_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_9_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_9_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_9_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_9_marked.isVisible() == true) {
+                unit_9_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_9_imgMouseClicked
 
     private void unit_10_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_10_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_10_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_10_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_10_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_10_marked.isVisible() == true) {
+                unit_10_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_10_imgMouseClicked
 
     private void unit_11_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_11_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_11_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_11_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_11_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_11_marked.isVisible() == true) {
+                unit_11_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_11_imgMouseClicked
 
     private void unit_12_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_12_imgMouseClicked
-        // TODO add your handling code here:
+        if(unit_12_img.getAccessibleContext().getAccessibleDescription().compareTo("NA") == 0) {
+            recruitErrorGUI reGUI = new recruitErrorGUI();
+            reGUI.setVisible(true);
+        }
+        else {
+            if(unit_12_marked.isVisible() == false) {
+                if(count < maxRecruits) {
+                    unit_12_marked.setVisible(true);
+                    count++;
+                }
+            }
+            else if(unit_12_marked.isVisible() == true) {
+                unit_12_marked.setVisible(false);
+                count--;
+            }
+        }
     }//GEN-LAST:event_unit_12_imgMouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        List<UnitCard> selectedUnits = new ArrayList<>();
+        List<Integer> cardIndexes = new ArrayList<>();
+        
+        if(board.getPlayerCulture().compareTo("Norse") == 0) {
+            Norse norsePlayer = Norse.getInstance();
+            List<UnitCard> norseUnits = norsePlayer.getCurrentUnitList();
+            cardIndexes = getCardIndexes();
+            
+            for(int i = 0; i < cardIndexes.size(); i++) {
+                selectedUnits.add(norsePlayer.getTotalUnitList().get(cardIndexes.get(i)));
+            }
+            
+            int[] arr = getTotalUnitCost(selectedUnits);
+            boolean recruitSuccess = checkRequiredResources(norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getWood(), norsePlayer.getGold(), arr);
+            
+            if(recruitSuccess == true) {
+                norsePlayer.setFood(norsePlayer.getFood() - arr[0]);
+                norsePlayer.setFavor(norsePlayer.getFavor() - arr[1]);
+                norsePlayer.setWood(norsePlayer.getWood() - arr[2]);
+                norsePlayer.setGold(norsePlayer.getGold() - arr[3]);
+                
+                for(int i = 0; i < selectedUnits.size(); i++) {
+                    norseUnits.add(selectedUnits.get(i));
+                }
+                
+                board.updateResources("Norse");
+                this.setVisible(false);
+                board.initPlayPermCards();
+            }
+            else {
+                recruitErrorGUI reGUI = new recruitErrorGUI();
+                reGUI.setVisible(true);
+            }
+        }
+        else if(board.getPlayerCulture().compareTo("Greek") == 0) {
+            Greek greekPlayer = Greek.getInstance();
+            List<UnitCard> greekUnits = greekPlayer.getCurrentUnitList();
+            cardIndexes = getCardIndexes();
+
+            for(int i = 0; i < cardIndexes.size(); i++) {
+                selectedUnits.add(greekPlayer.getTotalUnitList().get(cardIndexes.get(i)));
+            }
+            
+            int[] arr = getTotalUnitCost(selectedUnits);
+            boolean recruitSuccess = checkRequiredResources(greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getWood(), greekPlayer.getGold(), arr);
+            
+            if(recruitSuccess == true) {
+                greekPlayer.setFood(greekPlayer.getFood() - arr[0]);
+                greekPlayer.setFavor(greekPlayer.getFavor() - arr[1]);
+                greekPlayer.setWood(greekPlayer.getWood() - arr[2]);
+                greekPlayer.setGold(greekPlayer.getGold() - arr[3]);
+                
+                for(int i = 0; i < selectedUnits.size(); i++) {
+                    greekUnits.add(selectedUnits.get(i));
+                }
+                
+                board.updateResources("Greek");
+                this.setVisible(false);
+                board.initPlayPermCards();
+            }
+            else {
+                recruitErrorGUI reGUI = new recruitErrorGUI();
+                reGUI.setVisible(true);
+            }
+        }
+        else {
+            Egyptian egyptianPlayer = Egyptian.getInstance();
+            List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
+            cardIndexes = getCardIndexes();
+            
+            for(int i = 0; i < cardIndexes.size(); i++) {
+                selectedUnits.add(egyptianPlayer.getTotalUnitList().get(cardIndexes.get(i)));
+            }
+            
+            int[] arr = getTotalUnitCost(selectedUnits);
+            boolean recruitSuccess = checkRequiredResources(egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), arr);
+            
+            if(recruitSuccess == true) {
+                egyptianPlayer.setFood(egyptianPlayer.getFood() - arr[0]);
+                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - arr[1]);
+                egyptianPlayer.setWood(egyptianPlayer.getWood() - arr[2]);
+                egyptianPlayer.setGold(egyptianPlayer.getGold() - arr[3]);
+                
+                for(int i = 0; i < selectedUnits.size(); i++) {
+                    egyptianUnits.add(selectedUnits.get(i));
+                }
+                
+                board.updateResources("Egyptian");
+                this.setVisible(false);
+                board.initPlayPermCards();
+            }
+            else {
+                recruitErrorGUI reGUI = new recruitErrorGUI();
+                reGUI.setVisible(true);
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private List<Integer> getCardIndexes() {
+        List<Integer> cardIndexes = new ArrayList<>();
+
+        if(unit_1_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_1_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_2_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_2_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_3_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_3_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_4_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_4_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_5_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_5_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_6_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_6_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_7_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_7_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_8_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_8_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_9_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_9_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_10_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_10_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_11_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_11_img.getAccessibleContext().getAccessibleName()));
+        }
+        if(unit_12_marked.isVisible() == true) {
+            cardIndexes.add(Integer.parseInt(unit_12_img.getAccessibleContext().getAccessibleName()));
+        }
+        
+        return cardIndexes;
+    }
+    
+    private int[] getTotalUnitCost(List<UnitCard> unitList) {
+        int[] arr = new int[4];
+        
+        for(int i = 0; i < unitList.size(); i++) {
+            arr[0] += unitList.get(i).getFood();
+            arr[1] += unitList.get(i).getFavor();
+            arr[2] += unitList.get(i).getWood();
+            arr[3] += unitList.get(i).getGold();
+        }
+        
+        return arr;
+    }
+    
+    private boolean checkRequiredResources(int food, int favor, int wood, int gold, int[] arr) {
+        if(food < arr[0]) {
+            return false;
+        }
+        if(favor < arr[1]) {
+            return false;
+        }
+        if(wood < arr[2]) {
+            return false;
+        }
+        if(gold < arr[3]) {
+            return false;
+        }
+        
+        return true;
+    }
+    
     public void setupRecruitGUI(String culture) {
         List<UnitCard> unitList = new ArrayList<>();
         Component[] unitComponents = unitsPanel.getComponents();
@@ -387,16 +757,21 @@ public class recruitGUI extends javax.swing.JFrame {
             if (unitComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) unitComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(1);
-                while(count < unitList.size() && unitList.get(count).getAge() > age) {
-                    count++;
+                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + unitList.get(count).getFileName())));
+                label.getAccessibleContext().setAccessibleName(String.valueOf(unitList.get(count).getIndex()));
+                if(unitList.get(count).getAge() > this.age) {
+                    label.getAccessibleContext().setAccessibleDescription("NA");
                 }
-                if(count < unitList.size()) {
-                    label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + unitList.get(count).getFileName())));
-                    label.getAccessibleContext().setAccessibleName(String.valueOf(unitList.get(count).getIndex()));
-                    count++;
+                else {
+                    label.getAccessibleContext().setAccessibleDescription("A");
                 }
+                count++;
             }
         }
+    }
+
+    public void setMaxRecruits(int maxRecruits) {
+        this.maxRecruits = maxRecruits;
     }
     
     /**
@@ -434,6 +809,9 @@ public class recruitGUI extends javax.swing.JFrame {
         });
     }
 
+    private int age = 0;
+    private int count = 0;
+    private int maxRecruits = 0;
     private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
