@@ -20,6 +20,8 @@ import javax.swing.JPanel;
 public class BoardController {
     private static List<TerrainTiles> terrainList = new ArrayList<>();
     private String playerCulture;
+    private String aiCulture;
+    private String aiCulture2;
     private int playerAge = 0;
     private int playerTurnCount = 0;
     private static Norse norsePlayer;
@@ -87,6 +89,7 @@ public class BoardController {
         else if(str.compareTo("gather") == 0) {
             gatherGUI gGUI = new gatherGUI();
             gGUI.setVisible(true);
+            aiGatherHandler();
         }
     }
     
@@ -456,22 +459,76 @@ public class BoardController {
         return false;
     }
     
-    public void playGatherCard(String str, String culture) {
-        if(str == "mountain" || str == "hill" || str == "swamp" || str == "fertile" || str == "desert" || str == "forest") {
-            scanTerrainTypes(str, culture);
+    private void aiGatherHandler() {
+        String str = getRandomGatherType();
+        String culture = aiCulture;
+        System.out.println("AI " + culture + " gathered the " + str);
+        playGatherCard(str, culture);
+        
+        str = getRandomGatherType();
+        culture = aiCulture2;
+        System.out.println("AI " + culture + " gathered the " + str);
+        playGatherCard(str, culture);
+    }
+    
+    private String getRandomGatherType() {
+        Random rand = new Random(System.nanoTime());
+        String str = "";
+        int num = rand.nextInt(10);
+        
+        if(num == 0) {
+            str = "desert";
+        }
+        else if(num == 1) {
+            str = "fertile";
+        }
+        else if(num == 2) {
+            str = "hill";
+        }
+        else if(num == 3) {
+            str = "forest";
+        }
+        else if(num == 4) {
+            str = "mountain";
+        }
+        else if(num == 5) {
+            str = "swamp";
+        }
+        else if(num == 6) {
+            str = "favor";
+        }
+        else if(num == 7) {
+            str = "food";
+        }
+        else if(num == 8) {
+            str = "wood";
         }
         else {
-            //scanResourceType(str, culture);
+            str = "gold";
+        }
+        
+        return str;
+    }
+    
+    public void playGatherCard(String str, String culture) {
+        if(str == "mountain" || str == "hill" || str == "swamp" || str == "fertile" || str == "desert" || str == "forest") {
+            scanTerrainTypes(str, culture, 1);
+        }
+        else {
+            scanTerrainTypes(str, culture, 2);
         }
     }
     
-    private void scanTerrainTypes(String str, String culture) {
+    private void scanTerrainTypes(String str, String culture, int scanType) {
         List<TerrainTiles> terrains;
         int[] arr;
         
         if(culture.compareTo("Norse") == 0) {
             terrains = norsePlayer.getNorseTerrains();
-            arr = calculateTerrainResources(str, terrains);
+            if(scanType == 1)
+                arr = calculateTerrainResources(str, terrains);
+            else
+                arr = calculateResources(str, terrains);
             norsePlayer.setFood(arr[0] + norsePlayer.getFood());
             norsePlayer.setFavor(arr[1] + norsePlayer.getFavor());
             norsePlayer.setWood(arr[2] + norsePlayer.getWood());
@@ -481,7 +538,10 @@ public class BoardController {
         }
         else if(culture.compareTo("Greek") == 0) {
             terrains = greekPlayer.getGreekTerrains();
-            arr = calculateTerrainResources(str, terrains);
+            if(scanType == 1)
+                arr = calculateTerrainResources(str, terrains);
+            else
+                arr = calculateResources(str, terrains);
             greekPlayer.setFood(arr[0] + greekPlayer.getFood());
             greekPlayer.setFavor(arr[1] + greekPlayer.getFavor());
             greekPlayer.setWood(arr[2] + greekPlayer.getWood());
@@ -490,7 +550,10 @@ public class BoardController {
         }
         else {
             terrains = egyptianPlayer.getEgyptianTerrains();
-            arr = calculateTerrainResources(str, terrains);
+            if(scanType == 1)
+                arr = calculateTerrainResources(str, terrains);
+            else
+                arr = calculateResources(str, terrains);
             egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
             egyptianPlayer.setFavor(arr[1] + egyptianPlayer.getFavor());
             egyptianPlayer.setWood(arr[2] + egyptianPlayer.getWood());
@@ -509,6 +572,29 @@ public class BoardController {
                 arr[0] += tile.getFoodCount();
                 arr[1] += tile.getFavorCount();
                 arr[2] += tile.getWoodCount();
+                arr[3] += tile.getGoldCount();
+            }
+        }
+        
+        return arr;
+    }
+    
+    private int[] calculateResources(String str, List<TerrainTiles> terrains) {
+        int[] arr = {0,0,0,0};
+        
+        for(int i = 0; i < terrains.size(); i++) {
+            TerrainTiles tile = terrains.get(i);
+            
+            if(str.compareTo("food") == 0) {
+                arr[0] += tile.getFoodCount();
+            }
+            else if(str.compareTo("favor") == 0) {
+                arr[1] += tile.getFavorCount();
+            }
+            else if(str.compareTo("wood") == 0) {
+                arr[2] += tile.getWoodCount();
+            }
+            else {
                 arr[3] += tile.getGoldCount();
             }
         }
@@ -547,4 +633,21 @@ public class BoardController {
     public void removePlayerPermCards(String card) {
         playerPermCards.remove(card);
     }
+
+    public String getAiCulture() {
+        return aiCulture;
+    }
+
+    public void setAiCulture(String aiCulture) {
+        this.aiCulture = aiCulture;
+    }
+
+    public String getAiCulture2() {
+        return aiCulture2;
+    }
+
+    public void setAiCulture2(String aiCulture2) {
+        this.aiCulture2 = aiCulture2;
+    }
+    
 }

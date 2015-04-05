@@ -29,14 +29,20 @@ public class BoardGUI extends javax.swing.JFrame {
         if(boardType.compareTo("Norse") == 0) {
             jTabbedPane1.setSelectedIndex(0);
             this.boardController.setPlayerCulture(boardType);
+            this.boardController.setAiCulture("Greek");
+            this.boardController.setAiCulture2("Egyptian");
         }
         else if(boardType.compareTo("Greek") == 0) {
             jTabbedPane1.setSelectedIndex(1);
             this.boardController.setPlayerCulture(boardType);
+            this.boardController.setAiCulture("Norse");
+            this.boardController.setAiCulture2("Egyptian");
         }
         else if(boardType.compareTo("Egyptian") == 0) {
             jTabbedPane1.setSelectedIndex(2);
             this.boardController.setPlayerCulture(boardType);
+            this.boardController.setAiCulture("Norse");
+            this.boardController.setAiCulture2("Greek");
         }
     }
     
