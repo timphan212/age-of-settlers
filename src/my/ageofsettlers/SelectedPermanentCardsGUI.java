@@ -253,19 +253,19 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_card_1_imgMouseClicked
 
     private void card_2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card_2_imgMouseClicked
-        if(maxCards >= 2)
-        if(card_2_marked.isVisible() == true) {
-            card_2_marked.setVisible(false);
-        }
-        else {
-            card_1_marked.setVisible(false);
-            card_2_marked.setVisible(true);
-            card_3_marked.setVisible(false);
-            card_4_marked.setVisible(false);
-            card_5_marked.setVisible(false);
-            card_6_marked.setVisible(false);
-            card_7_marked.setVisible(false);
-            
+        if(maxCards >= 2) {
+            if(card_2_marked.isVisible() == true) {
+                card_2_marked.setVisible(false);
+            }
+            else {
+                card_1_marked.setVisible(false);
+                card_2_marked.setVisible(true);
+                card_3_marked.setVisible(false);
+                card_4_marked.setVisible(false);
+                card_5_marked.setVisible(false);
+                card_6_marked.setVisible(false);
+                card_7_marked.setVisible(false);
+            }
         }
     }//GEN-LAST:event_card_2_imgMouseClicked
 

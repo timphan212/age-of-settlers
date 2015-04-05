@@ -37,6 +37,8 @@ public class Greek {
     private boolean siegeworkshop = false;
     private boolean greattemple = false;
     private boolean wonder = false;
+    private List<UnitCard> totalUnitList = new ArrayList<>();
+    private List<UnitCard> currentUnitList = new ArrayList<>();
     
     public static synchronized Greek getInstance() {
         if(instance == null) {
@@ -216,5 +218,21 @@ public class Greek {
 
     public void setWonder(boolean wonder) {
         this.wonder = wonder;
+    }
+
+    public List<UnitCard> getTotalUnitList() {
+        return totalUnitList;
+    }
+
+    public void setTotalUnitList(List<UnitCard> totalUnitList) {
+        this.totalUnitList = totalUnitList;
+    }
+
+    public List<UnitCard> getCurrentUnitList() {
+        return currentUnitList;
+    }
+
+    public void setCurrentUnitList(List<UnitCard> currentUnitList) {
+        this.currentUnitList = currentUnitList;
     }
 }
