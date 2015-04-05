@@ -91,6 +91,11 @@ public class BoardController {
             gGUI.setVisible(true);
             aiGatherHandler();
         }
+        else if(str.compareTo("trade") == 0) {
+            tradeGUI tGUI = new tradeGUI();
+            tGUI.setVisible(true);
+            tGUI.setupTradeGUI(playerCulture);
+        }
     }
     
     private static List<TerrainTiles> terrainSetup() {
@@ -140,7 +145,7 @@ public class BoardController {
     }
     
     private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList) {
-        List<TerrainTiles> randomTerrain = new ArrayList<>(); //select random tiles
+        List<TerrainTiles> randomTerrain = new ArrayList<>();
         int count = 0, num = 0, ndx = 0;
         
         for(int i = 0; i < 18; i++) {
@@ -600,6 +605,18 @@ public class BoardController {
         }
         
         return arr;
+    }
+    
+    public void updateResources(String culture) {
+        if(culture.compareTo("Norse") == 0) {
+            bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+        }
+        else {
+            bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+        }
     }
     
     public TerrainTiles getTerrainTile(int index) {

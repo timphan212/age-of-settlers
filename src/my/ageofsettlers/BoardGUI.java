@@ -272,6 +272,7 @@ public class BoardGUI extends javax.swing.JFrame {
         victory_Norse_19 = new javax.swing.JPanel();
         victory_Norse_19.setVisible(false);
         norseAge = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
         norseBoardImg = new javax.swing.JLabel();
         greekBoard = new javax.swing.JPanel();
         greekTerrain = new javax.swing.JPanel();
@@ -2615,6 +2616,21 @@ public class BoardGUI extends javax.swing.JFrame {
         norseResources.add(norseAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 100, -1));
 
         norseBoard.add(norseResources, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 240));
+
+        jPanel2.setOpaque(false);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 390, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        norseBoard.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 390, 350));
 
         norseBoardImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/NorseBoardResized.png"))); // NOI18N
         norseBoard.add(norseBoardImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
@@ -7411,6 +7427,7 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel mountain_g1;

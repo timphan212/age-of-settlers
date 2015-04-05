@@ -23,6 +23,20 @@ public class Norse {
     private int gold = 4;
     private int victory = 0;
     private int age = 0;
+    private int house = 0;
+    private boolean wall = false;
+    private boolean tower = false;
+    private boolean storehouse = false;
+    private boolean market = false;
+    private boolean armory = false;
+    private boolean quarry = false;
+    private boolean monument = false;
+    private boolean granary = false;
+    private boolean goldmint = false;
+    private boolean woodworkshop = false;
+    private boolean siegeworkshop = false;
+    private boolean greattemple = false;
+    private boolean wonder = false;
     
     public static synchronized Norse getInstance() {
         if(instance == null) {
@@ -90,5 +104,117 @@ public class Norse {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getHouse() {
+        return house;
+    }
+
+    public void setHouse(int house) {
+        this.house = house;
+    }
+
+    public boolean isWall() {
+        return wall;
+    }
+
+    public void setWall(boolean wall) {
+        this.wall = wall;
+    }
+
+    public boolean isTower() {
+        return tower;
+    }
+
+    public void setTower(boolean tower) {
+        this.tower = tower;
+    }
+
+    public boolean isStorehouse() {
+        return storehouse;
+    }
+
+    public void setStorehouse(boolean storehouse) {
+        this.storehouse = storehouse;
+    }
+
+    public boolean isMarket() {
+        return market;
+    }
+
+    public void setMarket(boolean market) {
+        this.market = market;
+    }
+
+    public boolean isArmory() {
+        return armory;
+    }
+
+    public void setArmory(boolean armory) {
+        this.armory = armory;
+    }
+
+    public boolean isQuarry() {
+        return quarry;
+    }
+
+    public void setQuarry(boolean quarry) {
+        this.quarry = quarry;
+    }
+
+    public boolean isMonument() {
+        return monument;
+    }
+
+    public void setMonument(boolean monument) {
+        this.monument = monument;
+    }
+
+    public boolean isGranary() {
+        return granary;
+    }
+
+    public void setGranary(boolean granary) {
+        this.granary = granary;
+    }
+
+    public boolean isGoldmint() {
+        return goldmint;
+    }
+
+    public void setGoldmint(boolean goldmint) {
+        this.goldmint = goldmint;
+    }
+
+    public boolean isWoodworkshop() {
+        return woodworkshop;
+    }
+
+    public void setWoodworkshop(boolean woodworkshop) {
+        this.woodworkshop = woodworkshop;
+    }
+
+    public boolean isSiegeworkshop() {
+        return siegeworkshop;
+    }
+
+    public void setSiegeworkshop(boolean siegeworkshop) {
+        this.siegeworkshop = siegeworkshop;
+    }
+
+    public boolean isGreattemple() {
+        return greattemple;
+    }
+
+    public void setGreattemple(boolean greattemple) {
+        this.greattemple = greattemple;
+    }
+
+    public boolean isWonder() {
+        return wonder;
+    }
+
+    public void setWonder(boolean wonder) {
+        this.wonder = wonder;
     }
 }
