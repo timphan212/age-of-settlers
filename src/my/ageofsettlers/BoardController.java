@@ -128,6 +128,10 @@ public class BoardController {
             rGUI.setMaxRecruits(2);
             rGUI.setVisible(true);
         }
+        else {
+            opponentSelectionGUI osGUI = new opponentSelectionGUI();
+            osGUI.setVisible(true);
+        }
     }
     
     private static void unitSetup() {
@@ -940,6 +944,13 @@ public class BoardController {
         }
         
         updateResources("Egyptian");
+    }
+    
+    public void setupAttackCard(String opponent) {
+        attackUnitSelectionGUI ausGUI = new attackUnitSelectionGUI();
+        ausGUI.setVisible(true);
+        ausGUI.setMaxCards(4);
+        ausGUI.setupAttackGUI(playerCulture);
     }
     
     public TerrainTiles getTerrainTile(int index) {
