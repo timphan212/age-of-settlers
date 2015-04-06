@@ -359,17 +359,65 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_card_7_imgMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int cardIndex = getCardIndex();
+        UnitCard playerCard;
+        
+        if(board.getPlayerCulture().compareTo("Norse") == 0) {
+            Norse norsePlayer = Norse.getInstance();
+            playerCard = norsePlayer.getTotalUnitList().get(cardIndex);
+        }
+        else if(board.getPlayerCulture().compareTo("Greek") == 0) {
+            Greek greekPlayer = Greek.getInstance();
+            playerCard = greekPlayer.getTotalUnitList().get(cardIndex);
+        }
+        else {
+            Egyptian egyptianPlayer = Egyptian.getInstance();
+            playerCard = egyptianPlayer.getTotalUnitList().get(cardIndex);
+        }
+        
+        selectedUnits.remove(selectedUnits.indexOf(playerCard));
         this.setVisible(false);
+        board.commenceBattle(selectedUnits, playerCard, this.enemy);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private int getCardIndex() {
+        int cardIndex = 0;
+        
+        if(card_1_marked.isVisible() == true) {
+            cardIndex = Integer.parseInt(card_1_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_2_marked.isVisible() == true) {
+            cardIndex = Integer.parseInt(card_2_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_3_marked.isVisible() == true) {
+            cardIndex = Integer.parseInt(card_3_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_4_marked.isVisible() == true) {
+            cardIndex = Integer.parseInt(card_4_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_5_marked.isVisible() == true) {
+            cardIndex = Integer.parseInt(card_5_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_6_marked.isVisible() == true) {
+            cardIndex = Integer.parseInt(card_6_img.getAccessibleContext().getAccessibleName());
+        }
+        else {
+            cardIndex = Integer.parseInt(card_7_img.getAccessibleContext().getAccessibleName());
+        }
+        
+        return cardIndex;
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    public void setupCards(List<UnitCard> selectedUnits) {
+    public void setupCards(List<UnitCard> selectedUnits, String opponent) {
+        this.selectedUnits = selectedUnits;
         Component[] cardComponents = jPanel2.getComponents();
         int count = 0;
+        this.enemy = opponent;
         
         for (Component cardComponent : cardComponents) {
             if (cardComponent instanceof javax.swing.JPanel) {
@@ -383,6 +431,11 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
             } 
         }
     }
+
+    public void setMaxCards(int maxCards) {
+        this.maxCards = maxCards;
+    }
+    
     
     /**
      * @param args the command line arguments
@@ -419,6 +472,8 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
         });
     }
 
+    List<UnitCard> selectedUnits;
+    private String enemy;
     private int maxCards = 0;
     private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables

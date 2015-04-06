@@ -950,7 +950,55 @@ public class BoardController {
         attackUnitSelectionGUI ausGUI = new attackUnitSelectionGUI();
         ausGUI.setVisible(true);
         ausGUI.setMaxCards(4);
-        ausGUI.setupAttackGUI(playerCulture);
+        ausGUI.setupAttackGUI(playerCulture, opponent);
+    }
+    
+    public void setupBattle(List<UnitCard> selectedUnits, String opponent) {
+        attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
+        aupGUI.setVisible(true);
+        aupGUI.setupCards(selectedUnits, opponent);
+        aupGUI.setMaxCards(selectedUnits.size());
+    }
+    
+    public void commenceBattle(List<UnitCard> selectedUnits, UnitCard playerCard, String opponent) {
+        UnitCard opponentCard = getOpponentCard(opponent);
+        
+        //compare two cards
+        //do the fighting
+        //unsure: readd winner back to selectedunits, remove the loser?
+        if(selectedUnits.isEmpty()) {
+            initPlayPermCards();
+        }
+        else {
+            attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
+            aupGUI.setVisible(true);
+            aupGUI.setMaxCards(selectedUnits.size());
+            aupGUI.setupCards(selectedUnits, opponent);
+        }
+    }
+    
+    private UnitCard getOpponentCard(String opponent) {
+        Random rand = new Random(System.nanoTime());
+        UnitCard opponentCard;
+        
+        if(opponent.compareTo("Norse") == 0) {
+            List<UnitCard> opponentCardList = norsePlayer.getCurrentUnitList();
+            int ndx = rand.nextInt(opponentCardList.size());
+            System.out.println(ndx);
+            opponentCard = opponentCardList.get(ndx);
+        }
+        else if(opponent.compareTo("Greek") == 0) {
+            List<UnitCard> opponentCardList = greekPlayer.getCurrentUnitList();
+            int ndx = rand.nextInt(opponentCardList.size());
+            opponentCard = opponentCardList.get(ndx);
+        }
+        else {
+            List<UnitCard> opponentCardList = egyptianPlayer.getCurrentUnitList();
+            int ndx = rand.nextInt(opponentCardList.size());
+            opponentCard = opponentCardList.get(ndx);
+        }
+        
+        return opponentCard;
     }
     
     public TerrainTiles getTerrainTile(int index) {

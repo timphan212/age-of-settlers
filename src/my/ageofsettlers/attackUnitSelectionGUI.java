@@ -498,9 +498,7 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
         }
         
         this.setVisible(false);
-        attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
-        aupGUI.setVisible(true);
-        aupGUI.setupCards(selectedUnits);
+        board.setupBattle(selectedUnits, this.opponent);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private List<Integer> getCardIndexes() {
@@ -555,9 +553,10 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
         this.maxCards = maxCards;
     }
 
-    public void setupAttackGUI(String culture) {
+    public void setupAttackGUI(String culture, String opponent) {
         List<UnitCard> unitList = new ArrayList<>();
         Component[] unitComponents = unitsPanel.getComponents();
+        this.opponent = opponent;
         int ndx = 0;
         
         if(culture.compareTo("Norse") == 0) {
@@ -626,6 +625,7 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
     private int drawnCardCount = 0;
     private int maxCards = 0;
     private BoardController board;
+    private String opponent;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
