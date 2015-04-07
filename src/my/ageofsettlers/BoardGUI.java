@@ -7895,46 +7895,49 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
     
-    public void changeAgeText(String culture, int age, int wood, int gold, int food, int favor) {
+    public void changeAgeText(String culture, int age, int wood, int gold, int food, int favor, int victory) {
         nextAgeGUI naGUI = new nextAgeGUI();
         javax.swing.JTextField field = naGUI.getTextField();
         String str = "";
         
         if(culture.compareTo("Norse") == 0) {
             str = setAgeText(norseAge, age);
-            changeBoardResources(culture, wood, gold, food, favor);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
         } 
         else if(culture.compareTo("Greek") == 0) {
             str = setAgeText(greekAge, age);
-            changeBoardResources(culture, wood, gold, food, favor);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
         }
         else {
             str = setAgeText(greekAge, age);
-            changeBoardResources(culture, wood, gold, food, favor);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
         }
         
         field.setText(field.getText() + " " + str);
         naGUI.setVisible(true);
     }
     
-    public void changeBoardResources(String culture, int wood, int gold, int food, int favor) {
+    public void changeBoardResources(String culture, int wood, int gold, int food, int favor, int victory) {
         if(culture.compareTo("Norse") == 0) {
             setResources(norseFoodResources, food);
             setResources(norseWoodResources, wood);
             setResources(norseGoldResources, gold);
             setResources(norseFavorResources, favor);
+            setResources(norseVictoryResources, victory);
         }
         else if(culture.compareTo("Greek") == 0) {
             setResources(greekFoodResources, food);
             setResources(greekWoodResources, wood);
             setResources(greekGoldResources, gold);
             setResources(greekFavorResources, favor);
+            setResources(greekVictoryResources, victory);
         }
         else {
             setResources(egyptianFoodResources, food);
             setResources(egyptianWoodResources, wood);
             setResources(egyptianGoldResources, gold);
             setResources(egyptianFavorResources, favor);
+            setResources(egyptianVictoryResources, victory);
         }
     }
     

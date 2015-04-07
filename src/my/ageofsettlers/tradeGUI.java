@@ -52,6 +52,8 @@ public class tradeGUI extends javax.swing.JFrame {
         bankGoldSelection = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        bankVictoryText = new javax.swing.JTextField();
+        bankVictorySelection = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -115,37 +117,37 @@ public class tradeGUI extends javax.swing.JFrame {
         bankFoodText.setBackground(new java.awt.Color(255,255,255,1));
         bankFoodText.setText("Food:");
         bankFoodText.setBorder(null);
-        jPanel1.add(bankFoodText, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
+        jPanel1.add(bankFoodText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
         bankFoodSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(bankFoodSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, -1, -1));
+        jPanel1.add(bankFoodSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         bankFavorText.setEditable(false);
         bankFavorText.setBackground(new java.awt.Color(255,255,255,1));
         bankFavorText.setText("Favor:");
         bankFavorText.setBorder(null);
-        jPanel1.add(bankFavorText, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
+        jPanel1.add(bankFavorText, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
 
         bankFavorSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(bankFavorSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, -1, -1));
+        jPanel1.add(bankFavorSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
 
         bankWoodText.setEditable(false);
         bankWoodText.setBackground(new java.awt.Color(255,255,255,1));
         bankWoodText.setText("Wood:");
         bankWoodText.setBorder(null);
-        jPanel1.add(bankWoodText, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+        jPanel1.add(bankWoodText, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
 
         bankWoodSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(bankWoodSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, -1));
+        jPanel1.add(bankWoodSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, -1));
 
         bankGoldText.setEditable(false);
         bankGoldText.setBackground(new java.awt.Color(255,255,255,1));
         bankGoldText.setText("Gold:");
         bankGoldText.setBorder(null);
-        jPanel1.add(bankGoldText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, -1));
+        jPanel1.add(bankGoldText, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, -1, -1));
 
         bankGoldSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(bankGoldSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, -1));
+        jPanel1.add(bankGoldSelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
 
         jButton1.setText("Trade");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -162,6 +164,15 @@ public class tradeGUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, -1));
+
+        bankVictoryText.setEditable(false);
+        bankVictoryText.setBackground(new java.awt.Color(255,255,255,1));
+        bankVictoryText.setText("Victory:");
+        bankVictoryText.setBorder(null);
+        jPanel1.add(bankVictoryText, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, -1, -1));
+
+        bankVictorySelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(bankVictorySelection, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,11 +197,66 @@ public class tradeGUI extends javax.swing.JFrame {
         int bankFavorCount = Integer.parseInt((String)bankFavorSelection.getSelectedItem());
         int bankWoodCount = Integer.parseInt((String)bankWoodSelection.getSelectedItem());
         int bankGoldCount = Integer.parseInt((String)bankGoldSelection.getSelectedItem());
+        int bankVictoryCount = Integer.parseInt((String)bankVictorySelection.getSelectedItem());
+        boolean victoryTradeFail = false;
+        
+        if(this.playerCulture.compareTo("Norse") == 0) {
+            Norse norsePlayer = Norse.getInstance();
+            if(bankVictoryCount > 0) {
+                if(playerFavorCount <= bankVictoryCount*8 || norsePlayer.isGreattemple() == false) {
+                    victoryTradeFail = true;
+                }
+                else {
+                    norsePlayer.setFavor(norsePlayer.getFavor() - bankVictoryCount*8);
+                    norsePlayer.setVictory(norsePlayer.getVictory() + bankVictoryCount);
+                    playerFavorCount -= bankVictoryCount*8;
+                    victoryTradeFail = false;
+                }
+            }
+            else {
+                victoryTradeFail = false;
+            }
+        }
+        else if(this.playerCulture.compareTo("Greek") == 0) {
+            Greek greekPlayer = Greek.getInstance();
+            if(bankVictoryCount > 0) {
+                if(playerFavorCount != bankVictoryCount*8 || greekPlayer.isGreattemple() == false) {
+                    victoryTradeFail = true;
+                }
+                else {
+                    greekPlayer.setFavor(greekPlayer.getFavor() - bankVictoryCount*8);
+                    greekPlayer.setVictory(greekPlayer.getVictory() + bankVictoryCount);
+                    playerFavorCount -= bankVictoryCount*8;
+                    victoryTradeFail = false;
+                }
+            }
+            else {
+                victoryTradeFail = false;
+            }
+        }
+        else {
+            Egyptian egyptianPlayer = Egyptian.getInstance();
+            if(bankVictoryCount > 0) {
+                if(playerFavorCount != bankVictoryCount*8 || egyptianPlayer.isGreattemple() == false) {
+                    victoryTradeFail = true;
+                }
+                else {
+                    egyptianPlayer.setFavor(egyptianPlayer.getFavor() - bankVictoryCount*8);
+                    egyptianPlayer.setVictory(egyptianPlayer.getVictory() + bankVictoryCount);
+                    playerFavorCount -= bankVictoryCount*8;
+                    victoryTradeFail = false;
+                }
+            }
+            else {
+                victoryTradeFail = false;
+            }
+        }
+        
         
         int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
         int sum2 = bankFoodCount + bankFavorCount + bankWoodCount + bankGoldCount;
 
-        if(sum1 == sum2) {
+        if(sum1 == sum2 && victoryTradeFail == false) {
             if(this.playerCulture.compareTo("Norse") == 0) {
                 Norse norsePlayer = Norse.getInstance();
                 norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCount);
@@ -282,7 +348,8 @@ public class tradeGUI extends javax.swing.JFrame {
         favorCount = new String[bank.getFavor()+1];
         woodCount = new String[bank.getWood()+1];
         goldCount = new String[bank.getFavor()+1];
-        
+        String[] victoryCount = new String[bank.getVictory() + 1];
+                
         for(int i = 0; i < foodCount.length; i++) {
             foodCount[i] = String.valueOf(i);
         }
@@ -299,6 +366,10 @@ public class tradeGUI extends javax.swing.JFrame {
            goldCount[i] = String.valueOf(i);
         }
         bankGoldSelection.setModel(new javax.swing.DefaultComboBoxModel(goldCount));
+        for(int i = 0; i < victoryCount.length; i++) {
+           victoryCount[i] = String.valueOf(i);
+        }
+        bankVictorySelection.setModel(new javax.swing.DefaultComboBoxModel(victoryCount));
     }
     
     /**
@@ -347,6 +418,8 @@ public class tradeGUI extends javax.swing.JFrame {
     private javax.swing.JComboBox bankGoldSelection;
     private javax.swing.JTextField bankGoldText;
     private javax.swing.JTextField bankText;
+    private javax.swing.JComboBox bankVictorySelection;
+    private javax.swing.JTextField bankVictoryText;
     private javax.swing.JComboBox bankWoodSelection;
     private javax.swing.JTextField bankWoodText;
     private javax.swing.JButton jButton1;

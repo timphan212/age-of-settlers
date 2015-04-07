@@ -474,27 +474,38 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
         if(board.getPlayerCulture().compareTo("Norse") == 0) {
             Norse norsePlayer = Norse.getInstance();
             cardIndexes = getCardIndexes();
+            List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
             
             for(int i = 0; i < cardIndexes.size(); i++) {
-                selectedUnits.add(norsePlayer.getTotalUnitList().get(cardIndexes.get(i)));
+                UnitCard playerCard = norsePlayer.getTotalUnitList().get(cardIndexes.get(i));
+                selectedUnits.add(playerCard);
+                norseCurrentUnits.remove(playerCard);
             }
-            
+            norsePlayer.setCurrentUnitList(norseCurrentUnits);
         }
         else if(board.getPlayerCulture().compareTo("Greek") == 0) {
             Greek greekPlayer = Greek.getInstance();
             cardIndexes = getCardIndexes();
-
+            List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+            
             for(int i = 0; i < cardIndexes.size(); i++) {
-                selectedUnits.add(greekPlayer.getTotalUnitList().get(cardIndexes.get(i)));
+                UnitCard playerCard = greekPlayer.getTotalUnitList().get(cardIndexes.get(i));
+                selectedUnits.add(playerCard);
+                greekCurrentUnits.remove(playerCard);
             }
+            greekPlayer.setCurrentUnitList(greekCurrentUnits);
         }
         else {
             Egyptian egyptianPlayer = Egyptian.getInstance();
             cardIndexes = getCardIndexes();
+            List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
             
             for(int i = 0; i < cardIndexes.size(); i++) {
-                selectedUnits.add(egyptianPlayer.getTotalUnitList().get(cardIndexes.get(i)));
+                UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(cardIndexes.get(i));
+                selectedUnits.add(playerCard);
+                egyptianCurrentUnits.remove(playerCard);
             }
+            egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
         }
         
         this.setVisible(false);

@@ -6,6 +6,8 @@
 
 package my.ageofsettlers;
 
+import java.util.Random;
+
 /**
  *
  * @author Tim
@@ -117,6 +119,13 @@ public class gatherGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String str = retrieveString();
+        board.playGatherCard(str, board.getPlayerCulture());
+        this.setVisible(false);
+        board.initPlayPermCards();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private String retrieveString() {
         String str = "";
         if(Desert.isSelected() == true) {
             str = "desert";
@@ -149,10 +158,8 @@ public class gatherGUI extends javax.swing.JFrame {
             str = "gold";
         }
         
-        board.playGatherCard(str, board.getPlayerCulture());
-        this.setVisible(false);
-        board.initPlayPermCards();
-    }//GEN-LAST:event_jButton1ActionPerformed
+        return str;
+    }
 
     /**
      * @param args the command line arguments

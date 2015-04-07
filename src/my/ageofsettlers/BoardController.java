@@ -32,6 +32,7 @@ public class BoardController {
     private List<String> playerPermCards = new ArrayList<>();
     private static BoardGUI bGUI;
     private int roundCount = 0;
+    private List<UnitCard> aiBattleUnits = new ArrayList<>();
     
     /**
      * @param args the command line arguments
@@ -109,9 +110,27 @@ public class BoardController {
             aiGatherHandler();
         }
         else if(str.compareTo("trade") == 0) {
+            tradeCostGUI tcGUI = new tradeCostGUI();
             tradeGUI tGUI = new tradeGUI();
-            tGUI.setVisible(true);
-            tGUI.setupTradeGUI(playerCulture);
+            boolean market = false;
+            if(playerCulture.compareTo("Norse") == 0) {
+                market = norsePlayer.isMarket();
+            }
+            else if(playerCulture.compareTo("Greek") == 0) {
+                market = greekPlayer.isMarket();
+            }
+            else {
+                market = egyptianPlayer.isMarket();
+            }
+            
+            if(market == true) {
+                tGUI.setVisible(true);
+                tGUI.setupTradeGUI(playerCulture);
+            }
+            else {
+                tcGUI.setVisible(true);
+                tcGUI.setupTradeCostGUI(playerCulture);
+            }
         }
         else if(str.compareTo("build") == 0) {
             buildingGUI buildGUI = new buildingGUI();
@@ -143,19 +162,59 @@ public class BoardController {
     private static void norseUnitSetup() {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
+        String[] bonuses;
         
-        UnitCard norseUnit1 = new UnitCard(0, "Nidhogg", "CardBattleNorse1.png", 3, "Flyer", 7, 0, 1, 0, 4);
-        UnitCard norseUnit2 = new UnitCard(1, "Throwing Axeman", "CardBattleNorse2.png", 0, "Archer", 3, 1, 0, 1, 0);
-        UnitCard norseUnit3 = new UnitCard(2, "Jarl", "CardBattleNorse3.png", 0, "Calvalry", 3, 1, 0, 0, 1);
-        UnitCard norseUnit4 = new UnitCard(3, "Valkyrie", "CardBattleNorse4.png", 3, "Calvalry", 5, 0, 3, 0, 1);
-        UnitCard norseUnit5 = new UnitCard(4, "Troll", "CardBattleNorse5.png", 3, "Warrior", 6, 3, 0, 2, 0);
-        UnitCard norseUnit6 = new UnitCard(5, "Nidhogg", "CardBattleNorse6.png", 3, "Flyer", 7, 0, 1, 0, 4); //Incorrect Duplicate
-        UnitCard norseUnit7 = new UnitCard(6, "Dwarf", "CardBattleNorse7.png", 3, "Giant-Killer", 4, 2, 0, 0, 2);
-        UnitCard norseUnit8 = new UnitCard(7, "Huskarl", "CardBattleNorse8.png", 0, "Warrior", 3, 1, 0, 0, 2);
-        UnitCard norseUnit9 = new UnitCard(8, "Frost Giant", "CardBattleNorse9.png", 3, "Giant", 7, 4, 2, 0, 0);
-        UnitCard norseUnit10 = new UnitCard(9, "Classical Norse Hero", "CardBattleNorse10.png", 1, "Hero", 5, 3, 0, 0, 3);
-        UnitCard norseUnit11 = new UnitCard(10, "Heroic Norse Hero", "CardBattleNorse11.png", 2, "Hero", 6, 3, 0, 0, 3);
-        UnitCard norseUnit12 = new UnitCard(11, "Mythic Norse Hero", "CardBattleNorse12.png", 3, "Hero", 8, 4, 4, 0, 0);
+        bonuses = new String[1];
+        bonuses[0] = "4;Giant-Killer";
+        UnitCard norseUnit1 = new UnitCard(0, "Nidhogg", "CardBattleNorse1.png", 3, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4);
+        
+        bonuses = new String[2];
+        bonuses[0] = "3;Warrior";
+        bonuses[1] = "4;Flyer";
+        UnitCard norseUnit2 = new UnitCard(1, "Throwing Axeman", "CardBattleNorse2.png", 0, "Mortal;Archer", 3, bonuses, 1, 0, 1, 0);
+        
+        bonuses = new String[2];
+        bonuses[0] = "4;Hero";
+        bonuses[1] = "4;Archer";
+        UnitCard norseUnit3 = new UnitCard(2, "Jarl", "CardBattleNorse3.png", 0, "Mortal;Calvalry", 3, bonuses, 1, 0, 0, 1);
+        
+        bonuses = new String[1];
+        bonuses[0] = "4;Archer";
+        UnitCard norseUnit4 = new UnitCard(3, "Valkyrie", "CardBattleNorse4.png", 3, "Myth;Calvalry", 5, bonuses, 0, 3, 0, 1);
+        
+        bonuses = new String[1];
+        bonuses[0] = "4;Calvalry";
+        UnitCard norseUnit5 = new UnitCard(4, "Troll", "CardBattleNorse5.png", 3, "Myth;Warrior", 6, bonuses, 3, 0, 2, 0);
+        
+        bonuses = new String[1];
+        bonuses[0] = "4;Giant-Killer";
+        UnitCard norseUnit6 = new UnitCard(5, "Nidhogg", "CardBattleNorse6.png", 3, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4); //Incorrect Duplicate
+
+        bonuses = new String[1];
+        bonuses[0] = "7;Giant";
+        UnitCard norseUnit7 = new UnitCard(6, "Dwarf", "CardBattleNorse7.png", 3, "Myth;Giant-Killer", 4, bonuses, 2, 0, 0, 2);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Calvalry";
+        UnitCard norseUnit8 = new UnitCard(7, "Huskarl", "CardBattleNorse8.png", 0, "Mortal;Warrior", 3, bonuses, 1, 0, 0, 2);
+
+        bonuses = new String[2];
+        bonuses[0] = "2;Warrior";
+        bonuses[1] = "3;Mortal";
+        UnitCard norseUnit9 = new UnitCard(8, "Frost Giant", "CardBattleNorse9.png", 3, "Myth;Giant", 7, bonuses, 4, 2, 0, 0);
+        
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard norseUnit10 = new UnitCard(9, "Classical Norse Hero", "CardBattleNorse10.png", 1, "Hero", 5, bonuses, 3, 0, 0, 3);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard norseUnit11 = new UnitCard(10, "Heroic Norse Hero", "CardBattleNorse11.png", 2, "Hero", 6, bonuses, 3, 0, 0, 3);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard norseUnit12 = new UnitCard(11, "Mythic Norse Hero", "CardBattleNorse12.png", 3, "Hero", 8, bonuses, 4, 4, 0, 0);
+
         unitList.add(norseUnit1);
         unitList.add(norseUnit2);
         unitList.add(norseUnit3);
@@ -182,19 +241,60 @@ public class BoardController {
     private static void greekUnitSetup() {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
+        String[] bonuses;
+
+        bonuses = new String[2];
+        bonuses[0] = "3;Archer";
+        bonuses[1] = "3;Flyer";
+        UnitCard greekUnit1 = new UnitCard(0, "Centaur", "CardBattleGreek1.png", 3, "Myth;Archer;Calvalry", 5, bonuses, 0, 1, 3, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Mortal";
+        UnitCard greekUnit2 = new UnitCard(1, "Cyclops", "CardBattleGreek2.png", 3, "Myth;Giant", 6, bonuses, 3, 3, 0, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Giant-Killer";
+        UnitCard greekUnit3 = new UnitCard(2, "Manticore", "CardBattleGreek3.png", 3, "Myth;Flyer", 5, bonuses, 2, 2, 0, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard greekUnit4 = new UnitCard(3, "Classical Greek Hero", "CardBattleGreek4.png", 1, "Hero", 5, bonuses, 3, 0, 0, 3);
+
+        bonuses = new String[2];
+        bonuses[0] = "4;Flyer";
+        bonuses[1] = "3;Warrior";
+        UnitCard greekUnit5 = new UnitCard(4, "Toxotes", "CardBattleGreek5.png", 0, "Mortal;Archer", 3, bonuses, 1, 0, 1, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard greekUnit6 = new UnitCard(5, "Heroic Greek Hero", "CardBattleGreek6.png", 2, "Hero", 6, bonuses, 3, 0, 0, 4);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Warrior";
+        UnitCard greekUnit7 = new UnitCard(6, "Hydra", "CardBattleGreek7.png", 3, "Myth;Giant", 6, bonuses, 0, 2, 0, 2);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Calvalry";
+        UnitCard greekUnit8 = new UnitCard(7, "Minotaur", "CardBattleGreek8.png", 3, "Myth;Warrior", 5, bonuses, 2, 0, 2, 0);
         
-        UnitCard greekUnit1 = new UnitCard(0, "Centaur", "CardBattleGreek1.png", 3, "Archer;Calvalry", 5, 0, 1, 3, 0);
-        UnitCard greekUnit2 = new UnitCard(1, "Cyclops", "CardBattleGreek2.png", 3, "Giant", 6, 3, 3, 0, 0);
-        UnitCard greekUnit3 = new UnitCard(2, "Manticore", "CardBattleGreek3.png", 3, "Flyer", 5, 2, 2, 0, 0);
-        UnitCard greekUnit4 = new UnitCard(3, "Classical Greek Hero", "CardBattleGreek4.png", 1, "Hero", 5, 3, 0, 0, 3);
-        UnitCard greekUnit5 = new UnitCard(4, "Toxotes", "CardBattleGreek5.png", 0, "Archer", 3, 1, 0, 1, 0);
-        UnitCard greekUnit6 = new UnitCard(5, "Heroic Greek Hero", "CardBattleGreek6.png", 2, "Hero", 6, 3, 0, 0, 4);
-        UnitCard greekUnit7 = new UnitCard(6, "Hydra", "CardBattleGreek7.png", 3, "Giant", 6, 0, 2, 0, 2);
-        UnitCard greekUnit8 = new UnitCard(7, "Minotaur", "CardBattleGreek8.png", 3, "Warrior", 5, 2, 0, 2, 0);
-        UnitCard greekUnit9 = new UnitCard(8, "Mythical Greek Hero", "CardBattleGreek9.png", 3, "Hero", 5, 0, 4, 0, 4);
-        UnitCard greekUnit10 = new UnitCard(9, "Hippokon", "CardBattleGreek10.png", 0, "Calvalry", 3, 1, 0, 0, 1);
-        UnitCard greekUnit11 = new UnitCard(10, "Hoplite", "CardBattleGreek11.png", 0, "Warrior", 3, 1, 0, 1, 0);
-        UnitCard greekUnit12 = new UnitCard(11, "Medusa", "CardBattleGreek12.png", 3, "Giant-Killer", 5, 1, 3, 0, 0);
+        bonuses = new String[1];
+        bonuses[0] = "";
+        UnitCard greekUnit9 = new UnitCard(8, "Mythical Greek Hero", "CardBattleGreek9.png", 3, "Hero", 5, bonuses, 0, 4, 0, 4);
+
+        bonuses = new String[2];
+        bonuses[0] = "4;Hero";
+        bonuses[1] = "4;Archer";
+        UnitCard greekUnit10 = new UnitCard(9, "Hippokon", "CardBattleGreek10.png", 0, "Mortal;Calvalry", 3, bonuses, 1, 0, 0, 1);
+
+        bonuses = new String[2];
+        bonuses[0] = "3;Calvalry";
+        bonuses[1] = "1;Mortal";
+        UnitCard greekUnit11 = new UnitCard(10, "Hoplite", "CardBattleGreek11.png", 0, "Mortal;Warrior", 3, bonuses, 1, 0, 1, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "6;Giant";
+        UnitCard greekUnit12 = new UnitCard(11, "Medusa", "CardBattleGreek12.png", 3, "Myth;Giant-Killer", 5, bonuses, 1, 3, 0, 0);
+        
         unitList.add(greekUnit1);
         unitList.add(greekUnit2);
         unitList.add(greekUnit3);
@@ -221,19 +321,57 @@ public class BoardController {
     private static void egyptianUnitSetup() {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
+        String[] bonuses;
         
-        UnitCard egyptianUnit1 = new UnitCard(0, "Pharaoh", "CardBattleEgypt1.png", 2, "Hero", 6, 3, 0, 0, 3);
-        UnitCard egyptianUnit2 = new UnitCard(1, "Scorpion-Man", "CardBattleEgypt2.png", 3, "Giant", 5, 4, 0, 0, 2);
-        UnitCard egyptianUnit3 = new UnitCard(2, "Sphinx", "CardBattleEgypt3.png", 3, "Giant-Killer", 5, 0, 2, 0, 2);
-        UnitCard egyptianUnit4 = new UnitCard(3, "Anubite", "CardBattleEgypt4.png", 3, "Calvalry", 5, 0, 1, 0, 3);
-        UnitCard egyptianUnit5 = new UnitCard(4, "Son of Osiris", "CardBattleEgypt5.png", 3, "Hero", 8, 0, 4, 0, 4);
-        UnitCard egyptianUnit6 = new UnitCard(5, "Chariot Archer", "CardBattleEgypt6.png", 0, "Archer;Calvalry", 3, 0, 0, 1, 1);
-        UnitCard egyptianUnit7 = new UnitCard(6, "Priest", "CardBattleEgypt7.png", 1, "Hero", 4, 2, 0, 0, 4);
-        UnitCard egyptianUnit8 = new UnitCard(7, "Elephant", "CardBattleEgypt8.png", 0, "Giant", 3, 2, 0, 0, 1);
-        UnitCard egyptianUnit9 = new UnitCard(8, "Mummy", "CardBattleEgypt9.png", 3, "Myth", 5, 0, 2, 0, 3);
-        UnitCard egyptianUnit10 = new UnitCard(9, "Spearman", "CardBattleEgypt10.png", 0, "Warrior", 3, 1, 0, 1, 0);
-        UnitCard egyptianUnit11 = new UnitCard(10, "Phoenix", "CardBattleEgypt11.png", 3, "Flyer", 6, 0, 3, 2, 0);
-        UnitCard egyptianUnit12 = new UnitCard(11, "Wadjet", "CardBattleEgypt12.png", 3, "Warrior", 5, 2, 2, 0, 0);
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard egyptianUnit1 = new UnitCard(0, "Pharaoh", "CardBattleEgypt1.png", 2, "Hero", 6, bonuses, 3, 0, 0, 3);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Mortal";
+        UnitCard egyptianUnit2 = new UnitCard(1, "Scorpion-Man", "CardBattleEgypt2.png", 3, "Myth;Giant", 5, bonuses, 4, 0, 0, 2);
+
+        bonuses = new String[1];
+        bonuses[0] = "6;Giant";
+        UnitCard egyptianUnit3 = new UnitCard(2, "Sphinx", "CardBattleEgypt3.png", 3, "Myth;Giant-Killer", 5, bonuses, 0, 2, 0, 2);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Archer";
+        UnitCard egyptianUnit4 = new UnitCard(3, "Anubite", "CardBattleEgypt4.png", 3, "Myth;Calvalry", 5, bonuses, 0, 1, 0, 3);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Myth";
+        UnitCard egyptianUnit5 = new UnitCard(4, "Son of Osiris", "CardBattleEgypt5.png", 3, "Hero", 8, bonuses, 0, 4, 0, 4);
+
+        bonuses = new String[2];
+        bonuses[0] = "3;Flyer";
+        bonuses[1] = "3;Warrior";
+        UnitCard egyptianUnit6 = new UnitCard(5, "Chariot Archer", "CardBattleEgypt6.png", 0, "Mortal;Archer;Calvalry", 3, bonuses, 0, 0, 1, 1);
+
+        bonuses = new String[1];
+        bonuses[0] = "5;Myth";
+        UnitCard egyptianUnit7 = new UnitCard(6, "Priest", "CardBattleEgypt7.png", 1, "Hero", 4, bonuses, 2, 0, 0, 4);
+
+        bonuses = new String[1];
+        bonuses[0] = "2;Mortal";
+        UnitCard egyptianUnit8 = new UnitCard(7, "Elephant", "CardBattleEgypt8.png", 0, "Mortal;Giant", 3, bonuses, 2, 0, 0, 1);
+        
+        bonuses = new String[1];
+        bonuses[0] = "";
+        UnitCard egyptianUnit9 = new UnitCard(8, "Mummy", "CardBattleEgypt9.png", 3, "Myth", 5, bonuses, 0, 2, 0, 3);
+
+        bonuses = new String[2];
+        bonuses[0] = "3;Calvalry";
+        bonuses[1] = "4;Hero";
+        UnitCard egyptianUnit10 = new UnitCard(9, "Spearman", "CardBattleEgypt10.png", 0, "Mortal;Warrior", 3, bonuses, 1, 0, 1, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Giant-Killer";
+        UnitCard egyptianUnit11 = new UnitCard(10, "Phoenix", "CardBattleEgypt11.png", 3, "Myth;Flyer", 6, bonuses, 0, 3, 2, 0);
+
+        bonuses = new String[1];
+        bonuses[0] = "4;Calvalry";
+        UnitCard egyptianUnit12 = new UnitCard(11, "Wadjet", "CardBattleEgypt12.png", 3, "Myth;Warrior", 5, bonuses, 2, 2, 0, 0);
         unitList.add(egyptianUnit1);
         unitList.add(egyptianUnit2);
         unitList.add(egyptianUnit3);
@@ -588,7 +726,7 @@ public class BoardController {
                 norsePlayer.setFood(norsePlayer.getFood() - reqResources);
                 norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
                 norsePlayer.setAge(norsePlayer.getAge()+1);
-                bGUI.changeAgeText("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+                bGUI.changeAgeText("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
             }
             else {
                 cardError.setVisible(true);
@@ -603,7 +741,7 @@ public class BoardController {
                 greekPlayer.setFood(greekPlayer.getFood() - reqResources);
                 greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
                 greekPlayer.setAge(greekPlayer.getAge()+1);
-                bGUI.changeAgeText("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+                bGUI.changeAgeText("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
             }
             else {
                 cardError.setVisible(true);
@@ -618,7 +756,7 @@ public class BoardController {
                 egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
                 egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
                 egyptianPlayer.setAge(egyptianPlayer.getAge()+1);
-                bGUI.changeAgeText("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+                bGUI.changeAgeText("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
             }
             else {
                 cardError.setVisible(true);
@@ -719,11 +857,12 @@ public class BoardController {
                 arr = calculateTerrainResources(str, terrains);
             else
                 arr = calculateResources(str, terrains);
+            arr = checkBuildingBonuses(arr, "Norse");
             norsePlayer.setFood(arr[0] + norsePlayer.getFood());
             norsePlayer.setFavor(arr[1] + norsePlayer.getFavor());
             norsePlayer.setWood(arr[2] + norsePlayer.getWood());
             norsePlayer.setGold(arr[3] + norsePlayer.getGold());
-            bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+            bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
             
         }
         else if(culture.compareTo("Greek") == 0) {
@@ -732,11 +871,12 @@ public class BoardController {
                 arr = calculateTerrainResources(str, terrains);
             else
                 arr = calculateResources(str, terrains);
+            arr = checkBuildingBonuses(arr, "Greek");
             greekPlayer.setFood(arr[0] + greekPlayer.getFood());
             greekPlayer.setFavor(arr[1] + greekPlayer.getFavor());
             greekPlayer.setWood(arr[2] + greekPlayer.getWood());
             greekPlayer.setGold(arr[3] + greekPlayer.getGold());
-            bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+            bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), egyptianPlayer.getVictory());
         }
         else {
             terrains = egyptianPlayer.getEgyptianTerrains();
@@ -744,12 +884,60 @@ public class BoardController {
                 arr = calculateTerrainResources(str, terrains);
             else
                 arr = calculateResources(str, terrains);
+            arr = checkBuildingBonuses(arr, "Egyptian");
             egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
             egyptianPlayer.setFavor(arr[1] + egyptianPlayer.getFavor());
             egyptianPlayer.setWood(arr[2] + egyptianPlayer.getWood());
             egyptianPlayer.setGold(arr[3] + egyptianPlayer.getGold());
-            bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+            bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
         }
+    }
+    
+    private int[] checkBuildingBonuses(int[] arr, String culture) {
+        if(culture.compareTo("Norse") == 0) {
+            if(norsePlayer.isGoldmint() == true) {
+                arr[3] += 2;
+            }
+            if(norsePlayer.isGranary() == true) {
+                arr[0] += 2;
+            }
+            if(norsePlayer.isMonument() == true) {
+                arr[1] += 2;
+            }
+            if(norsePlayer.isWoodworkshop() == true) {
+                arr[2] += 2;
+            }
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            if(greekPlayer.isGoldmint() == true) {
+                arr[3] += 2;
+            }
+            if(greekPlayer.isGranary() == true) {
+                arr[0] += 2;
+            }
+            if(greekPlayer.isMonument() == true) {
+                arr[1] += 2;
+            }
+            if(greekPlayer.isWoodworkshop() == true) {
+                arr[2] += 2;
+            }
+        }
+        else {
+            if(egyptianPlayer.isGoldmint() == true) {
+                arr[3] += 2;
+            }
+            if(egyptianPlayer.isGranary() == true) {
+                arr[0] += 2;
+            }
+            if(egyptianPlayer.isMonument() == true) {
+                arr[1] += 2;
+            }
+            if(egyptianPlayer.isWoodworkshop() == true) {
+                arr[2] += 2;
+            }
+        }
+        
+        return arr;
     }
     
     private int[] calculateTerrainResources(String str, List<TerrainTiles> terrains) {
@@ -794,13 +982,13 @@ public class BoardController {
     
     public void updateResources(String culture) {
         if(culture.compareTo("Norse") == 0) {
-            bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+            bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
         }
         else if(culture.compareTo("Greek") == 0) {
-            bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+            bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
         }
         else {
-            bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+            bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
         }
     }
     
@@ -947,10 +1135,48 @@ public class BoardController {
     }
     
     public void setupAttackCard(String opponent) {
-        attackUnitSelectionGUI ausGUI = new attackUnitSelectionGUI();
-        ausGUI.setVisible(true);
-        ausGUI.setMaxCards(4);
-        ausGUI.setupAttackGUI(playerCulture, opponent);
+        int max = 4;
+        int size = 0;
+        
+        if(opponent.compareTo("Norse") == 0) {
+            size = norsePlayer.getCurrentUnitList().size();
+        }
+        else if(opponent.compareTo("Greek") == 0) {
+            size = greekPlayer.getCurrentUnitList().size();
+        }
+        else {
+            size = egyptianPlayer.getCurrentUnitList().size();
+        }
+        
+        if(size > 0) {
+            aiBattleUnits = getOpponentSelection(opponent, max);
+            attackUnitSelectionGUI ausGUI = new attackUnitSelectionGUI();
+            ausGUI.setVisible(true);
+            if(playerCulture.compareTo("Norse") == 0) {
+                if(norsePlayer.isArmory()) {
+                    max += 1;
+                }
+            }
+            else if(playerCulture.compareTo("Greek") == 0) {
+                if(greekPlayer.isArmory()) {
+                    max += 1;
+                }
+            }
+            else {
+                if(egyptianPlayer.isArmory()) {
+                    max += 1;
+                }
+            }
+            ausGUI.setMaxCards(max);
+            ausGUI.setupAttackGUI(playerCulture, opponent);
+        }
+        else {
+            attackResultsGUI arGUI = new attackResultsGUI();
+            arGUI.setTextInfo("You successfully attacked the enemy.");
+            arGUI.setVisible(true);
+            distributeBattleVictory(playerCulture);
+            initPlayPermCards();
+        }
     }
     
     public void setupBattle(List<UnitCard> selectedUnits, String opponent) {
@@ -960,45 +1186,286 @@ public class BoardController {
         aupGUI.setMaxCards(selectedUnits.size());
     }
     
-    public void commenceBattle(List<UnitCard> selectedUnits, UnitCard playerCard, String opponent) {
-        UnitCard opponentCard = getOpponentCard(opponent);
+    public void commenceBattle(String attacker, List<UnitCard> selectedUnits, UnitCard attackerCard, String defender) {
+        Random rand = new Random(System.nanoTime());
+        UnitCard defenderCard = null;
+        attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
         
-        //compare two cards
-        //do the fighting
-        //unsure: readd winner back to selectedunits, remove the loser?
-        if(selectedUnits.isEmpty()) {
+        if(aiBattleUnits.size() > 0) {
+            int ndx = rand.nextInt(aiBattleUnits.size());
+            defenderCard = aiBattleUnits.get(ndx);
+            aiBattleUnits.remove(ndx);
+        }
+        
+        
+        int attackerDice = compareCardsAttacker(attacker, attackerCard, defenderCard.getType());
+        int defenderDice = compareCardsDefender(attacker, defender, "", defenderCard, attackerCard.getType());
+        
+        int[] attackerRolls = rollDice(attackerDice);
+        int[] defenderRolls = rollDice(defenderDice);
+        int attackerSixes = countSixes(attackerRolls);
+        int defenderSixes = countSixes(defenderRolls);
+        
+        while((attackerSixes == 0 && defenderSixes == 0) || (attackerSixes == defenderSixes)) {
+            attackerRolls = rollDice(attackerDice);
+            defenderRolls = rollDice(defenderDice);
+            attackerSixes = countSixes(attackerRolls);
+            defenderSixes = countSixes(defenderRolls);
+        }
+        
+        String victor = "";
+        if(attackerSixes > defenderSixes) {
+            victor = attacker;
+        }
+        else {
+            victor = defender;
+        }
+        if(victor.compareTo(attacker) == 0) {
+            selectedUnits.add(attackerCard);
+        }
+        else {
+            aiBattleUnits.add(defenderCard);
+        }
+        
+        roundResultsGUI rrGUI = new roundResultsGUI();
+        rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
+        rrGUI.setVisible(true);
+        
+        if(aiBattleUnits.isEmpty()) {
+            aupGUI.setVisible(false);
+            attackResultsGUI arGUI = new attackResultsGUI();
+            arGUI.setTextInfo("You successfully attacked the enemy.");
+            arGUI.setVisible(true);
+            distributeBattleVictory(attacker);
+            addUnitsBacktoList(attacker, selectedUnits);
+            initPlayPermCards();
+        }
+        else if(selectedUnits.isEmpty()) {
+            aupGUI.setVisible(false);
+            attackResultsGUI arGUI = new attackResultsGUI();
+            arGUI.setTextInfo("You unsuccessfully attacked the enemy.");
+            arGUI.setVisible(true);
+            distributeBattleVictory(defender);
+            addUnitsBacktoList(defender, aiBattleUnits);
             initPlayPermCards();
         }
         else {
-            attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
             aupGUI.setVisible(true);
             aupGUI.setMaxCards(selectedUnits.size());
-            aupGUI.setupCards(selectedUnits, opponent);
+            aupGUI.setupCards(selectedUnits, defender);
         }
     }
     
-    private UnitCard getOpponentCard(String opponent) {
+    private List<UnitCard> getOpponentSelection(String opponent, int baseMax) {
+        int max = baseMax;
+        List<UnitCard> opponentUnitList = new ArrayList<>();
+        List<UnitCard> opponentCurrentList = new ArrayList<>();
         Random rand = new Random(System.nanoTime());
-        UnitCard opponentCard;
+        int ndx = 0;
         
         if(opponent.compareTo("Norse") == 0) {
-            List<UnitCard> opponentCardList = norsePlayer.getCurrentUnitList();
-            int ndx = rand.nextInt(opponentCardList.size());
-            System.out.println(ndx);
-            opponentCard = opponentCardList.get(ndx);
+            opponentCurrentList = norsePlayer.getCurrentUnitList();
+            if(norsePlayer.isArmory()) {
+                max += 1;
+            }
+            if(max > opponentCurrentList.size()) {
+                max = opponentCurrentList.size();
+            }
+            for(int i = 0; i < max; i++) {
+                ndx = rand.nextInt(opponentCurrentList.size());
+                opponentUnitList.add(opponentCurrentList.get(ndx));
+                opponentCurrentList.remove(ndx);
+            }
+            norsePlayer.setCurrentUnitList(opponentCurrentList);
         }
         else if(opponent.compareTo("Greek") == 0) {
-            List<UnitCard> opponentCardList = greekPlayer.getCurrentUnitList();
-            int ndx = rand.nextInt(opponentCardList.size());
-            opponentCard = opponentCardList.get(ndx);
+            opponentCurrentList = greekPlayer.getCurrentUnitList();
+            if(greekPlayer.isArmory()) {
+                max += 1;
+            }
+            if(max > opponentCurrentList.size()) {
+                max = opponentCurrentList.size();
+            }
+            for(int i = 0; i < max; i++) {
+                ndx = rand.nextInt(opponentCurrentList.size());
+                opponentUnitList.add(opponentCurrentList.get(ndx));
+                opponentCurrentList.remove(ndx);
+            }
+            greekPlayer.setCurrentUnitList(opponentCurrentList);
         }
         else {
-            List<UnitCard> opponentCardList = egyptianPlayer.getCurrentUnitList();
-            int ndx = rand.nextInt(opponentCardList.size());
-            opponentCard = opponentCardList.get(ndx);
+            opponentCurrentList = egyptianPlayer.getCurrentUnitList();
+            if(egyptianPlayer.isArmory()) {
+                max += 1;
+            }
+            if(max > opponentCurrentList.size()) {
+                max = opponentCurrentList.size();
+            }
+            for(int i = 0; i < max; i++) {
+                ndx = rand.nextInt(opponentCurrentList.size());
+                opponentUnitList.add(opponentCurrentList.get(ndx));
+                opponentCurrentList.remove(ndx);
+            }
+            egyptianPlayer.setCurrentUnitList(opponentCurrentList);
         }
         
-        return opponentCard;
+        return opponentUnitList;
+    }
+    
+    private int compareCardsAttacker(String attacker, UnitCard card, String opponentType) {
+        int dice = card.getNumberofDice();
+        
+        dice += getBonusDice(card, opponentType);
+        
+        
+        return dice;
+    }
+    
+    private int compareCardsDefender(String attacker, String defender, String attackingArea, UnitCard card, String attackerType) {
+        int dice = card.getNumberofDice();
+        boolean siegeWorkshop = false;
+        
+        dice += getBonusDice(card, attackerType);
+        
+        if(attacker.compareTo("Norse") == 0) {
+            if(norsePlayer.isSiegeworkshop()) {
+                siegeWorkshop = true;
+            }
+        }
+        else if(attacker.compareTo("Greek") == 0) {
+            if(greekPlayer.isSiegeworkshop()) {
+                siegeWorkshop = true;
+            }
+        }
+        else {
+            if(egyptianPlayer.isSiegeworkshop()) {
+                siegeWorkshop = true;
+            }
+        }
+        if(siegeWorkshop == false) {
+            if(defender.compareTo("Norse") == 0) {
+                if(attackingArea.compareTo("city") == 0) {
+                    if(norsePlayer.isWall()) {
+                        dice += 2;
+                    }
+                }
+                else if(attackingArea.compareTo("production") == 0) {
+                    if(norsePlayer.isTower()) {
+                        dice += 2;
+                    }
+                }
+            }
+            else if(defender.compareTo("Greek") == 0) {
+                if(attackingArea.compareTo("city") == 0) {
+                    if(greekPlayer.isWall()) {
+                        dice += 2;
+                    }
+                }
+                else if(attackingArea.compareTo("production") == 0) {
+                    if(greekPlayer.isTower()) {
+                        dice += 2;
+                    }
+                }
+            }
+            else {
+                if(attackingArea.compareTo("city") == 0) {
+                    if(egyptianPlayer.isWall()) {
+                        dice += 2;
+                    }
+                }
+                else if(attackingArea.compareTo("production") == 0) {
+                    if(egyptianPlayer.isTower()) {
+                        dice += 2;
+                    }
+                }
+            }
+        }
+        
+        return dice;
+    }
+    
+    private int getBonusDice(UnitCard card, String type) {
+        int dice = 0;
+        String[] bonuses = card.getBonuses();
+
+        for(int i = 0; i < bonuses.length; i++) {
+            String[] arr = bonuses[i].split(";");
+            String[] opponentArr = type.split(";");
+            for(int j = 0; j < opponentArr.length; j++) {
+                if(arr[1].compareTo(opponentArr[j]) == 0) {
+                    dice += Integer.parseInt(arr[0]);
+                }
+            }
+        }
+        
+        return dice;
+    }
+    
+    private int[] rollDice(int diceNumber) {
+        int[] diceRolls = new int[diceNumber];
+        Random rand = new Random(System.nanoTime());
+        
+        for(int i = 0; i < diceNumber; i++) {
+            diceRolls[i] = rand.nextInt(6) + 1;
+        }
+        
+        return diceRolls;
+    }
+    
+    private int countSixes(int[] rolls) {
+        int sixes = 0;
+        
+        for(int i = 0; i < rolls.length; i++) {
+            if(rolls[i] == 6) {
+                sixes++;
+            }
+        }
+        
+        return sixes;
+    }
+    
+    public void tacticalRetreat(List<UnitCard> playerCards, String opponent) {
+        addUnitsBacktoList(playerCulture, playerCards);
+        addUnitsBacktoList(opponent, aiBattleUnits);
+    }
+    
+    private void addUnitsBacktoList(String culture, List<UnitCard> unitList) {
+        if(culture.compareTo("Norse") == 0) {
+            List<UnitCard> currentList = norsePlayer.getCurrentUnitList();
+            for(int i = 0; i < unitList.size(); i++) {
+                currentList.add(unitList.get(i));
+            }
+            norsePlayer.setCurrentUnitList(currentList);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            List<UnitCard> currentList = greekPlayer.getCurrentUnitList();
+            for(int i = 0; i < unitList.size(); i++) {
+                currentList.add(unitList.get(i));
+            }
+            greekPlayer.setCurrentUnitList(currentList);
+        }
+        else {
+            List<UnitCard> currentList = egyptianPlayer.getCurrentUnitList();
+            for(int i = 0; i < unitList.size(); i++) {
+                currentList.add(unitList.get(i));
+            }
+            egyptianPlayer.setCurrentUnitList(currentList);
+        }
+    }
+    
+    private void distributeBattleVictory(String culture) {
+        if(culture.compareTo("Norse") == 0) {
+            norsePlayer.setVictory(norsePlayer.getVictory() + victoryCards[3]);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            greekPlayer.setVictory(greekPlayer.getVictory() + victoryCards[3]);
+        }
+        else {
+            egyptianPlayer.setVictory(egyptianPlayer.getVictory() + victoryCards[3]);
+        }
+        
+        victoryCards[3] = 0;
+        updateResources(culture);
     }
     
     public TerrainTiles getTerrainTile(int index) {

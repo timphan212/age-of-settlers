@@ -392,6 +392,32 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        if(card_1_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_1_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_2_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_2_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_3_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_3_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_4_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_4_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_5_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_5_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_6_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_6_img.getAccessibleContext().getAccessibleName());
+        }
+        else if(card_7_marked.isVisible() == true) {
+            board.removePlayerPermCards(card_7_img.getAccessibleContext().getAccessibleName());
+        }
+        else {
+            board.removePlayerPermCards(card_1_img.getAccessibleContext().getAccessibleName());
+        }
+        
         this.setVisible(false);
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed

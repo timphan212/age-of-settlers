@@ -371,8 +371,9 @@ public class buildingGUI extends javax.swing.JFrame {
                 norsePlayer.setGreattemple(true);
             }
             else {
-                if(norsePlayer.isWonder() == true) {
+                if(norsePlayer.isWonder() == true && norsePlayer.getAge() != 3) {
                     return false;
+                    //go to end game
                 }
                 
                 norsePlayer.setWonder(true);
@@ -493,8 +494,9 @@ public class buildingGUI extends javax.swing.JFrame {
                 greekPlayer.setGreattemple(true);
             }
             else {
-                if(greekPlayer.isWonder() == true) {
+                if(greekPlayer.isWonder() == true && greekPlayer.getAge() != 3) {
                     return false;
+                    //go to end game
                 }
                 
                 greekPlayer.setWonder(true);
@@ -615,11 +617,12 @@ public class buildingGUI extends javax.swing.JFrame {
                 egyptianPlayer.setGreattemple(true);
             }
             else {
-                if(egyptianPlayer.isWonder() == true) {
+                if(egyptianPlayer.isWonder() == true && egyptianPlayer.getAge() != 3) {
                     return false;
                 }
                 
                 egyptianPlayer.setWonder(true);
+                //go to end game
             }
             
             egyptianPlayer.setFood(egyptianPlayer.getFood() - food);

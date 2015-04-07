@@ -377,7 +377,7 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
         
         selectedUnits.remove(selectedUnits.indexOf(playerCard));
         this.setVisible(false);
-        board.commenceBattle(selectedUnits, playerCard, this.enemy);
+        board.commenceBattle(board.getPlayerCulture(), selectedUnits, playerCard, this.enemy);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private int getCardIndex() {
@@ -409,6 +409,7 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
     }
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        board.tacticalRetreat(selectedUnits, enemy);
         this.setVisible(false);
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
