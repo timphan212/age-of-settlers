@@ -181,7 +181,6 @@ public class QuarryGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private boolean checkResources(String culture, String building, int food, int favor, int wood, int gold) {                
-        BoardController board = new BoardController();
 
         if(culture.compareTo("Norse") == 0) {
             Norse norsePlayer = Norse.getInstance();
