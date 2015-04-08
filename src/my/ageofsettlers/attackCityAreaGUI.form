@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="WallBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="HouseBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="TowerBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="StorehouseBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MarketBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ArmoryBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="QuarryBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MonumentBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="GranaryBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="GoldMintBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="WoodworkshopBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="SiegeEngineBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="GreatTempleBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="WonderBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="71" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="HouseBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="WallBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="TowerBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="StorehouseBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="MarketBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="ArmoryBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="QuarryBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="MonumentBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="GranaryBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="GoldMintBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="WoodworkshopBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="SiegeEngineBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="GreatTempleBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="WonderBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Color(255,255,255,1)" type="code"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Select x buildings to destroy:"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="HouseBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="House"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="WallBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wall"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="TowerBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tower"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="StorehouseBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Storehouse"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="MarketBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Market"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ArmoryBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Armory"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="QuarryBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quarry"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="MonumentBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monument"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="GranaryBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Granary"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="GoldMintBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gold Mint"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="WoodworkshopBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wood Workshop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="SiegeEngineBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Siege Engine Workshop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="GreatTempleBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Great Temple"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="WonderBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wonder"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Confirm"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

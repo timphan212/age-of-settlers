@@ -377,7 +377,7 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
         
         selectedUnits.remove(selectedUnits.indexOf(playerCard));
         this.setVisible(false);
-        board.commenceBattle(board.getPlayerCulture(), selectedUnits, playerCard, this.enemy);
+        board.commenceBattle(board.getPlayerCulture(), selectedUnits, playerCard, this.enemy, this.attackingArea);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private int getCardIndex() {
@@ -436,7 +436,10 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
     public void setMaxCards(int maxCards) {
         this.maxCards = maxCards;
     }
-    
+
+    public void setAttackingArea(String attackingArea) {
+        this.attackingArea = attackingArea;
+    }
     
     /**
      * @param args the command line arguments
@@ -477,6 +480,7 @@ public class attackUnitPlayGUI extends javax.swing.JFrame {
     private String enemy;
     private int maxCards = 0;
     private BoardController board;
+    private String attackingArea;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel card_1_img;
     private javax.swing.JLabel card_1_marked;

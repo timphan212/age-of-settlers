@@ -7868,6 +7868,7 @@ public class BoardGUI extends javax.swing.JFrame {
                         if(selectedTerrain.getTerrainType().compareTo(label.getAccessibleContext().getAccessibleDescription()) == 0) {
                             label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + selectedTerrain.getFileName())));
                             label.getAccessibleContext().setAccessibleDescription("");
+                            label.getAccessibleContext().setAccessibleName(selectedTerrain.getFileName());
                             return;
                         }
                     }
@@ -8001,6 +8002,36 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
     
+    public void setupBuildingRemovalIcon(String culture, List<String> building) {
+        if(culture.compareTo("Norse") == 0) {
+            setBuildingRemovalIcon(norseBuildingPanel, building);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            setBuildingRemovalIcon(greekBuildingPanel, building);
+        }
+        else {
+            setBuildingRemovalIcon(egyptianBuildingPanel, building);
+        }
+    }
+    
+    private void setBuildingRemovalIcon(javax.swing.JPanel buildingPanel, List<String> building) {
+        Component[] buildComponents = buildingPanel.getComponents();
+        
+        for(int i = 0; i < building.size(); i++) {
+            for (Component buildComponent : buildComponents) {
+                if (buildComponent instanceof javax.swing.JPanel) {
+                    javax.swing.JPanel panel = (javax.swing.JPanel) buildComponent;
+                    javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                    if(label.getAccessibleContext().getAccessibleName().compareTo(building.get(i)) == 0) {
+                        label.setIcon(null);
+                        label.getAccessibleContext().setAccessibleName("");
+                        break;
+                    }
+                } 
+            }
+        }
+    }
+    
     public void selectAiExploreTerrain(javax.swing.JPanel panel, String culture) {
         if(culture.compareTo("Norse") == 0) {
             Norse norsePlayer = Norse.getInstance();
@@ -8013,6 +8044,36 @@ public class BoardGUI extends javax.swing.JFrame {
         else {
             Egyptian egyptianPlayer = Egyptian.getInstance();
             boardController.findAITerrain(egyptTerrain.getComponents(), panel.getComponents(), egyptianPlayer.getEgyptianTerrains());
+        }
+    }
+    
+    public void setupRemoveTerrainTile(String culture, TerrainTiles terrain) {
+        if(culture.compareTo("Norse") == 0) {
+            setRemovalTerrainTile(norseTerrain, terrain);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            setRemovalTerrainTile(greekTerrain, terrain);
+        }
+        else {
+            setRemovalTerrainTile(egyptTerrain, terrain);
+        }
+    }
+    
+    private void setRemovalTerrainTile(javax.swing.JPanel terrainPanel, TerrainTiles terrain) {
+        Component[] terrainComponents = terrainPanel.getComponents();
+
+        for (Component terrainComponent : terrainComponents) {
+            if (terrainComponent instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                System.out.println(label.getAccessibleContext().getAccessibleName());
+                if(label.getAccessibleContext().getAccessibleName().compareTo(terrain.getFileName()) == 0) {
+                    label.setIcon(null);
+                    label.getAccessibleContext().setAccessibleName("");
+                    label.getAccessibleContext().setAccessibleDescription(terrain.getTerrainType());
+                    break;
+                }
+            } 
         }
     }
     

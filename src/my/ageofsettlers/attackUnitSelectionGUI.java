@@ -509,7 +509,7 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
         }
         
         this.setVisible(false);
-        board.setupBattle(selectedUnits, this.opponent);
+        board.setupBattle(selectedUnits, this.opponent, this.attackingArea);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private List<Integer> getCardIndexes() {
@@ -596,6 +596,10 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
             }
         }
     }
+
+    public void setAttackingArea(String attackingArea) {
+        this.attackingArea = attackingArea;
+    }
     
     /**
      * @param args the command line arguments
@@ -637,6 +641,7 @@ public class attackUnitSelectionGUI extends javax.swing.JFrame {
     private int maxCards = 0;
     private BoardController board;
     private String opponent;
+    private String attackingArea;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
