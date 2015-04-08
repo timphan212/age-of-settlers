@@ -563,30 +563,39 @@ public class BoardController {
         }
         
         if(terrain.getTerrainType().compareTo("fertile") == 0) {
-            return this.addTerrainToList(0, arr, cultureTerrain, terrain);
+            return this.addTerrainToList(playerCulture, 0, arr, cultureTerrain, terrain);
         }
         else if(terrain.getTerrainType().compareTo("forest") == 0) {
-            return this.addTerrainToList(1, arr, cultureTerrain, terrain);
+            return this.addTerrainToList(playerCulture, 1, arr, cultureTerrain, terrain);
         }
         else if(terrain.getTerrainType().compareTo("hill") == 0) {
-            return this.addTerrainToList(2, arr, cultureTerrain, terrain);
+            return this.addTerrainToList(playerCulture, 2, arr, cultureTerrain, terrain);
         }
         else if(terrain.getTerrainType().compareTo("mountain") == 0) {
-            return this.addTerrainToList(3, arr, cultureTerrain, terrain);
+            return this.addTerrainToList(playerCulture, 3, arr, cultureTerrain, terrain);
         }
         else if(terrain.getTerrainType().compareTo("desert") == 0) {
-            return this.addTerrainToList(4, arr, cultureTerrain, terrain);
+            return this.addTerrainToList(playerCulture, 4, arr, cultureTerrain, terrain);
         }
         else if(terrain.getTerrainType().compareTo("swamp") == 0) {
-            return this.addTerrainToList(5, arr, cultureTerrain, terrain);
+            return this.addTerrainToList(playerCulture, 5, arr, cultureTerrain, terrain);
         }
         
         return false;
     }
     
-    private boolean addTerrainToList(int index, int[] arr, List<TerrainTiles> cultureTerrain, TerrainTiles terrain) {
+    private boolean addTerrainToList(String culture, int index, int[] arr, List<TerrainTiles> cultureTerrain, TerrainTiles terrain) {
         if(arr[index] > 0) {
             arr[index]--;
+            if(culture.compareTo("Norse") == 0) {
+                norsePlayer.setMaxTerrains(arr);
+            }
+            else if(culture.compareTo("Greek") == 0) {
+                greekPlayer.setMaxTerrainGreek(arr);
+            }
+            else {
+                egyptianPlayer.setMaxTerrainEgyptian(arr);
+            }
             cultureTerrain.add(terrain);
             return true;
         }
@@ -607,24 +616,24 @@ public class BoardController {
 
         for(int i = 0; i < 2; i++) {
             if(aiPlayers.get(i).compareTo("Norse") == 0) {
-                findAITerrain(norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
+                findAITerrain(aiPlayers.get(i), norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
             }
             else if(aiPlayers.get(i).compareTo("Greek") == 0) {
-                findAITerrain(greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
+                findAITerrain(aiPlayers.get(i), greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
             }
             else if(aiPlayers.get(i).compareTo("Egyptian") == 0) {
-                findAITerrain(egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
+                findAITerrain(aiPlayers.get(i), egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
         for(int j = 1; j >= 0; j--) {
             if(aiPlayers.get(j).compareTo("Norse") == 0) {
-                findAITerrain(norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
+                findAITerrain(aiPlayers.get(j), norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
             }
             else if(aiPlayers.get(j).compareTo("Greek") == 0) {
-                findAITerrain(greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
+                findAITerrain(aiPlayers.get(j), greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
             }
             else if(aiPlayers.get(j).compareTo("Egyptian") == 0) {
-                findAITerrain(egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
+                findAITerrain(aiPlayers.get(j), egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
     }
@@ -648,7 +657,7 @@ public class BoardController {
         return aiList;
     }
     
-    public void findAITerrain(Component[] boardTerrains, Component[] tabTerrains, List<TerrainTiles> cultureTerrains) {
+    public void findAITerrain(String culture, Component[] boardTerrains, Component[] tabTerrains, List<TerrainTiles> cultureTerrains) {
         for(Component tabTerrain : tabTerrains) {
             if(tabTerrain instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) tabTerrain;
@@ -660,14 +669,90 @@ public class BoardController {
                         javax.swing.JLabel label2 = (javax.swing.JLabel) panel2.getComponent(0);
                         if(label2.getAccessibleContext().getAccessibleDescription().compareTo(tabTile.getTerrainType()) == 0) {
                             cultureTerrains.add(tabTile);
+                            decrementMaxTerrains(culture, tabTile);
                             label.setVisible(false);
                             label2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + tabTile.getFileName())));
                             label2.getAccessibleContext().setAccessibleDescription("");
+                            label2.getAccessibleContext().setAccessibleName(tabTile.getFileName());
                             return;
                         }
                     }
                 }
             }
+        }
+    }
+    
+    private void decrementMaxTerrains(String culture, TerrainTiles terrain) {
+        String type = terrain.getTerrainType();
+       
+        if(culture.compareTo("Norse") == 0) {
+            int[] arr = norsePlayer.getMaxTerrains();
+            
+            if(type.compareTo("fertile") == 0) {
+                arr[0] -= 1;
+            }
+            else if(type.compareTo("forest") == 0) {
+                arr[1] -= 1;
+            }
+            else if(type.compareTo("hill") == 0) {
+                arr[2] -= 1;
+            }
+            else if(type.compareTo("mountain") == 0) {
+                arr[3] -= 1;
+            }
+            else if(type.compareTo("desert") == 0) {
+                arr[4] -= 1;
+            }
+            else if(type.compareTo("swamp") == 0) {
+                arr[5] -= 1;
+            }
+            norsePlayer.setMaxTerrains(arr);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            int[] arr = greekPlayer.getMaxTerrains();
+            
+            if(type.compareTo("fertile") == 0) {
+                arr[0] -= 1;
+            }
+            else if(type.compareTo("forest") == 0) {
+                arr[1] -= 1;
+            }
+            else if(type.compareTo("hill") == 0) {
+                arr[2] -= 1;
+            }
+            else if(type.compareTo("mountain") == 0) {
+                arr[3] -= 1;
+            }
+            else if(type.compareTo("desert") == 0) {
+                arr[4] -= 1;
+            }
+            else if(type.compareTo("swamp") == 0) {
+                arr[5] -= 1;
+            }
+            greekPlayer.setMaxTerrainGreek(arr);
+        }
+        else {
+            int[] arr = egyptianPlayer.getMaxTerrains();
+            
+            if(type.compareTo("fertile") == 0) {
+                arr[0] -= 1;
+            }
+            else if(type.compareTo("forest") == 0) {
+                arr[1] -= 1;
+            }
+            else if(type.compareTo("hill") == 0) {
+                arr[2] -= 1;
+            }
+            else if(type.compareTo("mountain") == 0) {
+                arr[3] -= 1;
+            }
+            else if(type.compareTo("desert") == 0) {
+                arr[4] -= 1;
+            }
+            else if(type.compareTo("swamp") == 0) {
+                arr[5] -= 1;
+            }
+            egyptianPlayer.setMaxTerrainEgyptian(arr);
         }
     }
     
@@ -1501,7 +1586,6 @@ public class BoardController {
     }
     
     public void removeBuildingTiles(String culture, List<String> buildings) {
-        System.out.println(buildings.get(0));
         removeBuildings(culture, buildings);
         bGUI.setupBuildingRemovalIcon(culture, buildings);
     }
@@ -1680,6 +1764,7 @@ public class BoardController {
             currentTerrainTiles.remove(terrainNdx);
             norsePlayer.setNorseTerrains(currentTerrainTiles);
             bGUI.setupRemoveTerrainTile(defender, selectedTerrain);
+            checkRemovedTerrainTile(defender, selectedTerrain);
         }
         else if(defender.compareTo("Greek") == 0) {
             currentTerrainTiles = greekPlayer.getGreekTerrains();
@@ -1687,6 +1772,7 @@ public class BoardController {
             currentTerrainTiles.remove(terrainNdx);
             greekPlayer.setGreekTerrains(currentTerrainTiles);
             bGUI.setupRemoveTerrainTile(defender, selectedTerrain);
+            checkRemovedTerrainTile(defender, selectedTerrain);
         }
         else {
             currentTerrainTiles = egyptianPlayer.getEgyptianTerrains();
@@ -1694,9 +1780,174 @@ public class BoardController {
             currentTerrainTiles.remove(terrainNdx);
             egyptianPlayer.setEgyptianTerrains(currentTerrainTiles);
             bGUI.setupRemoveTerrainTile(defender, selectedTerrain);
+            checkRemovedTerrainTile(defender, selectedTerrain);
+        }
+        
+        if(attacker.compareTo("Norse") == 0) {
+            boolean usable = checkTerrainUsable(attacker, norsePlayer.getMaxTerrains(), selectedTerrain);
+            
+            if(usable == true) {
+                List<TerrainTiles> currentTerrains = norsePlayer.getNorseTerrains();
+                currentTerrains.add(selectedTerrain);
+                norsePlayer.setNorseTerrains(currentTerrains);
+            }
+        }
+        else if(attacker.compareTo("Greek") == 0) {
+            boolean usable = checkTerrainUsable(attacker, greekPlayer.getMaxTerrains(), selectedTerrain);
+            
+            if(usable == true) {
+                List<TerrainTiles> currentTerrains = greekPlayer.getGreekTerrains();
+                currentTerrains.add(selectedTerrain);
+                greekPlayer.setGreekTerrains(currentTerrains);
+            }
+        }
+        else {
+            boolean usable = checkTerrainUsable(attacker, egyptianPlayer.getMaxTerrains(), selectedTerrain);
+            
+            if(usable == true) {
+                List<TerrainTiles> currentTerrains = egyptianPlayer.getEgyptianTerrains();
+                currentTerrains.add(selectedTerrain);
+                egyptianPlayer.setEgyptianTerrains(currentTerrains);
+            }
         }
         
         initPlayPermCards();
+    }
+    
+    private boolean checkTerrainUsable(String attacker, int[] arr, TerrainTiles selectedTerrain) {
+        String type = selectedTerrain.getTerrainType();
+        
+        if(type.compareTo("fertile") == 0) {
+                if(arr[0] > 0) {
+                    arr[0]--;
+                    setMaxArray(attacker, arr);
+                    return true;
+                }
+            }
+            else if(type.compareTo("forest") == 0) {
+                if(arr[1] > 0) {
+                    arr[1]--;
+                    setMaxArray(attacker, arr);
+                    return true;
+                }
+            }
+            else if(type.compareTo("hill") == 0) {
+                if(arr[2] > 0) {
+                    arr[2]--;
+                    setMaxArray(attacker, arr);
+                    return true;
+                }
+            }
+            else if(type.compareTo("mountain") == 0) {
+                if(arr[3] > 0) {
+                    arr[3]--;
+                    setMaxArray(attacker, arr);
+                    return true;
+                }
+            }
+            else if(type.compareTo("desert") == 0) {
+                if(arr[4] > 0) {
+                    arr[4]--;
+                    setMaxArray(attacker, arr);
+                    return true;
+                }
+            }
+            else if(type.compareTo("swamp") == 0) {
+                if(arr[5] > 0) {
+                    arr[5]--;
+                    setMaxArray(attacker, arr);
+                    return true;
+                }
+            }
+        return false;
+    }
+    
+    private void setMaxArray(String attacker, int[] arr) {
+        if(attacker.compareTo("Norse") == 0) {
+            norsePlayer.setMaxTerrains(arr);
+        }
+        else if(attacker.compareTo("Greek") == 0) {
+            greekPlayer.setMaxTerrainGreek(arr);
+        }
+        else {
+            egyptianPlayer.setMaxTerrainEgyptian(arr);
+        }
+    }
+    
+    private void checkRemovedTerrainTile(String defender, TerrainTiles selectedTerrain) {
+        String type = selectedTerrain.getTerrainType();
+       
+        if(defender.compareTo("Norse") == 0) {
+            int[] arr = norsePlayer.getMaxTerrains();
+            
+            if(type.compareTo("fertile") == 0) {
+                arr[0] += 1;
+            }
+            else if(type.compareTo("forest") == 0) {
+                arr[1] += 1;
+            }
+            else if(type.compareTo("hill") == 0) {
+                arr[2] += 1;
+            }
+            else if(type.compareTo("mountain") == 0) {
+                arr[3] += 1;
+            }
+            else if(type.compareTo("desert") == 0) {
+                arr[4] += 1;
+            }
+            else if(type.compareTo("swamp") == 0) {
+                arr[5] += 1;
+            }
+            norsePlayer.setMaxTerrains(arr);
+        }
+        else if(defender.compareTo("Greek") == 0) {
+            int[] arr = greekPlayer.getMaxTerrains();
+            
+            if(type.compareTo("fertile") == 0) {
+                arr[0] += 1;
+            }
+            else if(type.compareTo("forest") == 0) {
+                arr[1] += 1;
+            }
+            else if(type.compareTo("hill") == 0) {
+                arr[2] += 1;
+            }
+            else if(type.compareTo("mountain") == 0) {
+                arr[3] += 1;
+            }
+            else if(type.compareTo("desert") == 0) {
+                arr[4] += 1;
+            }
+            else if(type.compareTo("swamp") == 0) {
+                arr[5] += 1;
+            }
+            greekPlayer.setMaxTerrainGreek(arr);
+        }
+        else {
+            int[] arr = egyptianPlayer.getMaxTerrains();
+            
+            if(type.compareTo("fertile") == 0) {
+                arr[0] += 1;
+            }
+            else if(type.compareTo("forest") == 0) {
+                arr[1] += 1;
+            }
+            else if(type.compareTo("hill") == 0) {
+                arr[2] += 1;
+            }
+            else if(type.compareTo("mountain") == 0) {
+                arr[3] += 1;
+            }
+            else if(type.compareTo("desert") == 0) {
+                arr[4] += 1;
+            }
+            else if(type.compareTo("swamp") == 0) {
+                arr[5] += 1;
+            }
+            egyptianPlayer.setMaxTerrainEgyptian(arr);
+        }
+       
+        
     }
     
     public TerrainTiles getTerrainTile(int index) {

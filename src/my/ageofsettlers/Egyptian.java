@@ -14,7 +14,7 @@ import java.util.List;
  * @author Tim
  */
 public class Egyptian {
-    private final int[] maxTerrainEgyptian = {5, 1, 2, 0, 6, 2};
+    private int[] maxTerrainEgyptian = {5, 1, 2, 0, 6, 2};
     private List<TerrainTiles> egyptianTerrains = new ArrayList<>();
     private static Egyptian instance = null;
     private int food = 4;
@@ -234,5 +234,9 @@ public class Egyptian {
 
     public void setCurrentUnitList(List<UnitCard> currentUnitList) {
         this.currentUnitList = currentUnitList;
+    }
+
+    public void setMaxTerrainEgyptian(int[] maxTerrainEgyptian) {
+        this.maxTerrainEgyptian = maxTerrainEgyptian;
     }
 }

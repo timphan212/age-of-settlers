@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class Greek {
     private List<TerrainTiles> greekTerrains = new ArrayList<>(); 
-    private final int[] maxTerrainGreek = {3, 2, 8, 1, 1, 1};
+    private int[] maxTerrainGreek = {3, 2, 8, 1, 1, 1};
     private static Greek instance = null;
     private int food = 4;
     private int favor = 4;
@@ -234,5 +234,9 @@ public class Greek {
 
     public void setCurrentUnitList(List<UnitCard> currentUnitList) {
         this.currentUnitList = currentUnitList;
+    }
+
+    public void setMaxTerrainGreek(int[] maxTerrainGreek) {
+        this.maxTerrainGreek = maxTerrainGreek;
     }
 }

@@ -55,7 +55,6 @@ public class BoardGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         norseBoard = new javax.swing.JPanel();
         norseTerrain = new javax.swing.JPanel();
@@ -847,8 +846,6 @@ public class BoardGUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
 
-        jButton2.setText("jButton2");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 600));
 
@@ -864,11 +861,15 @@ public class BoardGUI extends javax.swing.JFrame {
         fertile_n1.setLayout(fertile_n1Layout);
         fertile_n1Layout.setHorizontalGroup(
             fertile_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(fertile_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
         );
         fertile_n1Layout.setVerticalGroup(
             fertile_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+            .addGap(0, 90, Short.MAX_VALUE)
+            .addGroup(fertile_n1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(fertile_n1_img, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
         );
 
         fertile_n1_img.getAccessibleContext().setAccessibleDescription("fertile");
@@ -7885,8 +7886,8 @@ public class BoardGUI extends javax.swing.JFrame {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
                 TerrainTiles terrainSetup = terrainList.get(count);
-                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainSetup.getFileName())));
                 label.getAccessibleContext().setAccessibleDescription(Integer.toString(terrainSetup.getIndex()));
+                label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainSetup.getFileName())));
             } 
             else {
                 count--;
@@ -8035,15 +8036,15 @@ public class BoardGUI extends javax.swing.JFrame {
     public void selectAiExploreTerrain(javax.swing.JPanel panel, String culture) {
         if(culture.compareTo("Norse") == 0) {
             Norse norsePlayer = Norse.getInstance();
-            boardController.findAITerrain(norseTerrain.getComponents(), panel.getComponents(), norsePlayer.getNorseTerrains());
+            boardController.findAITerrain("Norse", norseTerrain.getComponents(), panel.getComponents(), norsePlayer.getNorseTerrains());
         }
         else if(culture.compareTo("Greek") == 0) {
             Greek greekPlayer = Greek.getInstance();
-            boardController.findAITerrain(greekTerrain.getComponents(), panel.getComponents(), greekPlayer.getGreekTerrains());
+            boardController.findAITerrain("Greek", greekTerrain.getComponents(), panel.getComponents(), greekPlayer.getGreekTerrains());
         }
         else {
             Egyptian egyptianPlayer = Egyptian.getInstance();
-            boardController.findAITerrain(egyptTerrain.getComponents(), panel.getComponents(), egyptianPlayer.getEgyptianTerrains());
+            boardController.findAITerrain("Egyptian", egyptTerrain.getComponents(), panel.getComponents(), egyptianPlayer.getEgyptianTerrains());
         }
     }
     
@@ -8066,7 +8067,6 @@ public class BoardGUI extends javax.swing.JFrame {
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                System.out.println(label.getAccessibleContext().getAccessibleName());
                 if(label.getAccessibleContext().getAccessibleName().compareTo(terrain.getFileName()) == 0) {
                     label.setIcon(null);
                     label.getAccessibleContext().setAccessibleName("");
@@ -8074,6 +8074,34 @@ public class BoardGUI extends javax.swing.JFrame {
                     break;
                 }
             } 
+        }
+    }
+    
+    public void setupSpecificTerrainTile(String culture, TerrainTiles terrain) {
+        if(culture.compareTo("Norse") == 0) {
+            setSpecificTerrainTile(norseTerrain, terrain);
+        }
+        else if(culture.compareTo("Greek") == 0) {
+            setSpecificTerrainTile(greekTerrain, terrain);
+        }
+        else {
+            setSpecificTerrainTile(egyptTerrain, terrain);
+        }
+    }
+    
+    private void setSpecificTerrainTile(javax.swing.JPanel terrainPanel, TerrainTiles terrain) {
+        Component[] terrainComponents = terrainPanel.getComponents();
+        
+        for(Component terrainComponent: terrainComponents) {
+            if (terrainComponent instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+                if(label.getAccessibleContext().getAccessibleDescription().compareTo(terrain.getTerrainType()) == 0) {
+                    label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrain.getFileName())));
+                    label.getAccessibleContext().setAccessibleDescription("");
+                    label.getAccessibleContext().setAccessibleName(terrain.getFileName());
+                }
+            }
         }
     }
     
@@ -8416,7 +8444,6 @@ public class BoardGUI extends javax.swing.JFrame {
     private javax.swing.JPanel hills_n3;
     private javax.swing.JLabel hills_n3_img;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;

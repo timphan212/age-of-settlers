@@ -14,7 +14,7 @@ import java.util.List;
  * @author Tim
  */
 public class Norse {
-    private final int[] maxTerrainNorse = {3, 4, 3, 4, 1, 1};
+    private int[] maxTerrainNorse = {3, 4, 3, 4, 1, 1};
     private List<TerrainTiles> norseTerrains = new ArrayList<>();
     private static Norse instance = null;
     private int food = 4;
@@ -60,6 +60,10 @@ public class Norse {
         return maxTerrainNorse;
     }
 
+    public void setMaxTerrains(int[] maxTerrains) {
+        this.maxTerrainNorse = maxTerrains;
+    }
+    
     public int getFood() {
         return food;
     }
@@ -235,4 +239,6 @@ public class Norse {
     public void setCurrentUnitList(List<UnitCard> currentUnitList) {
         this.currentUnitList = currentUnitList;
     }
+    
+    
 }
