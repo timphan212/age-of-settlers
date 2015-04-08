@@ -176,7 +176,7 @@ public class BoardController {
         bonuses = new String[2];
         bonuses[0] = "4;Hero";
         bonuses[1] = "4;Archer";
-        UnitCard norseUnit3 = new UnitCard(2, "Jarl", "CardBattleNorse3.png", 0, "Mortal;Calvalry", 10, bonuses, 1, 0, 0, 1);
+        UnitCard norseUnit3 = new UnitCard(2, "Jarl", "CardBattleNorse3.png", 0, "Mortal;Calvalry", 3, bonuses, 1, 0, 0, 1);
         
         bonuses = new String[1];
         bonuses[0] = "4;Archer";
@@ -1781,29 +1781,32 @@ public class BoardController {
             egyptianPlayer.setEgyptianTerrains(currentTerrainTiles);
             bGUI.setupRemoveTerrainTile(defender, selectedTerrain);
             checkRemovedTerrainTile(defender, selectedTerrain);
+            bGUI.setupSpecificTerrainTile(attacker, selectedTerrain);
         }
         
         if(attacker.compareTo("Norse") == 0) {
             boolean usable = checkTerrainUsable(attacker, norsePlayer.getMaxTerrains(), selectedTerrain);
-            
+            System.out.println(usable);
             if(usable == true) {
                 List<TerrainTiles> currentTerrains = norsePlayer.getNorseTerrains();
                 currentTerrains.add(selectedTerrain);
                 norsePlayer.setNorseTerrains(currentTerrains);
+                bGUI.setupSpecificTerrainTile(attacker, selectedTerrain);
             }
         }
         else if(attacker.compareTo("Greek") == 0) {
             boolean usable = checkTerrainUsable(attacker, greekPlayer.getMaxTerrains(), selectedTerrain);
-            
+            System.out.println(usable);
             if(usable == true) {
                 List<TerrainTiles> currentTerrains = greekPlayer.getGreekTerrains();
                 currentTerrains.add(selectedTerrain);
                 greekPlayer.setGreekTerrains(currentTerrains);
+                bGUI.setupSpecificTerrainTile(attacker, selectedTerrain);
             }
         }
         else {
             boolean usable = checkTerrainUsable(attacker, egyptianPlayer.getMaxTerrains(), selectedTerrain);
-            
+            System.out.println(usable);
             if(usable == true) {
                 List<TerrainTiles> currentTerrains = egyptianPlayer.getEgyptianTerrains();
                 currentTerrains.add(selectedTerrain);

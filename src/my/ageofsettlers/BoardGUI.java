@@ -8091,7 +8091,7 @@ public class BoardGUI extends javax.swing.JFrame {
     
     private void setSpecificTerrainTile(javax.swing.JPanel terrainPanel, TerrainTiles terrain) {
         Component[] terrainComponents = terrainPanel.getComponents();
-        
+        System.out.println(terrain.getFileName());
         for(Component terrainComponent: terrainComponents) {
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
