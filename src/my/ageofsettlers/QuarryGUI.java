@@ -15,9 +15,12 @@ public class QuarryGUI extends javax.swing.JFrame {
      * Creates new form QuarryGUI
      */
     public QuarryGUI() {
+        this.board = BoardController.getInstance();
+        this.playerCulture = board.getPlayerCulture();
         initComponents();
     }
     private BoardController board;
+    private String playerCulture;
     private String culture;
     private String building;
     private int food;
@@ -139,18 +142,42 @@ public class QuarryGUI extends javax.swing.JFrame {
         if(gold > 0)
             gold--;
         boolean build = checkResources(culture, building, food, favor, wood, gold);
+        if(build == true) {
+            this.setVisible(false);
+            board.initPlayPermCards();
+        }
+        else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         if(wood >0)
             wood--;
-        boolean build = checkResources(culture, building, food, favor, wood, gold);        
+        boolean build = checkResources(culture, building, food, favor, wood, gold); 
+        if(build == true) {
+            this.setVisible(false);
+            board.initPlayPermCards();
+        }
+        else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if(favor >0)
             favor--;
         boolean build = checkResources(culture, building, food, favor, wood, gold);        
+        if(build == true) {
+            this.setVisible(false);
+            board.initPlayPermCards();
+        }
+        else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private boolean checkResources(String culture, String building, int food, int favor, int wood, int gold) {                
