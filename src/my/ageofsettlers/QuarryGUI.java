@@ -17,6 +17,7 @@ public class QuarryGUI extends javax.swing.JFrame {
     public QuarryGUI() {
         initComponents();
     }
+    private BoardController board;
     private String culture;
     private String building;
     private int food;
@@ -123,6 +124,14 @@ public class QuarryGUI extends javax.swing.JFrame {
        if(food > 0)
            food--;
         boolean build = checkResources(culture, building, food, favor, wood, gold);
+        if(build == true) {
+            this.setVisible(false);
+            board.initPlayPermCards();
+        }
+        else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+        }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
