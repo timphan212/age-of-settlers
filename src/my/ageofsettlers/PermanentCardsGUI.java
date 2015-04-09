@@ -62,6 +62,27 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
         recruitMarked.setVisible(false);
         PermanentRecruit_img = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        rac1 = new javax.swing.JPanel();
+        randomActionCardAttack_img = new javax.swing.JLabel();
+        attackMarked.setVisible(false);
+        rac2 = new javax.swing.JPanel();
+        randomActionCardBuild_img = new javax.swing.JLabel();
+        buildMarked.setVisible(false);
+        rac3 = new javax.swing.JPanel();
+        randomActionCardGather_img = new javax.swing.JLabel();
+        buildMarked.setVisible(false);
+        rac4 = new javax.swing.JPanel();
+        randomActionCardExplore_img = new javax.swing.JLabel();
+        buildMarked.setVisible(false);
+        rac5 = new javax.swing.JPanel();
+        randomActionCardNextAge_img = new javax.swing.JLabel();
+        buildMarked.setVisible(false);
+        rac6 = new javax.swing.JPanel();
+        randomActionCardTrade_img = new javax.swing.JLabel();
+        buildMarked.setVisible(false);
+        rac7 = new javax.swing.JPanel();
+        randomActionCardRecruit_img = new javax.swing.JLabel();
+        buildMarked.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -157,50 +178,118 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             }
         });
 
+        rac1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac1.add(randomActionCardAttack_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        rac2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac2.add(randomActionCardBuild_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        rac3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac3.add(randomActionCardGather_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        rac4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac4.add(randomActionCardExplore_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        rac5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac5.add(randomActionCardNextAge_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        rac6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac6.add(randomActionCardTrade_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        rac7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac7.add(randomActionCardRecruit_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PermanentAttack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PermanentBuild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PermanentGather, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(PermanentExplore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PermanentAttack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rac1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PermanentNextAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(rac2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PermanentBuild, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PermanentTrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PermanentGather, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rac3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PermanentExplore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rac4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PermanentRecruit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(rac5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PermanentNextAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PermanentTrade, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rac6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PermanentRecruit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rac7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(451, 451, 451)
                         .addComponent(jButton1)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PermanentRecruit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermanentTrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermanentNextAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermanentExplore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermanentGather, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermanentBuild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PermanentAttack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PermanentRecruit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PermanentTrade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PermanentExplore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PermanentGather, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PermanentBuild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PermanentAttack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rac3, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                                    .addComponent(rac4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(rac2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(rac1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(rac6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rac7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(PermanentNextAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rac5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(6, 6, 6))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 540));
         setupCards();
 
         pack();
@@ -343,6 +432,21 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             PermanentRecruit_img.getAccessibleContext().setAccessibleName("CardPermEgyptRecruit.png");
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptTrade.png")));
             PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermEgyptTrade.png");
+            
+            randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptAttackThoth.png")));
+            randomActionCardAttack_img.getAccessibleContext().setAccessibleName("CardRandEgyptAttackThoth.png");
+            randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildHorus.png")));
+            randomActionCardBuild_img.getAccessibleContext().setAccessibleName("CardRandEgyptBuildHorus.png");
+            randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptGatherRa.png")));
+            randomActionCardGather_img.getAccessibleContext().setAccessibleName("CardRandEgyptGatherRa.png");
+            randomActionCardExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptExplorePtah.png")));
+            randomActionCardExplore_img.getAccessibleContext().setAccessibleName("CardRandEgyptExplorePtah.png");
+            randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptAgeHathor.png")));
+            randomActionCardNextAge_img.getAccessibleContext().setAccessibleName("CardRandEgyptAgeHathor.png");
+            randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildHorus.png")));
+            randomActionCardTrade_img.getAccessibleContext().setAccessibleName("CardRandEgyptBuildHorus.png");
+            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildNephthys.png")));
+            randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandEgyptRecruitAnubis.png");
         }
         else if(board.getPlayerCulture().compareTo("Greek") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekAttack.png")));
@@ -359,6 +463,21 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             PermanentRecruit_img.getAccessibleContext().setAccessibleName("CardPermGreekRecruit.png");
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekTrade.png")));
             PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermGreekTrade.png");
+            
+            randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekAttackAres.png")));
+            randomActionCardAttack_img.getAccessibleContext().setAccessibleName("CardRandGreekAttackAres.png");
+            randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekBuildHera.png")));
+            randomActionCardBuild_img.getAccessibleContext().setAccessibleName("CardRandGreekBuildHera.png");
+            randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekGatherDionysus.png")));
+            randomActionCardGather_img.getAccessibleContext().setAccessibleName("CardRandGreekGatherDionysus.png");
+            randomActionCardExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekExploreArtemis.png")));
+            randomActionCardExplore_img.getAccessibleContext().setAccessibleName("CardRandGreekExploreArtemis.png");
+            randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekAgeZeus.png")));
+            randomActionCardNextAge_img.getAccessibleContext().setAccessibleName("CardRandGreekAgeZeus.png");
+            randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekTradeHermes.png")));
+            randomActionCardTrade_img.getAccessibleContext().setAccessibleName("CardRandGreekTradeHermes.png");
+            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekRecruitApollo.png")));
+            randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandGreekRecruitApollo.png");
         }
         else if(board.getPlayerCulture().compareTo("Norse") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseAttack.png")));
@@ -375,6 +494,21 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             PermanentRecruit_img.getAccessibleContext().setAccessibleName("CardPermNorseRecruit.png");
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermNorseTrade.png")));
             PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermNorseTrade.png");
+            
+            randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseAttackTyr.png")));
+            randomActionCardAttack_img.getAccessibleContext().setAccessibleName("CardRandNorseAttackTyr.png");
+            randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseBuildNjord.png")));
+            randomActionCardBuild_img.getAccessibleContext().setAccessibleName("CardRandNorseBuildNjord.png");
+            randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseGatherFreya.png")));
+            randomActionCardGather_img.getAccessibleContext().setAccessibleName("CardRandNorseGatherFreya.png");
+            randomActionCardExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseExploreBaldr.png")));
+            randomActionCardExplore_img.getAccessibleContext().setAccessibleName("CardRandNorseExploreBaldr.png");
+            randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseAgeOdin.png")));
+            randomActionCardNextAge_img.getAccessibleContext().setAccessibleName("CardRandNorseAgeOdin.png");
+            randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseTradeLoki.png")));
+            randomActionCardTrade_img.getAccessibleContext().setAccessibleName("CardRandNorseTradeLoki.png");
+            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandNorseRecruitHel.png")));
+            randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandNorseRecruitHel.png");
         }
     }
     /**
@@ -445,6 +579,20 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nextAgeMarked;
+    private javax.swing.JPanel rac1;
+    private javax.swing.JPanel rac2;
+    private javax.swing.JPanel rac3;
+    private javax.swing.JPanel rac4;
+    private javax.swing.JPanel rac5;
+    private javax.swing.JPanel rac6;
+    private javax.swing.JPanel rac7;
+    private javax.swing.JLabel randomActionCardAttack_img;
+    private javax.swing.JLabel randomActionCardBuild_img;
+    private javax.swing.JLabel randomActionCardExplore_img;
+    private javax.swing.JLabel randomActionCardGather_img;
+    private javax.swing.JLabel randomActionCardNextAge_img;
+    private javax.swing.JLabel randomActionCardRecruit_img;
+    private javax.swing.JLabel randomActionCardTrade_img;
     private javax.swing.JLabel recruitMarked;
     private javax.swing.JLabel tradeMarked;
     // End of variables declaration//GEN-END:variables
