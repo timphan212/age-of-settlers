@@ -378,6 +378,29 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             actionList.add(PermanentGather_img.getAccessibleContext().getAccessibleName());
         }
         
+        if(attackMark.isVisible() == true) {
+            actionList.add(randomActionCardAttack_img.getAccessibleContext().getAccessibleName());
+        }
+        if(buildMark.isVisible() == true) {
+            actionList.add(randomActionCardBuild_img.getAccessibleContext().getAccessibleName());
+        }
+        if(exploreMark.isVisible() == true) {
+            actionList.add(randomActionCardExplore_img.getAccessibleContext().getAccessibleName());
+        }
+        if(nextAgeMark.isVisible() == true) {
+            actionList.add(randomActionCardNextAge_img.getAccessibleContext().getAccessibleName());
+        }
+        if(recruitMark.isVisible() == true) {
+            actionList.add(randomActionCardRecruit_img.getAccessibleContext().getAccessibleName());
+        }
+        if(tradeMark.isVisible() == true) {
+            actionList.add(randomActionCardTrade_img.getAccessibleContext().getAccessibleName());
+        }
+        if(gatherMark.isVisible() == true) {
+            actionList.add(randomActionCardGather_img.getAccessibleContext().getAccessibleName());
+        }
+        
+       
         board.setPlayerPermCards(actionList);
         board.initPlayPermCards();
         this.setVisible(false);
