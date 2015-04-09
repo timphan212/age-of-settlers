@@ -63,26 +63,33 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
         PermanentRecruit_img = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         rac1 = new javax.swing.JPanel();
+        attackMark = new javax.swing.JLabel();
+        attackMark.setVisible(false);
         randomActionCardAttack_img = new javax.swing.JLabel();
-        attackMarked.setVisible(false);
         rac2 = new javax.swing.JPanel();
+        buildMark = new javax.swing.JLabel();
+        buildMark.setVisible(false);
         randomActionCardBuild_img = new javax.swing.JLabel();
-        buildMarked.setVisible(false);
         rac3 = new javax.swing.JPanel();
+        gatherMark = new javax.swing.JLabel();
+        gatherMark.setVisible(false);
         randomActionCardGather_img = new javax.swing.JLabel();
-        buildMarked.setVisible(false);
         rac4 = new javax.swing.JPanel();
+        exploreMark = new javax.swing.JLabel();
+        exploreMark.setVisible(false);
         randomActionCardExplore_img = new javax.swing.JLabel();
-        buildMarked.setVisible(false);
         rac5 = new javax.swing.JPanel();
+        nextAgeMark = new javax.swing.JLabel();
+        nextAgeMark.setVisible(false);
         randomActionCardNextAge_img = new javax.swing.JLabel();
-        buildMarked.setVisible(false);
         rac6 = new javax.swing.JPanel();
+        tradeMark = new javax.swing.JLabel();
+        tradeMark.setVisible(false);
         randomActionCardTrade_img = new javax.swing.JLabel();
-        buildMarked.setVisible(false);
         rac7 = new javax.swing.JPanel();
+        recruitMark = new javax.swing.JLabel();
+        recruitMark.setVisible(false);
         randomActionCardRecruit_img = new javax.swing.JLabel();
-        buildMarked.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -178,40 +185,92 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             }
         });
 
+        rac1.setPreferredSize(new java.awt.Dimension(150, 225));
         rac1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac1.add(randomActionCardAttack_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        attackMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac1.add(attackMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
+        randomActionCardAttack_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardAttack_imgMouseClicked(evt);
+            }
+        });
+        rac1.add(randomActionCardAttack_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 240));
+
+        rac2.setOpaque(false);
+        rac2.setPreferredSize(new java.awt.Dimension(150, 225));
         rac2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac2.add(randomActionCardBuild_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        buildMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac2.add(buildMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        randomActionCardBuild_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardBuild_imgMouseClicked(evt);
+            }
+        });
+        rac2.add(randomActionCardBuild_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 240));
 
         rac3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac3.add(randomActionCardGather_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        gatherMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac3.add(gatherMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        randomActionCardGather_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardGather_imgMouseClicked(evt);
+            }
+        });
+        rac3.add(randomActionCardGather_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 240));
 
         rac4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac4.add(randomActionCardExplore_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        exploreMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac4.add(exploreMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        randomActionCardExplore_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardExplore_imgMouseClicked(evt);
+            }
+        });
+        rac4.add(randomActionCardExplore_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 240));
 
         rac5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac5.add(randomActionCardNextAge_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        nextAgeMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac5.add(nextAgeMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        randomActionCardNextAge_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardNextAge_imgMouseClicked(evt);
+            }
+        });
+        rac5.add(randomActionCardNextAge_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 4, 150, 240));
 
         rac6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac6.add(randomActionCardTrade_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        tradeMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac6.add(tradeMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        randomActionCardTrade_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardTrade_imgMouseClicked(evt);
+            }
+        });
+        rac6.add(randomActionCardTrade_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 240));
 
         rac7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
-        rac7.add(randomActionCardRecruit_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+        recruitMark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/Marking.png"))); // NOI18N
+        rac7.add(recruitMark, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 125, 125));
+
+        randomActionCardRecruit_img.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                randomActionCardRecruit_imgMouseClicked(evt);
+            }
+        });
+        rac7.add(randomActionCardRecruit_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 240));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -270,7 +329,7 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rac3, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                                    .addComponent(rac3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(rac4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(rac2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(rac1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -416,6 +475,97 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PermanentRecruit_imgMouseClicked
 
+    private void randomActionCardAttack_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardAttack_imgMouseClicked
+        if(attackMark.isVisible() == false) {
+            if(count < maxCards) {
+                attackMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            attackMark.setVisible(false);
+            count--;
+        }
+    }//GEN-LAST:event_randomActionCardAttack_imgMouseClicked
+
+    private void randomActionCardBuild_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardBuild_imgMouseClicked
+        if(buildMark.isVisible() == false) {
+            if(count < maxCards) {
+                buildMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            buildMark.setVisible(false);
+            count--;
+        }        
+    }//GEN-LAST:event_randomActionCardBuild_imgMouseClicked
+
+    private void randomActionCardGather_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardGather_imgMouseClicked
+        if(gatherMark.isVisible() == false) {
+            if(count < maxCards) {
+                gatherMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            gatherMark.setVisible(false);
+            count--;
+        }     
+    }//GEN-LAST:event_randomActionCardGather_imgMouseClicked
+
+    private void randomActionCardExplore_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardExplore_imgMouseClicked
+       if(exploreMark.isVisible() == false) {
+            if(count < maxCards) {
+                exploreMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            exploreMark.setVisible(false);
+            count--;
+        }     
+    }//GEN-LAST:event_randomActionCardExplore_imgMouseClicked
+
+    private void randomActionCardNextAge_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardNextAge_imgMouseClicked
+         if(nextAgeMark.isVisible() == false) {
+            if(count < maxCards) {
+                nextAgeMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            nextAgeMark.setVisible(false);
+            count--;
+        }  
+    }//GEN-LAST:event_randomActionCardNextAge_imgMouseClicked
+
+    private void randomActionCardTrade_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardTrade_imgMouseClicked
+         if(tradeMark.isVisible() == false) {
+            if(count < maxCards) {
+                tradeMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            tradeMark.setVisible(false);
+            count--;
+        }  
+    }//GEN-LAST:event_randomActionCardTrade_imgMouseClicked
+
+    private void randomActionCardRecruit_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_randomActionCardRecruit_imgMouseClicked
+        if(recruitMark.isVisible() == false) {
+            if(count < maxCards) {
+                recruitMark.setVisible(true);
+                count++;
+            }
+        }
+        else {
+            recruitMark.setVisible(false);
+            count--;
+        }  
+    }//GEN-LAST:event_randomActionCardRecruit_imgMouseClicked
+
     public void setupCards() {
         if(board.getPlayerCulture().compareTo("Egyptian") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptAttack.png")));
@@ -433,8 +583,8 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             PermanentTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermEgyptTrade.png")));
             PermanentTrade_img.getAccessibleContext().setAccessibleName("CardPermEgyptTrade.png");
             
-            randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptAttackThoth.png")));
-            randomActionCardAttack_img.getAccessibleContext().setAccessibleName("CardRandEgyptAttackThoth.png");
+            randomActionCardAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/rsz_CardRandEgyptAttackThoth.png")));
+            randomActionCardAttack_img.getAccessibleContext().setAccessibleName("rsz_CardRandEgyptAttackThoth.png");
             randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildHorus.png")));
             randomActionCardBuild_img.getAccessibleContext().setAccessibleName("CardRandEgyptBuildHorus.png");
             randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptGatherRa.png")));
@@ -445,7 +595,7 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             randomActionCardNextAge_img.getAccessibleContext().setAccessibleName("CardRandEgyptAgeHathor.png");
             randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildHorus.png")));
             randomActionCardTrade_img.getAccessibleContext().setAccessibleName("CardRandEgyptBuildHorus.png");
-            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildNephthys.png")));
+            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptRecruitAnubis.png")));
             randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandEgyptRecruitAnubis.png");
         }
         else if(board.getPlayerCulture().compareTo("Greek") == 0) {
@@ -572,12 +722,17 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel PermanentRecruit_img;
     private javax.swing.JPanel PermanentTrade;
     private javax.swing.JLabel PermanentTrade_img;
+    private javax.swing.JLabel attackMark;
     private javax.swing.JLabel attackMarked;
+    private javax.swing.JLabel buildMark;
     private javax.swing.JLabel buildMarked;
+    private javax.swing.JLabel exploreMark;
     private javax.swing.JLabel exploreMarked;
+    private javax.swing.JLabel gatherMark;
     private javax.swing.JLabel gatherMarked;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nextAgeMark;
     private javax.swing.JLabel nextAgeMarked;
     private javax.swing.JPanel rac1;
     private javax.swing.JPanel rac2;
@@ -593,7 +748,9 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel randomActionCardNextAge_img;
     private javax.swing.JLabel randomActionCardRecruit_img;
     private javax.swing.JLabel randomActionCardTrade_img;
+    private javax.swing.JLabel recruitMark;
     private javax.swing.JLabel recruitMarked;
+    private javax.swing.JLabel tradeMark;
     private javax.swing.JLabel tradeMarked;
     // End of variables declaration//GEN-END:variables
 }
