@@ -425,26 +425,89 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
     private String parseString(String str) {
         String str2 = "";
 
-        if(str.toLowerCase().contains("attack")) {
+        if(str.toLowerCase().contains("attack") && !str.toLowerCase().contains("CardRand")) {
             str2 = "attack";
         }
-        else if(str.toLowerCase().contains("trade")) {
+        else if(str.toLowerCase().contains("trade") && !str.toLowerCase().contains("CardRand")) {
             str2 = "trade";
         }
-        else if(str.toLowerCase().contains("gather")) {
+        else if(str.toLowerCase().contains("gather") && !str.toLowerCase().contains("CardRand")) {
             str2 = "gather";
         }
-        else if(str.toLowerCase().contains("recruit")) {
+        else if(str.toLowerCase().contains("recruit") && !str.toLowerCase().contains("CardRand")) {
             str2 = "recruit";
         }
-        else if(str.toLowerCase().contains("age")) {
+        else if(str.toLowerCase().contains("age") && !str.toLowerCase().contains("CardRand")) {
             str2 = "age";
         }
-        else if(str.toLowerCase().contains("build")) {
+        else if(str.toLowerCase().contains("build")&& !str.toLowerCase().contains("CardRand")) {
             str2 = "build";
         }
-        else {
+        else if(str.toLowerCase().contains("explore")&& !str.toLowerCase().contains("CardRand")){
             str2 = "explore";
+        }
+        else if(str.toLowerCase().contains("rsz_CardRandEgyptAttackThoth")){
+            str2 = "thoth";
+        }
+         else if(str.toLowerCase().contains("CardRandEgyptBuildHorus")){
+            str2 = "horus";
+        }
+         else if(str.toLowerCase().contains("CardRandEgyptGatherRa")){
+            str2 = "gatherra";
+        }
+         else if(str.toLowerCase().contains("CardRandEgyptExplorePtah")){
+            str2 = "ptah";
+        }
+         else if(str.toLowerCase().contains("CardRandEgyptAgeHathor")){
+            str2 = "hathor";
+        }
+         else if(str.toLowerCase().contains("sakun")){
+            str2 = "sakun";
+        }
+         else if(str.toLowerCase().contains("CardRandEgyptRecruitAnubis")){
+            str2 = "anubis";
+        }
+         else if(str.toLowerCase().contains("attackares")){
+            str2 = "ares";
+        }
+         else if(str.toLowerCase().contains("buildhera")){
+            str2 = "hera";
+        }
+         else if(str.toLowerCase().contains("dionysus")){
+            str2 = "dionysus";
+        }
+         else if(str.toLowerCase().contains("exploreartemis")){
+            str2 = "artemis";
+        }
+         else if(str.toLowerCase().contains("zeus")){
+            str2 = "zeus";
+        }
+         else if(str.toLowerCase().contains("hermes")){
+            str2 = "hermes";
+        }
+        else if(str.toLowerCase().contains("apollo")){
+            str2 = "apollo";
+        }
+        else if(str.toLowerCase().contains("attacktyr")){
+            str2 = "tyr";
+        }
+        else if(str.toLowerCase().contains("njord")){
+            str2 = "njord";
+        }
+        else if(str.toLowerCase().contains("freya")){
+            str2 = "freya";
+        }
+        else if(str.toLowerCase().contains("baldr")){
+            str2 = "baldr";
+        }
+        else if(str.toLowerCase().contains("oldin")){
+            str2 = "oldin";
+        }
+         else if(str.toLowerCase().contains("loki")){
+            str2 = "loki";
+        }
+         else if(str.toLowerCase().contains("recruithel")){
+            str2 = "hel";
         }
         
         return str2;
