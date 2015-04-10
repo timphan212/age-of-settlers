@@ -425,26 +425,47 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
     private String parseString(String str) {
         String str2 = "";
 
-        if(str.toLowerCase().contains("attack")) {
+        if(str.toLowerCase().contains("attack") && str.toLowerCase().contains("perm")) {
             str2 = "attack";
         }
-        else if(str.toLowerCase().contains("trade")) {
+        else if(str.toLowerCase().contains("trade") && str.toLowerCase().contains("perm")) {
             str2 = "trade";
         }
-        else if(str.toLowerCase().contains("gather")) {
+        else if(str.toLowerCase().contains("gather") && str.toLowerCase().contains("perm")) {
             str2 = "gather";
         }
-        else if(str.toLowerCase().contains("recruit")) {
+        else if(str.toLowerCase().contains("recruit") && str.toLowerCase().contains("perm")) {
             str2 = "recruit";
         }
-        else if(str.toLowerCase().contains("age")) {
+        else if(str.toLowerCase().contains("age") && str.toLowerCase().contains("perm")) {
             str2 = "age";
         }
-        else if(str.toLowerCase().contains("build")) {
+        else if(str.toLowerCase().contains("build") && str.toLowerCase().contains("perm")) {
             str2 = "build";
         }
-        else {
+        else if (str.toLowerCase().contains("explore") && str.toLowerCase().contains("perm")){
             str2 = "explore";
+        }
+        else if(str.toLowerCase().contains("attack") && str.toLowerCase().contains("rand")) {
+            str2 = "randAttack";
+        }
+        else if(str.toLowerCase().contains("trade") && str.toLowerCase().contains("rand")) {
+            str2 = "randTrade";
+        }
+        else if(str.toLowerCase().contains("gather") && str.toLowerCase().contains("rand")) {
+            str2 = "randGather";
+        }
+        else if(str.toLowerCase().contains("recruit") && str.toLowerCase().contains("rand")) {
+            str2 = "randRecruit";
+        }
+        else if(str.toLowerCase().contains("age") && str.toLowerCase().contains("rand")) {
+            str2 = "randAge";
+        }
+        else if(str.toLowerCase().contains("build") && str.toLowerCase().contains("rand")) {
+            str2 = "randBuild";
+        }
+        else if (str.toLowerCase().contains("explore") && str.toLowerCase().contains("rand")){
+            str2 = "randExplore";
         }
         
         return str2;
