@@ -616,7 +616,7 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             randomActionCardExplore_img.getAccessibleContext().setAccessibleName("CardRandEgyptExplorePtah.png");
             randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptAgeHathor.png")));
             randomActionCardNextAge_img.getAccessibleContext().setAccessibleName("CardRandEgyptAgeHathor.png");
-            randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptBuildHorus.png")));
+            randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptTradeTah.png")));
             randomActionCardTrade_img.getAccessibleContext().setAccessibleName("CardRandEgyptBuildHorus.png");
             randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptRecruitAnubis.png")));
             randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandEgyptRecruitAnubis.png");
