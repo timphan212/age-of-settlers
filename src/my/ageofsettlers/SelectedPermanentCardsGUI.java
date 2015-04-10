@@ -425,26 +425,26 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
     private String parseString(String str) {
         String str2 = "";
 
-        if(str.toLowerCase().contains("attack") && !str.toLowerCase().contains("CardRand")) {
+        if(str.toLowerCase().contains("attack") && str.toLowerCase().startsWith("cardperm")) {
             str2 = "attack";
         }
-        else if(str.toLowerCase().contains("trade") && !str.toLowerCase().contains("CardRand")) {
+        else if(str.toLowerCase().contains("trade") && str.toLowerCase().startsWith("cardperm")) {
             str2 = "trade";
         }
-        else if(str.toLowerCase().contains("gather") && !str.toLowerCase().contains("CardRand")) {
+        else if(str.toLowerCase().contains("gather") && str.toLowerCase().startsWith("cardperm")) {
             str2 = "gather";
         }
-        else if(str.toLowerCase().contains("recruit") && !str.toLowerCase().contains("CardRand")) {
+        else if(str.toLowerCase().contains("recruit") && str.toLowerCase().startsWith("cardperm")) {
             str2 = "recruit";
         }
-        else if(str.toLowerCase().contains("age") && !str.toLowerCase().contains("CardRand")) {
+        else if(str.toLowerCase().contains("age") && str.toLowerCase().startsWith("cardperm")) {
             str2 = "age";
         }
-        else if(str.toLowerCase().contains("build")&& !str.toLowerCase().contains("CardRand")) {
+        else if(str.toLowerCase().contains("build")&& str.toLowerCase().startsWith("cardperm")) {
             str2 = "build";
         }
-        else if(str.toLowerCase().contains("explore")&& !str.toLowerCase().contains("CardRand")){
-            str2 = "explore";
+        else if(str.toLowerCase().contains("explore") && str.toLowerCase().startsWith("cardperm")) {
+                str2 = "explore";
         }
         else if(str.toLowerCase().contains("rsz_CardRandEgyptAttackThoth")){
             str2 = "thoth";
@@ -509,7 +509,7 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
          else if(str.toLowerCase().contains("recruithel")){
             str2 = "hel";
         }
-        
+        System.out.println(str+" --- "+str2);
         return str2;
     }
     
