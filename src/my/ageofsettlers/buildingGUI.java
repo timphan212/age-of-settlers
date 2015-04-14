@@ -66,6 +66,11 @@ public class buildingGUI extends javax.swing.JFrame {
 
         buttonGroup2.add(houseSelection);
         houseSelection.setText("House");
+        houseSelection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                houseSelectionActionPerformed(evt);
+            }
+        });
 
         buttonGroup2.add(wallSelection);
         wallSelection.setText("Wall");
@@ -218,47 +223,382 @@ public class buildingGUI extends javax.swing.JFrame {
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void houseSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseSelectionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_houseSelectionActionPerformed
+
     private boolean checkBuildingSelection(String culture) {
         if(houseSelection.isSelected() == true) {
+            if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "House.png", 2, 0, 2, 0);
         }
         else if(wallSelection.isSelected() == true) {
+            if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Wall.png", 0, 0, 3, 3);
         }
         else if(towerSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Tower.png", 0, 0, 3, 3);
         }
         else if(marketSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Market.png", 0, 2, 0, 3);
         }
         else if(storehouseSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Storehouse.png", 2,2,2,2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Storehouse.png", 2,2,2,2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Storehouse.png", 2,2,2,2);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Storehouse.png", 2,2,2,2);
         }
         else if(armorySelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Armory.png", 0, 0, 3, 2);
         }
         else if(quarrySelection.isSelected() == true) {
-            return checkResources(culture, "Quarry.png", 4, 0, 0, 1);
+                if(culture.compareTo("Norse") == 0) {
+                    Norse norsePlayer = Norse.getInstance(); 
+                    if(norsePlayer.isQuarry() == true) {
+                        quarrySelection.setVisible(false);
+                    }
+                }
+                if(culture.compareTo("Greek") == 0) {
+                    QuarryGUI quarry = new QuarryGUI();
+                    Greek greekPlayer = Greek.getInstance(); 
+                    if(greekPlayer.isQuarry() == true) {
+                        quarrySelection.setVisible(false);     
+                    }
+                }
+                if(culture.compareTo("Egyptian") == 0) {
+                    Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                    if(egyptianPlayer.isQuarry() == true) {
+                        quarrySelection.setVisible(false);  
+                    }
+                }
+                return checkResources(culture, "Quarry.png", 4, 0, 0, 1);
         }
         else if(monumentSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Monument.png", 3, 0, 0, 2);
         }
         else if(granarySelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Granary.png", 0, 0, 2, 3);
         }
         else if(woodworkshopSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "WoodWork.png", 2, 0, 0, 3);
         }
         else if(goldmintSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "GoldMint.png", 3, 0, 2, 0);
         }
         else if(siegeworkshopSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "SiegeWork.png", 0, 0, 3, 2);
         }
         else if(greattempleSelection.isSelected() == true) {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "GreatTemple.png", 4, 4, 4, 4);
         }
         else {
+                if(culture.compareTo("Norse") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Norse norsePlayer = Norse.getInstance(); 
+                if(norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Greek") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Greek greekPlayer = Greek.getInstance(); 
+                if(greekPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                    quarry.setVisible(true);
+                }
+            }
+            if(culture.compareTo("Egyptian") == 0) {
+                QuarryGUI quarry = new QuarryGUI();
+                Egyptian egyptianPlayer = Egyptian.getInstance(); 
+                if(egyptianPlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                    quarry.setVisible(true);
+                }
+            }
             return checkResources(culture, "Wonder.png", 10, 10, 10, 10);
         }
     }
