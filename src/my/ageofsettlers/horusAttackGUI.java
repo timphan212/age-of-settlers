@@ -259,6 +259,7 @@ public class horusAttackGUI extends javax.swing.JFrame {
         if(g.isWoodworkshop())   
             board.removeBuildingTiles(playerCulture, buildings);  
       }
+      this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
