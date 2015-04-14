@@ -449,7 +449,7 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
         else if(str.toLowerCase().contains("rsz_CardRandEgyptAttackThoth")){
             str2 = "thoth";
         }
-         else if(str.toLowerCase().contains("CardRandEgyptBuildHorus")){
+         else if(str.toLowerCase().contains("horus")){
             str2 = "horus";
         }
          else if(str.toLowerCase().contains("CardRandEgyptGatherRa")){
@@ -461,8 +461,8 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
          else if(str.toLowerCase().contains("CardRandEgyptAgeHathor")){
             str2 = "hathor";
         }
-         else if(str.toLowerCase().contains("sakun")){
-            str2 = "sakun";
+         else if(str.toLowerCase().contains("CardRandEgyptTradeTah")){
+            str2 = "tah";
         }
          else if(str.toLowerCase().contains("CardRandEgyptRecruitAnubis")){
             str2 = "anubis";
@@ -509,7 +509,6 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
          else if(str.toLowerCase().contains("recruithel")){
             str2 = "hel";
         }
-        System.out.println(str+" --- "+str2);
         return str2;
     }
     

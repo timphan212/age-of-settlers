@@ -101,6 +101,7 @@ public class BoardController {
     }
     
     public void playCard(String str) {
+        System.out.println(str);
         if(str.compareTo("age") == 0) {
             playNextAgeCard(playerCulture);
         }
@@ -147,10 +148,15 @@ public class BoardController {
             rGUI.setMaxRecruits(2);
             rGUI.setVisible(true);
         }
-        else {
+        else if(str.compareTo("attack") == 0){
             attackAreaGUI aaGUI = new attackAreaGUI();
             aaGUI.setVisible(true);
         }
+        else if(str.compareTo("horus") == 0) {
+            attackGUI aGUI = new attackGUI();
+            aGUI.setVisible(true);
+        }
+        
     }
     
     private static void unitSetup() {
@@ -166,7 +172,7 @@ public class BoardController {
         
         bonuses = new String[1];
         bonuses[0] = "4;Giant-Killer";
-        UnitCard norseUnit1 = new UnitCard(0, "Nidhogg", "CardBattleNorse1.png", 3, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4);
+        UnitCard norseUnit1 = new UnitCard(0, "Nidhogg", "CardBattleNorse1.png", 0, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4);
         
         bonuses = new String[2];
         bonuses[0] = "3;Warrior";
@@ -180,19 +186,19 @@ public class BoardController {
         
         bonuses = new String[1];
         bonuses[0] = "4;Archer";
-        UnitCard norseUnit4 = new UnitCard(3, "Valkyrie", "CardBattleNorse4.png", 3, "Myth;Calvalry", 5, bonuses, 0, 3, 0, 1);
+        UnitCard norseUnit4 = new UnitCard(3, "Valkyrie", "CardBattleNorse4.png", 0, "Myth;Calvalry", 5, bonuses, 0, 3, 0, 1);
         
         bonuses = new String[1];
         bonuses[0] = "4;Calvalry";
-        UnitCard norseUnit5 = new UnitCard(4, "Troll", "CardBattleNorse5.png", 3, "Myth;Warrior", 6, bonuses, 3, 0, 2, 0);
+        UnitCard norseUnit5 = new UnitCard(4, "Troll", "CardBattleNorse5.png", 0, "Myth;Warrior", 6, bonuses, 3, 0, 2, 0);
         
         bonuses = new String[1];
         bonuses[0] = "4;Giant-Killer";
-        UnitCard norseUnit6 = new UnitCard(5, "Nidhogg", "CardBattleNorse6.png", 3, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4); //Incorrect Duplicate
+        UnitCard norseUnit6 = new UnitCard(5, "Nidhogg", "CardBattleNorse6.png", 0, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4); //Incorrect Duplicate
 
         bonuses = new String[1];
         bonuses[0] = "7;Giant";
-        UnitCard norseUnit7 = new UnitCard(6, "Dwarf", "CardBattleNorse7.png", 3, "Myth;Giant-Killer", 4, bonuses, 2, 0, 0, 2);
+        UnitCard norseUnit7 = new UnitCard(6, "Dwarf", "CardBattleNorse7.png", 0, "Myth;Giant-Killer", 4, bonuses, 2, 0, 0, 2);
 
         bonuses = new String[1];
         bonuses[0] = "4;Calvalry";
@@ -201,7 +207,7 @@ public class BoardController {
         bonuses = new String[2];
         bonuses[0] = "2;Warrior";
         bonuses[1] = "3;Mortal";
-        UnitCard norseUnit9 = new UnitCard(8, "Frost Giant", "CardBattleNorse9.png", 3, "Myth;Giant", 7, bonuses, 4, 2, 0, 0);
+        UnitCard norseUnit9 = new UnitCard(8, "Frost Giant", "CardBattleNorse9.png", 0, "Myth;Giant", 7, bonuses, 4, 2, 0, 0);
         
         bonuses = new String[1];
         bonuses[0] = "4;Myth";
@@ -246,15 +252,15 @@ public class BoardController {
         bonuses = new String[2];
         bonuses[0] = "3;Archer";
         bonuses[1] = "3;Flyer";
-        UnitCard greekUnit1 = new UnitCard(0, "Centaur", "CardBattleGreek1.png", 3, "Myth;Archer;Calvalry", 5, bonuses, 0, 1, 3, 0);
+        UnitCard greekUnit1 = new UnitCard(0, "Centaur", "CardBattleGreek1.png", 0, "Myth;Archer;Calvalry", 5, bonuses, 0, 1, 3, 0);
 
         bonuses = new String[1];
         bonuses[0] = "4;Mortal";
-        UnitCard greekUnit2 = new UnitCard(1, "Cyclops", "CardBattleGreek2.png", 3, "Myth;Giant", 6, bonuses, 3, 3, 0, 0);
+        UnitCard greekUnit2 = new UnitCard(1, "Cyclops", "CardBattleGreek2.png", 0, "Myth;Giant", 6, bonuses, 3, 3, 0, 0);
 
         bonuses = new String[1];
         bonuses[0] = "4;Giant-Killer";
-        UnitCard greekUnit3 = new UnitCard(2, "Manticore", "CardBattleGreek3.png", 3, "Myth;Flyer", 5, bonuses, 2, 2, 0, 0);
+        UnitCard greekUnit3 = new UnitCard(2, "Manticore", "CardBattleGreek3.png", 0, "Myth;Flyer", 5, bonuses, 2, 2, 0, 0);
 
         bonuses = new String[1];
         bonuses[0] = "4;Myth";
@@ -271,11 +277,11 @@ public class BoardController {
 
         bonuses = new String[1];
         bonuses[0] = "4;Warrior";
-        UnitCard greekUnit7 = new UnitCard(6, "Hydra", "CardBattleGreek7.png", 3, "Myth;Giant", 6, bonuses, 0, 2, 0, 2);
+        UnitCard greekUnit7 = new UnitCard(6, "Hydra", "CardBattleGreek7.png", 0, "Myth;Giant", 6, bonuses, 0, 2, 0, 2);
 
         bonuses = new String[1];
         bonuses[0] = "4;Calvalry";
-        UnitCard greekUnit8 = new UnitCard(7, "Minotaur", "CardBattleGreek8.png", 3, "Myth;Warrior", 5, bonuses, 2, 0, 2, 0);
+        UnitCard greekUnit8 = new UnitCard(7, "Minotaur", "CardBattleGreek8.png", 0, "Myth;Warrior", 5, bonuses, 2, 0, 2, 0);
         
         bonuses = new String[1];
         bonuses[0] = "";
@@ -293,7 +299,7 @@ public class BoardController {
 
         bonuses = new String[1];
         bonuses[0] = "6;Giant";
-        UnitCard greekUnit12 = new UnitCard(11, "Medusa", "CardBattleGreek12.png", 3, "Myth;Giant-Killer", 5, bonuses, 1, 3, 0, 0);
+        UnitCard greekUnit12 = new UnitCard(11, "Medusa", "CardBattleGreek12.png", 0, "Myth;Giant-Killer", 5, bonuses, 1, 3, 0, 0);
         
         unitList.add(greekUnit1);
         unitList.add(greekUnit2);
@@ -329,15 +335,15 @@ public class BoardController {
 
         bonuses = new String[1];
         bonuses[0] = "4;Mortal";
-        UnitCard egyptianUnit2 = new UnitCard(1, "Scorpion-Man", "CardBattleEgypt2.png", 3, "Myth;Giant", 5, bonuses, 4, 0, 0, 2);
+        UnitCard egyptianUnit2 = new UnitCard(1, "Scorpion-Man", "CardBattleEgypt2.png", 0, "Myth;Giant", 5, bonuses, 4, 0, 0, 2);
 
         bonuses = new String[1];
         bonuses[0] = "6;Giant";
-        UnitCard egyptianUnit3 = new UnitCard(2, "Sphinx", "CardBattleEgypt3.png", 3, "Myth;Giant-Killer", 5, bonuses, 0, 2, 0, 2);
+        UnitCard egyptianUnit3 = new UnitCard(2, "Sphinx", "CardBattleEgypt3.png", 0, "Myth;Giant-Killer", 5, bonuses, 0, 2, 0, 2);
 
         bonuses = new String[1];
         bonuses[0] = "4;Archer";
-        UnitCard egyptianUnit4 = new UnitCard(3, "Anubite", "CardBattleEgypt4.png", 3, "Myth;Calvalry", 5, bonuses, 0, 1, 0, 3);
+        UnitCard egyptianUnit4 = new UnitCard(3, "Anubite", "CardBattleEgypt4.png", 0, "Myth;Calvalry", 5, bonuses, 0, 1, 0, 3);
 
         bonuses = new String[1];
         bonuses[0] = "4;Myth";
@@ -358,7 +364,7 @@ public class BoardController {
         
         bonuses = new String[1];
         bonuses[0] = "";
-        UnitCard egyptianUnit9 = new UnitCard(8, "Mummy", "CardBattleEgypt9.png", 3, "Myth", 5, bonuses, 0, 2, 0, 3);
+        UnitCard egyptianUnit9 = new UnitCard(8, "Mummy", "CardBattleEgypt9.png", 0, "Myth", 5, bonuses, 0, 2, 0, 3);
 
         bonuses = new String[2];
         bonuses[0] = "3;Calvalry";
@@ -367,11 +373,11 @@ public class BoardController {
 
         bonuses = new String[1];
         bonuses[0] = "4;Giant-Killer";
-        UnitCard egyptianUnit11 = new UnitCard(10, "Phoenix", "CardBattleEgypt11.png", 3, "Myth;Flyer", 6, bonuses, 0, 3, 2, 0);
+        UnitCard egyptianUnit11 = new UnitCard(10, "Phoenix", "CardBattleEgypt11.png", 0, "Myth;Flyer", 6, bonuses, 0, 3, 2, 0);
 
         bonuses = new String[1];
         bonuses[0] = "4;Calvalry";
-        UnitCard egyptianUnit12 = new UnitCard(11, "Wadjet", "CardBattleEgypt12.png", 3, "Myth;Warrior", 5, bonuses, 2, 2, 0, 0);
+        UnitCard egyptianUnit12 = new UnitCard(11, "Wadjet", "CardBattleEgypt12.png", 0, "Myth;Warrior", 5, bonuses, 2, 2, 0, 0);
         unitList.add(egyptianUnit1);
         unitList.add(egyptianUnit2);
         unitList.add(egyptianUnit3);
@@ -851,13 +857,13 @@ public class BoardController {
     
     private int findAge(int currentAge) {
         if(currentAge == 0) {
-            return 3;
-        }
-        else if(currentAge == 1) {
             return 4;
         }
-        else if(currentAge == 2){
+        else if(currentAge == 1) {
             return 5;
+        }
+        else if(currentAge == 2){
+            return 6;
         }
         else {
             return -1;
