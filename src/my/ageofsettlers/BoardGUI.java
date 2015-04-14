@@ -7976,10 +7976,12 @@ public class BoardGUI extends javax.swing.JFrame {
     }
     
     public void setupBuildingIcon(String culture, String building) {
+       
         if(culture.compareTo("Norse") == 0) {
             setBuildingIcon(norseBuildingPanel, building);
         }
         else if(culture.compareTo("Greek") == 0) {
+           
             setBuildingIcon(greekBuildingPanel, building);
         }
         else {
@@ -7989,7 +7991,6 @@ public class BoardGUI extends javax.swing.JFrame {
     
     private void setBuildingIcon(javax.swing.JPanel buildingPanel, String building) {
         Component[] buildComponents = buildingPanel.getComponents();
-        
         for (Component buildComponent : buildComponents) {
             if (buildComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) buildComponent;

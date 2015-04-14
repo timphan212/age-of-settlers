@@ -15,6 +15,8 @@ public class attackGUI extends javax.swing.JFrame {
      * Creates new form attackGUI
      */
     public attackGUI() {
+        this.board = BoardController.getInstance();
+        this.ePlayer = Egyptian.getInstance();
         initComponents();
     }
 
@@ -87,9 +89,18 @@ public class attackGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        horusAttackGUI horus = new horusAttackGUI();
-        horus.setVisible(true);
-        this.setVisible(false);
+        if(ePlayer.getFavor() >=1) {
+            int newFavor = ePlayer.getFavor() - 1;
+            ePlayer.setFavor(newFavor);
+            board.updateResources("Egyptian");            
+            horusAttackGUI horus = new horusAttackGUI();
+            horus.setVisible(true);
+            this.setVisible(false);
+        }
+        else {
+            board.initPlayPermCards();
+            this.setVisible(false);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -126,7 +137,8 @@ public class attackGUI extends javax.swing.JFrame {
             }
         });
     }
-
+    Egyptian ePlayer;
+    BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

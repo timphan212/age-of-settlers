@@ -156,6 +156,10 @@ public class BoardController {
             attackGUI aGUI = new attackGUI();
             aGUI.setVisible(true);
         }
+        else if(str.compareTo("hera") == 0) {
+            BoardGUI board = new BoardGUI();
+            board.setupBuildingIcon("Greek", "House.png");
+        }
         
     }
     
