@@ -1077,6 +1077,7 @@ public class BoardController {
     
     public void updateResources(String culture) {
         if(culture.compareTo("Norse") == 0) {
+            System.out.println(norsePlayer.getFavor());
             bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
         }
         else if(culture.compareTo("Greek") == 0) {

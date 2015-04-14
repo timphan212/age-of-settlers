@@ -44,6 +44,11 @@ public class attackGUI extends javax.swing.JFrame {
         });
 
         jButton2.setText("Norse");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Select the opponent");
 
@@ -102,6 +107,21 @@ public class attackGUI extends javax.swing.JFrame {
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       if(ePlayer.getFavor() >=1) {
+            int newFavor = ePlayer.getFavor() - 1;
+            ePlayer.setFavor(newFavor);
+            board.updateResources("Egyptian");            
+            horusAttackGUI horus = new horusAttackGUI();
+            horus.setVisible(true);
+            this.setVisible(false);
+        }
+        else {
+            board.initPlayPermCards();
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
