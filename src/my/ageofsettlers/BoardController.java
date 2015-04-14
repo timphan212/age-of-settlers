@@ -157,8 +157,17 @@ public class BoardController {
             aGUI.setVisible(true);
         }
         else if(str.compareTo("hera") == 0) {
-            BoardGUI board = new BoardGUI();
-            board.setupBuildingIcon("Greek", "House.png");
+           this.board = BoardController.getInstance();
+           this.gPlayer = Greek.getInstance();
+            if(gPlayer.getFavor() >=1) {
+                int newFavor = gPlayer.getFavor() - 1;
+                gPlayer.setFavor(newFavor);
+                board.updateResources("Greek");   
+                bGUI.setupBuildingIcon("Greek", "House.png");
+            }
+            else {
+                board.initPlayPermCards();
+            }
         }
         
     }
@@ -1077,7 +1086,6 @@ public class BoardController {
     
     public void updateResources(String culture) {
         if(culture.compareTo("Norse") == 0) {
-            System.out.println(norsePlayer.getFavor());
             bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
         }
         else if(culture.compareTo("Greek") == 0) {
@@ -2011,5 +2019,7 @@ public class BoardController {
     public void setAiCulture2(String aiCulture2) {
         this.aiCulture2 = aiCulture2;
     }
+    Greek gPlayer;
+    BoardController board;
     
 }
