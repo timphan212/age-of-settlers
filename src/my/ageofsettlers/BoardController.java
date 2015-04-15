@@ -169,6 +169,10 @@ public class BoardController {
                 board.initPlayPermCards();
             }
         }
+        else if(str.compareTo("njord") == 0) {
+            NorseRandNjord njord = new NorseRandNjord();
+            njord.setVisible(true);
+        }
         
     }
     
