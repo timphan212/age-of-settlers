@@ -173,6 +173,10 @@ public class BoardController {
             NorseRandNjord njord = new NorseRandNjord();
             njord.setVisible(true);
         }
+        else if(str.compareTo("tah") == 0) {
+            EgyptBuildTah tah = new EgyptBuildTah();
+            tah.setVisible(true);
+        }
         
     }
     

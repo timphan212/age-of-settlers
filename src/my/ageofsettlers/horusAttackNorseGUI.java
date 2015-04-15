@@ -260,6 +260,8 @@ public class horusAttackNorseGUI extends javax.swing.JFrame {
             board.removeBuildingTiles(playerCulture, buildings);
         }
         this.setVisible(false);
+        board.initPlayPermCards();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
