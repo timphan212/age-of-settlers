@@ -509,7 +509,6 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
          else if(str.toLowerCase().contains("recruithel")){
             str2 = "hel";
         }
-        System.out.println(str2);
         return str2;
     }
     

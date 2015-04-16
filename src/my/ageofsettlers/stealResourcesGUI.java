@@ -115,7 +115,6 @@ public class stealResourcesGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boolean stealResources = checkBuildingSelection(this.playerCulture);
-        System.out.println(this.playerCulture);
         if(stealResources == true) {
             this.setVisible(false);
             board.initPlayPermCards();

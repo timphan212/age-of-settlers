@@ -218,7 +218,10 @@ public class BoardController {
             AskGodPowerGUI godpower = new AskGodPowerGUI();
             godpower.setVisible(true);
         }
-        
+        else if(str.compareTo("loki") == 0) {
+            AskGodPowerForLokiGUI godpower = new AskGodPowerForLokiGUI();
+            godpower.setVisible(true);
+        }
     }
     
     private static void unitSetup() {
