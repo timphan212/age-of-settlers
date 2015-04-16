@@ -15,6 +15,8 @@ public class AskGodPowerGUI extends javax.swing.JFrame {
      * Creates new form AskGodPowerGUI
      */
     public AskGodPowerGUI() {
+        this.board = BoardController.getInstance();
+        this.gPlayer = Greek.getInstance();
         initComponents();
     }
 
@@ -44,6 +46,11 @@ public class AskGodPowerGUI extends javax.swing.JFrame {
         });
 
         proceedToNormalCard.setText("No!");
+        proceedToNormalCard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proceedToNormalCardActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,8 +97,19 @@ public class AskGodPowerGUI extends javax.swing.JFrame {
         TradeHermesGUI hermes = new TradeHermesGUI();
         hermes.setupTradeCostGUI("Greek");
         hermes.setVisible(true);
+
+        int newFavor = gPlayer.getFavor() - 1;
+        gPlayer.setFavor(newFavor);
+        board.updateResources("Greek");
         this.setVisible(false);
     }//GEN-LAST:event_proceedToGodPowerActionPerformed
+
+    private void proceedToNormalCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proceedToNormalCardActionPerformed
+        tradeGUI tGUI = new tradeGUI();
+        this.setVisible(false);
+        tGUI.setVisible(true);
+        tGUI.setupTradeGUI("Greek");
+    }//GEN-LAST:event_proceedToNormalCardActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,7 +145,8 @@ public class AskGodPowerGUI extends javax.swing.JFrame {
             }
         });
     }
-
+    private BoardController board;
+    Greek gPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
