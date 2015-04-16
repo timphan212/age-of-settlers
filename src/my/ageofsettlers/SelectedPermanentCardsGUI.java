@@ -458,8 +458,8 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
          else if(str.contains("CardRandEgyptExplorePtah")){
             str2 = "ptah";
         }
-         else if(str.contains("CardRandEgyptAgeHathor")){
-            str2 = "hathor";
+         else if(str.contains("Hathor")){
+            str2 = "randAge";
         }
          else if(str.contains("CardRandEgyptTradeTah")){
             str2 = "tah";
@@ -480,7 +480,7 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
             str2 = "artemis";
         }
          else if(str.toLowerCase().contains("zeus")){
-            str2 = "zeus";
+            str2 = "randAge";
         }
          else if(str.toLowerCase().contains("hermes")){
             str2 = "hermes";
@@ -500,8 +500,8 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
         else if(str.toLowerCase().contains("baldr")){
             str2 = "baldr";
         }
-        else if(str.toLowerCase().contains("oldin")){
-            str2 = "oldin";
+        else if(str.toLowerCase().contains("odin")){
+            str2 = "randAge";
         }
          else if(str.toLowerCase().contains("loki")){
             str2 = "loki";

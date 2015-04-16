@@ -33,10 +33,10 @@ public class BoardController {
     private static BoardGUI bGUI;
     private int roundCount = 0;
     private List<UnitCard> aiBattleUnits = new ArrayList<>();
+    private boolean isPlayFourthCard = false;
+
     
-    /**
-     * @param args the command line arguments
-     */
+    
     
     public static synchronized BoardController getInstance() {
         if(instance == null) {
@@ -81,22 +81,24 @@ public class BoardController {
     
     public void initPlayPermCards() {
         SelectedPermanentCardsGUI spCards = new SelectedPermanentCardsGUI();
-        if(playerPermCards.size() > 0) {
+        if (playerPermCards.size() > 0) {
             spCards.setMaxCards(playerPermCards.size());
             spCards.setupCards();
-        }
-        else {
+        } else {
             roundCount = 3;
         }
         roundCount++;
-        if(roundCount > 3) {
+
+        if (isPlayFourthCard == false && roundCount > 3) {
             spCards.setVisible(false);
             spoilage();
             TurnFinishGUI tfGUI = new TurnFinishGUI();
             tfGUI.setVisible(true);
-        }
-        else {
+        } else {
             spCards.setVisible(true);
+        }
+        if (isPlayFourthCard == true && roundCount > 3) {
+            this.setFourthCard(false);
         }
     }
     
@@ -176,6 +178,41 @@ public class BoardController {
         else if(str.compareTo("tah") == 0) {
             EgyptBuildTah tah = new EgyptBuildTah();
             tah.setVisible(true);
+        }
+        
+        else if (str.compareTo("randAge") == 0) {
+            System.out.println("Playing random action card next age");
+            CardPlayError cardError = new CardPlayError();
+
+            if (playerCulture.compareTo("Norse") == 0) {
+                int reqResources = randomFindAge(norsePlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    GodPowerNextAgeGUI godPower = new GodPowerNextAgeGUI();
+                    godPower.setVisible(true);
+                } else {
+                    cardError.setVisible(true);
+                }
+            } else if (playerCulture.compareTo("Greek") == 0) {
+                int reqResources = randomFindAge(norsePlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    GodPowerNextAgeGUI godPower = new GodPowerNextAgeGUI();
+                    godPower.setVisible(true);
+                } else {
+                    cardError.setVisible(true);
+                }
+            } else {
+                int reqResources = randomFindAge(egyptianPlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    GodPowerNextAgeGUI godPower = new GodPowerNextAgeGUI();
+                    godPower.setVisible(true);
+                } else {
+                    cardError.setVisible(true);
+                }
+            }
+
         }
         
     }
@@ -887,6 +924,19 @@ public class BoardController {
             return 6;
         }
         else {
+            return -1;
+        }
+    }
+    
+    private int randomFindAge(int currentAge) {
+        // Cost of random action card next age
+        if (currentAge == 0) {
+            return 3;
+        } else if (currentAge == 1) {
+            return 4;
+        } else if (currentAge == 2) {
+            return 5;
+        } else {
             return -1;
         }
     }
@@ -2027,7 +2077,60 @@ public class BoardController {
     public void setAiCulture2(String aiCulture2) {
         this.aiCulture2 = aiCulture2;
     }
+    public boolean getFourthCard() {
+        return isPlayFourthCard;
+    }
+
+    public void setFourthCard(boolean x) {
+        isPlayFourthCard = x;
+    }
+    public void playRandomNextAgeCard(String culture) {
+
+        CardPlayError cardError = new CardPlayError();
+
+        if (culture.compareTo("Norse") == 0) {
+            int reqResources = randomFindAge(norsePlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+            if (advanceAge == true && reqResources >= 3) {
+                norsePlayer.setWood(norsePlayer.getWood() - reqResources);
+                norsePlayer.setGold(norsePlayer.getGold() - reqResources);
+                norsePlayer.setFood(norsePlayer.getFood() - reqResources);
+                norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
+                norsePlayer.setAge(norsePlayer.getAge() + 1);
+                bGUI.changeAgeText("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
+            } else {
+                cardError.setVisible(true);
+            }
+        } else if (culture.compareTo("Greek") == 0) {
+            int reqResources = randomFindAge(greekPlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+            if (advanceAge == true && reqResources >= 3) {
+                greekPlayer.setWood(greekPlayer.getWood() - reqResources);
+                greekPlayer.setGold(greekPlayer.getGold() - reqResources);
+                greekPlayer.setFood(greekPlayer.getFood() - reqResources);
+                greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
+                greekPlayer.setAge(greekPlayer.getAge() + 1);
+                bGUI.changeAgeText("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
+            } else {
+                cardError.setVisible(true);
+            }
+        } else {
+            int reqResources = randomFindAge(egyptianPlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+            if (advanceAge == true && reqResources >= 3) {
+                egyptianPlayer.setWood(egyptianPlayer.getWood() - reqResources);
+                egyptianPlayer.setGold(egyptianPlayer.getGold() - reqResources);
+                egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
+                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
+                egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
+                bGUI.changeAgeText("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
+            } else {
+                cardError.setVisible(true);
+            }
+        }
+    }
     Greek gPlayer;
     BoardController board;
+    
     
 }
