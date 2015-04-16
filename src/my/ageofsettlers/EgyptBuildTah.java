@@ -76,7 +76,7 @@ public class EgyptBuildTah extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -87,9 +87,7 @@ public class EgyptBuildTah extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -100,8 +98,9 @@ public class EgyptBuildTah extends javax.swing.JFrame {
             int newFavor = ePlayer.getFavor() - 1;
             ePlayer.setFavor(newFavor);
             board.updateResources("Egyptian");
-            stealResourcesGUI steal = new stealResourcesGUI();
+            TahTradeCardForEgyptGUI steal = new TahTradeCardForEgyptGUI();
             steal.setVisible(true);
+            this.setVisible(false);
         }
         else {
             board.initPlayPermCards();
@@ -114,8 +113,9 @@ public class EgyptBuildTah extends javax.swing.JFrame {
             int newFavor = ePlayer.getFavor() - 1;
             ePlayer.setFavor(newFavor);
             board.updateResources("Egyptian");
-            stealResourcesGUI steal = new stealResourcesGUI();
+            TahTradeCardForEgyptNorseGUI steal = new TahTradeCardForEgyptNorseGUI();
             steal.setVisible(true);
+            this.setVisible(false);
         }
         else {
             board.initPlayPermCards();
@@ -157,8 +157,8 @@ public class EgyptBuildTah extends javax.swing.JFrame {
             }
         });
     }
-    private Egyptian ePlayer;
-    private BoardController board;
+    Egyptian ePlayer;
+    BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

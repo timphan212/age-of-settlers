@@ -9,14 +9,15 @@ package my.ageofsettlers;
  *
  * @author SailendraBharadwaj
  */
-public class stealResourcesGUI extends javax.swing.JFrame {
+public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form stealResourcesGUI
+     * Creates new form TahTradeCardForEgyptGUI
      */
-    public stealResourcesGUI() {
+    public TahTradeCardForEgyptGUI() {
         this.board = BoardController.getInstance();
-        this.playerCulture = board.getPlayerCulture();
+        this.egyptPlayer = Egyptian.getInstance();
+        this.greekPlayer = Greek.getInstance();
         initComponents();
     }
 
@@ -29,7 +30,6 @@ public class stealResourcesGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         food = new javax.swing.JRadioButton();
         wood = new javax.swing.JRadioButton();
         gold = new javax.swing.JRadioButton();
@@ -61,29 +61,29 @@ public class stealResourcesGUI extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(128, 128, 128)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(favor)
                             .addComponent(gold)
                             .addComponent(wood)
                             .addComponent(food)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(jButton1)
                         .addGap(67, 67, 67)
                         .addComponent(jButton2)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(food)
                 .addGap(18, 18, 18)
@@ -93,37 +93,79 @@ public class stealResourcesGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(favor)
                 .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(37, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        boolean stealResources = checkBuildingSelection(this.playerCulture);
-        System.out.println(this.playerCulture);
-        if(stealResources == true) {
-            this.setVisible(false);
-            board.initPlayPermCards();
-        }
-        else {
+        if(food.isSelected() == true) {
+           if(greekPlayer.getFood() >=2) {
+               int greekFood = greekPlayer.getFood() - 2;
+               greekPlayer.setFood(greekFood);
+               int egyptFood = egyptPlayer.getFood() + 2;
+               egyptPlayer.setFood(egyptFood);
+               board.updateResources("Greek");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
             beGUI.setVisible(true);
+           } 
         }
+        else if(wood.isSelected() == true) {
+             if(greekPlayer.getWood()>=2) {
+               int greekWood = greekPlayer.getWood() - 2;
+               greekPlayer.setWood(greekWood);
+               int egyptWood = egyptPlayer.getWood() + 2;
+               egyptPlayer.setWood(egyptWood);
+               board.updateResources("Greek");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+           }  
+        }
+        else if(gold.isSelected() == true) {
+            if(greekPlayer.getGold()>=2) {
+               int greekGold = greekPlayer.getGold() - 2;
+               greekPlayer.setGold(greekGold);
+               int egyptGold = egyptPlayer.getGold() + 2;
+               egyptPlayer.setGold(egyptGold);
+               board.updateResources("Greek");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+           }  
+            
+        }
+        else if(favor.isSelected() == true) {
+            if(greekPlayer.getFavor()>=2) {
+               int greekFavor = greekPlayer.getFavor() - 2;
+               greekPlayer.setFavor(greekFavor);
+               int egyptFavor = egyptPlayer.getFavor() + 2;
+               egyptPlayer.setFavor(egyptFavor);
+               board.updateResources("Greek");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+           }  
+        }
+                  board.initPlayPermCards();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -131,13 +173,6 @@ public class stealResourcesGUI extends javax.swing.JFrame {
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private boolean checkBuildingSelection(String playerCulture) {
-        if(playerCulture.compareTo("Greek") == 0) {
-            System.out.println("...");
-            return true;
-        }
-        return false;
-    }
     /**
      * @param args the command line arguments
      */
@@ -155,34 +190,32 @@ public class stealResourcesGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new stealResourcesGUI().setVisible(true);
+                new TahTradeCardForEgyptGUI().setVisible(true);
             }
         });
     }
-
     private BoardController board;
-    private String playerCulture;
+    Egyptian egyptPlayer;
+    Greek greekPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton favor;
     private javax.swing.JRadioButton food;
     private javax.swing.JRadioButton gold;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton wood;
     // End of variables declaration//GEN-END:variables
-
 }

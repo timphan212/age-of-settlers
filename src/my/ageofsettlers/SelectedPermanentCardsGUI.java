@@ -446,25 +446,25 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
         else if(str.toLowerCase().contains("explore") && str.toLowerCase().startsWith("cardperm")) {
                 str2 = "explore";
         }
-        else if(str.toLowerCase().contains("rsz_CardRandEgyptAttackThoth")){
+        else if(str.contains("rsz_CardRandEgyptAttackThoth")){
             str2 = "thoth";
         }
          else if(str.toLowerCase().contains("horus")){
             str2 = "horus";
         }
-         else if(str.toLowerCase().contains("CardRandEgyptGatherRa")){
+         else if(str.contains("CardRandEgyptGatherRa")){
             str2 = "gatherra";
         }
-         else if(str.toLowerCase().contains("CardRandEgyptExplorePtah")){
+         else if(str.contains("CardRandEgyptExplorePtah")){
             str2 = "ptah";
         }
-         else if(str.toLowerCase().contains("CardRandEgyptAgeHathor")){
+         else if(str.contains("CardRandEgyptAgeHathor")){
             str2 = "hathor";
         }
-         else if(str.toLowerCase().contains("CardRandEgyptTradeTah")){
+         else if(str.contains("CardRandEgyptTradeTah")){
             str2 = "tah";
         }
-         else if(str.toLowerCase().contains("CardRandEgyptRecruitAnubis")){
+         else if(str.contains("CardRandEgyptRecruitAnubis")){
             str2 = "anubis";
         }
          else if(str.toLowerCase().contains("attackares")){
@@ -509,6 +509,7 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
          else if(str.toLowerCase().contains("recruithel")){
             str2 = "hel";
         }
+        System.out.println(str2);
         return str2;
     }
     

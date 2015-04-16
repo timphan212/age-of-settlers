@@ -9,14 +9,15 @@ package my.ageofsettlers;
  *
  * @author SailendraBharadwaj
  */
-public class stealResourcesGUI extends javax.swing.JFrame {
+public class TahTradeCardForEgyptNorseGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form stealResourcesGUI
+     * Creates new form TahTradeCardForEgyptNorseGUI
      */
-    public stealResourcesGUI() {
+    public TahTradeCardForEgyptNorseGUI() {
         this.board = BoardController.getInstance();
-        this.playerCulture = board.getPlayerCulture();
+        this.egyptPlayer = Egyptian.getInstance();
+        this.norsePlayer = Norse.getInstance();
         initComponents();
     }
 
@@ -66,37 +67,36 @@ public class stealResourcesGUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(128, 128, 128)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(favor)
-                            .addComponent(gold)
-                            .addComponent(wood)
-                            .addComponent(food)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jButton1)
-                        .addGap(67, 67, 67)
-                        .addComponent(jButton2)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                    .addComponent(favor)
+                    .addComponent(gold)
+                    .addComponent(wood)
+                    .addComponent(food))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(86, 86, 86))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(23, 23, 23)
                 .addComponent(food)
-                .addGap(18, 18, 18)
-                .addComponent(wood)
-                .addGap(18, 18, 18)
-                .addComponent(gold)
-                .addGap(18, 18, 18)
-                .addComponent(favor)
                 .addGap(32, 32, 32)
+                .addComponent(wood)
+                .addGap(33, 33, 33)
+                .addComponent(gold)
+                .addGap(36, 36, 36)
+                .addComponent(favor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -114,30 +114,74 @@ public class stealResourcesGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        boolean stealResources = checkBuildingSelection(this.playerCulture);
-        System.out.println(this.playerCulture);
-        if(stealResources == true) {
-            this.setVisible(false);
-            board.initPlayPermCards();
-        }
-        else {
+          if(food.isSelected() == true) {
+           if(norsePlayer.getFood() >=2) {
+               int norseFood = norsePlayer.getFood() - 2;
+               norsePlayer.setFood(norseFood);
+               int egyptFood = egyptPlayer.getFood() + 2;
+               egyptPlayer.setFood(egyptFood);
+               board.updateResources("Norse");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
             beGUI.setVisible(true);
+           } 
         }
+        else if(wood.isSelected() == true) {
+             if(norsePlayer.getWood()>=2) {
+               int norseWood = norsePlayer.getWood() - 2;
+               norsePlayer.setWood(norseWood);
+               int egyptWood = egyptPlayer.getWood() + 2;
+               egyptPlayer.setWood(egyptWood);
+               board.updateResources("Norse");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+           }  
+        }
+        else if(gold.isSelected() == true) {
+            if(norsePlayer.getGold()>=2) {
+               int norseGold = norsePlayer.getGold() - 2;
+               norsePlayer.setGold(norseGold);
+               int egyptGold = egyptPlayer.getGold() + 2;
+               egyptPlayer.setGold(egyptGold);
+               board.updateResources("Norse");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+           }  
+            
+        }
+        else if(favor.isSelected() == true) {
+            if(norsePlayer.getFavor()>=2) {
+               int norseFavor = norsePlayer.getFavor() - 2;
+               norsePlayer.setFavor(norseFavor);
+               int egyptFavor = egyptPlayer.getFavor() + 2;
+               egyptPlayer.setFavor(egyptFavor);
+               board.updateResources("Norse");
+               board.updateResources("Egyptian");
+               this.setVisible(false);
+           }
+           else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+           }  
+        }
+          board.initPlayPermCards();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.setVisible(false);
-        board.initPlayPermCards();
+        // 
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private boolean checkBuildingSelection(String playerCulture) {
-        if(playerCulture.compareTo("Greek") == 0) {
-            System.out.println("...");
-            return true;
-        }
-        return false;
-    }
     /**
      * @param args the command line arguments
      */
@@ -155,26 +199,27 @@ public class stealResourcesGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptNorseGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptNorseGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptNorseGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(stealResourcesGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TahTradeCardForEgyptNorseGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new stealResourcesGUI().setVisible(true);
+                new TahTradeCardForEgyptNorseGUI().setVisible(true);
             }
         });
     }
-
+    
     private BoardController board;
-    private String playerCulture;
+    Norse norsePlayer;
+    Egyptian egyptPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton favor;
     private javax.swing.JRadioButton food;
@@ -184,5 +229,4 @@ public class stealResourcesGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton wood;
     // End of variables declaration//GEN-END:variables
-
 }
