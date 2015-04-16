@@ -180,6 +180,7 @@ public class TradeHermesGUI extends javax.swing.JFrame {
 
         if(sum1 == sum2) {
             Greek greekPlayer = Greek.getInstance();
+            ;
             greekPlayer.setFood(greekPlayer.getFood() + playerFoodCount);
             greekPlayer.setFavor(greekPlayer.getFavor() + playerFavorCount);
             greekPlayer.setWood(greekPlayer.getWood() + playerWoodCount);
