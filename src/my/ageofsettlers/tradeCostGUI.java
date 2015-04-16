@@ -55,6 +55,11 @@ public class tradeCostGUI extends javax.swing.JFrame {
         playerFoodText.setBorder(null);
 
         playerFoodSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        playerFoodSelection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerFoodSelectionActionPerformed(evt);
+            }
+        });
 
         playerFavorText.setEditable(false);
         playerFavorText.setBackground(new java.awt.Color(255,255,255,1));
@@ -209,6 +214,10 @@ public class tradeCostGUI extends javax.swing.JFrame {
         this.setVisible(false);
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void playerFoodSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerFoodSelectionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_playerFoodSelectionActionPerformed
 
     public void setupTradeCostGUI(String culture) {
         String[] foodCount;

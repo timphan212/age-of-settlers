@@ -214,6 +214,10 @@ public class BoardController {
             }
 
         }
+        else if(str.compareTo("hermes") == 0) {
+            AskGodPowerGUI godpower = new AskGodPowerGUI();
+            godpower.setVisible(true);
+        }
         
     }
     
