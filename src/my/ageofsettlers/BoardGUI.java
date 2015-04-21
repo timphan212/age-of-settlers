@@ -7911,7 +7911,7 @@ public class BoardGUI extends javax.swing.JFrame {
             changeBoardResources(culture, wood, gold, food, favor, victory);
         }
         else {
-            str = setAgeText(greekAge, age);
+            str = setAgeText(egyptianAge, age);
             changeBoardResources(culture, wood, gold, food, favor, victory);
         }
         

@@ -618,8 +618,8 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             randomActionCardNextAge_img.getAccessibleContext().setAccessibleName("CardRandEgyptAgeHathor.png");
             randomActionCardTrade_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptTradeTah.png")));
             randomActionCardTrade_img.getAccessibleContext().setAccessibleName("CardRandEgyptTradeTah.png");
-            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptRecruitAnubis.png")));
-            randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandEgyptRecruitAnubis.png");
+            randomActionCardRecruit_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandEgyptRecruitOsiris.png")));
+            randomActionCardRecruit_img.getAccessibleContext().setAccessibleName("CardRandEgyptRecruitOsiris.png");
         }
         else if(board.getPlayerCulture().compareTo("Greek") == 0) {
             PermanentAttack_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardPermGreekAttack.png")));

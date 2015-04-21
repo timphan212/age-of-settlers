@@ -209,8 +209,12 @@ public class BoardController {
             godPower.setVisible(true);
         } else if(str.compareTo("freya")==0){
             GodPowerFreyaGUI godPower = new GodPowerFreyaGUI();
-            godPower.setVisible(true);
-            
+            godPower.setVisible(true);   
+        } else if(str.compareTo("osiris") == 0) {
+            if(egyptianPlayer.getAge() != 0) {
+                EgyptRecruitOsirisGUI osiris = new EgyptRecruitOsirisGUI();
+                osiris.setVisible(true);
+            }
         }
     }
 
