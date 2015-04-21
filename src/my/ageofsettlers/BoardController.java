@@ -207,6 +207,10 @@ public class BoardController {
             terrainList = baldrPickExploreTerrains(eGUI, 3);
             GodPowerBaldrGUI godPower = new GodPowerBaldrGUI(eGUI);
             godPower.setVisible(true);
+        } else if(str.compareTo("freya")==0){
+            GodPowerFreyaGUI godPower = new GodPowerFreyaGUI();
+            godPower.setVisible(true);
+            
         }
     }
 
@@ -877,7 +881,7 @@ public class BoardController {
         return false;
     }
 
-    private void aiGatherHandler() {
+    public void aiGatherHandler() {
         String str = getRandomGatherType();
         String culture = aiCulture;
         System.out.println("AI " + culture + " gathered the " + str);
@@ -1984,6 +1988,10 @@ public class BoardController {
 
     public void setFourthCard(boolean x) {
         isPlayFourthCard = x;
+    }
+    
+    public void addNorseFourGold(){
+        norsePlayer.setGold(norsePlayer.getGold() + 4);
     }
 
     public void playRandomNextAgeCard(String culture) {

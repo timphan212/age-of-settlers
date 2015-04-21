@@ -62,6 +62,11 @@ public class gatherGUI extends javax.swing.JFrame {
 
         buttonGroup2.add(Forest);
         Forest.setText("Forest");
+        Forest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ForestActionPerformed(evt);
+            }
+        });
         jPanel1.add(Forest, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
         buttonGroup2.add(Desert);
@@ -124,6 +129,10 @@ public class gatherGUI extends javax.swing.JFrame {
         this.setVisible(false);
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ForestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ForestActionPerformed
 
     private String retrieveString() {
         String str = "";
