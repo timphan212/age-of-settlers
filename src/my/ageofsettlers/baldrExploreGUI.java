@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package my.ageofsettlers;
 
 import java.awt.Component;
@@ -13,12 +12,12 @@ import java.util.List;
  *
  * @author Tim
  */
-public class exploreGUI extends javax.swing.JFrame {
+public class baldrExploreGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form exploreGUI
      */
-    public exploreGUI() {
+    public baldrExploreGUI() {
         this.board = BoardController.getInstance();
         initComponents();
     }
@@ -41,8 +40,6 @@ public class exploreGUI extends javax.swing.JFrame {
         terrain_img_2 = new javax.swing.JLabel();
         terrain_3 = new javax.swing.JPanel();
         terrain_img_3 = new javax.swing.JLabel();
-        terrain_4 = new javax.swing.JPanel();
-        terrain_img_4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -114,26 +111,7 @@ public class exploreGUI extends javax.swing.JFrame {
 
         terrainPanel.add(terrain_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 11, -1, -1));
 
-        terrain_img_4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                terrain_img_4MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout terrain_4Layout = new javax.swing.GroupLayout(terrain_4);
-        terrain_4.setLayout(terrain_4Layout);
-        terrain_4Layout.setHorizontalGroup(
-            terrain_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(terrain_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-        );
-        terrain_4Layout.setVerticalGroup(
-            terrain_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(terrain_img_4, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-        );
-
-        terrainPanel.add(terrain_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 11, -1, -1));
-
-        explorePanel.add(terrainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 460, 120));
+        explorePanel.add(terrainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 380, 120));
 
         jButton1.setText("Done");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +119,7 @@ public class exploreGUI extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        explorePanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+        explorePanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -158,15 +136,18 @@ public class exploreGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        board.exploreAiHandler(terrainPanel);
+        if (god == false) {
+            System.out.println("No GOD baldr");
+            board.exploreAiHandler(terrainPanel);
+        }
         this.setVisible(false);
         board.initPlayPermCards();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void terrain_img_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_1MouseClicked
         boolean terrainSuccess = this.board.terrainHandler(evt);
-        if(terrainSuccess == true) {
-            this.board.exploreHandler(evt, terrainPanel);
+        if (terrainSuccess == true) {
+            this.board.baldrExploreHandler(evt, terrainPanel, god);
             this.setVisible(false);
             board.initPlayPermCards();
         }
@@ -174,8 +155,8 @@ public class exploreGUI extends javax.swing.JFrame {
 
     private void terrain_img_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_2MouseClicked
         boolean terrainSuccess = this.board.terrainHandler(evt);
-        if(terrainSuccess == true) {
-            this.board.exploreHandler(evt, terrainPanel);
+        if (terrainSuccess == true) {
+            this.board.baldrExploreHandler(evt, terrainPanel, god);
             this.setVisible(false);
             board.initPlayPermCards();
         }
@@ -183,28 +164,19 @@ public class exploreGUI extends javax.swing.JFrame {
 
     private void terrain_img_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_3MouseClicked
         boolean terrainSuccess = this.board.terrainHandler(evt);
-        if(terrainSuccess == true) {
-            this.board.exploreHandler(evt, terrainPanel);
+        if (terrainSuccess == true) {
+            this.board.baldrExploreHandler(evt, terrainPanel, god);
             this.setVisible(false);
             board.initPlayPermCards();
         }
     }//GEN-LAST:event_terrain_img_3MouseClicked
 
-    private void terrain_img_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_4MouseClicked
-        boolean terrainSuccess = this.board.terrainHandler(evt);
-        if(terrainSuccess == true) {
-            this.board.exploreHandler(evt, terrainPanel);
-            this.setVisible(false);
-            board.initPlayPermCards();
-        }
-    }//GEN-LAST:event_terrain_img_4MouseClicked
-
     public void setTerrainIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrainPanel.getComponents();
         int count = 0;
-        
-        for(Component terrainComponent : terrainComponents) {
-            if(terrainComponent instanceof javax.swing.JPanel) {
+
+        for (Component terrainComponent : terrainComponents) {
+            if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
                 TerrainTiles terrain = terrainList.get(count);
@@ -214,7 +186,7 @@ public class exploreGUI extends javax.swing.JFrame {
             }
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -232,14 +204,18 @@ public class exploreGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(exploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(exploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(exploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(exploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -248,11 +224,15 @@ public class exploreGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new exploreGUI().setVisible(true);
+                new baldrExploreGUI().setVisible(true);
             }
         });
     }
 
+    public void setBaldrGod(boolean b) {
+        god = b;
+    }
+    private boolean god = false;
     private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel explorePanel;
@@ -262,10 +242,8 @@ public class exploreGUI extends javax.swing.JFrame {
     private javax.swing.JPanel terrain_1;
     private javax.swing.JPanel terrain_2;
     private javax.swing.JPanel terrain_3;
-    private javax.swing.JPanel terrain_4;
     private javax.swing.JLabel terrain_img_1;
     private javax.swing.JLabel terrain_img_2;
     private javax.swing.JLabel terrain_img_3;
-    private javax.swing.JLabel terrain_img_4;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package my.ageofsettlers;
 
 import java.awt.Component;
@@ -18,6 +17,7 @@ import javax.swing.JPanel;
  * @author Tim
  */
 public class BoardController {
+
     private static List<TerrainTiles> terrainList = new ArrayList<>();
     private String playerCulture;
     private String aiCulture;
@@ -35,22 +35,19 @@ public class BoardController {
     private List<UnitCard> aiBattleUnits = new ArrayList<>();
     private boolean isPlayFourthCard = false;
 
-    
-    
-    
     public static synchronized BoardController getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new BoardController();
         }
-        
+
         return instance;
     }
-    
+
     public static void main(String[] args) {
         CultureSelectGUI culSelect = new CultureSelectGUI();
         culSelect.setVisible(true);
     }
-    
+
     public static void boardSetup(BoardGUI board) {
         bGUI = board;
         norsePlayer = Norse.getInstance();
@@ -60,25 +57,25 @@ public class BoardController {
         unitSetup();
         terrainList = randomTerrainTiles(terrainList);
     }
-    
+
     public static void setupRounds() {
         victoryCardGUI victoryRounds = victoryCardGUI.getInstance();
         victoryRounds.getTextField().setVisible(true);
         victoryRounds.setVisible(true);
     }
-    
+
     public void initVictoryCards() {
         victoryCardGUI vcGUI = victoryCardGUI.getInstance();
         vcGUI.setVisible(true);
     }
-    
+
     public void initPermanentCards() {
         PermanentCardsGUI pcGUI = new PermanentCardsGUI();
         int num = getMaxCards();
         pcGUI.setMaxCards(num);
         pcGUI.setVisible(true);
     }
-    
+
     public void initPlayPermCards() {
         SelectedPermanentCardsGUI spCards = new SelectedPermanentCardsGUI();
         if (playerPermCards.size() > 0) {
@@ -101,86 +98,70 @@ public class BoardController {
             this.setFourthCard(false);
         }
     }
-    
+
     public void playCard(String str) {
         System.out.println(str);
-        if(str.compareTo("age") == 0) {
+        if (str.compareTo("age") == 0) {
             playNextAgeCard(playerCulture);
-        }
-        else if(str.compareTo("gather") == 0) {
+        } else if (str.compareTo("gather") == 0) {
             gatherGUI gGUI = new gatherGUI();
             gGUI.setVisible(true);
             aiGatherHandler();
-        }
-        else if(str.compareTo("trade") == 0) {
+        } else if (str.compareTo("trade") == 0) {
             tradeCostGUI tcGUI = new tradeCostGUI();
             tradeGUI tGUI = new tradeGUI();
             boolean market = false;
-            if(playerCulture.compareTo("Norse") == 0) {
+            if (playerCulture.compareTo("Norse") == 0) {
                 market = norsePlayer.isMarket();
-            }
-            else if(playerCulture.compareTo("Greek") == 0) {
+            } else if (playerCulture.compareTo("Greek") == 0) {
                 market = greekPlayer.isMarket();
-            }
-            else {
+            } else {
                 market = egyptianPlayer.isMarket();
             }
-            
-            if(market == true) {
+
+            if (market == true) {
                 tGUI.setVisible(true);
                 tGUI.setupTradeGUI(playerCulture);
-            }
-            else {
+            } else {
                 tcGUI.setVisible(true);
                 tcGUI.setupTradeCostGUI(playerCulture);
             }
-        }
-        else if(str.compareTo("build") == 0) {
+        } else if (str.compareTo("build") == 0) {
             buildingGUI buildGUI = new buildingGUI();
             buildGUI.setVisible(true);
-        }
-        else if(str.compareTo("explore") == 0) {
+        } else if (str.compareTo("explore") == 0) {
             exploreGUI eGUI = new exploreGUI();
             eGUI.setVisible(true);
-            terrainList = pickExploreTerrains(eGUI);
-        }
-        else if(str.compareTo("recruit") == 0) {
+            terrainList = pickExploreTerrains(eGUI, 4);
+        } else if (str.compareTo("recruit") == 0) {
             recruitGUI rGUI = new recruitGUI();
             rGUI.setupRecruitGUI(playerCulture);
             rGUI.setMaxRecruits(2);
             rGUI.setVisible(true);
-        }
-        else if(str.compareTo("attack") == 0){
+        } else if (str.compareTo("attack") == 0) {
             attackAreaGUI aaGUI = new attackAreaGUI();
             aaGUI.setVisible(true);
-        }
-        else if(str.compareTo("horus") == 0) {
+        } else if (str.compareTo("horus") == 0) {
             attackGUI aGUI = new attackGUI();
             aGUI.setVisible(true);
-        }
-        else if(str.compareTo("hera") == 0) {
-           this.board = BoardController.getInstance();
-           this.gPlayer = Greek.getInstance();
-            if(gPlayer.getFavor() >=1) {
+        } else if (str.compareTo("hera") == 0) {
+            this.board = BoardController.getInstance();
+            this.gPlayer = Greek.getInstance();
+            if (gPlayer.getFavor() >= 1) {
                 int newFavor = gPlayer.getFavor() - 1;
                 gPlayer.setFavor(newFavor);
-                board.updateResources("Greek");   
+                board.updateResources("Greek");
                 bGUI.setupBuildingIcon("Greek", "House.png");
-            }
-            else {
+            } else {
                 board.initPlayPermCards();
             }
-        }
-        else if(str.compareTo("njord") == 0) {
+        } else if (str.compareTo("njord") == 0) {
             NorseRandNjord njord = new NorseRandNjord();
             njord.setVisible(true);
-        }
-        else if(str.compareTo("tah") == 0) {
+        } else if (str.compareTo("tah") == 0) {
             EgyptBuildTah tah = new EgyptBuildTah();
             tah.setVisible(true);
-        }
-        
-        else if (str.compareTo("randAge") == 0) {
+        } else if (str.compareTo("randAge") == 0) {
             System.out.println("Playing random action card next age");
             CardPlayError cardError = new CardPlayError();
 
@@ -213,50 +194,55 @@ public class BoardController {
                 }
             }
 
-        }
-        else if(str.compareTo("hermes") == 0) {
+        } else if (str.compareTo("hermes") == 0) {
             AskGodPowerGUI godpower = new AskGodPowerGUI();
             godpower.setVisible(true);
-        }
-        else if(str.compareTo("loki") == 0) {
+        } else if (str.compareTo("loki") == 0) {
             AskGodPowerForLokiGUI godpower = new AskGodPowerForLokiGUI();
             godpower.setVisible(true);
+        } else if (str.compareTo("baldr") == 0) {
+
+            baldrExploreGUI eGUI = new baldrExploreGUI();
+            eGUI.setBaldrGod(false);
+            terrainList = baldrPickExploreTerrains(eGUI, 3);
+            GodPowerBaldrGUI godPower = new GodPowerBaldrGUI(eGUI);
+            godPower.setVisible(true);
         }
     }
-    
+
     private static void unitSetup() {
         norseUnitSetup();
         greekUnitSetup();
         egyptianUnitSetup();
     }
-    
+
     private static void norseUnitSetup() {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
         String[] bonuses;
-        
+
         bonuses = new String[1];
         bonuses[0] = "4;Giant-Killer";
         UnitCard norseUnit1 = new UnitCard(0, "Nidhogg", "CardBattleNorse1.png", 0, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4);
-        
+
         bonuses = new String[2];
         bonuses[0] = "3;Warrior";
         bonuses[1] = "4;Flyer";
         UnitCard norseUnit2 = new UnitCard(1, "Throwing Axeman", "CardBattleNorse2.png", 0, "Mortal;Archer", 3, bonuses, 1, 0, 1, 0);
-        
+
         bonuses = new String[2];
         bonuses[0] = "4;Hero";
         bonuses[1] = "4;Archer";
         UnitCard norseUnit3 = new UnitCard(2, "Jarl", "CardBattleNorse3.png", 0, "Mortal;Calvalry", 3, bonuses, 1, 0, 0, 1);
-        
+
         bonuses = new String[1];
         bonuses[0] = "4;Archer";
         UnitCard norseUnit4 = new UnitCard(3, "Valkyrie", "CardBattleNorse4.png", 0, "Myth;Calvalry", 5, bonuses, 0, 3, 0, 1);
-        
+
         bonuses = new String[1];
         bonuses[0] = "4;Calvalry";
         UnitCard norseUnit5 = new UnitCard(4, "Troll", "CardBattleNorse5.png", 0, "Myth;Warrior", 6, bonuses, 3, 0, 2, 0);
-        
+
         bonuses = new String[1];
         bonuses[0] = "4;Giant-Killer";
         UnitCard norseUnit6 = new UnitCard(5, "Nidhogg", "CardBattleNorse6.png", 0, "Myth;Flyer", 7, bonuses, 0, 1, 0, 4); //Incorrect Duplicate
@@ -273,7 +259,7 @@ public class BoardController {
         bonuses[0] = "2;Warrior";
         bonuses[1] = "3;Mortal";
         UnitCard norseUnit9 = new UnitCard(8, "Frost Giant", "CardBattleNorse9.png", 0, "Myth;Giant", 7, bonuses, 4, 2, 0, 0);
-        
+
         bonuses = new String[1];
         bonuses[0] = "4;Myth";
         UnitCard norseUnit10 = new UnitCard(9, "Classical Norse Hero", "CardBattleNorse10.png", 1, "Hero", 5, bonuses, 3, 0, 0, 3);
@@ -299,7 +285,7 @@ public class BoardController {
         unitList.add(norseUnit11);
         unitList.add(norseUnit12);
         norsePlayer.setTotalUnitList(unitList);
-        
+
         currUnitList.add(norseUnit2);
         currUnitList.add(norseUnit2);
         currUnitList.add(norseUnit3);
@@ -308,7 +294,7 @@ public class BoardController {
         currUnitList.add(norseUnit8);
         norsePlayer.setCurrentUnitList(currUnitList);
     }
-    
+
     private static void greekUnitSetup() {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
@@ -347,7 +333,7 @@ public class BoardController {
         bonuses = new String[1];
         bonuses[0] = "4;Calvalry";
         UnitCard greekUnit8 = new UnitCard(7, "Minotaur", "CardBattleGreek8.png", 0, "Myth;Warrior", 5, bonuses, 2, 0, 2, 0);
-        
+
         bonuses = new String[1];
         bonuses[0] = "";
         UnitCard greekUnit9 = new UnitCard(8, "Mythical Greek Hero", "CardBattleGreek9.png", 3, "Hero", 5, bonuses, 0, 4, 0, 4);
@@ -365,7 +351,7 @@ public class BoardController {
         bonuses = new String[1];
         bonuses[0] = "6;Giant";
         UnitCard greekUnit12 = new UnitCard(11, "Medusa", "CardBattleGreek12.png", 0, "Myth;Giant-Killer", 5, bonuses, 1, 3, 0, 0);
-        
+
         unitList.add(greekUnit1);
         unitList.add(greekUnit2);
         unitList.add(greekUnit3);
@@ -379,7 +365,7 @@ public class BoardController {
         unitList.add(greekUnit11);
         unitList.add(greekUnit12);
         greekPlayer.setTotalUnitList(unitList);
-        
+
         currUnitList.add(greekUnit5);
         currUnitList.add(greekUnit5);
         currUnitList.add(greekUnit10);
@@ -388,12 +374,12 @@ public class BoardController {
         currUnitList.add(greekUnit11);
         greekPlayer.setCurrentUnitList(currUnitList);
     }
-    
+
     private static void egyptianUnitSetup() {
         List<UnitCard> unitList = new ArrayList<>();
         List<UnitCard> currUnitList = new ArrayList<>();
         String[] bonuses;
-        
+
         bonuses = new String[1];
         bonuses[0] = "4;Myth";
         UnitCard egyptianUnit1 = new UnitCard(0, "Pharaoh", "CardBattleEgypt1.png", 2, "Hero", 6, bonuses, 3, 0, 0, 3);
@@ -426,7 +412,7 @@ public class BoardController {
         bonuses = new String[1];
         bonuses[0] = "2;Mortal";
         UnitCard egyptianUnit8 = new UnitCard(7, "Elephant", "CardBattleEgypt8.png", 0, "Mortal;Giant", 3, bonuses, 2, 0, 0, 1);
-        
+
         bonuses = new String[1];
         bonuses[0] = "";
         UnitCard egyptianUnit9 = new UnitCard(8, "Mummy", "CardBattleEgypt9.png", 0, "Myth", 5, bonuses, 0, 2, 0, 3);
@@ -456,7 +442,7 @@ public class BoardController {
         unitList.add(egyptianUnit11);
         unitList.add(egyptianUnit12);
         egyptianPlayer.setTotalUnitList(unitList);
-        
+
         currUnitList.add(egyptianUnit6);
         currUnitList.add(egyptianUnit6);
         currUnitList.add(egyptianUnit8);
@@ -465,7 +451,7 @@ public class BoardController {
         currUnitList.add(egyptianUnit10);
         egyptianPlayer.setCurrentUnitList(currUnitList);
     }
-    
+
     private static List<TerrainTiles> terrainSetup() {
         List<TerrainTiles> terrains = new ArrayList<TerrainTiles>();
         TerrainTiles tile1 = new TerrainTiles(0, "fertile", "Fertile2Food.png", 12, 2, 0, 0, 0);
@@ -508,237 +494,202 @@ public class BoardController {
         terrains.add(tile19);
         TerrainTiles tile20 = new TerrainTiles(19, "swamp", "Swamp1Favor.png", 4, 0, 1, 0, 0);
         terrains.add(tile20);
-        
+
         return terrains;
     }
-    
+
     private static List<TerrainTiles> randomTerrainTiles(List<TerrainTiles> terrainList) {
         List<TerrainTiles> randomTerrain = new ArrayList<>();
         int count = 0, num = 0, ndx = 0;
-        
-        for(int i = 0; i < 18; i++) {
+
+        for (int i = 0; i < 18; i++) {
             Random rand = new Random(System.nanoTime());
-            num = rand.nextInt(90)+1;
+            num = rand.nextInt(90) + 1;
             ndx = getTerrainListIndex(num);
             TerrainTiles terrain = terrainList.get(ndx);
             count = terrain.getTileCount();
-            
-            while(count == 0) {
-                num = rand.nextInt(90)+1;
+
+            while (count == 0) {
+                num = rand.nextInt(90) + 1;
                 ndx = getTerrainListIndex(num);
                 terrain = terrainList.get(ndx);
                 count = terrain.getTileCount();
             }
-            
+
             terrain.setTileCount(count - 1);
             terrainList.set(ndx, terrain);
             randomTerrain.add(terrain);
         }
-        
+
         bGUI.setTerrainTabLabelIcon(randomTerrain);
-        
+
         return terrainList;
     }
-    
+
     private static int getTerrainListIndex(int num) {
-        if(num >= 1 && num <= 12) {
+        if (num >= 1 && num <= 12) {
             return 0;
-        }
-        else if(num >= 13 && num <= 15) {
+        } else if (num >= 13 && num <= 15) {
             return 1;
-        }
-        else if(num >= 16 && num <= 18) {
+        } else if (num >= 16 && num <= 18) {
             return 2;
-        }
-        else if(num >= 19 && num <= 21) {
+        } else if (num >= 19 && num <= 21) {
             return 3;
-        }
-        else if(num >= 22 && num <= 30) {
+        } else if (num >= 22 && num <= 30) {
             return 4;
-        }
-        else if(num >= 31 && num <= 32) {
+        } else if (num >= 31 && num <= 32) {
             return 5;
-        }
-        else if(num >= 33 && num <= 34) {
+        } else if (num >= 33 && num <= 34) {
             return 6;
-        }
-        else if(num >= 35 && num <= 36) {
+        } else if (num >= 35 && num <= 36) {
             return 7;
-        }
-        else if(num >= 37 && num <= 40) {
+        } else if (num >= 37 && num <= 40) {
             return 8;
-        }
-        else if(num >= 41 && num <= 44) {
+        } else if (num >= 41 && num <= 44) {
             return 9;
-        }
-        else if(num >= 45 && num <= 48) {
+        } else if (num >= 45 && num <= 48) {
             return 10;
-        }
-        else if(num >= 49 && num <= 52) {
+        } else if (num >= 49 && num <= 52) {
             return 11;
-        }
-        else if(num >= 53 && num <= 58) {
+        } else if (num >= 53 && num <= 58) {
             return 12;
-        }
-        else if(num >= 59 && num <= 61) {
+        } else if (num >= 59 && num <= 61) {
             return 13;
-        }
-        else if(num >= 62 && num <= 64) {
+        } else if (num >= 62 && num <= 64) {
             return 14;
-        }
-        else if(num >= 65 && num <= 71) {
+        } else if (num >= 65 && num <= 71) {
             return 15;
-        }
-        else if(num >= 72 && num <= 78) {
+        } else if (num >= 72 && num <= 78) {
             return 16;
-        }
-        else if(num >= 79 && num <= 82) {
+        } else if (num >= 79 && num <= 82) {
             return 17;
-        }
-        else if(num >= 83 && num <= 86) {
+        } else if (num >= 83 && num <= 86) {
             return 18;
-        }
-        else if(num >= 87 && num <= 90) {
+        } else if (num >= 87 && num <= 90) {
             return 19;
         }
         return 0;
     }
-    
+
     public boolean terrainHandler(java.awt.event.MouseEvent evt) {
         String index = evt.getComponent().getAccessibleContext().getAccessibleDescription();
         TerrainTiles selectedTerrain = getTerrainTile(Integer.parseInt(index));
         boolean terrainSuccess = checkMaxTerrain(selectedTerrain);
-        
-        if(terrainSuccess == true) {
+
+        if (terrainSuccess == true) {
             evt.getComponent().setVisible(false);
         }
-        
+
         return terrainSuccess;
     }
-    
+
     private boolean checkMaxTerrain(TerrainTiles terrain) {
         List<TerrainTiles> cultureTerrain = null;
         int[] arr = {};
-        
-        if(this.playerCulture.compareTo("Norse") == 0) {
+
+        if (this.playerCulture.compareTo("Norse") == 0) {
             cultureTerrain = norsePlayer.getNorseTerrains();
             arr = norsePlayer.getMaxTerrains();
-        }
-        else if(this.playerCulture.compareTo("Greek") == 0) {
+        } else if (this.playerCulture.compareTo("Greek") == 0) {
             cultureTerrain = greekPlayer.getGreekTerrains();
             arr = greekPlayer.getMaxTerrains();
-        }
-        else if(this.playerCulture.compareTo("Egyptian") == 0) {
+        } else if (this.playerCulture.compareTo("Egyptian") == 0) {
             cultureTerrain = egyptianPlayer.getEgyptianTerrains();
             arr = egyptianPlayer.getMaxTerrains();
         }
-        
-        if(terrain.getTerrainType().compareTo("fertile") == 0) {
+
+        if (terrain.getTerrainType().compareTo("fertile") == 0) {
             return this.addTerrainToList(playerCulture, 0, arr, cultureTerrain, terrain);
-        }
-        else if(terrain.getTerrainType().compareTo("forest") == 0) {
+        } else if (terrain.getTerrainType().compareTo("forest") == 0) {
             return this.addTerrainToList(playerCulture, 1, arr, cultureTerrain, terrain);
-        }
-        else if(terrain.getTerrainType().compareTo("hill") == 0) {
+        } else if (terrain.getTerrainType().compareTo("hill") == 0) {
             return this.addTerrainToList(playerCulture, 2, arr, cultureTerrain, terrain);
-        }
-        else if(terrain.getTerrainType().compareTo("mountain") == 0) {
+        } else if (terrain.getTerrainType().compareTo("mountain") == 0) {
             return this.addTerrainToList(playerCulture, 3, arr, cultureTerrain, terrain);
-        }
-        else if(terrain.getTerrainType().compareTo("desert") == 0) {
+        } else if (terrain.getTerrainType().compareTo("desert") == 0) {
             return this.addTerrainToList(playerCulture, 4, arr, cultureTerrain, terrain);
-        }
-        else if(terrain.getTerrainType().compareTo("swamp") == 0) {
+        } else if (terrain.getTerrainType().compareTo("swamp") == 0) {
             return this.addTerrainToList(playerCulture, 5, arr, cultureTerrain, terrain);
         }
-        
+
         return false;
     }
-    
+
     private boolean addTerrainToList(String culture, int index, int[] arr, List<TerrainTiles> cultureTerrain, TerrainTiles terrain) {
-        if(arr[index] > 0) {
+        if (arr[index] > 0) {
             arr[index]--;
-            if(culture.compareTo("Norse") == 0) {
+            if (culture.compareTo("Norse") == 0) {
                 norsePlayer.setMaxTerrains(arr);
-            }
-            else if(culture.compareTo("Greek") == 0) {
+            } else if (culture.compareTo("Greek") == 0) {
                 greekPlayer.setMaxTerrainGreek(arr);
-            }
-            else {
+            } else {
                 egyptianPlayer.setMaxTerrainEgyptian(arr);
             }
             cultureTerrain.add(terrain);
             return true;
-        }
-        else {
+        } else {
             displayError();
         }
-        
+
         return false;
     }
-    
+
     private void displayError() {
         TerrainErrorGUI error = new TerrainErrorGUI();
         error.setVisible(true);
     }
-    
+
     public void aiTurnHandler(javax.swing.JTabbedPane tabpanel, Component[] terrainComponents, Component[] norseTerrain, Component[] greekTerrain, Component[] egyptianTerrain) {
         List<String> aiPlayers = findAIPlayers();
 
-        for(int i = 0; i < 2; i++) {
-            if(aiPlayers.get(i).compareTo("Norse") == 0) {
+        for (int i = 0; i < 2; i++) {
+            if (aiPlayers.get(i).compareTo("Norse") == 0) {
                 findAITerrain(aiPlayers.get(i), norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
-            }
-            else if(aiPlayers.get(i).compareTo("Greek") == 0) {
+            } else if (aiPlayers.get(i).compareTo("Greek") == 0) {
                 findAITerrain(aiPlayers.get(i), greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
-            }
-            else if(aiPlayers.get(i).compareTo("Egyptian") == 0) {
+            } else if (aiPlayers.get(i).compareTo("Egyptian") == 0) {
                 findAITerrain(aiPlayers.get(i), egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
-        for(int j = 1; j >= 0; j--) {
-            if(aiPlayers.get(j).compareTo("Norse") == 0) {
+        for (int j = 1; j >= 0; j--) {
+            if (aiPlayers.get(j).compareTo("Norse") == 0) {
                 findAITerrain(aiPlayers.get(j), norseTerrain, terrainComponents, norsePlayer.getNorseTerrains());
-            }
-            else if(aiPlayers.get(j).compareTo("Greek") == 0) {
+            } else if (aiPlayers.get(j).compareTo("Greek") == 0) {
                 findAITerrain(aiPlayers.get(j), greekTerrain, terrainComponents, greekPlayer.getGreekTerrains());
-            }
-            else if(aiPlayers.get(j).compareTo("Egyptian") == 0) {
+            } else if (aiPlayers.get(j).compareTo("Egyptian") == 0) {
                 findAITerrain(aiPlayers.get(j), egyptianTerrain, terrainComponents, egyptianPlayer.getEgyptianTerrains());
             }
         }
     }
-    
+
     private List<String> findAIPlayers() {
         List<String> aiList = new ArrayList<>();
-        
-        if(playerCulture.compareTo("Norse") == 0) {
+
+        if (playerCulture.compareTo("Norse") == 0) {
             aiList.add("Greek");
             aiList.add("Egyptian");
-        }
-        else if(playerCulture.compareTo("Greek") == 0) {
+        } else if (playerCulture.compareTo("Greek") == 0) {
             aiList.add("Norse");
             aiList.add("Egyptian");
-        }
-        else if(playerCulture.compareTo("Egyptian") == 0) {
+        } else if (playerCulture.compareTo("Egyptian") == 0) {
             aiList.add("Norse");
             aiList.add("Greek");
         }
-        
+
         return aiList;
     }
-    
+
     public void findAITerrain(String culture, Component[] boardTerrains, Component[] tabTerrains, List<TerrainTiles> cultureTerrains) {
-        for(Component tabTerrain : tabTerrains) {
-            if(tabTerrain instanceof javax.swing.JPanel) {
+        for (Component tabTerrain : tabTerrains) {
+            if (tabTerrain instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) tabTerrain;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                if(label.isVisible()) {
+                if (label.isVisible()) {
                     TerrainTiles tabTile = terrainList.get(Integer.parseInt(label.getAccessibleContext().getAccessibleDescription()));
-                    for(Component boardTerrain : boardTerrains) {
+                    for (Component boardTerrain : boardTerrains) {
                         javax.swing.JPanel panel2 = (javax.swing.JPanel) boardTerrain;
                         javax.swing.JLabel label2 = (javax.swing.JLabel) panel2.getComponent(0);
-                        if(label2.getAccessibleContext().getAccessibleDescription().compareTo(tabTile.getTerrainType()) == 0) {
+                        if (label2.getAccessibleContext().getAccessibleDescription().compareTo(tabTile.getTerrainType()) == 0) {
                             cultureTerrains.add(tabTile);
                             decrementMaxTerrains(culture, tabTile);
                             label.setVisible(false);
@@ -752,91 +703,74 @@ public class BoardController {
             }
         }
     }
-    
+
     private void decrementMaxTerrains(String culture, TerrainTiles terrain) {
         String type = terrain.getTerrainType();
-       
-        if(culture.compareTo("Norse") == 0) {
+
+        if (culture.compareTo("Norse") == 0) {
             int[] arr = norsePlayer.getMaxTerrains();
-            
-            if(type.compareTo("fertile") == 0) {
+
+            if (type.compareTo("fertile") == 0) {
                 arr[0] -= 1;
-            }
-            else if(type.compareTo("forest") == 0) {
+            } else if (type.compareTo("forest") == 0) {
                 arr[1] -= 1;
-            }
-            else if(type.compareTo("hill") == 0) {
+            } else if (type.compareTo("hill") == 0) {
                 arr[2] -= 1;
-            }
-            else if(type.compareTo("mountain") == 0) {
+            } else if (type.compareTo("mountain") == 0) {
                 arr[3] -= 1;
-            }
-            else if(type.compareTo("desert") == 0) {
+            } else if (type.compareTo("desert") == 0) {
                 arr[4] -= 1;
-            }
-            else if(type.compareTo("swamp") == 0) {
+            } else if (type.compareTo("swamp") == 0) {
                 arr[5] -= 1;
             }
             norsePlayer.setMaxTerrains(arr);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             int[] arr = greekPlayer.getMaxTerrains();
-            
-            if(type.compareTo("fertile") == 0) {
+
+            if (type.compareTo("fertile") == 0) {
                 arr[0] -= 1;
-            }
-            else if(type.compareTo("forest") == 0) {
+            } else if (type.compareTo("forest") == 0) {
                 arr[1] -= 1;
-            }
-            else if(type.compareTo("hill") == 0) {
+            } else if (type.compareTo("hill") == 0) {
                 arr[2] -= 1;
-            }
-            else if(type.compareTo("mountain") == 0) {
+            } else if (type.compareTo("mountain") == 0) {
                 arr[3] -= 1;
-            }
-            else if(type.compareTo("desert") == 0) {
+            } else if (type.compareTo("desert") == 0) {
                 arr[4] -= 1;
-            }
-            else if(type.compareTo("swamp") == 0) {
+            } else if (type.compareTo("swamp") == 0) {
                 arr[5] -= 1;
             }
             greekPlayer.setMaxTerrainGreek(arr);
-        }
-        else {
+        } else {
             int[] arr = egyptianPlayer.getMaxTerrains();
-            
-            if(type.compareTo("fertile") == 0) {
+
+            if (type.compareTo("fertile") == 0) {
                 arr[0] -= 1;
-            }
-            else if(type.compareTo("forest") == 0) {
+            } else if (type.compareTo("forest") == 0) {
                 arr[1] -= 1;
-            }
-            else if(type.compareTo("hill") == 0) {
+            } else if (type.compareTo("hill") == 0) {
                 arr[2] -= 1;
-            }
-            else if(type.compareTo("mountain") == 0) {
+            } else if (type.compareTo("mountain") == 0) {
                 arr[3] -= 1;
-            }
-            else if(type.compareTo("desert") == 0) {
+            } else if (type.compareTo("desert") == 0) {
                 arr[4] -= 1;
-            }
-            else if(type.compareTo("swamp") == 0) {
+            } else if (type.compareTo("swamp") == 0) {
                 arr[5] -= 1;
             }
             egyptianPlayer.setMaxTerrainEgyptian(arr);
         }
     }
-    
+
     public void drawVictoryCard(int cardClicked, int previousClick) {
         victoryCards[cardClicked] += 1;
-        
-        if(previousClick > -1) {
+
+        if (previousClick > -1) {
             victoryCards[previousClick] -= 1;
         }
-        
+
         drawVictoryCubes();
     }
-    
+
     public void drawVictoryCubes() {
         victoryCardGUI vcGUI = victoryCardGUI.getInstance();
         vcGUI.drawPanelsOne(victoryCards[0]);
@@ -844,97 +778,84 @@ public class BoardController {
         vcGUI.drawPanelsThree(victoryCards[2]);
         vcGUI.drawPanelsFour(victoryCards[3]);
     }
-    
+
     private int getMaxCards() {
         int age = 0;
-        if(playerCulture.compareTo("Norse") == 0) {
+        if (playerCulture.compareTo("Norse") == 0) {
             age = norsePlayer.getAge();
-        }
-        else if(playerCulture.compareTo("Greek") == 0) {
+        } else if (playerCulture.compareTo("Greek") == 0) {
             age = greekPlayer.getAge();
-        }
-        else {
+        } else {
             age = egyptianPlayer.getAge();
         }
-        
-        if(age == 0) {
+
+        if (age == 0) {
             return 4;
-        }
-        else if(age == 1) {
+        } else if (age == 1) {
             return 5;
-        }
-        else if(age == 2) {
+        } else if (age == 2) {
             return 6;
-        }
-        else {
+        } else {
             return 7;
         }
     }
-    
+
     private void playNextAgeCard(String culture) {
         CardPlayError cardError = new CardPlayError();
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             int reqResources = findAge(norsePlayer.getAge());
             boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
-            if(advanceAge == true && reqResources >= 3) {
+            if (advanceAge == true && reqResources >= 3) {
                 norsePlayer.setWood(norsePlayer.getWood() - reqResources);
                 norsePlayer.setGold(norsePlayer.getGold() - reqResources);
                 norsePlayer.setFood(norsePlayer.getFood() - reqResources);
                 norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
-                norsePlayer.setAge(norsePlayer.getAge()+1);
+                norsePlayer.setAge(norsePlayer.getAge() + 1);
                 bGUI.changeAgeText("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
-            }
-            else {
+            } else {
                 cardError.setVisible(true);
             }
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             int reqResources = findAge(greekPlayer.getAge());
             boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
-            if(advanceAge == true && reqResources >= 3) {
+            if (advanceAge == true && reqResources >= 3) {
                 greekPlayer.setWood(greekPlayer.getWood() - reqResources);
                 greekPlayer.setGold(greekPlayer.getGold() - reqResources);
                 greekPlayer.setFood(greekPlayer.getFood() - reqResources);
                 greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
-                greekPlayer.setAge(greekPlayer.getAge()+1);
+                greekPlayer.setAge(greekPlayer.getAge() + 1);
                 bGUI.changeAgeText("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
-            }
-            else {
+            } else {
                 cardError.setVisible(true);
             }
-        }
-        else {
+        } else {
             int reqResources = findAge(egyptianPlayer.getAge());
             boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
-            if(advanceAge == true && reqResources >= 3) {
+            if (advanceAge == true && reqResources >= 3) {
                 egyptianPlayer.setWood(egyptianPlayer.getWood() - reqResources);
                 egyptianPlayer.setGold(egyptianPlayer.getGold() - reqResources);
                 egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
                 egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
-                egyptianPlayer.setAge(egyptianPlayer.getAge()+1);
+                egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
                 bGUI.changeAgeText("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
-            }
-            else {
+            } else {
                 cardError.setVisible(true);
             }
         }
     }
-    
+
     private int findAge(int currentAge) {
-        if(currentAge == 0) {
+        if (currentAge == 0) {
             return 4;
-        }
-        else if(currentAge == 1) {
+        } else if (currentAge == 1) {
             return 5;
-        }
-        else if(currentAge == 2){
+        } else if (currentAge == 2) {
             return 6;
-        }
-        else {
+        } else {
             return -1;
         }
     }
-    
+
     private int randomFindAge(int currentAge) {
         // Cost of random action card next age
         if (currentAge == 0) {
@@ -947,112 +868,103 @@ public class BoardController {
             return -1;
         }
     }
-    
+
     private boolean checkAgeReqs(int reqResources, int wood, int gold, int food, int favor) {
-        if(wood >= reqResources && gold >= reqResources && food >= reqResources && favor >= reqResources) {
+        if (wood >= reqResources && gold >= reqResources && food >= reqResources && favor >= reqResources) {
             return true;
         }
-        
+
         return false;
     }
-    
+
     private void aiGatherHandler() {
         String str = getRandomGatherType();
         String culture = aiCulture;
         System.out.println("AI " + culture + " gathered the " + str);
         playGatherCard(str, culture);
-        
+
         str = getRandomGatherType();
         culture = aiCulture2;
         System.out.println("AI " + culture + " gathered the " + str);
         playGatherCard(str, culture);
     }
-    
+
     private String getRandomGatherType() {
         Random rand = new Random(System.nanoTime());
         String str = "";
         int num = rand.nextInt(10);
-        
-        if(num == 0) {
+
+        if (num == 0) {
             str = "desert";
-        }
-        else if(num == 1) {
+        } else if (num == 1) {
             str = "fertile";
-        }
-        else if(num == 2) {
+        } else if (num == 2) {
             str = "hill";
-        }
-        else if(num == 3) {
+        } else if (num == 3) {
             str = "forest";
-        }
-        else if(num == 4) {
+        } else if (num == 4) {
             str = "mountain";
-        }
-        else if(num == 5) {
+        } else if (num == 5) {
             str = "swamp";
-        }
-        else if(num == 6) {
+        } else if (num == 6) {
             str = "favor";
-        }
-        else if(num == 7) {
+        } else if (num == 7) {
             str = "food";
-        }
-        else if(num == 8) {
+        } else if (num == 8) {
             str = "wood";
-        }
-        else {
+        } else {
             str = "gold";
         }
-        
+
         return str;
     }
-    
+
     public void playGatherCard(String str, String culture) {
-        if(str == "mountain" || str == "hill" || str == "swamp" || str == "fertile" || str == "desert" || str == "forest") {
+        if (str == "mountain" || str == "hill" || str == "swamp" || str == "fertile" || str == "desert" || str == "forest") {
             scanTerrainTypes(str, culture, 1);
-        }
-        else {
+        } else {
             scanTerrainTypes(str, culture, 2);
         }
     }
-    
+
     private void scanTerrainTypes(String str, String culture, int scanType) {
         List<TerrainTiles> terrains;
         int[] arr;
-        
-        if(culture.compareTo("Norse") == 0) {
+
+        if (culture.compareTo("Norse") == 0) {
             terrains = norsePlayer.getNorseTerrains();
-            if(scanType == 1)
+            if (scanType == 1) {
                 arr = calculateTerrainResources(str, terrains);
-            else
+            } else {
                 arr = calculateResources(str, terrains);
+            }
             arr = checkBuildingBonuses(arr, "Norse");
             norsePlayer.setFood(arr[0] + norsePlayer.getFood());
             norsePlayer.setFavor(arr[1] + norsePlayer.getFavor());
             norsePlayer.setWood(arr[2] + norsePlayer.getWood());
             norsePlayer.setGold(arr[3] + norsePlayer.getGold());
             bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
-            
-        }
-        else if(culture.compareTo("Greek") == 0) {
+
+        } else if (culture.compareTo("Greek") == 0) {
             terrains = greekPlayer.getGreekTerrains();
-            if(scanType == 1)
+            if (scanType == 1) {
                 arr = calculateTerrainResources(str, terrains);
-            else
+            } else {
                 arr = calculateResources(str, terrains);
+            }
             arr = checkBuildingBonuses(arr, "Greek");
             greekPlayer.setFood(arr[0] + greekPlayer.getFood());
             greekPlayer.setFavor(arr[1] + greekPlayer.getFavor());
             greekPlayer.setWood(arr[2] + greekPlayer.getWood());
             greekPlayer.setGold(arr[3] + greekPlayer.getGold());
             bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), egyptianPlayer.getVictory());
-        }
-        else {
+        } else {
             terrains = egyptianPlayer.getEgyptianTerrains();
-            if(scanType == 1)
+            if (scanType == 1) {
                 arr = calculateTerrainResources(str, terrains);
-            else
+            } else {
                 arr = calculateResources(str, terrains);
+            }
             arr = checkBuildingBonuses(arr, "Egyptian");
             egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
             egyptianPlayer.setFavor(arr[1] + egyptianPlayer.getFavor());
@@ -1061,148 +973,178 @@ public class BoardController {
             bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
         }
     }
-    
+
     private int[] checkBuildingBonuses(int[] arr, String culture) {
-        if(culture.compareTo("Norse") == 0) {
-            if(norsePlayer.isGoldmint() == true) {
+        if (culture.compareTo("Norse") == 0) {
+            if (norsePlayer.isGoldmint() == true) {
                 arr[3] += 2;
             }
-            if(norsePlayer.isGranary() == true) {
+            if (norsePlayer.isGranary() == true) {
                 arr[0] += 2;
             }
-            if(norsePlayer.isMonument() == true) {
+            if (norsePlayer.isMonument() == true) {
                 arr[1] += 2;
             }
-            if(norsePlayer.isWoodworkshop() == true) {
+            if (norsePlayer.isWoodworkshop() == true) {
+                arr[2] += 2;
+            }
+        } else if (culture.compareTo("Greek") == 0) {
+            if (greekPlayer.isGoldmint() == true) {
+                arr[3] += 2;
+            }
+            if (greekPlayer.isGranary() == true) {
+                arr[0] += 2;
+            }
+            if (greekPlayer.isMonument() == true) {
+                arr[1] += 2;
+            }
+            if (greekPlayer.isWoodworkshop() == true) {
+                arr[2] += 2;
+            }
+        } else {
+            if (egyptianPlayer.isGoldmint() == true) {
+                arr[3] += 2;
+            }
+            if (egyptianPlayer.isGranary() == true) {
+                arr[0] += 2;
+            }
+            if (egyptianPlayer.isMonument() == true) {
+                arr[1] += 2;
+            }
+            if (egyptianPlayer.isWoodworkshop() == true) {
                 arr[2] += 2;
             }
         }
-        else if(culture.compareTo("Greek") == 0) {
-            if(greekPlayer.isGoldmint() == true) {
-                arr[3] += 2;
-            }
-            if(greekPlayer.isGranary() == true) {
-                arr[0] += 2;
-            }
-            if(greekPlayer.isMonument() == true) {
-                arr[1] += 2;
-            }
-            if(greekPlayer.isWoodworkshop() == true) {
-                arr[2] += 2;
-            }
-        }
-        else {
-            if(egyptianPlayer.isGoldmint() == true) {
-                arr[3] += 2;
-            }
-            if(egyptianPlayer.isGranary() == true) {
-                arr[0] += 2;
-            }
-            if(egyptianPlayer.isMonument() == true) {
-                arr[1] += 2;
-            }
-            if(egyptianPlayer.isWoodworkshop() == true) {
-                arr[2] += 2;
-            }
-        }
-        
+
         return arr;
     }
-    
+
     private int[] calculateTerrainResources(String str, List<TerrainTiles> terrains) {
-        int[] arr = {0,0,0,0};
-        
-        for(int i = 0; i < terrains.size(); i++) {
+        int[] arr = {0, 0, 0, 0};
+
+        for (int i = 0; i < terrains.size(); i++) {
             TerrainTiles tile = terrains.get(i);
 
-            if(str.compareTo(tile.getTerrainType()) == 0) {
+            if (str.compareTo(tile.getTerrainType()) == 0) {
                 arr[0] += tile.getFoodCount();
                 arr[1] += tile.getFavorCount();
                 arr[2] += tile.getWoodCount();
                 arr[3] += tile.getGoldCount();
             }
         }
-        
+
         return arr;
     }
-    
+
     private int[] calculateResources(String str, List<TerrainTiles> terrains) {
-        int[] arr = {0,0,0,0};
-        
-        for(int i = 0; i < terrains.size(); i++) {
+        int[] arr = {0, 0, 0, 0};
+
+        for (int i = 0; i < terrains.size(); i++) {
             TerrainTiles tile = terrains.get(i);
-            
-            if(str.compareTo("food") == 0) {
+
+            if (str.compareTo("food") == 0) {
                 arr[0] += tile.getFoodCount();
-            }
-            else if(str.compareTo("favor") == 0) {
+            } else if (str.compareTo("favor") == 0) {
                 arr[1] += tile.getFavorCount();
-            }
-            else if(str.compareTo("wood") == 0) {
+            } else if (str.compareTo("wood") == 0) {
                 arr[2] += tile.getWoodCount();
-            }
-            else {
+            } else {
                 arr[3] += tile.getGoldCount();
             }
         }
-        
+
         return arr;
     }
-    
+
     public void updateResources(String culture) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             bGUI.changeBoardResources(culture, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             bGUI.changeBoardResources(culture, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
-        }
-        else {
+        } else {
             bGUI.changeBoardResources(culture, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
         }
     }
-    
-    private List<TerrainTiles> pickExploreTerrains(exploreGUI eGUI) {
+
+    private List<TerrainTiles> pickExploreTerrains(exploreGUI eGUI, int N) {
         List<TerrainTiles> randomTerrain = new ArrayList<>();
         int count = 0, num = 0, ndx = 0;
-        
-        for(int i = 0; i < 4; i++) {
+
+        for (int i = 0; i < N; i++) {
             Random rand = new Random(System.nanoTime());
-            num = rand.nextInt(90)+1;
+            num = rand.nextInt(90) + 1;
             ndx = getTerrainListIndex(num);
             TerrainTiles terrain = terrainList.get(ndx);
             count = terrain.getTileCount();
-            
-            while(count == 0) {
-                num = rand.nextInt(90)+1;
+            System.out.println(count);
+
+            while (count == 0) {
+                num = rand.nextInt(90) + 1;
                 ndx = getTerrainListIndex(num);
                 terrain = terrainList.get(ndx);
                 count = terrain.getTileCount();
             }
-            
+
             terrain.setTileCount(count - 1);
             terrainList.set(ndx, terrain);
             randomTerrain.add(terrain);
         }
-        
+
         eGUI.setTerrainIcon(randomTerrain);
-        
+
         return terrainList;
     }
-    
-    public void exploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
-            bGUI.selectCultureTerrain(evt);
-            exploreAiHandler(panel);
+
+    private List<TerrainTiles> baldrPickExploreTerrains(baldrExploreGUI eGUI, int N) {
+        List<TerrainTiles> randomTerrain = new ArrayList<>();
+        int count = 0, num = 0, ndx = 0;
+
+        for (int i = 0; i < N; i++) {
+            Random rand = new Random(System.nanoTime());
+            num = rand.nextInt(90) + 1;
+            ndx = getTerrainListIndex(num);
+            TerrainTiles terrain = terrainList.get(ndx);
+            count = terrain.getTileCount();
+            System.out.println(count);
+
+            while (count == 0) {
+                num = rand.nextInt(90) + 1;
+                ndx = getTerrainListIndex(num);
+                terrain = terrainList.get(ndx);
+                count = terrain.getTileCount();
+            }
+
+            terrain.setTileCount(count - 1);
+            terrainList.set(ndx, terrain);
+            randomTerrain.add(terrain);
+        }
+
+        eGUI.setTerrainIcon(randomTerrain);
+
+        return terrainList;
     }
-    
+
+    public void exploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
+        bGUI.selectCultureTerrain(evt);
+        exploreAiHandler(panel);
+    }
+
+    public void baldrExploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel, boolean god) {
+        bGUI.selectCultureTerrain(evt);
+        if (god == false) {
+            exploreAiHandler(panel);
+        }
+    }
+
     public void exploreAiHandler(javax.swing.JPanel panel) {
         bGUI.selectAiExploreTerrain(panel, aiCulture);
         bGUI.selectAiExploreTerrain(panel, aiCulture2);
     }
-    
+
     public void buildBuilding(String culture, String building) {
         bGUI.setupBuildingIcon(culture, building);
     }
-    
+
     private void spoilage() {
         spoilageNorse();
         spoilageGreek();
@@ -1210,157 +1152,150 @@ public class BoardController {
         //cleanup
         //start new turn
     }
-    
+
     private void spoilageNorse() {
         int max = 5;
         Bank bank = Bank.getInstance();
-        
-        if(norsePlayer.isStorehouse() == true) {
+
+        if (norsePlayer.isStorehouse() == true) {
             max = 8;
         }
-        if(norsePlayer.getFood() > max) {
+        if (norsePlayer.getFood() > max) {
             int excess = norsePlayer.getFood() - max;
             norsePlayer.setFood(norsePlayer.getFood() - excess);
             bank.setFood(bank.getFood() + excess);
         }
-        if(norsePlayer.getFavor() > max) {
+        if (norsePlayer.getFavor() > max) {
             int excess = norsePlayer.getFavor() - max;
             norsePlayer.setFavor(norsePlayer.getFavor() - excess);
         }
-        if(norsePlayer.getWood() > max) {
+        if (norsePlayer.getWood() > max) {
             int excess = norsePlayer.getWood() - max;
             norsePlayer.setWood(norsePlayer.getWood() - excess);
             bank.setWood(bank.getWood() + excess);
         }
-        if(norsePlayer.getGold() > max) {
+        if (norsePlayer.getGold() > max) {
             int excess = norsePlayer.getGold() - max;
             norsePlayer.setGold(norsePlayer.getGold() - excess);
             bank.setGold(bank.getGold() + excess);
         }
-        
+
         updateResources("Norse");
     }
-    
-        private void spoilageGreek() {
+
+    private void spoilageGreek() {
         int max = 5;
         Bank bank = Bank.getInstance();
-        
-        if(greekPlayer.isStorehouse() == true) {
+
+        if (greekPlayer.isStorehouse() == true) {
             max = 8;
         }
-        if(greekPlayer.getFood() > max) {
+        if (greekPlayer.getFood() > max) {
             int excess = greekPlayer.getFood() - max;
             greekPlayer.setFood(greekPlayer.getFood() - excess);
             bank.setFood(bank.getFood() + excess);
         }
-        if(greekPlayer.getFavor() > max) {
+        if (greekPlayer.getFavor() > max) {
             int excess = greekPlayer.getFavor() - max;
             greekPlayer.setFavor(greekPlayer.getFavor() - excess);
             bank.setFavor(bank.getFavor() + excess);
         }
-        if(greekPlayer.getWood() > max) {
+        if (greekPlayer.getWood() > max) {
             int excess = greekPlayer.getWood() - max;
             greekPlayer.setWood(greekPlayer.getWood() - excess);
             bank.setWood(bank.getWood() + excess);
         }
-        if(greekPlayer.getGold() > max) {
+        if (greekPlayer.getGold() > max) {
             int excess = greekPlayer.getGold() - max;
             greekPlayer.setGold(greekPlayer.getGold() - excess);
             bank.setGold(bank.getGold() + excess);
         }
-        
+
         updateResources("Greek");
     }
-        
+
     private void spoilageEgyptian() {
         int max = 5;
         Bank bank = Bank.getInstance();
-        
-        if(egyptianPlayer.isStorehouse() == true) {
+
+        if (egyptianPlayer.isStorehouse() == true) {
             max = 8;
         }
-        if(egyptianPlayer.getFood() > max) {
+        if (egyptianPlayer.getFood() > max) {
             int excess = egyptianPlayer.getFood() - max;
             egyptianPlayer.setFood(egyptianPlayer.getFood() - excess);
             bank.setFood(bank.getFood() + excess);
         }
-        if(egyptianPlayer.getFavor() > max) {
+        if (egyptianPlayer.getFavor() > max) {
             int excess = egyptianPlayer.getFavor() - max;
             egyptianPlayer.setFavor(egyptianPlayer.getFavor() - excess);
             bank.setFavor(bank.getFavor() + excess);
         }
-        if(egyptianPlayer.getWood() > max) {
+        if (egyptianPlayer.getWood() > max) {
             int excess = egyptianPlayer.getWood() - max;
             egyptianPlayer.setWood(egyptianPlayer.getWood() - excess);
             bank.setWood(bank.getWood() + excess);
         }
-        if(egyptianPlayer.getGold() > max) {
+        if (egyptianPlayer.getGold() > max) {
             int excess = egyptianPlayer.getGold() - max;
             egyptianPlayer.setGold(egyptianPlayer.getGold() - excess);
             bank.setGold(bank.getGold() + excess);
         }
-        
+
         updateResources("Egyptian");
     }
-    
+
     public void setupAttackCard(String opponent, String attackingArea) {
         int max = 4;
         int size = 0;
-        
-        if(opponent.compareTo("Norse") == 0) {
+
+        if (opponent.compareTo("Norse") == 0) {
             size = norsePlayer.getCurrentUnitList().size();
-        }
-        else if(opponent.compareTo("Greek") == 0) {
+        } else if (opponent.compareTo("Greek") == 0) {
             size = greekPlayer.getCurrentUnitList().size();
-        }
-        else {
+        } else {
             size = egyptianPlayer.getCurrentUnitList().size();
         }
-        
-        if(size > 0) {
+
+        if (size > 0) {
             aiBattleUnits = getOpponentSelection(opponent, max);
             attackUnitSelectionGUI ausGUI = new attackUnitSelectionGUI();
             ausGUI.setVisible(true);
-            if(playerCulture.compareTo("Norse") == 0) {
-                if(norsePlayer.isArmory()) {
+            if (playerCulture.compareTo("Norse") == 0) {
+                if (norsePlayer.isArmory()) {
                     max += 1;
                 }
-            }
-            else if(playerCulture.compareTo("Greek") == 0) {
-                if(greekPlayer.isArmory()) {
+            } else if (playerCulture.compareTo("Greek") == 0) {
+                if (greekPlayer.isArmory()) {
                     max += 1;
                 }
-            }
-            else {
-                if(egyptianPlayer.isArmory()) {
+            } else {
+                if (egyptianPlayer.isArmory()) {
                     max += 1;
                 }
             }
             ausGUI.setMaxCards(max);
             ausGUI.setupAttackGUI(playerCulture, opponent);
             ausGUI.setAttackingArea(attackingArea);
-        }
-        else {
+        } else {
             distributeBattleVictory(playerCulture);
-            if(attackingArea.compareTo("holding") == 0) {
+            if (attackingArea.compareTo("holding") == 0) {
                 attackHoldingAreaGUI ahaGUI = new attackHoldingAreaGUI();
                 ahaGUI.setupHoldingAreaGUI(playerCulture, opponent);
                 ahaGUI.setVisible(true);
-            }
-            else if(attackingArea.compareTo("city") == 0) {
+            } else if (attackingArea.compareTo("city") == 0) {
                 attackCityAreaGUI acaGUI = new attackCityAreaGUI();
                 acaGUI.setVisible(true);
                 int maxBuildings = getMaxBuildingDestroy(playerCulture);
                 acaGUI.setupCityAreaGUI(opponent, maxBuildings);
-            }
-            else {
+            } else {
                 attackProductionAreaGUI apaGUI = new attackProductionAreaGUI();
                 apaGUI.setupProductionArea(playerCulture, opponent);
                 apaGUI.setVisible(true);
             }
         }
     }
-    
+
     public void setupBattle(List<UnitCard> selectedUnits, String opponent, String attackingArea) {
         attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
         aupGUI.setVisible(true);
@@ -1368,73 +1303,67 @@ public class BoardController {
         aupGUI.setMaxCards(selectedUnits.size());
         aupGUI.setAttackingArea(attackingArea);
     }
-    
+
     public void commenceBattle(String attacker, List<UnitCard> selectedUnits, UnitCard attackerCard, String defender, String attackingArea) {
         Random rand = new Random(System.nanoTime());
         UnitCard defenderCard = null;
         attackUnitPlayGUI aupGUI = new attackUnitPlayGUI();
-        
-        if(aiBattleUnits.size() > 0) {
+
+        if (aiBattleUnits.size() > 0) {
             int ndx = rand.nextInt(aiBattleUnits.size());
             defenderCard = aiBattleUnits.get(ndx);
             aiBattleUnits.remove(ndx);
         }
-        
-        
+
         int attackerDice = compareCardsAttacker(attacker, attackerCard, defenderCard.getType());
         int defenderDice = compareCardsDefender(attacker, defender, attackingArea, defenderCard, attackerCard.getType());
-        
+
         int[] attackerRolls = rollDice(attackerDice);
         int[] defenderRolls = rollDice(defenderDice);
         int attackerSixes = countSixes(attackerRolls);
         int defenderSixes = countSixes(defenderRolls);
-        
-        while((attackerSixes == 0 && defenderSixes == 0) || (attackerSixes == defenderSixes)) {
+
+        while ((attackerSixes == 0 && defenderSixes == 0) || (attackerSixes == defenderSixes)) {
             attackerRolls = rollDice(attackerDice);
             defenderRolls = rollDice(defenderDice);
             attackerSixes = countSixes(attackerRolls);
             defenderSixes = countSixes(defenderRolls);
         }
-        
+
         String victor = "";
-        if(attackerSixes > defenderSixes) {
+        if (attackerSixes > defenderSixes) {
             victor = attacker;
-        }
-        else {
+        } else {
             victor = defender;
         }
-        if(victor.compareTo(attacker) == 0) {
+        if (victor.compareTo(attacker) == 0) {
             selectedUnits.add(attackerCard);
-        }
-        else {
+        } else {
             aiBattleUnits.add(defenderCard);
         }
-        
-        if(aiBattleUnits.isEmpty()) {
+
+        if (aiBattleUnits.isEmpty()) {
             aupGUI.setVisible(false);
             roundResultsGUI rrGUI = new roundResultsGUI();
             rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
             rrGUI.setVisible(true);
             distributeBattleVictory(attacker);
             addUnitsBacktoList(attacker, selectedUnits);
-            if(attackingArea.compareTo("holding") == 0) {
+            if (attackingArea.compareTo("holding") == 0) {
                 attackHoldingAreaGUI ahaGUI = new attackHoldingAreaGUI();
                 ahaGUI.setupHoldingAreaGUI(attacker, defender);
                 ahaGUI.setVisible(true);
-            }
-            else if(attackingArea.compareTo("city") == 0) {
+            } else if (attackingArea.compareTo("city") == 0) {
                 attackCityAreaGUI acaGUI = new attackCityAreaGUI();
                 acaGUI.setVisible(true);
                 int max = getMaxBuildingDestroy(attacker);
                 acaGUI.setupCityAreaGUI(defender, max);
-            }
-            else {
+            } else {
                 attackProductionAreaGUI apaGUI = new attackProductionAreaGUI();
                 apaGUI.setupProductionArea(attacker, defender);
                 apaGUI.setVisible(true);
             }
-        }
-        else if(selectedUnits.isEmpty()) {
+        } else if (selectedUnits.isEmpty()) {
             aupGUI.setVisible(false);
             roundResultsGUI rrGUI = new roundResultsGUI();
             rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
@@ -1445,8 +1374,7 @@ public class BoardController {
             distributeBattleVictory(defender);
             addUnitsBacktoList(defender, aiBattleUnits);
             initPlayPermCards();
-        }
-        else {
+        } else {
             aupGUI.setVisible(true);
             aupGUI.setMaxCards(selectedUnits.size());
             aupGUI.setupCards(selectedUnits, defender);
@@ -1456,409 +1384,389 @@ public class BoardController {
             rrGUI.setVisible(true);
         }
     }
-    
+
     private List<UnitCard> getOpponentSelection(String opponent, int baseMax) {
         int max = baseMax;
         List<UnitCard> opponentUnitList = new ArrayList<>();
         List<UnitCard> opponentCurrentList = new ArrayList<>();
         Random rand = new Random(System.nanoTime());
         int ndx = 0;
-        
-        if(opponent.compareTo("Norse") == 0) {
+
+        if (opponent.compareTo("Norse") == 0) {
             opponentCurrentList = norsePlayer.getCurrentUnitList();
-            if(norsePlayer.isArmory()) {
+            if (norsePlayer.isArmory()) {
                 max += 1;
             }
-            if(max > opponentCurrentList.size()) {
+            if (max > opponentCurrentList.size()) {
                 max = opponentCurrentList.size();
             }
-            for(int i = 0; i < max; i++) {
+            for (int i = 0; i < max; i++) {
                 ndx = rand.nextInt(opponentCurrentList.size());
                 opponentUnitList.add(opponentCurrentList.get(ndx));
                 opponentCurrentList.remove(ndx);
             }
             norsePlayer.setCurrentUnitList(opponentCurrentList);
-        }
-        else if(opponent.compareTo("Greek") == 0) {
+        } else if (opponent.compareTo("Greek") == 0) {
             opponentCurrentList = greekPlayer.getCurrentUnitList();
-            if(greekPlayer.isArmory()) {
+            if (greekPlayer.isArmory()) {
                 max += 1;
             }
-            if(max > opponentCurrentList.size()) {
+            if (max > opponentCurrentList.size()) {
                 max = opponentCurrentList.size();
             }
-            for(int i = 0; i < max; i++) {
+            for (int i = 0; i < max; i++) {
                 ndx = rand.nextInt(opponentCurrentList.size());
                 opponentUnitList.add(opponentCurrentList.get(ndx));
                 opponentCurrentList.remove(ndx);
             }
             greekPlayer.setCurrentUnitList(opponentCurrentList);
-        }
-        else {
+        } else {
             opponentCurrentList = egyptianPlayer.getCurrentUnitList();
-            if(egyptianPlayer.isArmory()) {
+            if (egyptianPlayer.isArmory()) {
                 max += 1;
             }
-            if(max > opponentCurrentList.size()) {
+            if (max > opponentCurrentList.size()) {
                 max = opponentCurrentList.size();
             }
-            for(int i = 0; i < max; i++) {
+            for (int i = 0; i < max; i++) {
                 ndx = rand.nextInt(opponentCurrentList.size());
                 opponentUnitList.add(opponentCurrentList.get(ndx));
                 opponentCurrentList.remove(ndx);
             }
             egyptianPlayer.setCurrentUnitList(opponentCurrentList);
         }
-        
+
         return opponentUnitList;
     }
-    
+
     private int compareCardsAttacker(String attacker, UnitCard card, String opponentType) {
         int dice = card.getNumberofDice();
-        
+
         dice += getBonusDice(card, opponentType);
-        
-        
+
         return dice;
     }
-    
+
     private int compareCardsDefender(String attacker, String defender, String attackingArea, UnitCard card, String attackerType) {
         int dice = card.getNumberofDice();
         boolean siegeWorkshop = false;
 
         dice += getBonusDice(card, attackerType);
-        
-        if(attacker.compareTo("Norse") == 0) {
-            if(norsePlayer.isSiegeworkshop()) {
+
+        if (attacker.compareTo("Norse") == 0) {
+            if (norsePlayer.isSiegeworkshop()) {
+                siegeWorkshop = true;
+            }
+        } else if (attacker.compareTo("Greek") == 0) {
+            if (greekPlayer.isSiegeworkshop()) {
+                siegeWorkshop = true;
+            }
+        } else {
+            if (egyptianPlayer.isSiegeworkshop()) {
                 siegeWorkshop = true;
             }
         }
-        else if(attacker.compareTo("Greek") == 0) {
-            if(greekPlayer.isSiegeworkshop()) {
-                siegeWorkshop = true;
-            }
-        }
-        else {
-            if(egyptianPlayer.isSiegeworkshop()) {
-                siegeWorkshop = true;
-            }
-        }
-        if(siegeWorkshop == false) {
-            if(defender.compareTo("Norse") == 0) {
-                if(attackingArea.compareTo("city") == 0) {
-                    if(norsePlayer.isWall()) {
+        if (siegeWorkshop == false) {
+            if (defender.compareTo("Norse") == 0) {
+                if (attackingArea.compareTo("city") == 0) {
+                    if (norsePlayer.isWall()) {
+                        dice += 2;
+                    }
+                } else if (attackingArea.compareTo("production") == 0) {
+                    if (norsePlayer.isTower()) {
                         dice += 2;
                     }
                 }
-                else if(attackingArea.compareTo("production") == 0) {
-                    if(norsePlayer.isTower()) {
+            } else if (defender.compareTo("Greek") == 0) {
+                if (attackingArea.compareTo("city") == 0) {
+                    if (greekPlayer.isWall()) {
+                        dice += 2;
+                    }
+                } else if (attackingArea.compareTo("production") == 0) {
+                    if (greekPlayer.isTower()) {
                         dice += 2;
                     }
                 }
-            }
-            else if(defender.compareTo("Greek") == 0) {
-                if(attackingArea.compareTo("city") == 0) {
-                    if(greekPlayer.isWall()) {
+            } else {
+                if (attackingArea.compareTo("city") == 0) {
+                    if (egyptianPlayer.isWall()) {
                         dice += 2;
                     }
-                }
-                else if(attackingArea.compareTo("production") == 0) {
-                    if(greekPlayer.isTower()) {
-                        dice += 2;
-                    }
-                }
-            }
-            else {
-                if(attackingArea.compareTo("city") == 0) {
-                    if(egyptianPlayer.isWall()) {
-                        dice += 2;
-                    }
-                }
-                else if(attackingArea.compareTo("production") == 0) {
-                    if(egyptianPlayer.isTower()) {
+                } else if (attackingArea.compareTo("production") == 0) {
+                    if (egyptianPlayer.isTower()) {
                         dice += 2;
                     }
                 }
             }
         }
-        
+
         return dice;
     }
-    
+
     private int getBonusDice(UnitCard card, String type) {
         int dice = 0;
         String[] bonuses = card.getBonuses();
 
-        for(int i = 0; i < bonuses.length; i++) {
+        for (int i = 0; i < bonuses.length; i++) {
             String[] arr = bonuses[i].split(";");
             String[] opponentArr = type.split(";");
-            for(int j = 0; j < opponentArr.length; j++) {
-                if(arr[1].compareTo(opponentArr[j]) == 0) {
+            for (int j = 0; j < opponentArr.length; j++) {
+                if (arr[1].compareTo(opponentArr[j]) == 0) {
                     dice += Integer.parseInt(arr[0]);
                 }
             }
         }
-        
+
         return dice;
     }
-    
+
     private int[] rollDice(int diceNumber) {
         int[] diceRolls = new int[diceNumber];
         Random rand = new Random(System.nanoTime());
-        
-        for(int i = 0; i < diceNumber; i++) {
+
+        for (int i = 0; i < diceNumber; i++) {
             diceRolls[i] = rand.nextInt(6) + 1;
         }
-        
+
         return diceRolls;
     }
-    
+
     private int countSixes(int[] rolls) {
         int sixes = 0;
-        
-        for(int i = 0; i < rolls.length; i++) {
-            if(rolls[i] == 6) {
+
+        for (int i = 0; i < rolls.length; i++) {
+            if (rolls[i] == 6) {
                 sixes++;
             }
         }
-        
+
         return sixes;
     }
-    
+
     public void tacticalRetreat(List<UnitCard> playerCards, String opponent) {
         addUnitsBacktoList(playerCulture, playerCards);
         addUnitsBacktoList(opponent, aiBattleUnits);
     }
-    
+
     private void addUnitsBacktoList(String culture, List<UnitCard> unitList) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             List<UnitCard> currentList = norsePlayer.getCurrentUnitList();
-            for(int i = 0; i < unitList.size(); i++) {
+            for (int i = 0; i < unitList.size(); i++) {
                 currentList.add(unitList.get(i));
             }
             norsePlayer.setCurrentUnitList(currentList);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             List<UnitCard> currentList = greekPlayer.getCurrentUnitList();
-            for(int i = 0; i < unitList.size(); i++) {
+            for (int i = 0; i < unitList.size(); i++) {
                 currentList.add(unitList.get(i));
             }
             greekPlayer.setCurrentUnitList(currentList);
-        }
-        else {
+        } else {
             List<UnitCard> currentList = egyptianPlayer.getCurrentUnitList();
-            for(int i = 0; i < unitList.size(); i++) {
+            for (int i = 0; i < unitList.size(); i++) {
                 currentList.add(unitList.get(i));
             }
             egyptianPlayer.setCurrentUnitList(currentList);
         }
     }
-    
+
     private void distributeBattleVictory(String culture) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             norsePlayer.setVictory(norsePlayer.getVictory() + victoryCards[3]);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             greekPlayer.setVictory(greekPlayer.getVictory() + victoryCards[3]);
-        }
-        else {
+        } else {
             egyptianPlayer.setVictory(egyptianPlayer.getVictory() + victoryCards[3]);
         }
-        
+
         victoryCards[3] = 0;
         updateResources(culture);
     }
-    
+
     public void removeBuildingTiles(String culture, List<String> buildings) {
         removeBuildings(culture, buildings);
         bGUI.setupBuildingRemovalIcon(culture, buildings);
     }
-    
+
     private int getMaxBuildingDestroy(String culture) {
         int max = 1;
-        
-        if(culture.compareTo("Norse") == 0) {
-            if(norsePlayer.isSiegeworkshop() == true) {
+
+        if (culture.compareTo("Norse") == 0) {
+            if (norsePlayer.isSiegeworkshop() == true) {
+                max += 1;
+            }
+        } else if (culture.compareTo("Greek") == 0) {
+            if (greekPlayer.isSiegeworkshop() == true) {
+                max += 1;
+            }
+        } else {
+            if (egyptianPlayer.isSiegeworkshop() == true) {
                 max += 1;
             }
         }
-        else if(culture.compareTo("Greek") == 0) {
-            if(greekPlayer.isSiegeworkshop() == true) {
-                max += 1;
-            }
-        }
-        else {
-            if(egyptianPlayer.isSiegeworkshop() == true) {
-                max += 1;
-            }
-        }
-        
+
         return max;
     }
-    
+
     private void removeBuildings(String culture, List<String> buildings) {
-        if(culture.compareTo("Norse") == 0) {
-            for(int i = 0; i < buildings.size(); i++) {
-                if(buildings.get(i).compareTo("House.png") == 0) {
+        if (culture.compareTo("Norse") == 0) {
+            for (int i = 0; i < buildings.size(); i++) {
+                if (buildings.get(i).compareTo("House.png") == 0) {
                     norsePlayer.setHouse(norsePlayer.getHouse() - 1);
                 }
-                if(buildings.get(i).compareTo("Armor.png") == 0) {
+                if (buildings.get(i).compareTo("Armor.png") == 0) {
                     norsePlayer.setArmory(false);
                 }
-                if(buildings.get(i).compareTo("GoldMint.png") == 0) {
+                if (buildings.get(i).compareTo("GoldMint.png") == 0) {
                     norsePlayer.setGoldmint(false);
                 }
-                if(buildings.get(i).compareTo("Granary.png") == 0) {
+                if (buildings.get(i).compareTo("Granary.png") == 0) {
                     norsePlayer.setGranary(false);
                 }
-                if(buildings.get(i).compareTo("GreatTemple.png") == 0) {
+                if (buildings.get(i).compareTo("GreatTemple.png") == 0) {
                     norsePlayer.setGreattemple(false);
                 }
-                if(buildings.get(i).compareTo("Market.png") == 0) {
+                if (buildings.get(i).compareTo("Market.png") == 0) {
                     norsePlayer.setMarket(false);
                 }
-                if(buildings.get(i).compareTo("Monument.png") == 0) {
+                if (buildings.get(i).compareTo("Monument.png") == 0) {
                     norsePlayer.setMonument(false);
                 }
-                if(buildings.get(i).compareTo("Quarry.png") == 0) {
+                if (buildings.get(i).compareTo("Quarry.png") == 0) {
                     norsePlayer.setQuarry(false);
                 }
-                if(buildings.get(i).compareTo("SiegeWork.png") == 0) {
+                if (buildings.get(i).compareTo("SiegeWork.png") == 0) {
                     norsePlayer.setSiegeworkshop(false);
                 }
-                if(buildings.get(i).compareTo("Storehouse.png") == 0) {
+                if (buildings.get(i).compareTo("Storehouse.png") == 0) {
                     norsePlayer.setStorehouse(false);
                 }
-                if(buildings.get(i).compareTo("Tower.png") == 0) {
+                if (buildings.get(i).compareTo("Tower.png") == 0) {
                     norsePlayer.setTower(false);
                 }
-                if(buildings.get(i).compareTo("Wall.png") == 0) {
+                if (buildings.get(i).compareTo("Wall.png") == 0) {
                     norsePlayer.setWall(false);
                 }
-                if(buildings.get(i).compareTo("Wonder.png") == 0) {
+                if (buildings.get(i).compareTo("Wonder.png") == 0) {
                     norsePlayer.setWonder(false);
                 }
-                if(buildings.get(i).compareTo("WoodWork.png") == 0) {
+                if (buildings.get(i).compareTo("WoodWork.png") == 0) {
                     norsePlayer.setWoodworkshop(false);
                 }
             }
-        }
-        else if(culture.compareTo("Greek") == 0) {
-            for(int i = 0; i < buildings.size(); i++) {
-                if(buildings.get(i).compareTo("House.png") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
+            for (int i = 0; i < buildings.size(); i++) {
+                if (buildings.get(i).compareTo("House.png") == 0) {
                     greekPlayer.setHouse(greekPlayer.getHouse() - 1);
                 }
-                if(buildings.get(i).compareTo("Armor.png") == 0) {
+                if (buildings.get(i).compareTo("Armor.png") == 0) {
                     greekPlayer.setArmory(false);
                 }
-                if(buildings.get(i).compareTo("GoldMint.png") == 0) {
+                if (buildings.get(i).compareTo("GoldMint.png") == 0) {
                     greekPlayer.setGoldmint(false);
                 }
-                if(buildings.get(i).compareTo("Granary.png") == 0) {
+                if (buildings.get(i).compareTo("Granary.png") == 0) {
                     greekPlayer.setGranary(false);
                 }
-                if(buildings.get(i).compareTo("GreatTemple.png") == 0) {
+                if (buildings.get(i).compareTo("GreatTemple.png") == 0) {
                     greekPlayer.setGreattemple(false);
                 }
-                if(buildings.get(i).compareTo("Market.png") == 0) {
+                if (buildings.get(i).compareTo("Market.png") == 0) {
                     greekPlayer.setMarket(false);
                 }
-                if(buildings.get(i).compareTo("Monument.png") == 0) {
+                if (buildings.get(i).compareTo("Monument.png") == 0) {
                     greekPlayer.setMonument(false);
                 }
-                if(buildings.get(i).compareTo("Quarry.png") == 0) {
+                if (buildings.get(i).compareTo("Quarry.png") == 0) {
                     greekPlayer.setQuarry(false);
                 }
-                if(buildings.get(i).compareTo("SiegeWork.png") == 0) {
+                if (buildings.get(i).compareTo("SiegeWork.png") == 0) {
                     greekPlayer.setSiegeworkshop(false);
                 }
-                if(buildings.get(i).compareTo("Storehouse.png") == 0) {
+                if (buildings.get(i).compareTo("Storehouse.png") == 0) {
                     greekPlayer.setStorehouse(false);
                 }
-                if(buildings.get(i).compareTo("Tower.png") == 0) {
+                if (buildings.get(i).compareTo("Tower.png") == 0) {
                     greekPlayer.setTower(false);
                 }
-                if(buildings.get(i).compareTo("Wall.png") == 0) {
+                if (buildings.get(i).compareTo("Wall.png") == 0) {
                     greekPlayer.setWall(false);
                 }
-                if(buildings.get(i).compareTo("Wonder.png") == 0) {
+                if (buildings.get(i).compareTo("Wonder.png") == 0) {
                     greekPlayer.setWonder(false);
                 }
-                if(buildings.get(i).compareTo("WoodWork.png") == 0) {
+                if (buildings.get(i).compareTo("WoodWork.png") == 0) {
                     greekPlayer.setWoodworkshop(false);
                 }
             }
-        }
-        else {
-            for(int i = 0; i < buildings.size(); i++) {
-                if(buildings.get(i).compareTo("House.png") == 0) {
+        } else {
+            for (int i = 0; i < buildings.size(); i++) {
+                if (buildings.get(i).compareTo("House.png") == 0) {
                     egyptianPlayer.setHouse(egyptianPlayer.getHouse() - 1);
                 }
-                if(buildings.get(i).compareTo("Armor.png") == 0) {
+                if (buildings.get(i).compareTo("Armor.png") == 0) {
                     egyptianPlayer.setArmory(false);
                 }
-                if(buildings.get(i).compareTo("GoldMint.png") == 0) {
+                if (buildings.get(i).compareTo("GoldMint.png") == 0) {
                     egyptianPlayer.setGoldmint(false);
                 }
-                if(buildings.get(i).compareTo("Granary.png") == 0) {
+                if (buildings.get(i).compareTo("Granary.png") == 0) {
                     egyptianPlayer.setGranary(false);
                 }
-                if(buildings.get(i).compareTo("GreatTemple.png") == 0) {
+                if (buildings.get(i).compareTo("GreatTemple.png") == 0) {
                     egyptianPlayer.setGreattemple(false);
                 }
-                if(buildings.get(i).compareTo("Market.png") == 0) {
+                if (buildings.get(i).compareTo("Market.png") == 0) {
                     egyptianPlayer.setMarket(false);
                 }
-                if(buildings.get(i).compareTo("Monument.png") == 0) {
+                if (buildings.get(i).compareTo("Monument.png") == 0) {
                     egyptianPlayer.setMonument(false);
                 }
-                if(buildings.get(i).compareTo("Quarry.png") == 0) {
+                if (buildings.get(i).compareTo("Quarry.png") == 0) {
                     egyptianPlayer.setQuarry(false);
                 }
-                if(buildings.get(i).compareTo("SiegeWork.png") == 0) {
+                if (buildings.get(i).compareTo("SiegeWork.png") == 0) {
                     egyptianPlayer.setSiegeworkshop(false);
                 }
-                if(buildings.get(i).compareTo("Storehouse.png") == 0) {
+                if (buildings.get(i).compareTo("Storehouse.png") == 0) {
                     egyptianPlayer.setStorehouse(false);
                 }
-                if(buildings.get(i).compareTo("Tower.png") == 0) {
+                if (buildings.get(i).compareTo("Tower.png") == 0) {
                     egyptianPlayer.setTower(false);
                 }
-                if(buildings.get(i).compareTo("Wall.png") == 0) {
+                if (buildings.get(i).compareTo("Wall.png") == 0) {
                     egyptianPlayer.setWall(false);
                 }
-                if(buildings.get(i).compareTo("Wonder.png") == 0) {
+                if (buildings.get(i).compareTo("Wonder.png") == 0) {
                     egyptianPlayer.setWonder(false);
                 }
-                if(buildings.get(i).compareTo("WoodWork.png") == 0) {
+                if (buildings.get(i).compareTo("WoodWork.png") == 0) {
                     egyptianPlayer.setWoodworkshop(false);
                 }
             }
         }
     }
-    
+
     public void removeTerrainTile(String attacker, String defender, String index) {
         int terrainNdx = Integer.parseInt(index);
         List<TerrainTiles> currentTerrainTiles = new ArrayList<>();
         TerrainTiles selectedTerrain;
-        
-        if(defender.compareTo("Norse") == 0) {
+
+        if (defender.compareTo("Norse") == 0) {
             currentTerrainTiles = norsePlayer.getNorseTerrains();
             selectedTerrain = currentTerrainTiles.get(terrainNdx);
             currentTerrainTiles.remove(terrainNdx);
             norsePlayer.setNorseTerrains(currentTerrainTiles);
             bGUI.setupRemoveTerrainTile(defender, selectedTerrain);
             checkRemovedTerrainTile(defender, selectedTerrain);
-        }
-        else if(defender.compareTo("Greek") == 0) {
+        } else if (defender.compareTo("Greek") == 0) {
             currentTerrainTiles = greekPlayer.getGreekTerrains();
             selectedTerrain = currentTerrainTiles.get(terrainNdx);
             currentTerrainTiles.remove(terrainNdx);
             greekPlayer.setGreekTerrains(currentTerrainTiles);
             bGUI.setupRemoveTerrainTile(defender, selectedTerrain);
             checkRemovedTerrainTile(defender, selectedTerrain);
-        }
-        else {
+        } else {
             currentTerrainTiles = egyptianPlayer.getEgyptianTerrains();
             selectedTerrain = currentTerrainTiles.get(terrainNdx);
             currentTerrainTiles.remove(terrainNdx);
@@ -1867,176 +1775,149 @@ public class BoardController {
             checkRemovedTerrainTile(defender, selectedTerrain);
             bGUI.setupSpecificTerrainTile(attacker, selectedTerrain);
         }
-        
-        if(attacker.compareTo("Norse") == 0) {
+
+        if (attacker.compareTo("Norse") == 0) {
             boolean usable = checkTerrainUsable(attacker, norsePlayer.getMaxTerrains(), selectedTerrain);
             System.out.println(usable);
-            if(usable == true) {
+            if (usable == true) {
                 List<TerrainTiles> currentTerrains = norsePlayer.getNorseTerrains();
                 currentTerrains.add(selectedTerrain);
                 norsePlayer.setNorseTerrains(currentTerrains);
                 bGUI.setupSpecificTerrainTile(attacker, selectedTerrain);
             }
-        }
-        else if(attacker.compareTo("Greek") == 0) {
+        } else if (attacker.compareTo("Greek") == 0) {
             boolean usable = checkTerrainUsable(attacker, greekPlayer.getMaxTerrains(), selectedTerrain);
             System.out.println(usable);
-            if(usable == true) {
+            if (usable == true) {
                 List<TerrainTiles> currentTerrains = greekPlayer.getGreekTerrains();
                 currentTerrains.add(selectedTerrain);
                 greekPlayer.setGreekTerrains(currentTerrains);
                 bGUI.setupSpecificTerrainTile(attacker, selectedTerrain);
             }
-        }
-        else {
+        } else {
             boolean usable = checkTerrainUsable(attacker, egyptianPlayer.getMaxTerrains(), selectedTerrain);
             System.out.println(usable);
-            if(usable == true) {
+            if (usable == true) {
                 List<TerrainTiles> currentTerrains = egyptianPlayer.getEgyptianTerrains();
                 currentTerrains.add(selectedTerrain);
                 egyptianPlayer.setEgyptianTerrains(currentTerrains);
             }
         }
-        
+
         initPlayPermCards();
     }
-    
+
     private boolean checkTerrainUsable(String attacker, int[] arr, TerrainTiles selectedTerrain) {
         String type = selectedTerrain.getTerrainType();
-        
-        if(type.compareTo("fertile") == 0) {
-                if(arr[0] > 0) {
-                    arr[0]--;
-                    setMaxArray(attacker, arr);
-                    return true;
-                }
+
+        if (type.compareTo("fertile") == 0) {
+            if (arr[0] > 0) {
+                arr[0]--;
+                setMaxArray(attacker, arr);
+                return true;
             }
-            else if(type.compareTo("forest") == 0) {
-                if(arr[1] > 0) {
-                    arr[1]--;
-                    setMaxArray(attacker, arr);
-                    return true;
-                }
+        } else if (type.compareTo("forest") == 0) {
+            if (arr[1] > 0) {
+                arr[1]--;
+                setMaxArray(attacker, arr);
+                return true;
             }
-            else if(type.compareTo("hill") == 0) {
-                if(arr[2] > 0) {
-                    arr[2]--;
-                    setMaxArray(attacker, arr);
-                    return true;
-                }
+        } else if (type.compareTo("hill") == 0) {
+            if (arr[2] > 0) {
+                arr[2]--;
+                setMaxArray(attacker, arr);
+                return true;
             }
-            else if(type.compareTo("mountain") == 0) {
-                if(arr[3] > 0) {
-                    arr[3]--;
-                    setMaxArray(attacker, arr);
-                    return true;
-                }
+        } else if (type.compareTo("mountain") == 0) {
+            if (arr[3] > 0) {
+                arr[3]--;
+                setMaxArray(attacker, arr);
+                return true;
             }
-            else if(type.compareTo("desert") == 0) {
-                if(arr[4] > 0) {
-                    arr[4]--;
-                    setMaxArray(attacker, arr);
-                    return true;
-                }
+        } else if (type.compareTo("desert") == 0) {
+            if (arr[4] > 0) {
+                arr[4]--;
+                setMaxArray(attacker, arr);
+                return true;
             }
-            else if(type.compareTo("swamp") == 0) {
-                if(arr[5] > 0) {
-                    arr[5]--;
-                    setMaxArray(attacker, arr);
-                    return true;
-                }
+        } else if (type.compareTo("swamp") == 0) {
+            if (arr[5] > 0) {
+                arr[5]--;
+                setMaxArray(attacker, arr);
+                return true;
             }
+        }
         return false;
     }
-    
+
     private void setMaxArray(String attacker, int[] arr) {
-        if(attacker.compareTo("Norse") == 0) {
+        if (attacker.compareTo("Norse") == 0) {
             norsePlayer.setMaxTerrains(arr);
-        }
-        else if(attacker.compareTo("Greek") == 0) {
+        } else if (attacker.compareTo("Greek") == 0) {
             greekPlayer.setMaxTerrainGreek(arr);
-        }
-        else {
+        } else {
             egyptianPlayer.setMaxTerrainEgyptian(arr);
         }
     }
-    
+
     private void checkRemovedTerrainTile(String defender, TerrainTiles selectedTerrain) {
         String type = selectedTerrain.getTerrainType();
-       
-        if(defender.compareTo("Norse") == 0) {
+
+        if (defender.compareTo("Norse") == 0) {
             int[] arr = norsePlayer.getMaxTerrains();
-            
-            if(type.compareTo("fertile") == 0) {
+
+            if (type.compareTo("fertile") == 0) {
                 arr[0] += 1;
-            }
-            else if(type.compareTo("forest") == 0) {
+            } else if (type.compareTo("forest") == 0) {
                 arr[1] += 1;
-            }
-            else if(type.compareTo("hill") == 0) {
+            } else if (type.compareTo("hill") == 0) {
                 arr[2] += 1;
-            }
-            else if(type.compareTo("mountain") == 0) {
+            } else if (type.compareTo("mountain") == 0) {
                 arr[3] += 1;
-            }
-            else if(type.compareTo("desert") == 0) {
+            } else if (type.compareTo("desert") == 0) {
                 arr[4] += 1;
-            }
-            else if(type.compareTo("swamp") == 0) {
+            } else if (type.compareTo("swamp") == 0) {
                 arr[5] += 1;
             }
             norsePlayer.setMaxTerrains(arr);
-        }
-        else if(defender.compareTo("Greek") == 0) {
+        } else if (defender.compareTo("Greek") == 0) {
             int[] arr = greekPlayer.getMaxTerrains();
-            
-            if(type.compareTo("fertile") == 0) {
+
+            if (type.compareTo("fertile") == 0) {
                 arr[0] += 1;
-            }
-            else if(type.compareTo("forest") == 0) {
+            } else if (type.compareTo("forest") == 0) {
                 arr[1] += 1;
-            }
-            else if(type.compareTo("hill") == 0) {
+            } else if (type.compareTo("hill") == 0) {
                 arr[2] += 1;
-            }
-            else if(type.compareTo("mountain") == 0) {
+            } else if (type.compareTo("mountain") == 0) {
                 arr[3] += 1;
-            }
-            else if(type.compareTo("desert") == 0) {
+            } else if (type.compareTo("desert") == 0) {
                 arr[4] += 1;
-            }
-            else if(type.compareTo("swamp") == 0) {
+            } else if (type.compareTo("swamp") == 0) {
                 arr[5] += 1;
             }
             greekPlayer.setMaxTerrainGreek(arr);
-        }
-        else {
+        } else {
             int[] arr = egyptianPlayer.getMaxTerrains();
-            
-            if(type.compareTo("fertile") == 0) {
+
+            if (type.compareTo("fertile") == 0) {
                 arr[0] += 1;
-            }
-            else if(type.compareTo("forest") == 0) {
+            } else if (type.compareTo("forest") == 0) {
                 arr[1] += 1;
-            }
-            else if(type.compareTo("hill") == 0) {
+            } else if (type.compareTo("hill") == 0) {
                 arr[2] += 1;
-            }
-            else if(type.compareTo("mountain") == 0) {
+            } else if (type.compareTo("mountain") == 0) {
                 arr[3] += 1;
-            }
-            else if(type.compareTo("desert") == 0) {
+            } else if (type.compareTo("desert") == 0) {
                 arr[4] += 1;
-            }
-            else if(type.compareTo("swamp") == 0) {
+            } else if (type.compareTo("swamp") == 0) {
                 arr[5] += 1;
             }
             egyptianPlayer.setMaxTerrainEgyptian(arr);
         }
-       
-        
+
     }
-    
+
     public TerrainTiles getTerrainTile(int index) {
         return terrainList.get(index);
     }
@@ -2052,7 +1933,7 @@ public class BoardController {
     public int getPlayerTurnCount() {
         return this.playerTurnCount;
     }
-    
+
     public void incrementPlayerTurnCount() {
         this.playerTurnCount += 1;
     }
@@ -2061,10 +1942,22 @@ public class BoardController {
         return playerPermCards;
     }
 
+    public void decrementNorsePlayerFavor() {
+        norsePlayer.setFavor(norsePlayer.getFavor() - 1);
+    }
+
+    public void decrementGreekPlayerFavor() {
+        greekPlayer.setFavor(greekPlayer.getFavor() - 1);
+    }
+
+    public void decrementEgyptianPlayerFavor() {
+        egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 1);
+    }
+
     public void setPlayerPermCards(List<String> playerPermCards) {
         this.playerPermCards = playerPermCards;
     }
-    
+
     public void removePlayerPermCards(String card) {
         playerPermCards.remove(card);
     }
@@ -2084,6 +1977,7 @@ public class BoardController {
     public void setAiCulture2(String aiCulture2) {
         this.aiCulture2 = aiCulture2;
     }
+
     public boolean getFourthCard() {
         return isPlayFourthCard;
     }
@@ -2091,6 +1985,7 @@ public class BoardController {
     public void setFourthCard(boolean x) {
         isPlayFourthCard = x;
     }
+
     public void playRandomNextAgeCard(String culture) {
 
         CardPlayError cardError = new CardPlayError();
@@ -2138,6 +2033,5 @@ public class BoardController {
     }
     Greek gPlayer;
     BoardController board;
-    
-    
+
 }
