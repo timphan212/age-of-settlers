@@ -252,7 +252,6 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
             reGUI.setVisible(true);
         }
         else {
-            System.out.println(count+" : "+maxRecruits);
             if(unit_2_marked.isVisible() == false) {
                 if(count < maxRecruits) {
                     unit_2_marked.setVisible(true);
