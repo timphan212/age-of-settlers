@@ -231,6 +231,7 @@ public class BoardController {
                     board.updateResources("Egyptian");
                     osiris.mythic();
                 }
+            }
         } else if(str.compareTo("apollo") == 0) {
             if(greekPlayer.getFavor() >= 1) {
                 GreekApolloGUI apollo = new GreekApolloGUI();
@@ -239,7 +240,6 @@ public class BoardController {
             }
         }
     }
-}
     
 
     private static void unitSetup() {
