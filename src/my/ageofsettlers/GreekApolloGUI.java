@@ -17,6 +17,7 @@ public class GreekApolloGUI extends javax.swing.JFrame {
      * Creates new form GreekApolloGUI
      */
     public GreekApolloGUI() {
+        this.board = BoardController.getInstance();
         initComponents();
     }
 
@@ -86,8 +87,8 @@ public class GreekApolloGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here
-        board.initPlayPermCards();
         this.setVisible(false);
+        board.initPlayPermCards();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 

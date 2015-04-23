@@ -235,8 +235,8 @@ public class BoardController {
         } else if(str.compareTo("apollo") == 0) {
             if(greekPlayer.getFavor() >= 1) {
                 GreekApolloGUI apollo = new GreekApolloGUI();
-                apollo.setVisible(true);
                 apollo.addArchers();    
+                apollo.setVisible(true);
             }
         }
     }
