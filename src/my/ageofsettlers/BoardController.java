@@ -213,10 +213,7 @@ public class BoardController {
         } else if(str.compareTo("osiris") == 0) {
             if(egyptianPlayer.getFavor() >=2) {
                 EgyptRecruitOsirisGUI osiris = new EgyptRecruitOsirisGUI();
-                if(egyptianPlayer.getAge() == 0) {
-                
-                }
-                else if(egyptianPlayer.getAge() == 1) {
+                if(egyptianPlayer.getAge() == 1) {
                     int newFavor = egyptianPlayer.getFavor() - 2;
                     egyptianPlayer.setFavor(newFavor);
                     board.updateResources("Egyptian");
@@ -234,9 +231,16 @@ public class BoardController {
                     board.updateResources("Egyptian");
                     osiris.mythic();
                 }
+        } else if(str.compareTo("apollo") == 0) {
+            if(greekPlayer.getFavor() >= 1) {
+                GreekApolloGUI apollo = new GreekApolloGUI();
+                apollo.setVisible(true);
+                apollo.addArchers();    
             }
         }
     }
+}
+    
 
     private static void unitSetup() {
         norseUnitSetup();
