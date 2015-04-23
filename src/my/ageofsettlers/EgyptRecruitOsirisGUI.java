@@ -86,9 +86,42 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
         UnitCard card = egyptianAllUnits.get(6);
         egyptianUnits.add(card);
         egyptianPlayer.setCurrentUnitList(egyptianUnits);
+        OsirisPlayedGUI success = new OsirisPlayedGUI();
+        success.setVisible(true);
+        this.setVisible(false);
             
        // board.updateResources("Egyptian");
     }
+    
+    public void heroic() {
+        Egyptian egyptianPlayer = Egyptian.getInstance();
+       // List<UnitCard> selectedUnits = new ArrayList<>();
+        List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
+        List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
+        UnitCard card = egyptianAllUnits.get(2);
+        egyptianUnits.add(card);
+        egyptianPlayer.setCurrentUnitList(egyptianUnits);
+        OsirisPlayedGUI success = new OsirisPlayedGUI();
+        success.setVisible(true);
+        this.setVisible(false);
+            
+       // board.updateResources("Egyptian");
+    }
+     public void mythic() {
+        Egyptian egyptianPlayer = Egyptian.getInstance();
+       // List<UnitCard> selectedUnits = new ArrayList<>();
+        List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
+        List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
+        UnitCard card = egyptianAllUnits.get(7);
+        egyptianUnits.add(card);
+        egyptianPlayer.setCurrentUnitList(egyptianUnits);
+        OsirisPlayedGUI success = new OsirisPlayedGUI();
+        success.setVisible(true);
+        this.setVisible(false);
+            
+       // board.updateResources("Egyptian");
+    }
+    
 
     /**
      * @param args the command line arguments
