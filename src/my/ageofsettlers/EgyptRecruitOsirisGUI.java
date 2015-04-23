@@ -98,7 +98,7 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
        // List<UnitCard> selectedUnits = new ArrayList<>();
         List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
         List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
-        UnitCard card = egyptianAllUnits.get(2);
+        UnitCard card = egyptianAllUnits.get(0);
         egyptianUnits.add(card);
         egyptianPlayer.setCurrentUnitList(egyptianUnits);
         OsirisPlayedGUI success = new OsirisPlayedGUI();
@@ -112,7 +112,7 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
        // List<UnitCard> selectedUnits = new ArrayList<>();
         List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
         List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
-        UnitCard card = egyptianAllUnits.get(7);
+        UnitCard card = egyptianAllUnits.get(4);
         egyptianUnits.add(card);
         egyptianPlayer.setCurrentUnitList(egyptianUnits);
         OsirisPlayedGUI success = new OsirisPlayedGUI();

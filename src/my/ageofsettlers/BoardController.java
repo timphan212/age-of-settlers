@@ -211,9 +211,29 @@ public class BoardController {
             GodPowerFreyaGUI godPower = new GodPowerFreyaGUI();
             godPower.setVisible(true);   
         } else if(str.compareTo("osiris") == 0) {
-            if(egyptianPlayer.getAge() != 0) {
+            if(egyptianPlayer.getFavor() >=2) {
                 EgyptRecruitOsirisGUI osiris = new EgyptRecruitOsirisGUI();
-                osiris.setVisible(true);
+                if(egyptianPlayer.getAge() == 0) {
+                
+                }
+                else if(egyptianPlayer.getAge() == 1) {
+                    int newFavor = egyptianPlayer.getFavor() - 2;
+                    egyptianPlayer.setFavor(newFavor);
+                    board.updateResources("Egyptian");
+                    osiris.classical();
+                }
+                else if(egyptianPlayer.getAge() == 2) {
+                    int newFavor = egyptianPlayer.getFavor() - 2;
+                    egyptianPlayer.setFavor(newFavor);
+                    board.updateResources("Egyptian");
+                    osiris.heroic();
+                }
+                else {
+                    int newFavor = egyptianPlayer.getFavor() - 2;
+                    egyptianPlayer.setFavor(newFavor);
+                    board.updateResources("Egyptian");
+                    osiris.mythic();
+                }
             }
         }
     }
