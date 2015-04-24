@@ -34,6 +34,7 @@ public class BoardController {
     private int roundCount = 0;
     private List<UnitCard> aiBattleUnits = new ArrayList<>();
     private boolean isPlayFourthCard = false;
+    private int maxBattleUnit = 4;
 
     public static synchronized BoardController getInstance() {
         if (instance == null) {
@@ -207,45 +208,50 @@ public class BoardController {
             terrainList = baldrPickExploreTerrains(eGUI, 3);
             GodPowerBaldrGUI godPower = new GodPowerBaldrGUI(eGUI);
             godPower.setVisible(true);
-        } else if(str.compareTo("freya")==0){
+        } else if (str.compareTo("freya") == 0) {
             GodPowerFreyaGUI godPower = new GodPowerFreyaGUI();
-            godPower.setVisible(true);   
-        } else if(str.compareTo("osiris") == 0) {
-            if(egyptianPlayer.getFavor() >=2) {
+            godPower.setVisible(true);
+        } else if (str.compareTo("osiris") == 0) {
+            if (egyptianPlayer.getFavor() >= 2) {
                 EgyptRecruitOsirisGUI osiris = new EgyptRecruitOsirisGUI();
-                if(egyptianPlayer.getAge() == 1) {
+                if (egyptianPlayer.getAge() == 1) {
                     int newFavor = egyptianPlayer.getFavor() - 2;
                     egyptianPlayer.setFavor(newFavor);
                     board.updateResources("Egyptian");
                     osiris.classical();
-                }
-                else if(egyptianPlayer.getAge() == 2) {
+                } else if (egyptianPlayer.getAge() == 2) {
                     int newFavor = egyptianPlayer.getFavor() - 2;
                     egyptianPlayer.setFavor(newFavor);
                     board.updateResources("Egyptian");
                     osiris.heroic();
-                }
-                else {
+                } else {
                     int newFavor = egyptianPlayer.getFavor() - 2;
                     egyptianPlayer.setFavor(newFavor);
                     board.updateResources("Egyptian");
                     osiris.mythic();
                 }
             }
-        } else if(str.compareTo("apollo") == 0) {
-            if(greekPlayer.getFavor() >= 1) {
+        } else if (str.compareTo("apollo") == 0) {
+            if (greekPlayer.getFavor() >= 1) {
                 GreekApolloGUI apollo = new GreekApolloGUI();
-                apollo.addArchers();    
+                apollo.addArchers();
                 apollo.setVisible(true);
             }
-        } else if(str.compareTo("hel") == 0) {
-            if(norsePlayer.getFavor() >= 1) {
+        } else if (str.compareTo("hel") == 0) {
+            if (norsePlayer.getFavor() >= 1) {
                 NorseRecruitHelGUI hel = new NorseRecruitHelGUI();
                 hel.setVisible(true);
             }
+        } else if (str.compareTo("heimdall") == 0) {
+            if (norsePlayer.getFavor() >= 4) {
+                GodPowerHeimdallGUI heim = new GodPowerHeimdallGUI();
+                heim.setVisible(true);
+            } else {
+                attackAreaGUI aaGUI = new attackAreaGUI();
+                aaGUI.setVisible(true);
+            }
         }
     }
-    
 
     private static void unitSetup() {
         norseUnitSetup();
@@ -1284,6 +1290,10 @@ public class BoardController {
 
     public void setupAttackCard(String opponent, String attackingArea) {
         int max = 4;
+        if (maxBattleUnit == 6) {
+            max = 6;
+        }
+
         int size = 0;
 
         if (opponent.compareTo("Norse") == 0) {
@@ -1331,6 +1341,7 @@ public class BoardController {
                 apaGUI.setVisible(true);
             }
         }
+        this.setMaxBattleUnit(4);
     }
 
     public void setupBattle(List<UnitCard> selectedUnits, String opponent, String attackingArea) {
@@ -2022,9 +2033,17 @@ public class BoardController {
     public void setFourthCard(boolean x) {
         isPlayFourthCard = x;
     }
-    
-    public void addNorseFourGold(){
+
+    public void addNorseFourGold() {
         norsePlayer.setGold(norsePlayer.getGold() + 4);
+    }
+
+    public void setMaxBattleUnit(int n) {
+        maxBattleUnit = n;
+    }
+
+    public int getMaxBattleUnit() {
+        return maxBattleUnit;
     }
 
     public void playRandomNextAgeCard(String culture) {

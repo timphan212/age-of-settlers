@@ -488,8 +488,8 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
         else if(str.toLowerCase().contains("apollo")){
             str2 = "apollo";
         }
-        else if(str.toLowerCase().contains("attacktyr")){
-            str2 = "tyr";
+        else if(str.toLowerCase().contains("heimdall")){
+            str2 = "heimdall";
         }
         else if(str.toLowerCase().contains("njord")){
             str2 = "njord";
