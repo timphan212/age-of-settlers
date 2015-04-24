@@ -250,9 +250,17 @@ public class BoardController {
                 attackAreaGUI aaGUI = new attackAreaGUI();
                 aaGUI.setVisible(true);
             }
+        } else if (str.compareTo("thoth") == 0) {
+            if (greekPlayer.getFavor() >= 1) {
+                GodPowerThothGUI thoth = new GodPowerThothGUI();
+                thoth.setVisible(true);
+                
+            } else {
+                attackAreaGUI aaGUI = new attackAreaGUI();
+                aaGUI.setVisible(true);
+            }
         }
     }
-
     private static void unitSetup() {
         norseUnitSetup();
         greekUnitSetup();
