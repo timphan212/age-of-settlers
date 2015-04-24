@@ -35,6 +35,7 @@ public class BoardController {
     private List<UnitCard> aiBattleUnits = new ArrayList<>();
     private boolean isPlayFourthCard = false;
     private int maxBattleUnit = 4;
+    private int foodBonus = 0;
 
     public static synchronized BoardController getInstance() {
         if (instance == null) {
@@ -279,7 +280,17 @@ public class BoardController {
                 gGUI.setVisible(true);
                 aiGatherHandler();
             }
+        } else if (str.compareTo("gatherra") == 0) {
+            System.out.println("Ra");
+            if (egyptianPlayer.getFavor() >= 2) {
+                GodPowerRaGUI ra = new GodPowerRaGUI();
+                ra.setVisible(true);
 
+            } else {
+                gatherGUI gGUI = new gatherGUI();
+                gGUI.setVisible(true);
+                aiGatherHandler();
+            }
         }
     }
 
@@ -1012,7 +1023,12 @@ public class BoardController {
                 arr = calculateResources(str, terrains);
             }
             arr = checkBuildingBonuses(arr, "Norse");
-            norsePlayer.setFood(arr[0] + norsePlayer.getFood());
+            if (playerCulture.compareTo("Norse") == 0 || foodBonus == 2) {
+                norsePlayer.setFood(arr[0] + foodBonus + norsePlayer.getFood());
+                foodBonus = 0;
+            } else {
+                norsePlayer.setFood(arr[0] + norsePlayer.getFood());
+            }
             norsePlayer.setFavor(arr[1] + norsePlayer.getFavor());
             norsePlayer.setWood(arr[2] + norsePlayer.getWood());
             norsePlayer.setGold(arr[3] + norsePlayer.getGold());
@@ -1026,7 +1042,12 @@ public class BoardController {
                 arr = calculateResources(str, terrains);
             }
             arr = checkBuildingBonuses(arr, "Greek");
-            greekPlayer.setFood(arr[0] + greekPlayer.getFood());
+            if (playerCulture.compareTo("Greek") == 0 || foodBonus == 2) {               
+            greekPlayer.setFood(arr[0] + foodBonus + greekPlayer.getFood());
+            foodBonus = 0;
+            } else {
+                greekPlayer.setFood(arr[0] + greekPlayer.getFood());
+            }
             greekPlayer.setFavor(arr[1] + greekPlayer.getFavor());
             greekPlayer.setWood(arr[2] + greekPlayer.getWood());
             greekPlayer.setGold(arr[3] + greekPlayer.getGold());
@@ -1039,7 +1060,12 @@ public class BoardController {
                 arr = calculateResources(str, terrains);
             }
             arr = checkBuildingBonuses(arr, "Egyptian");
-            egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
+          if (playerCulture.compareTo("Egyptian") == 0 || foodBonus == 2) { 
+            egyptianPlayer.setFood(arr[0] + foodBonus + egyptianPlayer.getFood());
+            foodBonus = 0;
+          } else {
+              egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
+          }
             egyptianPlayer.setFavor(arr[1] + egyptianPlayer.getFavor());
             egyptianPlayer.setWood(arr[2] + egyptianPlayer.getWood());
             egyptianPlayer.setGold(arr[3] + egyptianPlayer.getGold());
@@ -2081,6 +2107,14 @@ public class BoardController {
 
     public int getMaxBattleUnit() {
         return maxBattleUnit;
+    }
+
+    public void setFoodBonus(int n) {
+        foodBonus = n;
+    }
+
+    public int getFoodBonus() {
+        return foodBonus;
     }
 
     public void playRandomNextAgeCard(String culture) {
