@@ -238,6 +238,11 @@ public class BoardController {
                 apollo.addArchers();    
                 apollo.setVisible(true);
             }
+        } else if(str.compareTo("hel") == 0) {
+            if(norsePlayer.getFavor() >= 1) {
+                NorseRecruitHelGUI hel = new NorseRecruitHelGUI();
+                hel.setVisible(true);
+            }
         }
     }
     
