@@ -291,6 +291,30 @@ public class BoardController {
                 gGUI.setVisible(true);
                 aiGatherHandler();
             }
+        } else if (str.compareTo("artemis") == 0) {
+
+            if (greekPlayer.getFavor() >= 1) {
+                artemisExploreGUI eGUI = new artemisExploreGUI();
+                eGUI.setArtemisGod(false);
+                terrainList = artemisPickExploreTerrains(eGUI, 5);
+                GodPowerArtemisGUI godPower = new GodPowerArtemisGUI(eGUI);
+                godPower.setVisible(true);
+            } else {
+                artemisExploreGUI eGUI = new artemisExploreGUI();
+                eGUI.setVisible(true);
+            }
+        } else if (str.compareTo("ptah") == 0) {
+
+            if (egyptianPlayer.getFavor() >= 1) {
+                artemisExploreGUI eGUI = new artemisExploreGUI();
+                eGUI.setArtemisGod(false);
+                terrainList = artemisPickExploreTerrains(eGUI, 5);
+                GodPowerPtahGUI godPower = new GodPowerPtahGUI(eGUI);
+                godPower.setVisible(true);
+            } else {
+                artemisExploreGUI eGUI = new artemisExploreGUI();
+                eGUI.setVisible(true);
+            }
         }
     }
 
@@ -1042,9 +1066,9 @@ public class BoardController {
                 arr = calculateResources(str, terrains);
             }
             arr = checkBuildingBonuses(arr, "Greek");
-            if (playerCulture.compareTo("Greek") == 0 || foodBonus == 2) {               
-            greekPlayer.setFood(arr[0] + foodBonus + greekPlayer.getFood());
-            foodBonus = 0;
+            if (playerCulture.compareTo("Greek") == 0 || foodBonus == 2) {
+                greekPlayer.setFood(arr[0] + foodBonus + greekPlayer.getFood());
+                foodBonus = 0;
             } else {
                 greekPlayer.setFood(arr[0] + greekPlayer.getFood());
             }
@@ -1060,12 +1084,12 @@ public class BoardController {
                 arr = calculateResources(str, terrains);
             }
             arr = checkBuildingBonuses(arr, "Egyptian");
-          if (playerCulture.compareTo("Egyptian") == 0 || foodBonus == 2) { 
-            egyptianPlayer.setFood(arr[0] + foodBonus + egyptianPlayer.getFood());
-            foodBonus = 0;
-          } else {
-              egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
-          }
+            if (playerCulture.compareTo("Egyptian") == 0 || foodBonus == 2) {
+                egyptianPlayer.setFood(arr[0] + foodBonus + egyptianPlayer.getFood());
+                foodBonus = 0;
+            } else {
+                egyptianPlayer.setFood(arr[0] + egyptianPlayer.getFood());
+            }
             egyptianPlayer.setFavor(arr[1] + egyptianPlayer.getFavor());
             egyptianPlayer.setWood(arr[2] + egyptianPlayer.getWood());
             egyptianPlayer.setGold(arr[3] + egyptianPlayer.getGold());
@@ -1223,12 +1247,48 @@ public class BoardController {
         return terrainList;
     }
 
+    private List<TerrainTiles> artemisPickExploreTerrains(artemisExploreGUI eGUI, int N) {
+        List<TerrainTiles> randomTerrain = new ArrayList<>();
+        int count = 0, num = 0, ndx = 0;
+
+        for (int i = 0; i < N; i++) {
+            Random rand = new Random(System.nanoTime());
+            num = rand.nextInt(90) + 1;
+            ndx = getTerrainListIndex(num);
+            TerrainTiles terrain = terrainList.get(ndx);
+            count = terrain.getTileCount();
+            System.out.println(count);
+
+            while (count == 0) {
+                num = rand.nextInt(90) + 1;
+                ndx = getTerrainListIndex(num);
+                terrain = terrainList.get(ndx);
+                count = terrain.getTileCount();
+            }
+
+            terrain.setTileCount(count - 1);
+            terrainList.set(ndx, terrain);
+            randomTerrain.add(terrain);
+        }
+
+        eGUI.setTerrainIcon(randomTerrain);
+
+        return terrainList;
+    }
+
     public void exploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
         bGUI.selectCultureTerrain(evt);
         exploreAiHandler(panel);
     }
 
     public void baldrExploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel, boolean god) {
+        bGUI.selectCultureTerrain(evt);
+        if (god == false) {
+            exploreAiHandler(panel);
+        }
+    }
+
+    public void artemisExploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel, boolean god) {
         bGUI.selectCultureTerrain(evt);
         if (god == false) {
             exploreAiHandler(panel);
