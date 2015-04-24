@@ -5,6 +5,8 @@
  */
 package my.ageofsettlers;
 
+import java.util.List;
+
 /**
  *
  * @author SailendraBharadwaj
@@ -159,55 +161,86 @@ public class NorseRecruitHelGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-
+        if(card_1_marked.isVisible() == true) {
+            Norse norsePlayer = Norse.getInstance();
+            int newFavor = norsePlayer.getFavor() - 1;
+            norsePlayer.setFavor(newFavor);
+            List<UnitCard> norseUnitCards = norsePlayer.getCurrentUnitList();
+            List<UnitCard> norseTotalUnitList = norsePlayer.getTotalUnitList();
+            UnitCard card = norseTotalUnitList.get(1);
+            norseUnitCards.add(card);
+            norsePlayer.setCurrentUnitList(norseUnitCards);
+            board.updateResources("Norse");  
+        }
+        if(card_2_marked.isVisible() == true) {
+            Norse norsePlayer = Norse.getInstance();
+            int newFavor = norsePlayer.getFavor() - 1;
+            norsePlayer.setFavor(newFavor);
+            List<UnitCard> norseUnitCards = norsePlayer.getCurrentUnitList();
+            List<UnitCard> norseTotalUnitList = norsePlayer.getTotalUnitList();
+            UnitCard card = norseTotalUnitList.get(7);
+            norseUnitCards.add(card);
+            norsePlayer.setCurrentUnitList(norseUnitCards);
+            board.updateResources("Norse"); 
+            
+        }
+        if(card_3_marked.isVisible() == true) {
+            Norse norsePlayer = Norse.getInstance();
+            int newFavor = norsePlayer.getFavor() - 1;
+            norsePlayer.setFavor(newFavor);
+            List<UnitCard> norseUnitCards = norsePlayer.getCurrentUnitList();
+            List<UnitCard> norseTotalUnitList = norsePlayer.getTotalUnitList();
+            UnitCard card = norseTotalUnitList.get(2);
+            norseUnitCards.add(card);
+            norsePlayer.setCurrentUnitList(norseUnitCards);
+            board.updateResources("Norse"); 
+            
+        }
         this.setVisible(false);
+        board.initPlayPermCards();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void card_3_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card_3_imgMouseClicked
-        if(maxCards >= 3) {
-            if(card_3_marked.isVisible() == true) {
-                card_3_marked.setVisible(false);
-            }
-            else {
-                card_1_marked.setVisible(false);
-                card_2_marked.setVisible(false);
+        if(card_3_marked.isVisible() == false) {
+            if(count < maxCards) {
                 card_3_marked.setVisible(true);
+                count++;
             }
+        }
+        else {
+            card_3_marked.setVisible(false);
+            count--;
         }
     }//GEN-LAST:event_card_3_imgMouseClicked
 
     private void card_2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card_2_imgMouseClicked
-        if(maxCards >= 2) {
-            if(card_2_marked.isVisible() == true) {
-                card_2_marked.setVisible(false);
-            }
-            else {
-                card_1_marked.setVisible(false);
+     if(card_2_marked.isVisible() == false) {
+            if(count < maxCards) {
                 card_2_marked.setVisible(true);
-                card_3_marked.setVisible(false);
-              
+                count++;
             }
         }
+        else {
+            card_2_marked.setVisible(false);
+            count--;
+        }
+        
     }//GEN-LAST:event_card_2_imgMouseClicked
 
     private void card_1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card_1_imgMouseClicked
-        if(maxCards >= 1) {
-            if(card_1_marked.isVisible() == true) {
-                card_1_marked.setVisible(false);
-            }
-            else {
+        if(card_1_marked.isVisible() == false) {
+            if(count < maxCards) {
                 card_1_marked.setVisible(true);
-                card_2_marked.setVisible(false);
-                card_3_marked.setVisible(false);
-             
+                count++;
             }
+        }
+        else {
+            card_1_marked.setVisible(false);
+            count--;
         }
     }//GEN-LAST:event_card_1_imgMouseClicked
 
-    public void setMaxCards(int maxCards) {
-        this.maxCards = maxCards;
-    }
+  
     /**
      * @param args the command line arguments
      */
@@ -244,7 +277,8 @@ public class NorseRecruitHelGUI extends javax.swing.JFrame {
     }
 
     private BoardController board;
-    private int maxCards = 0;    
+    private int maxCards = 2;
+    private int count = 0;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel card_1_img;
     private javax.swing.JLabel card_1_marked;
