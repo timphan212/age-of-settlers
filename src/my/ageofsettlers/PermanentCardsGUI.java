@@ -641,8 +641,8 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
             randomActionCardAttack_img.getAccessibleContext().setAccessibleName("CardRandGreekAttackAres.png");
             randomActionCardBuild_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekBuildHera.png")));
             randomActionCardBuild_img.getAccessibleContext().setAccessibleName("CardRandGreekBuildHera.png");
-            randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekGatherDionysus.png")));
-            randomActionCardGather_img.getAccessibleContext().setAccessibleName("CardRandGreekGatherDionysus.png");
+            randomActionCardGather_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekGatherPoseidon.png")));
+            randomActionCardGather_img.getAccessibleContext().setAccessibleName("CardRandGreekGatherPoseidon.png");
             randomActionCardExplore_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekExploreArtemis.png")));
             randomActionCardExplore_img.getAccessibleContext().setAccessibleName("CardRandGreekExploreArtemis.png");
             randomActionCardNextAge_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/CardRandGreekAgeZeus.png")));

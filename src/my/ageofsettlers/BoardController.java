@@ -268,6 +268,18 @@ public class BoardController {
                 attackAreaGUI aaGUI = new attackAreaGUI();
                 aaGUI.setVisible(true);
             }
+        } else if (str.compareTo("poseidon") == 0) {
+            System.out.println("Poseidon");
+            if (greekPlayer.getFavor() >= 1) {
+                GodPowerPoseidonGUI poseidon = new GodPowerPoseidonGUI();
+                poseidon.setVisible(true);
+
+            } else {
+                gatherGUI gGUI = new gatherGUI();
+                gGUI.setVisible(true);
+                aiGatherHandler();
+            }
+
         }
     }
 
