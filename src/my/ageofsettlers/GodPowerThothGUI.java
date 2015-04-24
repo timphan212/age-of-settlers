@@ -86,9 +86,9 @@ public class GodPowerThothGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         int newFavor = egyptianPlayer.getFavor() - 1;
         egyptianPlayer.setFavor(newFavor);
-        board.updateResources("Norse");
+        board.updateResources("Egyptian");
         board.setFourthCard(true);
-       
+
         attackAreaGUI aaGUI = new attackAreaGUI();
         aaGUI.setVisible(true);
 
@@ -98,6 +98,8 @@ public class GodPowerThothGUI extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         attackAreaGUI aaGUI = new attackAreaGUI();
+        this.setVisible(false);
+
         aaGUI.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 

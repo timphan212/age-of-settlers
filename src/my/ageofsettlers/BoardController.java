@@ -251,16 +251,26 @@ public class BoardController {
                 aaGUI.setVisible(true);
             }
         } else if (str.compareTo("thoth") == 0) {
-            if (greekPlayer.getFavor() >= 1) {
+            if (egyptianPlayer.getFavor() >= 1) {
                 GodPowerThothGUI thoth = new GodPowerThothGUI();
                 thoth.setVisible(true);
-                
+
+            } else {
+                attackAreaGUI aaGUI = new attackAreaGUI();
+                aaGUI.setVisible(true);
+            }
+        } else if (str.compareTo("ares") == 0) {
+            if (greekPlayer.getFavor() >= 3) {
+                GodPowerAresGUI ares = new GodPowerAresGUI();
+                ares.setVisible(true);
+
             } else {
                 attackAreaGUI aaGUI = new attackAreaGUI();
                 aaGUI.setVisible(true);
             }
         }
     }
+
     private static void unitSetup() {
         norseUnitSetup();
         greekUnitSetup();
@@ -1298,8 +1308,15 @@ public class BoardController {
 
     public void setupAttackCard(String opponent, String attackingArea) {
         int max = 4;
+        int aimax = 4;
         if (maxBattleUnit == 6) {
             max = 6;
+            aimax = 4;
+        }
+
+        if (maxBattleUnit == 8) {
+            max = 8;
+            aimax = 6;
         }
 
         int size = 0;
@@ -1313,7 +1330,7 @@ public class BoardController {
         }
 
         if (size > 0) {
-            aiBattleUnits = getOpponentSelection(opponent, max);
+            aiBattleUnits = getOpponentSelection(opponent, aimax);
             attackUnitSelectionGUI ausGUI = new attackUnitSelectionGUI();
             ausGUI.setVisible(true);
             if (playerCulture.compareTo("Norse") == 0) {
