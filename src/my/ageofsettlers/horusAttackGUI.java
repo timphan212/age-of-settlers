@@ -32,6 +32,22 @@ public class horusAttackGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        houseSelection1 = new javax.swing.JRadioButton();
+        wallSelection1 = new javax.swing.JRadioButton();
+        towerSelection1 = new javax.swing.JRadioButton();
+        storehouseSelection1 = new javax.swing.JRadioButton();
+        marketSelection1 = new javax.swing.JRadioButton();
+        armorySelection1 = new javax.swing.JRadioButton();
+        quarrySelection1 = new javax.swing.JRadioButton();
+        monumentSelection1 = new javax.swing.JRadioButton();
+        granarySelection1 = new javax.swing.JRadioButton();
+        goldmintSelection1 = new javax.swing.JRadioButton();
+        woodworkshopSelection1 = new javax.swing.JRadioButton();
+        siegeworkshopSelection1 = new javax.swing.JRadioButton();
+        greattempleSelection1 = new javax.swing.JRadioButton();
+        wonderSelection1 = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
         towerSelection = new javax.swing.JRadioButton();
         storehouseSelection = new javax.swing.JRadioButton();
@@ -49,6 +65,107 @@ public class horusAttackGUI extends javax.swing.JFrame {
         wallSelection = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(255,255,255,1));
+        jTextField1.setBorder(null);
+
+        houseSelection1.setText("House");
+        houseSelection1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                houseSelection1ActionPerformed(evt);
+            }
+        });
+
+        wallSelection1.setText("Wall");
+
+        towerSelection1.setText("Tower");
+
+        storehouseSelection1.setText("Storehouse");
+
+        marketSelection1.setText("Market");
+
+        armorySelection1.setText("Armory");
+
+        quarrySelection1.setText("Quarry");
+
+        monumentSelection1.setText("Monument");
+
+        granarySelection1.setText("Granary");
+
+        goldmintSelection1.setText("Gold Mint");
+
+        woodworkshopSelection1.setText("Wood Workshop");
+
+        siegeworkshopSelection1.setText("Siege Engine Workshop");
+
+        greattempleSelection1.setText("Great Temple");
+
+        wonderSelection1.setText("The Wonder");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(wallSelection1)
+                            .addComponent(houseSelection1)
+                            .addComponent(towerSelection1)
+                            .addComponent(storehouseSelection1)
+                            .addComponent(marketSelection1)
+                            .addComponent(armorySelection1)
+                            .addComponent(quarrySelection1)
+                            .addComponent(monumentSelection1)
+                            .addComponent(granarySelection1)
+                            .addComponent(goldmintSelection1)
+                            .addComponent(woodworkshopSelection1)
+                            .addComponent(siegeworkshopSelection1)
+                            .addComponent(greattempleSelection1)
+                            .addComponent(wonderSelection1))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(houseSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(wallSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(towerSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(storehouseSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(marketSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(armorySelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quarrySelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(monumentSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(granarySelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(goldmintSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(woodworkshopSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(siegeworkshopSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(greattempleSelection1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(wonderSelection1)
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,11 +240,11 @@ public class horusAttackGUI extends javax.swing.JFrame {
                             .addComponent(greattempleSelection)
                             .addComponent(wonderSelection)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
+                        .addGap(74, 74, 74)
                         .addComponent(jButton1)
-                        .addGap(125, 125, 125)
+                        .addGap(78, 78, 78)
                         .addComponent(jButton2)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,30 +277,38 @@ public class horusAttackGUI extends javax.swing.JFrame {
                 .addComponent(greattempleSelection)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(wonderSelection)
-                .addGap(34, 34, 34)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void houseSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseSelectionActionPerformed
-              
-    }//GEN-LAST:event_houseSelectionActionPerformed
+    private void houseSelection1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseSelection1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_houseSelection1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.setVisible(false);
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+        buildingGUI buildGUI = new buildingGUI();
+        buildGUI.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Greek g = new Greek();
@@ -202,74 +327,73 @@ public class horusAttackGUI extends javax.swing.JFrame {
         buildings.add("Wall.png");
         buildings.add("Wonder.png");
         buildings.add("WoodWork.png");
-       
-      if(houseSelection.isSelected() == true) {
-        if(g.getHouse() > 0)
-        board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(armorySelection.isSelected() == true) {
-        if(g.isArmory())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(goldmintSelection.isSelected() == true) {
-        if(g.isGoldmint())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(granarySelection.isSelected() == true) {
-        if(g.isGranary())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if (greattempleSelection.isSelected() == true) {
-          if(g.isGreattemple())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(marketSelection.isSelected() == true) {
-        if(g.isMarket())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(monumentSelection.isSelected() == true) {
-       if(g.isMonument())
-         board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(quarrySelection.isSelected() == true) {
-        if(g.isQuarry())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(siegeworkshopSelection.isSelected() == true) {
-        if(g.isSiegeworkshop())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(storehouseSelection.isSelected() == true) {
-        if(g.isStorehouse())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(towerSelection.isSelected() == true) {
-        if(g.isTower())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(wallSelection.isSelected() == true) {
-        if(g.isWall())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(wonderSelection.isSelected() == true) {
-        if(g.isWonder())
-            board.removeBuildingTiles(playerCulture, buildings);
-      }
-      else if(woodworkshopSelection.isSelected() == true) {
-        if(g.isWoodworkshop())   
-            board.removeBuildingTiles(playerCulture, buildings);  
-      }
-      this.setVisible(false);
-      //board.initPlayPermCards();
-      board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(houseSelection.isSelected() == true) {
+            if(g.getHouse() > 0)
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(armorySelection.isSelected() == true) {
+            if(g.isArmory())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(goldmintSelection.isSelected() == true) {
+            if(g.isGoldmint())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(granarySelection.isSelected() == true) {
+            if(g.isGranary())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if (greattempleSelection.isSelected() == true) {
+            if(g.isGreattemple())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(marketSelection.isSelected() == true) {
+            if(g.isMarket())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(monumentSelection.isSelected() == true) {
+            if(g.isMonument())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(quarrySelection.isSelected() == true) {
+            if(g.isQuarry())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(siegeworkshopSelection.isSelected() == true) {
+            if(g.isSiegeworkshop())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(storehouseSelection.isSelected() == true) {
+            if(g.isStorehouse())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(towerSelection.isSelected() == true) {
+            if(g.isTower())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(wallSelection.isSelected() == true) {
+            if(g.isWall())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(wonderSelection.isSelected() == true) {
+            if(g.isWonder())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
+        else if(woodworkshopSelection.isSelected() == true) {
+            if(g.isWoodworkshop())
+            board.removeBuildingTiles(playerCulture, buildings);
+        }
         this.setVisible(false);
         //board.initPlayPermCards();
         board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        buildingGUI buildGUI = new buildingGUI();
+        buildGUI.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void houseSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseSelectionActionPerformed
+
+    }//GEN-LAST:event_houseSelectionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -311,21 +435,37 @@ public class horusAttackGUI extends javax.swing.JFrame {
     private String playerCulture;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton armorySelection;
+    private javax.swing.JRadioButton armorySelection1;
     private javax.swing.JRadioButton goldmintSelection;
+    private javax.swing.JRadioButton goldmintSelection1;
     private javax.swing.JRadioButton granarySelection;
+    private javax.swing.JRadioButton granarySelection1;
     private javax.swing.JRadioButton greattempleSelection;
+    private javax.swing.JRadioButton greattempleSelection1;
     private javax.swing.JRadioButton houseSelection;
+    private javax.swing.JRadioButton houseSelection1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JRadioButton marketSelection;
+    private javax.swing.JRadioButton marketSelection1;
     private javax.swing.JRadioButton monumentSelection;
+    private javax.swing.JRadioButton monumentSelection1;
     private javax.swing.JRadioButton quarrySelection;
+    private javax.swing.JRadioButton quarrySelection1;
     private javax.swing.JRadioButton siegeworkshopSelection;
+    private javax.swing.JRadioButton siegeworkshopSelection1;
     private javax.swing.JRadioButton storehouseSelection;
+    private javax.swing.JRadioButton storehouseSelection1;
     private javax.swing.JRadioButton towerSelection;
+    private javax.swing.JRadioButton towerSelection1;
     private javax.swing.JRadioButton wallSelection;
+    private javax.swing.JRadioButton wallSelection1;
     private javax.swing.JRadioButton wonderSelection;
+    private javax.swing.JRadioButton wonderSelection1;
     private javax.swing.JRadioButton woodworkshopSelection;
+    private javax.swing.JRadioButton woodworkshopSelection1;
     // End of variables declaration//GEN-END:variables
 }

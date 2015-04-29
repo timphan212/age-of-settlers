@@ -242,8 +242,8 @@ public class BoardController {
                 this.configureTurnFormation(currentPlayerTurn+1);
             }
         } else if (str.compareTo("njord") == 0) {
-            NorseRandNjord njord = new NorseRandNjord();
-            njord.setVisible(true);
+            NjordGUI n = new NjordGUI();
+            n.setVisible(true);
         } else if (str.compareTo("tah") == 0) {
             EgyptBuildTah tah = new EgyptBuildTah();
             tah.setVisible(true);
@@ -408,6 +408,7 @@ public class BoardController {
         
         if(card == 0) {
             System.out.println("AI played permanent attack card");
+            
             //ai plays attack
         }
         else if(card == 1) {

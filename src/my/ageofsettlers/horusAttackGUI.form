@@ -1,6 +1,168 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="wallSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="houseSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="towerSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="storehouseSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="marketSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="armorySelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="quarrySelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="monumentSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="granarySelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="goldmintSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="woodworkshopSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="siegeworkshopSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="greattempleSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="wonderSelection1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="houseSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="wallSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="towerSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="storehouseSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="marketSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="armorySelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="quarrySelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="monumentSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="granarySelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="goldmintSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="woodworkshopSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="siegeworkshopSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="greattempleSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="wonderSelection1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="57" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Color(255,255,255,1)" type="code"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="houseSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="House"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="houseSelection1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="wallSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wall"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="towerSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tower"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="storehouseSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Storehouse"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="marketSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Market"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="armorySelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Armory"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="quarrySelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quarry"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="monumentSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monument"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="granarySelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Granary"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="goldmintSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gold Mint"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="woodworkshopSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wood Workshop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="siegeworkshopSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Siege Engine Workshop"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="greattempleSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Great Temple"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="wonderSelection1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="The Wonder"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,12 +185,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -60,13 +222,13 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="163" max="32767" attributes="0"/>
+                  <EmptySpace pref="55" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -101,12 +263,12 @@
                   <Component id="greattempleSelection" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="wonderSelection" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="68" max="32767" attributes="0"/>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
