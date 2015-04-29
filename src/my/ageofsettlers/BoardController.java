@@ -32,9 +32,6 @@ public class BoardController {
     private static BoardController instance = null;
     private List<String> playerPermCards = new ArrayList<>();
     private static BoardGUI bGUI;
-    private int roundCount1 = 0;
-    private int roundCount2 = 0;
-    private int roundCount3 = 0;
     private List<UnitCard> aiBattleUnits = new ArrayList<>();
     private boolean isPlayFourthCard = false;
     private int maxBattleUnit = 4;
@@ -42,6 +39,7 @@ public class BoardController {
     private boolean winCondition = false;
     private int currentPlayerTurn = 0;
     private static int currentPlayerFormation = 1;
+    private static int roundcounter = 0;
     
     public static synchronized BoardController getInstance() {
         if (instance == null) {
@@ -101,24 +99,33 @@ public class BoardController {
         pcGUI.setMaxCards(num);
         pcGUI.setVisible(true);
     }
-
+   
     public void initPlayPermCards(int playerTurn) {
         SelectedPermanentCardsGUI spCards = new SelectedPermanentCardsGUI();
+        if(currentPlayerFormation == 1 && playerTurn == 3) {
+            roundcounter++;
+        }
+        else if(currentPlayerFormation == 2 && playerTurn == 1) {
+            roundcounter++;
+        }
+        else if(currentPlayerFormation == 3 && playerTurn == 2) {
+            roundcounter++;
+        }
         if(playerTurn == 1) {
-            if (playerPermCards.size() > 0) {
-                spCards.setMaxCards(playerPermCards.size());
-                spCards.setupCards();
-            } else {
-                roundCount1 = 3;
+            if(roundcounter <= 3 || isPlayFourthCard == true) {
+                if(isPlayFourthCard == true) {
+                    this.setFourthCard(false);
+                }
+                if (playerPermCards.size() > 0) {
+                    spCards.setMaxCards(playerPermCards.size());
+                    spCards.setupCards();
+                    spCards.setVisible(true);
+                }                
             }
-            roundCount1++;
-
-            if(isPlayFourthCard == true) {
-                roundCount1--;
-                this.setFourthCard(false);
-            }
-            if(roundCount1 <= 3) {
-                spCards.setVisible(true);
+            else {
+                spCards.setVisible(false);
+                spoilage();
+                cleanupTurns();
             }
             /*if (isPlayFourthCard == false && roundCount1 > 3) {
                 spCards.setVisible(false);
@@ -133,30 +140,30 @@ public class BoardController {
             }*/
         }
         else if(playerTurn == 2) {
-            roundCount2++;
-            if(isPlayFourthCard == true) {
-                roundCount2--;
-                this.setFourthCard(false);
-            }
-            if(roundCount2 <= 3) {
+            if(roundcounter <= 3 || isPlayFourthCard == true) {
+                if(isPlayFourthCard == true) {
+                    this.setFourthCard(false);
+                }
                 playAICard(aiCulture);
+            }
+            else {
+                spCards.setVisible(false);
+                spoilage();
+                cleanupTurns();
             }
         }
         else {
-            roundCount3++;
-            if(isPlayFourthCard == true) {
-                roundCount3--;
-                this.setFourthCard(false);
-            }
-            if(roundCount2 <= 3) {
+            if(roundcounter <= 3 || isPlayFourthCard == true) {
+                if(isPlayFourthCard == true) {
+                    this.setFourthCard(false);
+                }
                 playAICard(aiCulture2);
             }
-        }
-        //System.out.println(roundCount1 + " " + roundCount2 + " " + roundCount3);
-        if(roundCount1 >= 3 && roundCount2 >= 3 && roundCount3 >= 3) {
-            spCards.setVisible(false);
-            spoilage();
-            cleanupTurns();
+            else {
+                spCards.setVisible(false);
+                spoilage();
+                cleanupTurns();
+            }
         }
     }
 
@@ -1445,15 +1452,11 @@ public class BoardController {
         spoilageNorse();
         spoilageGreek();
         spoilageEgyptian();
-        //cleanup
-        //start new turn
     }
 
     private void cleanupTurns() {
-        roundCount1 = 0;
-        roundCount2 = 0;
-        roundCount3 = 0;
         currentPlayerTurn = 0;
+        roundcounter = 0;
         setupRounds();
     }
     private void spoilageNorse() {
