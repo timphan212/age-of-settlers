@@ -5,6 +5,9 @@
  */
 package my.ageofsettlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author SailendraBharadwaj
@@ -112,6 +115,8 @@ public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
                board.updateResources("Greek");
                board.updateResources("Egyptian");
                this.setVisible(false);
+             
+               
            }
            else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -127,6 +132,7 @@ public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
                board.updateResources("Greek");
                board.updateResources("Egyptian");
                this.setVisible(false);
+                
            }
            else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -142,6 +148,7 @@ public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
                board.updateResources("Greek");
                board.updateResources("Egyptian");
                this.setVisible(false);
+              
            }
            else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -164,8 +171,11 @@ public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
             beGUI.setVisible(true);
            }  
         }
-                  //board.initPlayPermCards();
-        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+        
+         tahExploreGUI eGUI = new tahExploreGUI();
+         eGUI.setVisible(true);
+         terrainList =  board.tahPickExploreTerrains(eGUI, 5);
+//        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -173,6 +183,9 @@ public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
         this.setVisible(false);
         //board.initPlayPermCards();
         board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+        tahExploreGUI eGUI = new tahExploreGUI();
+        eGUI.setVisible(true);
+        terrainList =  board.tahPickExploreTerrains(eGUI, 5);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -210,8 +223,9 @@ public class TahTradeCardForEgyptGUI extends javax.swing.JFrame {
         });
     }
     private BoardController board;
-    Egyptian egyptPlayer;
-    Greek greekPlayer;
+    private Egyptian egyptPlayer;
+    private static List<TerrainTiles> terrainList = new ArrayList<> ();
+    private Greek greekPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton favor;
     private javax.swing.JRadioButton food;

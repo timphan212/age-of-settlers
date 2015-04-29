@@ -10,14 +10,14 @@ import java.util.List;
 
 /**
  *
- * @author Tim
+ * @author SailendraBharadwaj
  */
-public class artemisExploreGUI extends javax.swing.JFrame {
+public class tahExploreGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form exploreGUI
+     * Creates new form tahExploreGUI
      */
-    public artemisExploreGUI() {
+    public tahExploreGUI() {
         this.board = BoardController.getInstance();
         initComponents();
     }
@@ -54,7 +54,12 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(255,255,255,1));
         jTextField1.setText("Select a terrain tile:");
         jTextField1.setBorder(null);
-        explorePanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        explorePanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 10, 110, -1));
 
         terrainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -203,25 +208,19 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(explorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(explorePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(explorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(explorePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (god == false) {
-            System.out.println("No GOD artemis");
-            board.exploreAiHandler(terrainPanel);
-        }
-        this.setVisible(false);
-        //board.initPlayPermCards();
-        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void terrain_img_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_1MouseClicked
 
@@ -234,7 +233,7 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         } else {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
                 //board.initPlayPermCards();
                 board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
@@ -253,7 +252,7 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         } else {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
                 //board.initPlayPermCards();
                 board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
@@ -261,21 +260,6 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_terrain_img_2MouseClicked
-
-    private void terrain_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_3MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_terrain_3MouseClicked
-
-    private void terrain_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_4MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_terrain_4MouseClicked
-
-    private void terrain_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_5MouseClicked
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_terrain_5MouseClicked
 
     private void terrain_img_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_3MouseClicked
         // TODO add your handling code here:
@@ -288,7 +272,7 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         } else {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
                 //board.initPlayPermCards();
                 board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
@@ -296,18 +280,22 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_terrain_img_3MouseClicked
 
+    private void terrain_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_terrain_3MouseClicked
+
     private void terrain_img_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_4MouseClicked
         // TODO add your handling code here:
         if (god == true && selectedCount == 0) {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
             }
             selectedCount++;
         } else {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
                 //board.initPlayPermCards();
                 board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
@@ -316,18 +304,22 @@ public class artemisExploreGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_terrain_img_4MouseClicked
 
+    private void terrain_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_terrain_4MouseClicked
+
     private void terrain_img_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_5MouseClicked
         // TODO add your handling code here:
         if (god == true && selectedCount == 0) {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
             }
             selectedCount++;
         } else {
             boolean terrainSuccess = this.board.terrainHandler(evt);
             if (terrainSuccess == true) {
-                this.board.artemisExploreHandler(evt, terrainPanel, god);
+                this.board.tahExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
                 //board.initPlayPermCards();
                 board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
@@ -335,6 +327,21 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_terrain_img_5MouseClicked
+
+    private void terrain_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_terrain_5MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        this.setVisible(false);
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     public void setTerrainIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrainPanel.getComponents();
@@ -351,7 +358,6 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             }
         }
     }
-
     /**
      * @param args the command line arguments
      */
@@ -369,37 +375,27 @@ public class artemisExploreGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tahExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tahExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tahExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(baldrExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tahExploreGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new artemisExploreGUI().setVisible(true);
+                new tahExploreGUI().setVisible(true);
             }
         });
     }
 
-    public void setArtemisGod(boolean b) {
-        god = b;
-    }
+    private BoardController board;
     private int selectedCount = 0;
     private boolean god = false;
-    private BoardController board;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel explorePanel;
     private javax.swing.JButton jButton1;

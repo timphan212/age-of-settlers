@@ -53,7 +53,7 @@ public class exploreGUI extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(255,255,255,1));
         jTextField1.setText("Select a terrain tile:");
         jTextField1.setBorder(null);
-        explorePanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        explorePanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, 100, -1));
 
         terrainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -141,13 +141,13 @@ public class exploreGUI extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        explorePanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+        explorePanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(explorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(explorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

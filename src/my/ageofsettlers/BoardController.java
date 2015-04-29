@@ -245,7 +245,7 @@ public class BoardController {
             NjordGUI n = new NjordGUI();
             n.setVisible(true);
         } else if (str.compareTo("tah") == 0) {
-            EgyptBuildTah tah = new EgyptBuildTah();
+            TahGUI tah = new TahGUI();
             tah.setVisible(true);
         } else if (str.compareTo("randAge") == 0) {
             System.out.println("Playing random action card next age");
@@ -1376,7 +1376,6 @@ public class BoardController {
             ndx = getTerrainListIndex(num);
             TerrainTiles terrain = terrainList.get(ndx);
             count = terrain.getTileCount();
-            System.out.println(count);
 
             while (count == 0) {
                 num = rand.nextInt(90) + 1;
@@ -1405,7 +1404,34 @@ public class BoardController {
             ndx = getTerrainListIndex(num);
             TerrainTiles terrain = terrainList.get(ndx);
             count = terrain.getTileCount();
-            System.out.println(count);
+           
+            while (count == 0) {
+                num = rand.nextInt(90) + 1;
+                ndx = getTerrainListIndex(num);
+                terrain = terrainList.get(ndx);
+                count = terrain.getTileCount();
+            }
+
+            terrain.setTileCount(count - 1);
+            terrainList.set(ndx, terrain);
+            randomTerrain.add(terrain);
+        }
+
+        eGUI.setTerrainIcon(randomTerrain);
+
+        return terrainList;
+    }
+    
+    public List<TerrainTiles> tahPickExploreTerrains(tahExploreGUI eGUI, int N) {
+        List<TerrainTiles> randomTerrain = new ArrayList<>();
+        int count = 0, num = 0, ndx = 0;
+
+        for (int i = 0; i < N; i++) {
+            Random rand = new Random(System.nanoTime());
+            num = rand.nextInt(90) + 1;
+            ndx = getTerrainListIndex(num);
+            TerrainTiles terrain = terrainList.get(ndx);
+            count = terrain.getTileCount();
 
             while (count == 0) {
                 num = rand.nextInt(90) + 1;
@@ -1437,6 +1463,12 @@ public class BoardController {
     }
 
     public void artemisExploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel, boolean god) {
+        bGUI.selectCultureTerrain(evt);
+        if (god == false) {
+            exploreAiHandler(panel);
+        }
+    }
+    public void tahExploreHandler(java.awt.event.MouseEvent evt, javax.swing.JPanel panel, boolean god) {
         bGUI.selectCultureTerrain(evt);
         if (god == false) {
             exploreAiHandler(panel);

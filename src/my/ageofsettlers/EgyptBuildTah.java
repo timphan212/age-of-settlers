@@ -5,6 +5,9 @@
  */
 package my.ageofsettlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author SailendraBharadwaj
@@ -106,6 +109,9 @@ public class EgyptBuildTah extends javax.swing.JFrame {
             //board.initPlayPermCards();
             board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             this.setVisible(false);
+            tahExploreGUI eGUI = new tahExploreGUI();
+            eGUI.setVisible(true);
+            terrainList =  board.tahPickExploreTerrains(eGUI, 5);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -122,6 +128,9 @@ public class EgyptBuildTah extends javax.swing.JFrame {
             //board.initPlayPermCards();
             board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             this.setVisible(false);
+            tahExploreGUI eGUI = new tahExploreGUI();
+            eGUI.setVisible(true);
+            terrainList =  board.tahPickExploreTerrains(eGUI, 5);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -159,8 +168,9 @@ public class EgyptBuildTah extends javax.swing.JFrame {
             }
         });
     }
-    Egyptian ePlayer;
-    BoardController board;
+    private Egyptian ePlayer;
+    private BoardController board;
+    private static List<TerrainTiles> terrainList = new ArrayList<>();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
