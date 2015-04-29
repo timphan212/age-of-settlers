@@ -34,7 +34,7 @@ public class OsirisErrorGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Insufficient favor cubes!!");
+        jLabel1.setText("Insufficient resiource cubes!!");
 
         jButton1.setText("O.K");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +55,7 @@ public class OsirisErrorGUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(109, 109, 109)
                         .addComponent(jButton1)))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

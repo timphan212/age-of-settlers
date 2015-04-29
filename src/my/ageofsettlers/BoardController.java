@@ -306,10 +306,8 @@ public class BoardController {
                 apollo.setVisible(true);
             }
         } else if (str.compareTo("hel") == 0) {
-            if (norsePlayer.getFavor() >= 1) {
-                NorseRecruitHelGUI hel = new NorseRecruitHelGUI();
-                hel.setVisible(true);
-            }
+            NorseHelGodPowerGUI hel = new NorseHelGodPowerGUI();
+            hel.setVisible(true);
         } else if (str.compareTo("heimdall") == 0) {
             if (norsePlayer.getFavor() >= 4) {
                 GodPowerHeimdallGUI heim = new GodPowerHeimdallGUI();
