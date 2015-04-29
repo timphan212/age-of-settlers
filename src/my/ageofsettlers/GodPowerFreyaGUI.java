@@ -87,7 +87,7 @@ public class GodPowerFreyaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         board.decrementNorsePlayerFavor();
         board.updateResources("Norse");
-        board.addNorseFourGold();
+        board.addNorseFiveGold();
         gatherGUI gGUI = new gatherGUI();
         this.setVisible(false);
         gGUI.setVisible(true);

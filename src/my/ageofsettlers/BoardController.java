@@ -408,7 +408,7 @@ public class BoardController {
             //ai plays attack
         }
         else if(card == 1) {
-            System.out.println("AI played permanent attack card");
+            System.out.println("AI played permanent build card");
             //ai plays build
         }
         else if(card == 2) {
@@ -2306,8 +2306,8 @@ public class BoardController {
         isPlayFourthCard = x;
     }
 
-    public void addNorseFourGold() {
-        norsePlayer.setGold(norsePlayer.getGold() + 4);
+    public void addNorseFiveGold() {
+        norsePlayer.setGold(norsePlayer.getGold() + 5);
     }
 
     public void setMaxBattleUnit(int n) {
