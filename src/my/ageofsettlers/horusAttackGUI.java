@@ -386,7 +386,7 @@ public class horusAttackGUI extends javax.swing.JFrame {
         }
         this.setVisible(false);
         //board.initPlayPermCards();
-        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+        //board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         buildingGUI buildGUI = new buildingGUI();
         buildGUI.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

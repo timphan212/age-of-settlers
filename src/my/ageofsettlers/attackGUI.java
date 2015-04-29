@@ -104,8 +104,10 @@ public class attackGUI extends javax.swing.JFrame {
         }
         else {
             //board.initPlayPermCards();
-            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+            //board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             this.setVisible(false);
+            buildingGUI buildGUI = new buildingGUI();
+            buildGUI.setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -113,15 +115,17 @@ public class attackGUI extends javax.swing.JFrame {
        if(ePlayer.getFavor() >=1) {
             int newFavor = ePlayer.getFavor() - 1;
             ePlayer.setFavor(newFavor);
-            board.updateResources("Egyptian");            
-            horusAttackGUI horus = new horusAttackGUI();
+            board.updateResources("Norse");            
+            horusAttackNorseGUI horus = new horusAttackNorseGUI();
             horus.setVisible(true);
             this.setVisible(false);
         }
         else {
             //board.initPlayPermCards();
-           board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+          // board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             this.setVisible(false);
+            buildingGUI buildGUI = new buildingGUI();
+            buildGUI.setVisible(true);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

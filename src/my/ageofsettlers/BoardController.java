@@ -227,8 +227,8 @@ public class BoardController {
             attackAreaGUI aaGUI = new attackAreaGUI();
             aaGUI.setVisible(true);
         } else if (str.compareTo("horus") == 0) {
-            attackGUI aGUI = new attackGUI();
-            aGUI.setVisible(true);
+            HorusGodPowerGUI horus = new HorusGodPowerGUI();
+            horus.setVisible(true);
         } else if (str.compareTo("hera") == 0) {
             this.board = BoardController.getInstance();
             this.gPlayer = Greek.getInstance();
@@ -346,7 +346,6 @@ public class BoardController {
                 aiGatherHandler();
             }
         } else if (str.compareTo("gatherra") == 0) {
-            System.out.println("Ra");
             if (egyptianPlayer.getFavor() >= 2) {
                 GodPowerRaGUI ra = new GodPowerRaGUI();
                 ra.setVisible(true);
