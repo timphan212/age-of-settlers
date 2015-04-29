@@ -212,7 +212,8 @@ public class tradeCostGUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void playerFoodSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerFoodSelectionActionPerformed

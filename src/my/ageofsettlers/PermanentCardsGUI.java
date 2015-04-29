@@ -402,7 +402,19 @@ public class PermanentCardsGUI extends javax.swing.JFrame {
         
        
         board.setPlayerPermCards(actionList);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        if(board.getCurrentPlayerFormation() == 1) {
+            board.setCurrentPlayerFormation(board.getCurrentPlayerFormation()+1);
+            board.configureTurnFormation(1);
+        }
+        else if(board.getCurrentPlayerFormation() == 2) {
+            board.setCurrentPlayerFormation(board.getCurrentPlayerFormation()+1);
+            board.configureTurnFormation(2);
+        }
+        else {
+            board.setCurrentPlayerFormation(1);
+            board.configureTurnFormation(3);
+        }
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 

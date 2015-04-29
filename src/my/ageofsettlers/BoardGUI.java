@@ -7813,7 +7813,7 @@ public class BoardGUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         victoryCardGUI victoryCard = victoryCardGUI.getInstance();
         victoryCard.getTextField().setVisible(false);
-        boardController.drawVictoryCubes();
+        BoardController.drawVictoryCubes();
         victoryCard.setVisible(true);
         victoryCard.hideButtons();
     }//GEN-LAST:event_jButton3ActionPerformed

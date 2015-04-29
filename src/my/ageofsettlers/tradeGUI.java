@@ -285,7 +285,8 @@ public class tradeGUI extends javax.swing.JFrame {
             bank.setGold(bank.getGold() + playerGoldCount - bankGoldCount);
             board.updateResources(this.playerCulture);
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
         else {
             tradeErrorGUI teGUI = new tradeErrorGUI();
@@ -295,7 +296,8 @@ public class tradeGUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setupTradeGUI(String culture) {

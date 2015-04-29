@@ -160,7 +160,8 @@ public class exploreGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         board.exploreAiHandler(terrainPanel);
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void terrain_img_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_1MouseClicked
@@ -168,7 +169,8 @@ public class exploreGUI extends javax.swing.JFrame {
         if(terrainSuccess == true) {
             this.board.exploreHandler(evt, terrainPanel);
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
     }//GEN-LAST:event_terrain_img_1MouseClicked
 
@@ -177,7 +179,8 @@ public class exploreGUI extends javax.swing.JFrame {
         if(terrainSuccess == true) {
             this.board.exploreHandler(evt, terrainPanel);
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
     }//GEN-LAST:event_terrain_img_2MouseClicked
 
@@ -186,7 +189,8 @@ public class exploreGUI extends javax.swing.JFrame {
         if(terrainSuccess == true) {
             this.board.exploreHandler(evt, terrainPanel);
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
     }//GEN-LAST:event_terrain_img_3MouseClicked
 
@@ -195,7 +199,8 @@ public class exploreGUI extends javax.swing.JFrame {
         if(terrainSuccess == true) {
             this.board.exploreHandler(evt, terrainPanel);
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
     }//GEN-LAST:event_terrain_img_4MouseClicked
 

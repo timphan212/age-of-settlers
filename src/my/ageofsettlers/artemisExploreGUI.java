@@ -219,7 +219,8 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             board.exploreAiHandler(terrainPanel);
         }
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void terrain_img_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain_img_1MouseClicked
@@ -235,7 +236,8 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             if (terrainSuccess == true) {
                 this.board.artemisExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
             }
         }
@@ -253,7 +255,8 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             if (terrainSuccess == true) {
                 this.board.artemisExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
             }
         }
@@ -287,8 +290,8 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             if (terrainSuccess == true) {
                 this.board.artemisExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
-                board.initPlayPermCards();
-
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             }
         }
     }//GEN-LAST:event_terrain_img_3MouseClicked
@@ -306,7 +309,8 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             if (terrainSuccess == true) {
                 this.board.artemisExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
             }
         }
@@ -325,7 +329,8 @@ public class artemisExploreGUI extends javax.swing.JFrame {
             if (terrainSuccess == true) {
                 this.board.artemisExploreHandler(evt, terrainPanel, god);
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
             }
         }

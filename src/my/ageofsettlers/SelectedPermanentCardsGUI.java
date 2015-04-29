@@ -419,7 +419,8 @@ public class SelectedPermanentCardsGUI extends javax.swing.JFrame {
         }
         
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private String parseString(String str) {

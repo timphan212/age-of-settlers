@@ -328,7 +328,8 @@ public class recruitGUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void unit_1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_unit_1_imgMouseClicked
@@ -587,7 +588,8 @@ public class recruitGUI extends javax.swing.JFrame {
                 
                 board.updateResources("Norse");
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             }
             else {
                 recruitErrorGUI reGUI = new recruitErrorGUI();
@@ -618,7 +620,8 @@ public class recruitGUI extends javax.swing.JFrame {
                 
                 board.updateResources("Greek");
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             }
             else {
                 recruitErrorGUI reGUI = new recruitErrorGUI();
@@ -649,7 +652,8 @@ public class recruitGUI extends javax.swing.JFrame {
                 
                 board.updateResources("Egyptian");
                 this.setVisible(false);
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             }
             else {
                 recruitErrorGUI reGUI = new recruitErrorGUI();

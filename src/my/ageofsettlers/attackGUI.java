@@ -103,7 +103,8 @@ public class attackGUI extends javax.swing.JFrame {
             this.setVisible(false);
         }
         else {
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -118,7 +119,8 @@ public class attackGUI extends javax.swing.JFrame {
             this.setVisible(false);
         }
         else {
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+           board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButton2ActionPerformed

@@ -6,6 +6,7 @@
 package my.ageofsettlers;
 
 import java.awt.Component;
+import java.io.FileDescriptor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,16 +28,21 @@ public class BoardController {
     private static Norse norsePlayer;
     private static Egyptian egyptianPlayer;
     private static Greek greekPlayer;
-    private int[] victoryCards = new int[4];
+    private static int[] victoryCards = new int[4];
     private static BoardController instance = null;
     private List<String> playerPermCards = new ArrayList<>();
     private static BoardGUI bGUI;
-    private int roundCount = 0;
+    private int roundCount1 = 0;
+    private int roundCount2 = 0;
+    private int roundCount3 = 0;
     private List<UnitCard> aiBattleUnits = new ArrayList<>();
     private boolean isPlayFourthCard = false;
     private int maxBattleUnit = 4;
     private int foodBonus = 0;
-
+    private boolean winCondition = false;
+    private int currentPlayerTurn = 0;
+    private static int currentPlayerFormation = 1;
+    
     public static synchronized BoardController getInstance() {
         if (instance == null) {
             instance = new BoardController();
@@ -61,8 +67,26 @@ public class BoardController {
     }
 
     public static void setupRounds() {
+        Random rand = new Random(System.nanoTime());
         victoryCardGUI victoryRounds = victoryCardGUI.getInstance();
         victoryRounds.getTextField().setVisible(true);
+        victoryRounds.setDisabledClick(false);
+        victoryRounds.setPreviousClick(-1);
+        if(currentPlayerFormation == 1) {
+            victoryRounds.setTurn(1);
+        }
+        else if(currentPlayerFormation == 2) {
+            int num = rand.nextInt(4);
+            drawVictoryCard(num, -1);
+            num = rand.nextInt(4);
+            drawVictoryCard(num, -1);
+            victoryRounds.setTurn(2);
+        }
+        else {
+            int num = rand.nextInt(4);
+            drawVictoryCard(num, -1);
+            victoryRounds.setTurn(3);
+        }
         victoryRounds.setVisible(true);
     }
 
@@ -78,29 +102,78 @@ public class BoardController {
         pcGUI.setVisible(true);
     }
 
-    public void initPlayPermCards() {
+    public void initPlayPermCards(int playerTurn) {
         SelectedPermanentCardsGUI spCards = new SelectedPermanentCardsGUI();
-        if (playerPermCards.size() > 0) {
-            spCards.setMaxCards(playerPermCards.size());
-            spCards.setupCards();
-        } else {
-            roundCount = 3;
-        }
-        roundCount++;
+        if(playerTurn == 1) {
+            if (playerPermCards.size() > 0) {
+                spCards.setMaxCards(playerPermCards.size());
+                spCards.setupCards();
+            } else {
+                roundCount1 = 3;
+            }
+            roundCount1++;
 
-        if (isPlayFourthCard == false && roundCount > 3) {
+            if(isPlayFourthCard == true) {
+                roundCount1--;
+                this.setFourthCard(false);
+            }
+            if(roundCount1 <= 3) {
+                spCards.setVisible(true);
+            }
+            /*if (isPlayFourthCard == false && roundCount1 > 3) {
+                spCards.setVisible(false);
+                spoilage();
+                /*TurnFinishGUI tfGUI = new TurnFinishGUI();
+                tfGUI.setVisible(true);
+            } else {
+                spCards.setVisible(true);
+            }
+            if (isPlayFourthCard == true && roundCount1 > 3) {
+                this.setFourthCard(false);
+            }*/
+        }
+        else if(playerTurn == 2) {
+            roundCount2++;
+            if(isPlayFourthCard == true) {
+                roundCount2--;
+                this.setFourthCard(false);
+            }
+            if(roundCount2 <= 3) {
+                playAICard(aiCulture);
+            }
+        }
+        else {
+            roundCount3++;
+            if(isPlayFourthCard == true) {
+                roundCount3--;
+                this.setFourthCard(false);
+            }
+            if(roundCount2 <= 3) {
+                playAICard(aiCulture2);
+            }
+        }
+        //System.out.println(roundCount1 + " " + roundCount2 + " " + roundCount3);
+        if(roundCount1 >= 3 && roundCount2 >= 3 && roundCount3 >= 3) {
             spCards.setVisible(false);
             spoilage();
-            TurnFinishGUI tfGUI = new TurnFinishGUI();
-            tfGUI.setVisible(true);
-        } else {
-            spCards.setVisible(true);
-        }
-        if (isPlayFourthCard == true && roundCount > 3) {
-            this.setFourthCard(false);
+            cleanupTurns();
         }
     }
 
+    public void configureTurnFormation(int playerTurn) {
+        this.currentPlayerTurn = playerTurn;
+        if(playerTurn == 1) {
+            initPlayPermCards(1);
+        }
+        else if(playerTurn == 2) {
+            initPlayPermCards(2);
+        }
+        else {
+            this.currentPlayerTurn = 0;
+            initPlayPermCards(3);
+        }
+    }
+    
     public void playCard(String str) {
         System.out.println(str);
         if (str.compareTo("age") == 0) {
@@ -155,7 +228,8 @@ public class BoardController {
                 board.updateResources("Greek");
                 bGUI.setupBuildingIcon("Greek", "House.png");
             } else {
-                board.initPlayPermCards();
+                //board.initPlayPermCards();
+                this.configureTurnFormation(currentPlayerTurn+1);
             }
         } else if (str.compareTo("njord") == 0) {
             NorseRandNjord njord = new NorseRandNjord();
@@ -318,6 +392,70 @@ public class BoardController {
         }
     }
 
+    private void playAICard(String culture) {
+        Random rand = new Random(System.nanoTime());
+        int card = rand.nextInt(14);
+        
+        if(card == 0) {
+            System.out.println("AI played permanent attack card");
+            //ai plays attack
+        }
+        else if(card == 1) {
+            System.out.println("AI played permanent attack card");
+            //ai plays build
+        }
+        else if(card == 2) {
+            System.out.println("AI played permanent gather card");
+            //ai plays gather
+        }
+        else if(card == 3) {
+            System.out.println("AI played permanent explore card");
+            //ai plays explore
+        }
+        else if(card == 4) {
+            System.out.println("AI played permanent next age card");
+            //ai plays nextage
+        }
+        else if(card == 5) {
+            System.out.println("AI played permanent trade card");
+            //ai plays trade
+        }
+        else if(card == 6) {
+            System.out.println("AI played permanent recruit card");
+            //ai plays recruit
+        }
+        else if(card == 7) {
+            System.out.println("AI played god attack card");
+            //ai plays god power attack
+        }
+        else if(card == 8) {
+            System.out.println("AI played god build card");
+            //ai plays god power build
+        }
+        else if(card == 9) {
+            System.out.println("AI played god power card");
+            //ai plays god power gather
+        }
+        else if(card == 10) {
+            System.out.println("AI played god explore card");
+            //ai plays god power explore
+        }
+        else if(card == 11) {
+            System.out.println("AI played god next age card");
+            //ai plays god power next age
+        }
+        else if(card == 12) {
+            System.out.println("AI played god trade card");
+            //ai plays god power trade
+        }
+        else if(card == 13) {
+            System.out.println("AI played god recruit card");
+            //ai plays god power recruit
+        }
+        
+        this.configureTurnFormation(currentPlayerTurn+1);
+    }
+    
     private static void unitSetup() {
         norseUnitSetup();
         greekUnitSetup();
@@ -869,7 +1007,7 @@ public class BoardController {
         }
     }
 
-    public void drawVictoryCard(int cardClicked, int previousClick) {
+    public static void drawVictoryCard(int cardClicked, int previousClick) {
         victoryCards[cardClicked] += 1;
 
         if (previousClick > -1) {
@@ -879,7 +1017,7 @@ public class BoardController {
         drawVictoryCubes();
     }
 
-    public void drawVictoryCubes() {
+    public static void drawVictoryCubes() {
         victoryCardGUI vcGUI = victoryCardGUI.getInstance();
         vcGUI.drawPanelsOne(victoryCards[0]);
         vcGUI.drawPanelsTwo(victoryCards[1]);
@@ -1199,7 +1337,6 @@ public class BoardController {
             ndx = getTerrainListIndex(num);
             TerrainTiles terrain = terrainList.get(ndx);
             count = terrain.getTileCount();
-            System.out.println(count);
 
             while (count == 0) {
                 num = rand.nextInt(90) + 1;
@@ -1312,6 +1449,13 @@ public class BoardController {
         //start new turn
     }
 
+    private void cleanupTurns() {
+        roundCount1 = 0;
+        roundCount2 = 0;
+        roundCount3 = 0;
+        currentPlayerTurn = 0;
+        setupRounds();
+    }
     private void spoilageNorse() {
         int max = 5;
         Bank bank = Bank.getInstance();
@@ -1544,7 +1688,8 @@ public class BoardController {
             arGUI.setVisible(true);
             distributeBattleVictory(defender);
             addUnitsBacktoList(defender, aiBattleUnits);
-            initPlayPermCards();
+            //initPlayPermCards();
+            configureTurnFormation(currentPlayerTurn+1);
         } else {
             aupGUI.setVisible(true);
             aupGUI.setMaxCards(selectedUnits.size());
@@ -1975,7 +2120,8 @@ public class BoardController {
             }
         }
 
-        initPlayPermCards();
+        //initPlayPermCards();
+        configureTurnFormation(currentPlayerTurn+1);
     }
 
     private boolean checkTerrainUsable(String attacker, int[] arr, TerrainTiles selectedTerrain) {
@@ -2177,6 +2323,26 @@ public class BoardController {
         return foodBonus;
     }
 
+    public void setWinCondition(boolean winCondition) {
+        this.winCondition = winCondition;
+    }
+
+    public int getCurrentPlayerTurn() {
+        return currentPlayerTurn;
+    }
+
+    public void setCurrentPlayerTurn(int currentPlayerTurn) {
+        this.currentPlayerTurn = currentPlayerTurn;
+    }
+
+    public int getCurrentPlayerFormation() {
+        return currentPlayerFormation;
+    }
+
+    public void setCurrentPlayerFormation(int currentPlayerFormation) {
+        this.currentPlayerFormation = currentPlayerFormation;
+    }
+    
     public void playRandomNextAgeCard(String culture) {
 
         CardPlayError cardError = new CardPlayError();

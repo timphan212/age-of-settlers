@@ -129,7 +129,8 @@ public class QuarryGUI extends javax.swing.JFrame {
         boolean build = checkResources(culture, building, food, favor, wood, gold);
         if(build == true) {
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
         else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -144,7 +145,8 @@ public class QuarryGUI extends javax.swing.JFrame {
         boolean build = checkResources(culture, building, food, favor, wood, gold);
         if(build == true) {
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
         else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -158,7 +160,8 @@ public class QuarryGUI extends javax.swing.JFrame {
         boolean build = checkResources(culture, building, food, favor, wood, gold); 
         if(build == true) {
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
         else {
             buildingErrorGUI beGUI = new buildingErrorGUI();
@@ -172,7 +175,8 @@ public class QuarryGUI extends javax.swing.JFrame {
         boolean build = checkResources(culture, building, food, favor, wood, gold);        
         if(build == true) {
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
         else {
             buildingErrorGUI beGUI = new buildingErrorGUI();

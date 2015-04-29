@@ -127,7 +127,8 @@ public class gatherGUI extends javax.swing.JFrame {
         String str = retrieveString();
         board.playGatherCard(str, board.getPlayerCulture());
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ForestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForestActionPerformed

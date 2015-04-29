@@ -175,7 +175,8 @@ public class TahTradeCardForEgyptNorseGUI extends javax.swing.JFrame {
             beGUI.setVisible(true);
            }  
         }
-          board.initPlayPermCards();
+          //board.initPlayPermCards();
+          board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

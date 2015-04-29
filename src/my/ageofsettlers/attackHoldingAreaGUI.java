@@ -225,7 +225,8 @@ public class attackHoldingAreaGUI extends javax.swing.JFrame {
             board.updateResources(attacker);
             board.updateResources(defender);
             this.setVisible(false);
-            board.initPlayPermCards();
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
         }
         else {
             attackHoldingAreaErrorGUI ahaeGUI = new attackHoldingAreaErrorGUI();
@@ -235,7 +236,8 @@ public class attackHoldingAreaGUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        board.initPlayPermCards();
+        //board.initPlayPermCards();
+        board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
