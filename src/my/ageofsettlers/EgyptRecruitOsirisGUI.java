@@ -90,6 +90,10 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
         OsirisPlayedGUI success = new OsirisPlayedGUI();
         success.setVisible(true);
         this.setVisible(false);
+        recruitGUI rGUI = new recruitGUI();
+            rGUI.setupRecruitGUI("Egyptian");
+            rGUI.setMaxRecruits(2);
+            rGUI.setVisible(true);
         
        // board.updateResources("Egyptian");
     }
@@ -105,7 +109,10 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
         OsirisPlayedGUI success = new OsirisPlayedGUI();
         success.setVisible(true);
         this.setVisible(false);
-            
+             recruitGUI rGUI = new recruitGUI();
+            rGUI.setupRecruitGUI("Egyptian");
+            rGUI.setMaxRecruits(2);
+            rGUI.setVisible(true);
        // board.updateResources("Egyptian");
     }
      public void mythic() {
@@ -118,6 +125,10 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
         egyptianPlayer.setCurrentUnitList(egyptianUnits);
         OsirisPlayedGUI success = new OsirisPlayedGUI();
         success.setVisible(true);
+         recruitGUI rGUI = new recruitGUI();
+            rGUI.setupRecruitGUI("Egyptian");
+            rGUI.setMaxRecruits(2);
+            rGUI.setVisible(true);
         this.setVisible(false);
             
        // board.updateResources("Egyptian");
