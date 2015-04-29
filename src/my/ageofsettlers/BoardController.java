@@ -120,7 +120,10 @@ public class BoardController {
                     spCards.setMaxCards(playerPermCards.size());
                     spCards.setupCards();
                     spCards.setVisible(true);
-                }                
+                }
+                else {
+                    configureTurnFormation(currentPlayerTurn+1);
+                }
             }
             else {
                 spCards.setVisible(false);
