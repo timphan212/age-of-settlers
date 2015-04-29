@@ -5,6 +5,9 @@
  */
 package my.ageofsettlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author SailendraBharadwaj
@@ -175,8 +178,11 @@ public class TahTradeCardForEgyptNorseGUI extends javax.swing.JFrame {
             beGUI.setVisible(true);
            }  
         }
+           tahExploreGUI eGUI = new tahExploreGUI();
+            eGUI.setVisible(true);
+         terrainList =  board.tahPickExploreTerrains(eGUI, 5);
           //board.initPlayPermCards();
-          board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+          //board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -219,8 +225,9 @@ public class TahTradeCardForEgyptNorseGUI extends javax.swing.JFrame {
     }
     
     private BoardController board;
-    Norse norsePlayer;
-    Egyptian egyptPlayer;
+    private Norse norsePlayer;
+    private Egyptian egyptPlayer;
+    private List<TerrainTiles> terrainList = new ArrayList<>();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton favor;
     private javax.swing.JRadioButton food;
