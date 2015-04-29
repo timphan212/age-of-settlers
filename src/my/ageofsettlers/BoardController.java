@@ -230,17 +230,8 @@ public class BoardController {
             HorusGodPowerGUI horus = new HorusGodPowerGUI();
             horus.setVisible(true);
         } else if (str.compareTo("hera") == 0) {
-            this.board = BoardController.getInstance();
-            this.gPlayer = Greek.getInstance();
-            if (gPlayer.getFavor() >= 1) {
-                int newFavor = gPlayer.getFavor() - 1;
-                gPlayer.setFavor(newFavor);
-                board.updateResources("Greek");
-                bGUI.setupBuildingIcon("Greek", "House.png");
-            } else {
-                //board.initPlayPermCards();
-                this.configureTurnFormation(currentPlayerTurn+1);
-            }
+            HeraGodPowerGUI hera = new HeraGodPowerGUI();
+            hera.setVisible(true);
         } else if (str.compareTo("njord") == 0) {
             NjordGUI n = new NjordGUI();
             n.setVisible(true);
