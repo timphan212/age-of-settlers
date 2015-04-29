@@ -309,12 +309,19 @@ public class BoardController {
                     egyptianPlayer.setFavor(newFavor);
                     board.updateResources("Egyptian");
                     osiris.heroic();
-                } else {
+                } else if (egyptianPlayer.getAge() == 3) {
                     int newFavor = egyptianPlayer.getFavor() - 2;
                     egyptianPlayer.setFavor(newFavor);
                     board.updateResources("Egyptian");
                     osiris.mythic();
+                } else {
+                    OsirisInArchaicErrorGUI osiriserror = new OsirisInArchaicErrorGUI();
+                    osiriserror.setVisible(true);
                 }
+            }
+            else {
+                OsirisErrorGUI osiris = new OsirisErrorGUI();
+                osiris.setVisible(true);
             }
         } else if (str.compareTo("apollo") == 0) {
             if (greekPlayer.getFavor() >= 1) {

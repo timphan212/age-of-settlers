@@ -90,7 +90,7 @@ public class EgyptRecruitOsirisGUI extends javax.swing.JFrame {
         OsirisPlayedGUI success = new OsirisPlayedGUI();
         success.setVisible(true);
         this.setVisible(false);
-            
+        
        // board.updateResources("Egyptian");
     }
     
