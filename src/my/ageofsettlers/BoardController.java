@@ -468,7 +468,7 @@ public class BoardController {
                             selectedUnits.add(playerCard);
                             greekCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(greekCurrentUnits);
+                        greekPlayer.setCurrentUnitList(greekCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Norse", "production");
                         
@@ -527,7 +527,7 @@ public class BoardController {
                             selectedUnits.add(playerCard);
                             greekCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(greekCurrentUnits);
+                        greekPlayer.setCurrentUnitList(greekCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Norse", "holding");
                         
@@ -764,7 +764,40 @@ public class BoardController {
         else if(actionCard == 4) {
             System.out.println("AI played permanent next age card");
             
-          //  playNextAgeCard(culture);
+            if (culture.compareTo("Norse") == 0) {
+                int reqResources = findAge(norsePlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    norsePlayer.setWood(norsePlayer.getWood() - reqResources);
+                    norsePlayer.setGold(norsePlayer.getGold() - reqResources);
+                    norsePlayer.setFood(norsePlayer.getFood() - reqResources);
+                    norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
+                    norsePlayer.setAge(norsePlayer.getAge() + 1);
+                    bGUI.changeAgeText("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
+                }
+        } else if (culture.compareTo("Greek") == 0) {
+            int reqResources = findAge(greekPlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+            if (advanceAge == true && reqResources >= 3) {
+                greekPlayer.setWood(greekPlayer.getWood() - reqResources);
+                greekPlayer.setGold(greekPlayer.getGold() - reqResources);
+                greekPlayer.setFood(greekPlayer.getFood() - reqResources);
+                greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
+                greekPlayer.setAge(greekPlayer.getAge() + 1);
+                bGUI.changeAgeText("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
+            }
+        } else {
+            int reqResources = findAge(egyptianPlayer.getAge());
+            boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+            if (advanceAge == true && reqResources >= 3) {
+                egyptianPlayer.setWood(egyptianPlayer.getWood() - reqResources);
+                egyptianPlayer.setGold(egyptianPlayer.getGold() - reqResources);
+                egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
+                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
+                egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
+                bGUI.changeAgeText("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
+            }
+        }
             //ai plays nextage
         }
         else if(actionCard == 5) {
