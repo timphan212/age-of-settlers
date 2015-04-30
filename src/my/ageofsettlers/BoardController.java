@@ -403,15 +403,15 @@ public class BoardController {
                   }
                   else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
-                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
-                            norseCurrentUnits.remove(playerCard);
+                            greekCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        greekPlayer.setCurrentUnitList(greekCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Norse", "city");
                         
@@ -420,15 +420,15 @@ public class BoardController {
                   }
                   else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
-                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
-                            norseCurrentUnits.remove(playerCard);
+                            egyptianCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Greek", "city");
                         
@@ -460,15 +460,15 @@ public class BoardController {
                   }
                   else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
-                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
-                            norseCurrentUnits.remove(playerCard);
+                            greekCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        norsePlayer.setCurrentUnitList(greekCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Norse", "production");
                         
@@ -478,15 +478,15 @@ public class BoardController {
                   }
                   else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
-                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
-                            norseCurrentUnits.remove(playerCard);
+                            egyptianCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Greek", "production");
                         
@@ -519,15 +519,15 @@ public class BoardController {
                   }
                   else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
-                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
-                            norseCurrentUnits.remove(playerCard);
+                            greekCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        norsePlayer.setCurrentUnitList(greekCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Norse", "holding");
                         
@@ -536,15 +536,15 @@ public class BoardController {
                   }
                   else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
-                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
-                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
-                            norseCurrentUnits.remove(playerCard);
+                            egyptianCurrentUnits.remove(playerCard);
                         }
-                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
                           setupBattle(selectedUnits, "Greek", "holding");
                         
@@ -764,7 +764,7 @@ public class BoardController {
         else if(actionCard == 4) {
             System.out.println("AI played permanent next age card");
             
-            playNextAgeCard(culture);
+          //  playNextAgeCard(culture);
             //ai plays nextage
         }
         else if(actionCard == 5) {
