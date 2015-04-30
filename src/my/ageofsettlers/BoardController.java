@@ -445,7 +445,7 @@ public class BoardController {
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -463,7 +463,7 @@ public class BoardController {
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -481,7 +481,7 @@ public class BoardController {
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -505,7 +505,7 @@ public class BoardController {
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -522,7 +522,7 @@ public class BoardController {
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -539,7 +539,7 @@ public class BoardController {
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
                         for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -559,7 +559,7 @@ public class BoardController {
             
             Random randBuilding = new Random(System.nanoTime());
             int randBuild = randBuilding.nextInt(14);
-            System.out.print(randBuild);
+       
                 QuarryGUI quarry = new QuarryGUI();
                 buildingGUI build = new buildingGUI();
                 if(randBuild == 0) {
@@ -679,6 +679,81 @@ public class BoardController {
         }
         else if(actionCard == 2) {
             System.out.println("AI played permanent gather card");
+            
+            Random randGatherCard = new Random(System.nanoTime());
+            int randGather = randGatherCard.nextInt(10);
+            
+            if(randGather == 0) {
+                if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("desert", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("desert", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("desert", "Greek");
+            } else if(randGather == 1) {
+               if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("fertile", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("fertile", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("fertile", "Greek"); 
+            } else if(randGather == 2) {
+                 if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("forest", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("forest", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("forest", "Greek");
+            } else if(randGather == 3) {
+                 if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("favor", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("favor", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("favor", "Greek");
+            } else if(randGather == 4) {
+                if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("food", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("food", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("food", "Greek");
+            } else if(randGather == 5) {
+                 if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("hill", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("hill", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("hill", "Greek");
+            } else if(randGather == 6) {
+                if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("gold", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("gold", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("gold", "Greek");
+            } else if(randGather == 7) {
+                 if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("mountain", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("mountain", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("mountain", "Greek");
+            } else if(randGather == 8) {
+                 if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("swamp", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("swamp", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("swamp", "Greek");
+            } else if(randGather == 9) {
+                 if(culture.compareTo("Egyptian") == 0 )
+                    playGatherCard("wood", "Egyptian");
+                else if(culture.compareTo("Norse") == 0 )
+                    playGatherCard("wood", "Norse");
+                else if(culture.compareTo("Greek") == 0 )
+                    playGatherCard("wood", "Greek");
+            }
             //ai plays gather
         }
         else if(actionCard == 3) {
