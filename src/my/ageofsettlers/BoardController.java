@@ -185,7 +185,6 @@ public class BoardController {
     }
     
     public void playCard(String str) {
-        System.out.println(str);
         if (str.compareTo("age") == 0) {
             playNextAgeCard(playerCulture);
         } else if (str.compareTo("gather") == 0) {
@@ -375,62 +374,118 @@ public class BoardController {
 
     private void playAICard(String culture) {
         Random rand = new Random(System.nanoTime());
-        int card = rand.nextInt(14);
+        int actionCard = rand.nextInt(14);
         
-        if(card == 0) {
+        if(actionCard == 0) {
             System.out.println("AI played permanent attack card");
-            
-            //ai plays attack
+             Random randArea = new Random(System.nanoTime());
+             int areaCard = randArea.nextInt(3);
+             
+             if(areaCard == 0) {
+                  Random randOp = new Random(System.nanoTime());
+                  int opponentCard = randOp.nextInt(2);
+                  if(culture.compareTo("Norse") == 0) {
+                        List<UnitCard> selectedUnits = new ArrayList<>();
+                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        Random randAttackUnit = new Random(System.nanoTime());
+                        for(int i= 0; i < 4; i++) {
+                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            selectedUnits.add(playerCard);
+                            norseCurrentUnits.remove(playerCard);
+                        }
+                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        if(opponentCard == 0) //Greek as opponent
+                          board.setupBattle(selectedUnits, "Greek", "City Area");
+                        
+                        if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Egypt", "City Area"); 
+                  }
+                  if(culture.compareTo("Greek") == 0) {
+                        List<UnitCard> selectedUnits = new ArrayList<>();
+                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        Random randAttackUnit = new Random(System.nanoTime());
+                        for(int i= 0; i < 4; i++) {
+                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            selectedUnits.add(playerCard);
+                            norseCurrentUnits.remove(playerCard);
+                        }
+                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        if(opponentCard == 0) //Greek as opponent
+                          board.setupBattle(selectedUnits, "Norse", "City Area");
+                        
+                        if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Egypt", "City Area"); 
+                  }
+                  if(culture.compareTo("Egyptian") == 0) {
+                        List<UnitCard> selectedUnits = new ArrayList<>();
+                        List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                        Random randAttackUnit = new Random(System.nanoTime());
+                        for(int i= 0; i < 4; i++) {
+                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                            UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                            selectedUnits.add(playerCard);
+                            norseCurrentUnits.remove(playerCard);
+                        }
+                        norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                        if(opponentCard == 0) //Greek as opponent
+                          board.setupBattle(selectedUnits, "Greek", "City Area");
+                        
+                        if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Norse", "City Area"); 
+                  }
+             }
         }
-        else if(card == 1) {
+        else if(actionCard == 1) {
             System.out.println("AI played permanent build card");
             //ai plays build
         }
-        else if(card == 2) {
+        else if(actionCard == 2) {
             System.out.println("AI played permanent gather card");
             //ai plays gather
         }
-        else if(card == 3) {
+        else if(actionCard == 3) {
             System.out.println("AI played permanent explore card");
             //ai plays explore
         }
-        else if(card == 4) {
+        else if(actionCard == 4) {
             System.out.println("AI played permanent next age card");
             //ai plays nextage
         }
-        else if(card == 5) {
+        else if(actionCard == 5) {
             System.out.println("AI played permanent trade card");
             //ai plays trade
         }
-        else if(card == 6) {
+        else if(actionCard == 6) {
             System.out.println("AI played permanent recruit card");
             //ai plays recruit
         }
-        else if(card == 7) {
+        else if(actionCard == 7) {
             System.out.println("AI played god attack card");
             //ai plays god power attack
         }
-        else if(card == 8) {
+        else if(actionCard == 8) {
             System.out.println("AI played god build card");
             //ai plays god power build
         }
-        else if(card == 9) {
+        else if(actionCard == 9) {
             System.out.println("AI played god power card");
             //ai plays god power gather
         }
-        else if(card == 10) {
+        else if(actionCard == 10) {
             System.out.println("AI played god explore card");
             //ai plays god power explore
         }
-        else if(card == 11) {
+        else if(actionCard == 11) {
             System.out.println("AI played god next age card");
             //ai plays god power next age
         }
-        else if(card == 12) {
+        else if(actionCard == 12) {
             System.out.println("AI played god trade card");
             //ai plays god power trade
         }
-        else if(card == 13) {
+        else if(actionCard == 13) {
             System.out.println("AI played god recruit card");
             //ai plays god power recruit
         }
