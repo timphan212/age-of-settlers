@@ -396,10 +396,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Greek", "city");
+                          setupBattle(selectedUnits, "Greek", "city");
                         
                         if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egyptian", "city"); 
+                          setupBattle(selectedUnits, "Egyptian", "city"); 
                   }
                   else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
@@ -413,10 +413,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Norse", "city");
+                          setupBattle(selectedUnits, "Norse", "city");
                         
                         if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egyptian", "city"); 
+                          setupBattle(selectedUnits, "Egyptian", "city"); 
                   }
                   else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
@@ -430,10 +430,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Greek", "city");
+                          setupBattle(selectedUnits, "Greek", "city");
                         
                         if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Norse", "city"); 
+                          setupBattle(selectedUnits, "Norse", "city"); 
                   }
              }
              else if(areaCard == 1) //production area
@@ -452,10 +452,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Greek", "production");
+                          setupBattle(selectedUnits, "Greek", "production");
                         
                         else if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egyptian", "production"); 
+                          setupBattle(selectedUnits, "Egyptian", "production"); 
                         selectedUnits.clear();
                   }
                   else if(culture.compareTo("Greek") == 0) {
@@ -470,10 +470,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Norse", "production");
+                          setupBattle(selectedUnits, "Norse", "production");
                         
                         else if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egyptian", "production"); 
+                          setupBattle(selectedUnits, "Egyptian", "production"); 
                         selectedUnits.clear();                        
                   }
                   else if(culture.compareTo("Egyptian") == 0) {
@@ -488,10 +488,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Greek", "production");
+                          setupBattle(selectedUnits, "Greek", "production");
                         
                         else if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Norse", "production"); 
+                          setupBattle(selectedUnits, "Norse", "production"); 
                         selectedUnits.clear();                        
                   }
              }
@@ -512,7 +512,7 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Greek", "holding");
+                          setupBattle(selectedUnits, "Greek", "holding");
                         
                         else if(opponentCard == 1) //Egypt as opponent
                           board.setupBattle(selectedUnits, "Egyptian", "holding"); 
@@ -529,10 +529,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Norse", "holding");
+                          setupBattle(selectedUnits, "Norse", "holding");
                         
                         else if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egyptian", "holding"); 
+                          setupBattle(selectedUnits, "Egyptian", "holding"); 
                   }
                   else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
@@ -546,10 +546,10 @@ public class BoardController {
                         }
                         norsePlayer.setCurrentUnitList(norseCurrentUnits);
                         if(opponentCard == 0) //Greek as opponent
-                          board.setupBattle(selectedUnits, "Greek", "holding");
+                          setupBattle(selectedUnits, "Greek", "holding");
                         
                         else if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Norse", "holding"); 
+                          setupBattle(selectedUnits, "Norse", "holding"); 
                   }
              }
         }
@@ -758,6 +758,9 @@ public class BoardController {
         }
         else if(actionCard == 3) {
             System.out.println("AI played permanent explore card");
+           
+                exploreGUI eGUI = new exploreGUI();
+                terrainList = pickExploreTerrains(eGUI, 4);
             //ai plays explore
         }
         else if(actionCard == 4) {
