@@ -388,8 +388,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -405,8 +405,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -422,8 +422,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(6); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -444,8 +444,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -462,8 +462,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -480,8 +480,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -504,8 +504,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -521,8 +521,8 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
-                            int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+                        for(int i= 0; i < 3; i++) {
+                            int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
                             norseCurrentUnits.remove(playerCard);
@@ -538,7 +538,7 @@ public class BoardController {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
-                        for(int i= 0; i < 4; i++) {
+                        for(int i= 0; i < 3; i++) {
                             int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
                             UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
                             selectedUnits.add(playerCard);
