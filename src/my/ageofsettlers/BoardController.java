@@ -399,9 +399,9 @@ public class BoardController {
                           board.setupBattle(selectedUnits, "Greek", "city");
                         
                         if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egypt", "city"); 
+                          board.setupBattle(selectedUnits, "Egyptian", "city"); 
                   }
-                  if(culture.compareTo("Greek") == 0) {
+                  else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
@@ -416,9 +416,9 @@ public class BoardController {
                           board.setupBattle(selectedUnits, "Norse", "city");
                         
                         if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egypt", "city"); 
+                          board.setupBattle(selectedUnits, "Egyptian", "city"); 
                   }
-                  if(culture.compareTo("Egyptian") == 0) {
+                  else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
@@ -436,7 +436,7 @@ public class BoardController {
                           board.setupBattle(selectedUnits, "Norse", "city"); 
                   }
              }
-             if(areaCard == 1) //production area
+             else if(areaCard == 1) //production area
              {
                   Random randOp = new Random(System.nanoTime());
                   int opponentCard = randOp.nextInt(2);
@@ -454,10 +454,11 @@ public class BoardController {
                         if(opponentCard == 0) //Greek as opponent
                           board.setupBattle(selectedUnits, "Greek", "production");
                         
-                        if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egypt", "production"); 
+                        else if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Egyptian", "production"); 
+                        selectedUnits.clear();
                   }
-                  if(culture.compareTo("Greek") == 0) {
+                  else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
@@ -471,10 +472,11 @@ public class BoardController {
                         if(opponentCard == 0) //Greek as opponent
                           board.setupBattle(selectedUnits, "Norse", "production");
                         
-                        if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egypt", "production"); 
+                        else if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Egyptian", "production"); 
+                        selectedUnits.clear();                        
                   }
-                  if(culture.compareTo("Egyptian") == 0) {
+                  else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
@@ -488,12 +490,13 @@ public class BoardController {
                         if(opponentCard == 0) //Greek as opponent
                           board.setupBattle(selectedUnits, "Greek", "production");
                         
-                        if(opponentCard == 1) //Egypt as opponent
+                        else if(opponentCard == 1) //Egypt as opponent
                           board.setupBattle(selectedUnits, "Norse", "production"); 
+                        selectedUnits.clear();                        
                   }
              }
              
-             if(areaCard == 2) //holding area
+            else if(areaCard == 2) //holding area
              {
                   Random randOp = new Random(System.nanoTime());
                   int opponentCard = randOp.nextInt(2);
@@ -511,10 +514,10 @@ public class BoardController {
                         if(opponentCard == 0) //Greek as opponent
                           board.setupBattle(selectedUnits, "Greek", "holding");
                         
-                        if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egypt", "holding"); 
+                        else if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Egyptian", "holding"); 
                   }
-                  if(culture.compareTo("Greek") == 0) {
+                  else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
@@ -528,10 +531,10 @@ public class BoardController {
                         if(opponentCard == 0) //Greek as opponent
                           board.setupBattle(selectedUnits, "Norse", "holding");
                         
-                        if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egypt", "holding"); 
+                        else if(opponentCard == 1) //Egypt as opponent
+                          board.setupBattle(selectedUnits, "Egyptian", "holding"); 
                   }
-                  if(culture.compareTo("Egyptian") == 0) {
+                  else if(culture.compareTo("Egyptian") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
                         List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
                         Random randAttackUnit = new Random(System.nanoTime());
@@ -545,7 +548,7 @@ public class BoardController {
                         if(opponentCard == 0) //Greek as opponent
                           board.setupBattle(selectedUnits, "Greek", "holding");
                         
-                        if(opponentCard == 1) //Egypt as opponent
+                        else if(opponentCard == 1) //Egypt as opponent
                           board.setupBattle(selectedUnits, "Norse", "holding"); 
                   }
              }
@@ -556,108 +559,121 @@ public class BoardController {
             
             Random randBuilding = new Random(System.nanoTime());
             int randBuild = randBuilding.nextInt(14);
-            
+            System.out.print(randBuild);
                 QuarryGUI quarry = new QuarryGUI();
                 buildingGUI build = new buildingGUI();
                 if(randBuild == 0) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
                              
                         }
-                    }   
+                     
                 } else if(randBuild == 1) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
                         quarry.setVisible(true);
+                    }
                         if(build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
                         }
-                    }
+                    
                 } else if(randBuild == 2) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
                         }
-                    }
+                    
                 } else if(randBuild == 3) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
                         }
-                    }
+                    
                 } else if(randBuild == 4) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Storehouse.png", 2,2,2,2);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Storehouse.png", 2,2,2,2)) {
                         }
-                    }
+                    
                 } else if(randBuild == 5) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
                         }
-                    }
+                    
                 } else if(randBuild == 6) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
                         }
-                    }
+                    
                 } else if(randBuild == 7) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
                         }
-                    }
+                    
                 } else if(randBuild == 8) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
                         }
-                    }
+                    
                 } else if(randBuild == 9) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
                         quarry.setVisible(true);
-                         if(build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
-                        }
                     }
+                     if(build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                        }
                 } else if(randBuild == 10) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
                         }
-                    }
+                    
                 } else if(randBuild == 11) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
                         }
-                    }
+                    
                 } else if(randBuild == 12) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
                         }
-                    } 
+                    
                 } else if(randBuild == 13) {
                     if(norsePlayer.isQuarry() == true) {
                         quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
                         quarry.setVisible(true);
+                    }
                          if(build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
                         }
-                    }
+                    
                 }
             //ai plays build
         }
