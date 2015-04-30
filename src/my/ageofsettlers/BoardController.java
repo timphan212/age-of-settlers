@@ -758,9 +758,7 @@ public class BoardController {
         }
         else if(actionCard == 3) {
             System.out.println("AI played permanent explore card");
-           
-                exploreGUI eGUI = new exploreGUI();
-                terrainList = pickExploreTerrains(eGUI, 4);
+      
             //ai plays explore
         }
         else if(actionCard == 4) {
