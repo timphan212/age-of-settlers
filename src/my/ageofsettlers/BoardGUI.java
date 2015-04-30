@@ -7919,6 +7919,26 @@ public class BoardGUI extends javax.swing.JFrame {
         naGUI.setVisible(true);
     }
     
+    public void changeAgeTextAI(String culture, int age, int wood, int gold, int food, int favor, int victory) {
+        nextAgeGUI naGUI = new nextAgeGUI();
+        javax.swing.JTextField field = naGUI.getTextField();
+        String str = "";
+        
+        if(culture.compareTo("Norse") == 0) {
+            str = setAgeText(norseAge, age);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
+        } 
+        else if(culture.compareTo("Greek") == 0) {
+            str = setAgeText(greekAge, age);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
+        }
+        else {
+            str = setAgeText(egyptianAge, age);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
+        }
+        
+    }
+    
     public void changeBoardResources(String culture, int wood, int gold, int food, int favor, int victory) {
         if(culture.compareTo("Norse") == 0) {
             setResources(norseFoodResources, food);
