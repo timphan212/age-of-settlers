@@ -515,7 +515,7 @@ public class BoardController {
                           setupBattle(selectedUnits, "Greek", "holding");
                         
                         else if(opponentCard == 1) //Egypt as opponent
-                          board.setupBattle(selectedUnits, "Egyptian", "holding"); 
+                          setupBattle(selectedUnits, "Egyptian", "holding"); 
                   }
                   else if(culture.compareTo("Greek") == 0) {
                         List<UnitCard> selectedUnits = new ArrayList<>();
@@ -765,6 +765,8 @@ public class BoardController {
         }
         else if(actionCard == 4) {
             System.out.println("AI played permanent next age card");
+            
+            playNextAgeCard(culture);
             //ai plays nextage
         }
         else if(actionCard == 5) {
