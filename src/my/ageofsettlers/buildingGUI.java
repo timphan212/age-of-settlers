@@ -400,7 +400,6 @@ public class buildingGUI extends javax.swing.JFrame {
                     }
                 }
                 if(culture.compareTo("Greek") == 0) {
-                    QuarryGUI quarry = new QuarryGUI();
                     Greek greekPlayer = Greek.getInstance(); 
                     if(greekPlayer.isQuarry() == true) {
                         quarrySelection.setVisible(false);     
@@ -605,7 +604,7 @@ public class buildingGUI extends javax.swing.JFrame {
         }
     }
     
-    private boolean checkResources(String culture, String building, int food, int favor, int wood, int gold) {
+    public boolean checkResources(String culture, String building, int food, int favor, int wood, int gold) {
         if(culture.compareTo("Norse") == 0) {
             Norse norsePlayer = Norse.getInstance();
             if(norsePlayer.getFood() < food) {
