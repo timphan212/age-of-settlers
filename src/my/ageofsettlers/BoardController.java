@@ -1009,6 +1009,58 @@ public class BoardController {
         } else if (actionCard == 11) {
             System.out.println("AI played god next age card");
             //ai plays god power next age
+            if (culture.equals("Norse")) {
+                Random randOdin = new Random(System.nanoTime());
+                int odin = randOdin.nextInt(2);
+                if (norsePlayer.getFavor() < 1) {
+                    odin = 0;
+                }
+                if (odin == 0) {
+                    // No God Power
+                    playRandomNextAgeCard("Norse");
+                    System.out.println("Norse AI didn't use God Power");
+
+                } else if (odin == 1) {
+                    //board.setFourthCard(true);
+
+                    System.out.println("Norse AI used God Power: Norse AI is going to play a fourth card on this turn");
+
+                }
+            } else if (culture.equals("Greek")) {
+                Random randZeus = new Random(System.nanoTime());
+                int zeus = randZeus.nextInt(2);
+                if (greekPlayer.getFavor() < 2) {
+                    zeus = 0;
+                }
+                if (zeus == 0) {
+                    // No God Power
+                    playRandomNextAgeCard("Greek");
+                    System.out.println("Greek AI didn't use God Power");
+
+                } else if (zeus == 1) {
+                    //board.setFourthCard(true);
+
+                    System.out.println("Greek AI used God Power: Greek AI is going to gain a free hero");
+
+                }
+            } else if (culture.equals("Egyptian")) {
+                Random randHathor = new Random(System.nanoTime());
+                int hathor = randHathor.nextInt(2);
+                if (egyptianPlayer.getFavor() < 2) {
+                    hathor = 0;
+                }
+                if (hathor == 0) {
+                    // No God Power
+                    playRandomNextAgeCard("Egyptian");
+                    System.out.println("Egyptian AI didn't use God Power");
+
+                } else if (hathor == 1) {
+                    //board.setFourthCard(true);
+
+                    System.out.println("Egyptian AI used God Power: Egyptian AI is going to eliminate one food producing tile from another player's board");
+
+                }
+            }
         } else if (actionCard == 12) {
             System.out.println("AI played god trade card");
             //ai plays god power trade
