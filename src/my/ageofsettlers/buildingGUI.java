@@ -6,6 +6,8 @@
 
 package my.ageofsettlers;
 
+import java.util.Random;
+
 /**
  *
  * @author Tim
@@ -19,6 +21,54 @@ public class buildingGUI extends javax.swing.JFrame {
         this.board = BoardController.getInstance();
         this.playerCulture = board.getPlayerCulture();
         initComponents();
+    }
+    
+    public buildingGUI(String culture) {
+        this.board = BoardController.getInstance();
+        this.playerCulture = board.getPlayerCulture();
+        initComponents();
+        Random rand = new Random(System.nanoTime());
+        int a = rand.nextInt(14);
+
+        if (a == 0) {
+            houseSelection.doClick();
+        } else if (a == 1) {
+            wallSelection.doClick();
+        } else if (a == 2) {
+            towerSelection.doClick();
+        } else if (a == 3) {
+            storehouseSelection.doClick();
+        } else if (a == 4) {
+            marketSelection.doClick();
+        } else if (a == 5) {
+            armorySelection.doClick();
+        } else if (a == 6) {
+            quarrySelection.doClick();
+        } else if (a == 7) {
+            monumentSelection.doClick();
+        } else if (a == 8) {
+            granarySelection.doClick();
+        } else if (a == 9) {
+            goldmintSelection.doClick();
+        } else if (a == 10) {
+            woodworkshopSelection.doClick();
+        } else if (a == 11) {
+            siegeworkshopSelection.doClick();
+        } else if (a == 12) {
+            greattempleSelection.doClick();
+        } else if (a == 13) {
+            wonderSelection.doClick();
+        }
+        boolean buildBool = checkBuildingSelection(culture);
+
+        if (buildBool == true) {
+            this.setVisible(false);
+            //board.initPlayPermCards();
+            board.configureTurnFormation(board.getCurrentPlayerTurn() + 1);
+        } else {
+            buildingErrorGUI beGUI = new buildingErrorGUI();
+            beGUI.setVisible(true);
+        }
     }
 
     /**
