@@ -385,12 +385,12 @@ public class BoardController {
                     norsePlayer.setCurrentUnitList(norseCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Greek", "city");
+                        setupBattleAI(selectedUnits, "Greek", "city");
                     }
 
                     if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Egyptian", "city");
+                        setupBattleAI(selectedUnits, "Egyptian", "city");
                     }
                 } else if (culture.compareTo("Greek") == 0) {
                     List<UnitCard> selectedUnits = new ArrayList<>();
@@ -405,12 +405,12 @@ public class BoardController {
                     greekPlayer.setCurrentUnitList(greekCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Norse", "city");
+                        setupBattleAI(selectedUnits, "Norse", "city");
                     }
 
                     if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Egyptian", "city");
+                        setupBattleAI(selectedUnits, "Egyptian", "city");
                     }
                 } else if (culture.compareTo("Egyptian") == 0) {
                     List<UnitCard> selectedUnits = new ArrayList<>();
@@ -425,12 +425,12 @@ public class BoardController {
                     egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Greek", "city");
+                        setupBattleAI(selectedUnits, "Greek", "city");
                     }
 
                     if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Norse", "city");
+                        setupBattleAI(selectedUnits, "Norse", "city");
                     }
                 }
             } else if (areaCard == 1) //production area
@@ -450,10 +450,10 @@ public class BoardController {
                     norsePlayer.setCurrentUnitList(norseCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Greek", "production");
+                        setupBattleAI(selectedUnits, "Greek", "production");
                     } else if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Egyptian", "production");
+                        setupBattleAI(selectedUnits, "Egyptian", "production");
                     }
                     selectedUnits.clear();
                 } else if (culture.compareTo("Greek") == 0) {
@@ -469,10 +469,10 @@ public class BoardController {
                     greekPlayer.setCurrentUnitList(greekCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Norse", "production");
+                        setupBattleAI(selectedUnits, "Norse", "production");
                     } else if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Egyptian", "production");
+                        setupBattleAI(selectedUnits, "Egyptian", "production");
                     }
                     selectedUnits.clear();
                 } else if (culture.compareTo("Egyptian") == 0) {
@@ -488,10 +488,10 @@ public class BoardController {
                     egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Greek", "production");
+                        setupBattleAI(selectedUnits, "Greek", "production");
                     } else if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Norse", "production");
+                        setupBattleAI(selectedUnits, "Norse", "production");
                     }
                     selectedUnits.clear();
                 }
@@ -512,10 +512,10 @@ public class BoardController {
                     norsePlayer.setCurrentUnitList(norseCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Greek", "holding");
+                        setupBattleAI(selectedUnits, "Greek", "holding");
                     } else if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Egyptian", "holding");
+                        setupBattleAI(selectedUnits, "Egyptian", "holding");
                     }
                 } else if (culture.compareTo("Greek") == 0) {
                     List<UnitCard> selectedUnits = new ArrayList<>();
@@ -530,12 +530,13 @@ public class BoardController {
                     greekPlayer.setCurrentUnitList(greekCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Norse", "holding");
+                        setupBattleAI(selectedUnits, "Norse", "holding");
                     } else if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Egyptian", "holding");
+                        setupBattleAI(selectedUnits, "Egyptian", "holding");
                     }
-                } else if (culture.compareTo("Egyptian") == 0) {
+                } 
+                else if (culture.compareTo("Egyptian") == 0) {
                     List<UnitCard> selectedUnits = new ArrayList<>();
                     List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
                     Random randAttackUnit = new Random(System.nanoTime());
@@ -548,10 +549,10 @@ public class BoardController {
                     egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
                     if (opponentCard == 0) //Greek as opponent
                     {
-                        setupBattle(selectedUnits, "Greek", "holding");
+                        setupBattleAI(selectedUnits, "Greek", "holding");
                     } else if (opponentCard == 1) //Egypt as opponent
                     {
-                        setupBattle(selectedUnits, "Norse", "holding");
+                        setupBattleAI(selectedUnits, "Norse", "holding");
                     }
                 }
             }
@@ -764,7 +765,6 @@ public class BoardController {
                 boolean victoryTradeFail = false;
 
                 if (culture.compareTo("Norse") == 0) {
-                    Norse norsePlayer = Norse.getInstance();
                     if (bankVictoryCount > 0) {
                         if (playerFavorCount <= bankVictoryCount * 8 || norsePlayer.isGreattemple() == false) {
                             victoryTradeFail = true;
@@ -778,7 +778,6 @@ public class BoardController {
                         victoryTradeFail = false;
                     }
                 } else if (culture.compareTo("Greek") == 0) {
-                    Greek greekPlayer = Greek.getInstance();
                     if (bankVictoryCount > 0) {
                         if (playerFavorCount != bankVictoryCount * 8 || greekPlayer.isGreattemple() == false) {
                             victoryTradeFail = true;
@@ -2265,6 +2264,15 @@ public class BoardController {
         aupGUI.setMaxCards(selectedUnits.size());
         aupGUI.setAttackingArea(attackingArea);
     }
+    
+     public void setupBattleAI(List<UnitCard> selectedUnits, String opponent, String attackingArea) {
+        System.out.println(opponent + " --- " + attackingArea);
+        attackUnitPlayAI aupAI = new attackUnitPlayAI();
+        aupAI.setMaxCards(selectedUnits.size());
+        aupAI.setEnemy(opponent);
+        aupAI.setAttackingArea(attackingArea);
+        aupAI.playAI();
+    }
 
     public void commenceBattle(String attacker, List<UnitCard> selectedUnits, UnitCard attackerCard, String defender, String attackingArea) {
         Random rand = new Random(System.nanoTime());
@@ -2347,6 +2355,78 @@ public class BoardController {
             rrGUI.setVisible(true);
         }
     }
+    
+    public void commenceBattleAI(String attacker, List<UnitCard> selectedUnits, UnitCard attackerCard, String defender, String attackingArea) {
+        Random rand = new Random(System.nanoTime());
+        UnitCard defenderCard = null;
+        attackUnitPlayAI aupGUI = new attackUnitPlayAI();
+
+        if (aiBattleUnits.size() > 0) {
+            Random rando = new Random(System.nanoTime());
+            defenderCard = aiBattleUnits.get(rando.nextInt(5));        
+        }
+
+        int attackerDice = compareCardsAttacker(attacker, attackerCard, defenderCard.getType());
+        int defenderDice = compareCardsDefender(attacker, defender, attackingArea, defenderCard, attackerCard.getType());
+
+        int[] attackerRolls = rollDice(attackerDice);
+        int[] defenderRolls = rollDice(defenderDice);
+        int attackerSixes = countSixes(attackerRolls);
+        int defenderSixes = countSixes(defenderRolls);
+
+        while ((attackerSixes == 0 && defenderSixes == 0) || (attackerSixes == defenderSixes)) {
+            attackerRolls = rollDice(attackerDice);
+            defenderRolls = rollDice(defenderDice);
+            attackerSixes = countSixes(attackerRolls);
+            defenderSixes = countSixes(defenderRolls);
+        }
+
+        String victor = "";
+        if (attackerSixes > defenderSixes) {
+            victor = attacker;
+        } else {
+            victor = defender;
+        }
+        if (victor.compareTo(attacker) == 0) {
+            selectedUnits.add(attackerCard);
+        } else {
+            aiBattleUnits.add(defenderCard);
+        }
+
+        if (aiBattleUnits.isEmpty()) {
+            roundResultsGUI rrGUI = new roundResultsGUI();
+            rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
+            distributeBattleVictory(attacker);
+            addUnitsBacktoList(attacker, selectedUnits);
+            if (attackingArea.compareTo("holding") == 0) {
+                attackHoldingAreaGUI ahaGUI = new attackHoldingAreaGUI();
+                ahaGUI.setupHoldingAreaGUI(attacker, defender);
+            } else if (attackingArea.compareTo("city") == 0) {
+                attackCityAreaGUI acaGUI = new attackCityAreaGUI();
+                acaGUI.setVisible(true);
+                int max = getMaxBuildingDestroy(attacker);
+                acaGUI.setupCityAreaGUI(defender, max);
+            } else {
+                attackProductionAreaGUI apaGUI = new attackProductionAreaGUI();
+                apaGUI.setupProductionArea(attacker, defender);
+            }
+        } else if (selectedUnits.isEmpty()) {
+            roundResultsGUI rrGUI = new roundResultsGUI();
+            rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
+            attackResultsGUI arGUI = new attackResultsGUI();
+            arGUI.setTextInfo("You unsuccessfully attacked the enemy.");
+            distributeBattleVictory(defender);
+            addUnitsBacktoList(defender, aiBattleUnits);
+            //initPlayPermCards();
+            configureTurnFormation(currentPlayerTurn + 1);
+        } else {
+            aupGUI.setMaxCards(selectedUnits.size());
+            aupGUI.setAttackingArea(attackingArea);
+            roundResultsGUI rrGUI = new roundResultsGUI();
+            rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
+        }
+    }
+
 
     private List<UnitCard> getOpponentSelection(String opponent, int baseMax) {
         int max = baseMax;
