@@ -1092,8 +1092,146 @@ public class BoardController {
             }
         } else if (actionCard == 12) {
             System.out.println("AI played god trade card");
-            if(culture.compareTo("Egyptian") == 0) {
-                
+            if(culture.compareTo("Greek") == 0) {
+                Random randHermes = new Random(System.nanoTime());
+                int hathor = randHermes.nextInt(2);
+                if(hathor == 0) {
+                    if(greekPlayer.getFavor() >= 1){
+                        greekPlayer.setFavor(greekPlayer.getFavor() - 1);
+                        updateResources(culture);
+                        TradeHermesAI her = new TradeHermesAI();
+                        her.playAI();
+                        System.out.print("and Greek AI used God power for Trade, Hermes");
+                    }
+                }
+                    actionCard = 5;
+                    playAICard("Greek");
+                    if(hathor != 0) 
+                        System.out.print(" and Greek AI has not used God power for Trade");
+            }
+            else if(culture.compareTo("Norse") == 0){
+                Random randLoki = new Random(System.nanoTime());
+                int loki = randLoki.nextInt(2); 
+                if(loki == 0){
+                    if(norsePlayer.getFavor() >= 1){
+                       norsePlayer.setFavor(norsePlayer.getFavor() - 1);
+                       updateResources(culture);
+                       int lokiOpponent = randLoki.nextInt(2);
+                       if(lokiOpponent == 0) {
+                            int playerFoodCount = randLoki.nextInt(6);
+                            int playerFavorCount = randLoki.nextInt(6);
+                            int playerWoodCount = randLoki.nextInt(6);
+                            int playerGoldCount = randLoki.nextInt(6);
+
+                            int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
+                            int sum2 = 5;
+
+                            if(sum1 == sum2) {
+                                egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
+                                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
+                                egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
+                                egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount);
+            
+                                norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
+                                norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
+                                norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
+                                norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
+
+                                board.updateResources("Egyptian");
+                                board.updateResources("Norse");
+                            }
+                           
+                       }
+                       else {
+                           
+                            int playerFoodCount = randLoki.nextInt(6);
+                            int playerFavorCount = randLoki.nextInt(6);
+                            int playerWoodCount = randLoki.nextInt(6);
+                            int playerGoldCount = randLoki.nextInt(6);
+
+                            int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
+                            int sum2 = 5;
+
+                            if(sum1 == sum2) {
+                                greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
+                                greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
+                                greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
+                                greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
+            
+                                norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
+                                norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
+                                norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
+                                norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
+
+                                board.updateResources("Greek");
+                                board.updateResources("Norse");
+                            }
+                           
+                       }
+                       
+                       System.out.println("Norse AI used God power for Trade, Loki");
+                    }
+                }
+                actionCard = 5;
+                playAICard("Norse");
+                if(loki != 0) 
+                    System.out.println("Norse AI has not used God power for Trade");
+            }
+            else {
+                Random randTah = new Random(System.nanoTime());
+                int tah = randTah.nextInt(2); 
+                if(tah == 0) {
+                    if(egyptianPlayer.getFavor() >=1) {
+                        egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 1);
+                        updateResources(culture);
+                        int tahOpponent = randTah.nextInt(2); 
+                        if(tahOpponent == 0) {
+                            int tahGreekResource = randTah.nextInt(4);
+                            if(tahGreekResource == 0) {
+                                if(greekPlayer.getFood() >=2) {
+                                int greekFood = greekPlayer.getFood() - 2;
+                                greekPlayer.setFood(greekFood);
+                                int egyptFood = egyptianPlayer.getFood() + 2;
+                                egyptianPlayer.setFood(egyptFood);
+                                board.updateResources("Greek");
+                                board.updateResources("Egyptian");
+                              }
+                            }
+                            else if(tahGreekResource == 1) {
+                                 if(greekPlayer.getWood()>=2) {
+                                    int greekWood = greekPlayer.getWood() - 2;
+                                    greekPlayer.setWood(greekWood);
+                                    int egyptWood = egyptianPlayer.getWood() + 2;
+                                    egyptianPlayer.setWood(egyptWood);
+                                    board.updateResources("Greek");
+                                    board.updateResources("Egyptian");
+                                 }
+                            }
+                            else if(tahGreekResource == 2) {
+                                 if(greekPlayer.getGold()>=2) {
+                                    int greekGold = greekPlayer.getGold() - 2;
+                                    greekPlayer.setGold(greekGold);
+                                    int egyptGold = egyptianPlayer.getGold() + 2;
+                                    egyptianPlayer.setGold(egyptGold);
+                                    board.updateResources("Greek");
+                                    board.updateResources("Egyptian");
+                                   }
+                            }
+                            else {
+                                 if(greekPlayer.getFavor()>=2) {
+                                    int greekFavor = greekPlayer.getFavor() - 2;
+                                    greekPlayer.setFavor(greekFavor);
+                                    int egyptFavor = egyptianPlayer.getFavor() + 2;
+                                    egyptianPlayer.setFavor(egyptFavor);
+                                    board.updateResources("Greek");
+                                    board.updateResources("Egyptian");
+                                 }
+                            }
+
+                        }
+
+                    }
+                }
             }
             //ai plays god power trade
         } else if (actionCard == 13) {
