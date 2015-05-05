@@ -880,6 +880,110 @@ public class BoardController {
             //ai plays god power attack
         } else if (actionCard == 8) {
             System.out.println("AI played god build card");
+            if(culture.equalsIgnoreCase("Greek")) {
+                Random randHera = new Random(System.nanoTime());
+                int hera = randHera.nextInt(2);
+                if(hera == 0) {
+                    if(greekPlayer.getFavor() >= 1) {
+                        greekPlayer.setFavor(greekPlayer.getFavor() -  1);
+                        board.updateResources("Greek");
+                        bGUI.setupBuildingIcon("Greek", "House.png");  
+                        System.out.println("Greek AI has used God power card of build, Hera");
+                    }
+                }
+                else {
+                        System.out.println("Greek AI has not used God power card of build, Hera");
+                }
+                actionCard = 1;
+                playAuxAICard(culture, actionCard);
+            }
+            else if(culture.equalsIgnoreCase("Norse"))
+            {
+                Random randNjord = new Random(System.nanoTime());
+                int njord = randNjord.nextInt(2);
+                if(njord == 0) {
+                    if(norsePlayer.getFavor() >= 1) {
+                        norsePlayer.setFavor(norsePlayer.getFavor() -  1);
+                        board.updateResources("Norse"); 
+                        int njordOpponent = randNjord.nextInt(2);
+                        if(njordOpponent == 0) {
+                            List<String> buildings = new ArrayList<String>();
+                            buildings.add("House.png");
+                            buildings.add("Armor.png");
+                            buildings.add("GoldMint.png");
+                            buildings.add("Granary.png");
+                            buildings.add("GreatTemple.png");
+                            buildings.add("Market.png");
+                            buildings.add("Monument.png");
+                            buildings.add("Quarry.png");
+                            buildings.add("SiegeWork.png");
+                            buildings.add("Storehouse.png");
+                            buildings.add("Tower.png");
+                            buildings.add("Wall.png");
+                            buildings.add("Wonder.png");
+                            buildings.add("WoodWork.png");
+                            int buildingRand = randNjord.nextInt(13); 
+                            if(buildingRand == 0) {
+                                if(greekPlayer.getHouse() > 0)
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 1) {
+                                    if(greekPlayer.isArmory())
+                                        removeBuildingTiles(playerCulture, buildings);
+                                   }
+                                else if(buildingRand == 2) {
+                                    if(greekPlayer.isGoldmint())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 3) {
+                                    if(greekPlayer.isGranary())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if (buildingRand == 4) {
+                                    if(greekPlayer.isGreattemple())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 5) {
+                                    if(greekPlayer.isMarket())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 6) {
+                                    if(greekPlayer.isMonument())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 7) {
+                                    if(greekPlayer.isQuarry())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 8) {
+                                    if(greekPlayer.isSiegeworkshop())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 9) {
+                                    if(greekPlayer.isStorehouse())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 10) {
+                                    if(greekPlayer.isTower())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 11) {
+                                    if(greekPlayer.isWall())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 12) {
+                                    if(greekPlayer.isWonder())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                                else if(buildingRand == 13) {
+                                    if(greekPlayer.isWoodworkshop())
+                                    removeBuildingTiles(playerCulture, buildings);
+                                }
+                            }
+                        }
+                    
+                }
+            }
             //ai plays god power build
 
         } else if (actionCard == 9) {
@@ -1340,11 +1444,7 @@ public class BoardController {
                 if(osirisP != 0)
                     System.out.println("Egyptian AI has not used God power for recruit, Osiris");
             }
-            
-            //ai plays god power recruit
         }
-
-        this.configureTurnFormation(currentPlayerTurn + 1);
     }
 
     private static void unitSetup() {
