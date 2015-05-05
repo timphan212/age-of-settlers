@@ -20,6 +20,7 @@ public class horusAttackNorseGUI extends javax.swing.JFrame {
     public horusAttackNorseGUI() {
         this.board = BoardController.getInstance();
         this.playerCulture = board.getPlayerCulture();
+        this.egyptianPlayer = Egyptian.getInstance();
         initComponents();
     }
 
@@ -186,7 +187,6 @@ public class horusAttackNorseGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_houseSelectionActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Norse n = new Norse();
         List<String> buildings = new ArrayList<String>();
         buildings.add("House.png");
         buildings.add("Armor.png");
@@ -204,64 +204,64 @@ public class horusAttackNorseGUI extends javax.swing.JFrame {
         buildings.add("WoodWork.png");
 
         if(houseSelection.isSelected() == true) {
-            if(n.getHouse() > 0)
+            if(egyptianPlayer.getHouse() > 0)
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(armorySelection.isSelected() == true) {
-            if(n.isArmory())
+            if(egyptianPlayer.isArmory())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(goldmintSelection.isSelected() == true) {
-            if(n.isGoldmint())
+            if(egyptianPlayer.isGoldmint())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(granarySelection.isSelected() == true) {
-            if(n.isGranary())
+            if(egyptianPlayer.isGranary())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if (greattempleSelection.isSelected() == true) {
-            if(n.isGreattemple())
+            if(egyptianPlayer.isGreattemple())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(marketSelection.isSelected() == true) {
-            if(n.isMarket())
+            if(egyptianPlayer.isMarket())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(monumentSelection.isSelected() == true) {
-            if(n.isMonument())
+            if(egyptianPlayer.isMonument())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(quarrySelection.isSelected() == true) {
-            if(n.isQuarry())
+            if(egyptianPlayer.isQuarry())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(siegeworkshopSelection.isSelected() == true) {
-            if(n.isSiegeworkshop())
+            if(egyptianPlayer.isSiegeworkshop())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(storehouseSelection.isSelected() == true) {
-            if(n.isStorehouse())
+            if(egyptianPlayer.isStorehouse())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(towerSelection.isSelected() == true) {
-            if(n.isTower())
+            if(egyptianPlayer.isTower())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(wallSelection.isSelected() == true) {
-            if(n.isWall())
+            if(egyptianPlayer.isWall())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(wonderSelection.isSelected() == true) {
-            if(n.isWonder())
+            if(egyptianPlayer.isWonder())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         else if(woodworkshopSelection.isSelected() == true) {
-            if(n.isWoodworkshop())
+            if(egyptianPlayer.isWoodworkshop())
             board.removeBuildingTiles(playerCulture, buildings);
         }
         this.setVisible(false);
         buildingGUI buildGUI = new buildingGUI();
-            buildGUI.setVisible(true);
+        buildGUI.setVisible(true);
         //board.initPlayPermCards();
        // board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
@@ -312,6 +312,7 @@ public class horusAttackNorseGUI extends javax.swing.JFrame {
 
     private BoardController board;
     private String playerCulture;
+    private Egyptian egyptianPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton armorySelection;
     private javax.swing.JRadioButton goldmintSelection;

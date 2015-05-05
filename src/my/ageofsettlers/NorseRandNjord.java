@@ -102,7 +102,7 @@ public class NorseRandNjord extends javax.swing.JFrame {
             int newFavor = nPlayer.getFavor() - 1;
             nPlayer.setFavor(newFavor);
             board.updateResources("Norse");
-            horusAttackGUI horus = new horusAttackGUI();
+            horusAttackNorseGUI horus = new horusAttackNorseGUI();
             horus.setVisible(true);
             this.setVisible(false);
         }

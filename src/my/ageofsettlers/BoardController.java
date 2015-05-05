@@ -925,64 +925,145 @@ public class BoardController {
                             int buildingRand = randNjord.nextInt(13); 
                             if(buildingRand == 0) {
                                 if(greekPlayer.getHouse() > 0)
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 1) {
-                                    if(greekPlayer.isArmory())
-                                        removeBuildingTiles(playerCulture, buildings);
-                                   }
-                                else if(buildingRand == 2) {
-                                    if(greekPlayer.isGoldmint())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 3) {
-                                    if(greekPlayer.isGranary())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if (buildingRand == 4) {
-                                    if(greekPlayer.isGreattemple())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 5) {
-                                    if(greekPlayer.isMarket())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 6) {
-                                    if(greekPlayer.isMonument())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 7) {
-                                    if(greekPlayer.isQuarry())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 8) {
-                                    if(greekPlayer.isSiegeworkshop())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 9) {
-                                    if(greekPlayer.isStorehouse())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 10) {
-                                    if(greekPlayer.isTower())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 11) {
-                                    if(greekPlayer.isWall())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 12) {
-                                    if(greekPlayer.isWonder())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
-                                else if(buildingRand == 13) {
-                                    if(greekPlayer.isWoodworkshop())
-                                    removeBuildingTiles(playerCulture, buildings);
-                                }
+                                removeBuildingTiles(playerCulture, buildings);
                             }
+                            else if(buildingRand == 1) {
+                                if(greekPlayer.isArmory())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 2) {
+                                if(greekPlayer.isGoldmint())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 3) {
+                                if(greekPlayer.isGranary())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if (buildingRand == 4) {
+                                if(greekPlayer.isGreattemple())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 5) {
+                                if(greekPlayer.isMarket())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 6) {
+                                if(greekPlayer.isMonument())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 7) {
+                                if(greekPlayer.isQuarry())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 8) {
+                                if(greekPlayer.isSiegeworkshop())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 9) {
+                                if(greekPlayer.isStorehouse())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 10) {
+                                if(greekPlayer.isTower())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 11) {
+                                if(greekPlayer.isWall())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 12) {
+                                if(greekPlayer.isWonder())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 13) {
+                                if(greekPlayer.isWoodworkshop())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                       
                         }
-                    
+                        if(njordOpponent == 1) {
+                            List<String> buildings = new ArrayList<String>();
+                            buildings.add("House.png");
+                            buildings.add("Armor.png");
+                            buildings.add("GoldMint.png");
+                            buildings.add("Granary.png");
+                            buildings.add("GreatTemple.png");
+                            buildings.add("Market.png");
+                            buildings.add("Monument.png");
+                            buildings.add("Quarry.png");
+                            buildings.add("SiegeWork.png");
+                            buildings.add("Storehouse.png");
+                            buildings.add("Tower.png");
+                            buildings.add("Wall.png");
+                            buildings.add("Wonder.png");
+                            buildings.add("WoodWork.png");
+                            int buildingRand = randNjord.nextInt(13); 
+                            if(buildingRand == 0) {
+                                if(egyptianPlayer.getHouse() > 0)
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 1) {
+                                if(egyptianPlayer.isArmory())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 2) {
+                                if(egyptianPlayer.isGoldmint())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 3) {
+                                if(egyptianPlayer.isGranary())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if (buildingRand == 4) {
+                                if(egyptianPlayer.isGreattemple())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 5) {
+                                if(egyptianPlayer.isMarket())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 6) {
+                                if(egyptianPlayer.isMonument())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 7) {
+                                if(egyptianPlayer.isQuarry())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 8) {
+                                if(egyptianPlayer.isSiegeworkshop())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 9) {
+                                if(greekPlayer.isStorehouse())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 10) {
+                                if(greekPlayer.isTower())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 11) {
+                                if(egyptianPlayer.isWall())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 12) {
+                                if(egyptianPlayer.isWonder())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                            else if(buildingRand == 13) {
+                                if(egyptianPlayer.isWoodworkshop())
+                                removeBuildingTiles(playerCulture, buildings);
+                            }
+                       
+                        }
+                    }
+                    System.out.println("Norse AI has used God power for Build, Njord");
                 }
+                else {
+                      System.out.println("Norse AI has not used God power for Build, Njord");
+                }
+                actionCard = 2;
+                playAuxAICard(culture, actionCard);
             }
             //ai plays god power build
 
@@ -1443,8 +1524,10 @@ public class BoardController {
                 rGUI.setMaxRecruits(2);
                 if(osirisP != 0)
                     System.out.println("Egyptian AI has not used God power for recruit, Osiris");
-            }
+            }        
         }
+                this.configureTurnFormation(currentPlayerTurn + 1);
+
     }
 
     private static void unitSetup() {

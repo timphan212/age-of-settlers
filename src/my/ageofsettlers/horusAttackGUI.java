@@ -20,6 +20,7 @@ public class horusAttackGUI extends javax.swing.JFrame {
     public horusAttackGUI() {
         this.board = BoardController.getInstance();
         this.playerCulture = board.getPlayerCulture();
+        this.g = Greek.getInstance();
         initComponents();
     }
 
@@ -311,7 +312,6 @@ public class horusAttackGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Greek g = new Greek();
         List<String> buildings = new ArrayList<String>();
         buildings.add("House.png");
         buildings.add("Armor.png");
@@ -433,6 +433,7 @@ public class horusAttackGUI extends javax.swing.JFrame {
     }
     private BoardController board; 
     private String playerCulture;
+    private Greek g;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton armorySelection;
     private javax.swing.JRadioButton armorySelection1;
