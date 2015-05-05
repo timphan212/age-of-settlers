@@ -694,6 +694,9 @@ public class BoardController {
 
         } else if (actionCard == 3) {
             System.out.println("AI played permanent explore card");
+            //            terrainList = pickExploreTerrains(eGUI, 4);
+
+            
 
             //ai plays explore
         } else if (actionCard == 4) {
@@ -2417,6 +2420,7 @@ public class BoardController {
                 ndx = getTerrainListIndex(num);
                 terrain = terrainList.get(ndx);
                 count = terrain.getTileCount();
+                
             }
 
             terrain.setTileCount(count - 1);

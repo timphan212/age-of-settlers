@@ -764,11 +764,17 @@ public class buildingGUI extends javax.swing.JFrame {
             else {
                 if(norsePlayer.isWonder() == true && norsePlayer.getAge() != 3) {
                     return false;
-                    //go to end game
                 }
                 
                 norsePlayer.setWonder(true);
-            }
+                WinnerGUI winner = new WinnerGUI(); //games end here
+                winner.setVisible(true);
+                try {
+                    Thread.sleep(100000);                 //stalling the game until user exits the game (need to change).
+                    } catch(InterruptedException ex) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
             
             norsePlayer.setFood(norsePlayer.getFood() - food);
             norsePlayer.setFavor(norsePlayer.getFavor() - favor);
