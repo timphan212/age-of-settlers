@@ -1092,6 +1092,9 @@ public class BoardController {
             }
         } else if (actionCard == 12) {
             System.out.println("AI played god trade card");
+            if(culture.compareTo("Egyptian") == 0) {
+                
+            }
             //ai plays god power trade
         } else if (actionCard == 13) {
             System.out.println("AI played god recruit card");
