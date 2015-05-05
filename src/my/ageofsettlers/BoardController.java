@@ -2550,6 +2550,17 @@ public class BoardController {
 
     public void buildBuilding(String culture, String building) {
         bGUI.setupBuildingIcon(culture, building);
+        Bank bank = Bank.getInstance();
+       //game ends if..
+        if((building.compareToIgnoreCase("Wonder.png") == 0) || (bank.getVictory() == 0)) {
+             WinnerGUI winner = new WinnerGUI(); //games end here
+            winner.setVisible(true);
+                try {
+                    Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
+                    } catch(InterruptedException ex) {
+                        Thread.currentThread().interrupt();
+                    }
+        }
     }
 
     private void spoilage() {
