@@ -2552,17 +2552,67 @@ public class BoardController {
         bGUI.setupBuildingIcon(culture, building);
         Bank bank = Bank.getInstance();
        //game ends if..
-        if((building.compareToIgnoreCase("Wonder.png") == 0) || (bank.getVictory() == 0)) {
-             WinnerGUI winner = new WinnerGUI(); //games end here
-            winner.setVisible(true);
-                try {
-                    Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
-                    } catch(InterruptedException ex) {
-                        Thread.currentThread().interrupt();
-                    }
+        if(building.compareToIgnoreCase("Wonder.png") == 0) {
+            if(culture.equalsIgnoreCase("norse")) {
+                int temp = victoryCards[0]+victoryCards[1]+victoryCards[2]+norsePlayer.getVictory();
+                norsePlayer.setVictory(temp);
+            }
+            else if(culture.equalsIgnoreCase("greek")) {
+                int temp = victoryCards[0]+victoryCards[1]+victoryCards[2]+greekPlayer.getVictory();
+                greekPlayer.setVictory(temp);
+            }
+            else {
+                if(culture.equalsIgnoreCase("egyptian")) {
+                int temp = victoryCards[0]+victoryCards[1]+victoryCards[2]+egyptianPlayer.getVictory();
+                egyptianPlayer.setVictory(temp);
+                }
+            }
+            victoryCards[0] = 0;
+            victoryCards[1] = 0;
+            victoryCards[2] = 0;
+            if(norsePlayer.getVictory() > egyptianPlayer.getVictory()) {
+                if(norsePlayer.getVictory() > greekPlayer.getVictory())
+                    winnerNorse();
+                 else
+                    winnerGreek();
+            }
+            else {
+                if(egyptianPlayer.getVictory() > greekPlayer.getVictory())
+                    winnerEgyptian();
+                 else
+                    winnerGreek();
+            }
         }
     }
 
+    private void winnerNorse() {
+        WinnerGUI winner = new WinnerGUI(); //games end here
+        winner.setVisible(true);
+        try {
+                Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
+            } catch(InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+    }
+     private void winnerGreek() {
+        WinnerGreekGUI winner = new WinnerGreekGUI(); //games end here
+        winner.setVisible(true);
+        try {
+                Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
+            } catch(InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+    }
+     
+    private void winnerEgyptian() {
+        WinnerEgyptianGUI winner = new WinnerEgyptianGUI(); //games end here
+        winner.setVisible(true);
+        try {
+                Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
+            } catch(InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+    }    
     private void spoilage() {
         spoilageNorse();
         spoilageGreek();
