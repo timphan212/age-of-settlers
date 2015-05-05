@@ -1105,7 +1105,7 @@ public class BoardController {
                     }
                 }
                     actionCard = 5;
-                    playAICard("Greek");
+                    playAuxAICard("Greek", actionCard);
                     if(hathor != 0) 
                         System.out.print(" and Greek AI has not used God power for Trade");
             }
@@ -1173,7 +1173,7 @@ public class BoardController {
                     }
                 }
                 actionCard = 5;
-                playAICard("Norse");
+                playAuxAICard("Norse", actionCard);
                 if(loki != 0) 
                     System.out.println("Norse AI has not used God power for Trade");
             }
@@ -1237,11 +1237,110 @@ public class BoardController {
                 
                 System.out.println("Egyptian AI has not used God power card of trade");
                 actionCard = 5;
-                playAICard(culture);
+                playAuxAICard(culture, actionCard);
             }
             //ai plays god power trade
         } else if (actionCard == 13) {
             System.out.println("AI played god recruit card");
+            if(culture.compareTo("Greek") == 0) {
+                Random randApollo = new Random(System.nanoTime());
+                int apollo = randApollo.nextInt(2);
+                if(apollo == 0) {
+                    if(greekPlayer.getFavor() >=1) {
+                        System.out.println("Greek AI has used God Power card of Recruit, Apollo");
+                        int newFavor = greekPlayer.getFavor() - 1;
+                        greekPlayer.setFavor(newFavor);
+                        board.updateResources("Greek");  
+                        List<UnitCard> greekUnitCards = greekPlayer.getCurrentUnitList();
+                        List<UnitCard> greekTotalUnitList = greekPlayer.getTotalUnitList();
+                        UnitCard card = greekTotalUnitList.get(4);
+                        greekUnitCards.add(card);
+                        greekUnitCards.add(card);
+                        greekPlayer.setCurrentUnitList(greekUnitCards);
+                    }
+                }
+                actionCard = 6;
+                playAuxAICard(culture, actionCard);
+                if(apollo!=0)
+                    System.out.println("Greek AI has not used God power card of recruit, Apollo");
+            }
+            else if(culture.compareTo("Norse") == 0) {
+                Random randApollo = new Random(System.nanoTime());
+                int cards = randApollo.nextInt(2);
+                if(cards == 0)
+                {
+                    int newFavor = norsePlayer.getFavor() - 1;
+                    norsePlayer.setFavor(newFavor);
+                    List<UnitCard> norseUnitCards = norsePlayer.getCurrentUnitList();
+                    List<UnitCard> norseTotalUnitList = norsePlayer.getTotalUnitList();
+                    UnitCard card = norseTotalUnitList.get(1);
+                    norseUnitCards.add(card);
+                    norsePlayer.setCurrentUnitList(norseUnitCards);
+                    board.updateResources("Norse"); 
+                }
+                if(cards == 0) {
+                    int newFavor = norsePlayer.getFavor() - 1;
+                    norsePlayer.setFavor(newFavor);
+                    List<UnitCard> norseUnitCards = norsePlayer.getCurrentUnitList();
+                    List<UnitCard> norseTotalUnitList = norsePlayer.getTotalUnitList();
+                    UnitCard card = norseTotalUnitList.get(7);
+                    norseUnitCards.add(card);
+                    norsePlayer.setCurrentUnitList(norseUnitCards);
+                    board.updateResources("Norse"); 
+                    System.out.println("Norse AI has used God power card of recruit, Hel");
+                }
+                else {
+                    System.out.println("Norse AI has not used God power card of recruit, Hel");
+                }
+                actionCard = 6;
+                playAuxAICard(culture, actionCard);
+                
+            }
+            else if(culture.compareTo("Egyptian") == 0) {
+                Random randOsiris = new Random(System.nanoTime());
+                int osirisP = randOsiris.nextInt(2);
+                
+                if(osirisP == 0) {
+                    if (egyptianPlayer.getFavor() >= 2) {
+                        EgyptRecruitOsirisGUI osiris = new EgyptRecruitOsirisGUI();
+                        if (egyptianPlayer.getAge() == 1) {
+                            int newFavor = egyptianPlayer.getFavor() - 2;
+                            egyptianPlayer.setFavor(newFavor);
+                            board.updateResources("Egyptian");
+                            List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
+                            List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
+                            UnitCard card = egyptianAllUnits.get(6);
+                            egyptianUnits.add(card);
+                            egyptianPlayer.setCurrentUnitList(egyptianUnits);
+                        } else if (egyptianPlayer.getAge() == 2) {
+                            int newFavor = egyptianPlayer.getFavor() - 2;
+                            egyptianPlayer.setFavor(newFavor);
+                            board.updateResources("Egyptian");
+                            List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
+                            List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
+                            UnitCard card = egyptianAllUnits.get(0);
+                            egyptianUnits.add(card);
+                            egyptianPlayer.setCurrentUnitList(egyptianUnits);
+                        } else if (egyptianPlayer.getAge() == 3) {
+                            int newFavor = egyptianPlayer.getFavor() - 2;
+                            egyptianPlayer.setFavor(newFavor);
+                            board.updateResources("Egyptian");
+                            List<UnitCard> egyptianUnits = egyptianPlayer.getCurrentUnitList();
+                            List<UnitCard> egyptianAllUnits = egyptianPlayer.getTotalUnitList();
+                            UnitCard card = egyptianAllUnits.get(4);
+                            egyptianUnits.add(card);
+                            egyptianPlayer.setCurrentUnitList(egyptianUnits);
+                        }
+                    }
+                    System.out.println("Egyptian AI has used God power for recruit, Osiris");
+                }
+                recruitGUI rGUI = new recruitGUI();
+                rGUI.setupRecruitGUI("Egyptian");
+                rGUI.setMaxRecruits(2);
+                if(osirisP != 0)
+                    System.out.println("Egyptian AI has not used God power for recruit, Osiris");
+            }
+            
             //ai plays god power recruit
         }
 
@@ -3286,5 +3385,522 @@ public class BoardController {
     }
     Greek gPlayer;
     BoardController board;
+
+    private void playAuxAICard(String culture, int actionCard) {
+        Random rand = new Random(System.nanoTime());
+
+        if (actionCard < 0) {
+            System.out.println("AI played permanent attack card");
+            Random randArea = new Random(System.nanoTime());
+            int areaCard = randArea.nextInt(3);
+
+            if (areaCard == 0) {
+                Random randOp = new Random(System.nanoTime());
+                int opponentCard = randOp.nextInt(2);
+                if (culture.compareTo("Norse") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        norseCurrentUnits.remove(playerCard);
+                    }
+                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Greek", "city");
+                    }
+
+                    if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Egyptian", "city");
+                    }
+                } else if (culture.compareTo("Greek") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        greekCurrentUnits.remove(playerCard);
+                    }
+                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Norse", "city");
+                    }
+
+                    if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Egyptian", "city");
+                    }
+                } else if (culture.compareTo("Egyptian") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        egyptianCurrentUnits.remove(playerCard);
+                    }
+                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Greek", "city");
+                    }
+
+                    if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Norse", "city");
+                    }
+                }
+            } else if (areaCard == 1) //production area
+            {
+                Random randOp = new Random(System.nanoTime());
+                int opponentCard = randOp.nextInt(2);
+                if (culture.compareTo("Norse") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        norseCurrentUnits.remove(playerCard);
+                    }
+                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Greek", "production");
+                    } else if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Egyptian", "production");
+                    }
+                    selectedUnits.clear();
+                } else if (culture.compareTo("Greek") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        greekCurrentUnits.remove(playerCard);
+                    }
+                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Norse", "production");
+                    } else if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Egyptian", "production");
+                    }
+                    selectedUnits.clear();
+                } else if (culture.compareTo("Egyptian") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        egyptianCurrentUnits.remove(playerCard);
+                    }
+                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Greek", "production");
+                    } else if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Norse", "production");
+                    }
+                    selectedUnits.clear();
+                }
+            } else if (areaCard == 2) //holding area
+            {
+                Random randOp = new Random(System.nanoTime());
+                int opponentCard = randOp.nextInt(2);
+                if (culture.compareTo("Norse") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        norseCurrentUnits.remove(playerCard);
+                    }
+                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Greek", "holding");
+                    } else if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Egyptian", "holding");
+                    }
+                } else if (culture.compareTo("Greek") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        greekCurrentUnits.remove(playerCard);
+                    }
+                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Norse", "holding");
+                    } else if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Egyptian", "holding");
+                    }
+                } 
+                else if (culture.compareTo("Egyptian") == 0) {
+                    List<UnitCard> selectedUnits = new ArrayList<>();
+                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
+                    Random randAttackUnit = new Random(System.nanoTime());
+                    for (int i = 0; i < 3; i++) {
+                        int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
+                        selectedUnits.add(playerCard);
+                        egyptianCurrentUnits.remove(playerCard);
+                    }
+                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
+                    if (opponentCard == 0) //Greek as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Greek", "holding");
+                    } else if (opponentCard == 1) //Egypt as opponent
+                    {
+                        setupBattleAI(selectedUnits, "Norse", "holding");
+                    }
+                }
+            }
+        } else if (actionCard == 1) //build card
+        {
+            System.out.println("AI played permanent build card");
+
+            Random randBuilding = new Random(System.nanoTime());
+            int randBuild = randBuilding.nextInt(14);
+
+            QuarryGUI quarry = new QuarryGUI();
+            buildingGUI build = new buildingGUI();
+            if (randBuild == 0) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+
+                }
+
+            } else if (randBuild == 1) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                }
+
+            } else if (randBuild == 2) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                }
+
+            } else if (randBuild == 3) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                }
+
+            } else if (randBuild == 4) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                }
+
+            } else if (randBuild == 5) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                }
+
+            } else if (randBuild == 6) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                }
+
+            } else if (randBuild == 7) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                }
+
+            } else if (randBuild == 8) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                }
+
+            } else if (randBuild == 9) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                }
+            } else if (randBuild == 10) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                }
+
+            } else if (randBuild == 11) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                }
+
+            } else if (randBuild == 12) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                }
+
+            } else if (randBuild == 13) {
+                if (norsePlayer.isQuarry() == true) {
+                    quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                    quarry.setVisible(true);
+                }
+                if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                }
+
+            }
+            //ai plays build
+        } else if (actionCard == 2) {
+            //ai plays gather
+            String str = getRandomGatherType();
+            //System.out.println("AI " + culture + " gathered the " + str);
+            playGatherCard(str, aiCulture);
+            str = getRandomGatherType();
+            //System.out.println("AI " + culture + " gathered the " + str);
+            playGatherCard(str, aiCulture2);
+            str = getRandomGatherType();
+            //System.out.println("AI " + culture + " gathered the " + str);
+            playGatherCard(str, playerCulture);
+            System.out.println("AI played permanent gather card");
+
+        } else if (actionCard == 3) {
+            System.out.println("AI played permanent explore card");
+
+            //ai plays explore
+        } else if (actionCard == 4) {
+            System.out.println("AI played permanent next age card");
+
+            if (culture.compareTo("Norse") == 0) {
+                int reqResources = findAge(norsePlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    norsePlayer.setWood(norsePlayer.getWood() - reqResources);
+                    norsePlayer.setGold(norsePlayer.getGold() - reqResources);
+                    norsePlayer.setFood(norsePlayer.getFood() - reqResources);
+                    norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
+                    norsePlayer.setAge(norsePlayer.getAge() + 1);
+                    bGUI.changeAgeTextAI("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
+
+                }
+            } else if (culture.compareTo("Greek") == 0) {
+                int reqResources = findAge(greekPlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    greekPlayer.setWood(greekPlayer.getWood() - reqResources);
+                    greekPlayer.setGold(greekPlayer.getGold() - reqResources);
+                    greekPlayer.setFood(greekPlayer.getFood() - reqResources);
+                    greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
+                    greekPlayer.setAge(greekPlayer.getAge() + 1);
+                    bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
+                }
+            } else {
+                int reqResources = findAge(egyptianPlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+                if (advanceAge == true && reqResources >= 3) {
+                    egyptianPlayer.setWood(egyptianPlayer.getWood() - reqResources);
+                    egyptianPlayer.setGold(egyptianPlayer.getGold() - reqResources);
+                    egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
+                    egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
+                    egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
+                    bGUI.changeAgeTextAI("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
+                }
+            }
+            //ai plays nextage
+        } else if (actionCard == 5) {
+            System.out.println("AI played permanent trade card");
+
+            boolean market = false;
+            if (culture.compareTo("Norse") == 0) {
+                market = norsePlayer.isMarket();
+            } else if (culture.compareTo("Greek") == 0) {
+                market = greekPlayer.isMarket();
+            } else {
+                market = egyptianPlayer.isMarket();
+            }
+
+            if (market == true) {
+                tradeGUI trade = new tradeGUI();
+                trade.setupTradeGUI(culture);
+                Bank bank = Bank.getInstance();
+                Random randTradeCard = new Random(System.nanoTime());
+
+                int playerFoodCount = randTradeCard.nextInt(4);
+                int playerFavorCount = randTradeCard.nextInt(4);
+                int playerWoodCount = randTradeCard.nextInt(4);
+                int playerGoldCount = randTradeCard.nextInt(4);
+                int bankFoodCount = randTradeCard.nextInt(4);
+                int bankFavorCount = randTradeCard.nextInt(4);
+                int bankWoodCount = randTradeCard.nextInt(4);
+                int bankGoldCount = randTradeCard.nextInt(4);
+                int bankVictoryCount = randTradeCard.nextInt(4);
+                boolean victoryTradeFail = false;
+
+                if (culture.compareTo("Norse") == 0) {
+                    if (bankVictoryCount > 0) {
+                        if (playerFavorCount <= bankVictoryCount * 8 || norsePlayer.isGreattemple() == false) {
+                            victoryTradeFail = true;
+                        } else {
+                            norsePlayer.setFavor(norsePlayer.getFavor() - bankVictoryCount * 8);
+                            norsePlayer.setVictory(norsePlayer.getVictory() + bankVictoryCount);
+                            playerFavorCount -= bankVictoryCount * 8;
+                            victoryTradeFail = false;
+                        }
+                    } else {
+                        victoryTradeFail = false;
+                    }
+                } else if (culture.compareTo("Greek") == 0) {
+                    if (bankVictoryCount > 0) {
+                        if (playerFavorCount != bankVictoryCount * 8 || greekPlayer.isGreattemple() == false) {
+                            victoryTradeFail = true;
+                        } else {
+                            greekPlayer.setFavor(greekPlayer.getFavor() - bankVictoryCount * 8);
+                            greekPlayer.setVictory(greekPlayer.getVictory() + bankVictoryCount);
+                            playerFavorCount -= bankVictoryCount * 8;
+                            victoryTradeFail = false;
+                        }
+                    } else {
+                        victoryTradeFail = false;
+                    }
+                } else {
+                    if (bankVictoryCount > 0) {
+                        if (playerFavorCount != bankVictoryCount * 8 || egyptianPlayer.isGreattemple() == false) {
+                            victoryTradeFail = true;
+                        } else {
+                            egyptianPlayer.setFavor(egyptianPlayer.getFavor() - bankVictoryCount * 8);
+                            egyptianPlayer.setVictory(egyptianPlayer.getVictory() + bankVictoryCount);
+                            playerFavorCount -= bankVictoryCount * 8;
+                            victoryTradeFail = false;
+                        }
+                    } else {
+                        victoryTradeFail = false;
+                    }
+                }
+
+                int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
+                int sum2 = bankFoodCount + bankFavorCount + bankWoodCount + bankGoldCount;
+
+                if (sum1 == sum2 && victoryTradeFail == false) {
+                    if (culture.compareTo("Norse") == 0) {
+                        norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCount);
+                        norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount + bankFavorCount);
+                        norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount + bankWoodCount);
+                        norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount + bankGoldCount);
+                    } else if (culture.compareTo("Greek") == 0) {
+                        greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount + bankFoodCount);
+                        greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount + bankFavorCount);
+                        greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount + bankWoodCount);
+                        greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount + bankGoldCount);
+                    } else {
+                        egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount + bankFoodCount);
+                        egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount + bankFavorCount);
+                        egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount + bankWoodCount);
+                        egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount + bankGoldCount);
+                    }
+
+                    bank.setFood(bank.getFood() + playerFoodCount - bankFoodCount);
+                    bank.setFavor(bank.getFavor() + playerFavorCount - bankFavorCount);
+                    bank.setWood(bank.getWood() + playerWoodCount - bankWoodCount);
+                    bank.setGold(bank.getGold() + playerGoldCount - bankGoldCount);
+                    updateResources(culture);
+                }
+            } else {
+                tradeCostGUI trade = new tradeCostGUI();
+                trade.setupTradeCostGUI(culture);
+                Random randTradeCard = new Random(System.nanoTime());
+
+                int playerFoodCount = randTradeCard.nextInt(4);
+                int playerFavorCount = randTradeCard.nextInt(4);
+                int playerWoodCount = randTradeCard.nextInt(4);
+                int playerGoldCount = randTradeCard.nextInt(4);
+
+                int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
+                int sum2 = 2;
+
+                if (sum1 == sum2) {
+                    if (culture.compareTo("Norse") == 0) {
+                        norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount);
+                        norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount);
+                        norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount);
+                        norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount);
+                    } else if (culture.compareTo("Greek") == 0) {
+                        greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
+                        greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
+                        greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
+                        greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
+                    } else {
+                        egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
+                        egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
+                        egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
+                        egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount);
+                    }
+
+                    updateResources(culture);
+                    tradeGUI tGUI = new tradeGUI();
+                    tGUI.setupTradeGUI(culture);
+                }
+            }
+
+        } else if (actionCard == 6) {
+            System.out.println("AI played permanent recruit card");
+            recruitGUI rGUI = new recruitGUI();
+            rGUI.setupRecruitGUI(culture);
+            rGUI.setMaxRecruits(2);
+            //ai plays recruit
+        } //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
