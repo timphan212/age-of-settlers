@@ -1227,11 +1227,17 @@ public class BoardController {
                                     board.updateResources("Egyptian");
                                  }
                             }
-
+//                            tahExploreGUI eGUI = new tahExploreGUI();
+//                            terrainList =  board.tahPickExploreTerrains(eGUI, 5);
                         }
-
+                        System.out.println("Egyptian AI has used God power card of Trade, Tah.");
                     }
+                
                 }
+                
+                System.out.println("Egyptian AI has not used God power card of trade");
+                actionCard = 5;
+                playAICard(culture);
             }
             //ai plays god power trade
         } else if (actionCard == 13) {
