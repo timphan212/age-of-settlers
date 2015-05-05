@@ -364,7 +364,7 @@ public class BoardController {
         Random rand = new Random(System.nanoTime());
         int actionCard = rand.nextInt(14);
 
-        if (actionCard == 0) {
+        if (actionCard < 0) {
             System.out.println("AI played permanent attack card");
             Random randArea = new Random(System.nanoTime());
             int areaCard = randArea.nextInt(3);
@@ -1016,8 +1016,20 @@ public class BoardController {
                 }
                 if (odin == 0) {
                     // No God Power
-                    playRandomNextAgeCard("Norse");
-                    System.out.println("Norse AI didn't use God Power");
+                if (culture.compareTo("Norse") == 0) {
+                int reqResources = findAge(norsePlayer.getAge());
+                boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
+                    if (advanceAge == true && reqResources >= 3) {
+                        norsePlayer.setWood(norsePlayer.getWood() - reqResources);
+                        norsePlayer.setGold(norsePlayer.getGold() - reqResources);
+                        norsePlayer.setFood(norsePlayer.getFood() - reqResources);
+                        norsePlayer.setFavor(norsePlayer.getFavor() - reqResources);
+                        norsePlayer.setAge(norsePlayer.getAge() + 1);
+                        bGUI.changeAgeTextAI("Norse", norsePlayer.getAge(), norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor(), norsePlayer.getVictory());
+
+                    }
+                }
+                System.out.println("Norse AI didn't use God Power");
 
                 } else if (odin == 1) {
                     //board.setFourthCard(true);
@@ -1033,9 +1045,19 @@ public class BoardController {
                 }
                 if (zeus == 0) {
                     // No God Power
-                    playRandomNextAgeCard("Greek");
+                   if (culture.compareTo("Greek") == 0) {
+                        int reqResources = findAge(greekPlayer.getAge());
+                        boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
+                        if (advanceAge == true && reqResources >= 3) {
+                            greekPlayer.setWood(greekPlayer.getWood() - reqResources);
+                            greekPlayer.setGold(greekPlayer.getGold() - reqResources);
+                            greekPlayer.setFood(greekPlayer.getFood() - reqResources);
+                            greekPlayer.setFavor(greekPlayer.getFavor() - reqResources);
+                            greekPlayer.setAge(greekPlayer.getAge() + 1);
+                            bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
+                        }
+                    }
                     System.out.println("Greek AI didn't use God Power");
-
                 } else if (zeus == 1) {
                     //board.setFourthCard(true);
 
@@ -1050,9 +1072,17 @@ public class BoardController {
                 }
                 if (hathor == 0) {
                     // No God Power
-                    playRandomNextAgeCard("Egyptian");
+                    int reqResources = findAge(egyptianPlayer.getAge());
+                    boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
+                    if (advanceAge == true && reqResources >= 3) {
+                        egyptianPlayer.setWood(egyptianPlayer.getWood() - reqResources);
+                        egyptianPlayer.setGold(egyptianPlayer.getGold() - reqResources);
+                        egyptianPlayer.setFood(egyptianPlayer.getFood() - reqResources);
+                        egyptianPlayer.setFavor(egyptianPlayer.getFavor() - reqResources);
+                        egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
+                        bGUI.changeAgeTextAI("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
+                    }
                     System.out.println("Egyptian AI didn't use God Power");
-
                 } else if (hathor == 1) {
                     //board.setFourthCard(true);
 
@@ -2360,10 +2390,9 @@ public class BoardController {
         Random rand = new Random(System.nanoTime());
         UnitCard defenderCard = null;
         attackUnitPlayAI aupGUI = new attackUnitPlayAI();
-
+        setupAttackCard(defender, attackingArea);
         if (aiBattleUnits.size() > 0) {
-            Random rando = new Random(System.nanoTime());
-            defenderCard = aiBattleUnits.get(rando.nextInt(5));        
+            defenderCard = aiBattleUnits.get(rand.nextInt(5));        
         }
 
         int attackerDice = compareCardsAttacker(attacker, attackerCard, defenderCard.getType());
@@ -2399,22 +2428,17 @@ public class BoardController {
             distributeBattleVictory(attacker);
             addUnitsBacktoList(attacker, selectedUnits);
             if (attackingArea.compareTo("holding") == 0) {
-                attackHoldingAreaGUI ahaGUI = new attackHoldingAreaGUI();
-                ahaGUI.setupHoldingAreaGUI(attacker, defender);
+                attackHoldingAreaAI ahaGUI = new attackHoldingAreaAI();
+                ahaGUI.playAI();
             } else if (attackingArea.compareTo("city") == 0) {
-                attackCityAreaGUI acaGUI = new attackCityAreaGUI();
-                acaGUI.setVisible(true);
+                attackCityAreaAI acaGUI = new attackCityAreaAI();
                 int max = getMaxBuildingDestroy(attacker);
                 acaGUI.setupCityAreaGUI(defender, max);
             } else {
-                attackProductionAreaGUI apaGUI = new attackProductionAreaGUI();
+                attackProductionAreaAI apaGUI = new attackProductionAreaAI();
                 apaGUI.setupProductionArea(attacker, defender);
             }
         } else if (selectedUnits.isEmpty()) {
-            roundResultsGUI rrGUI = new roundResultsGUI();
-            rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
-            attackResultsGUI arGUI = new attackResultsGUI();
-            arGUI.setTextInfo("You unsuccessfully attacked the enemy.");
             distributeBattleVictory(defender);
             addUnitsBacktoList(defender, aiBattleUnits);
             //initPlayPermCards();
@@ -2422,8 +2446,6 @@ public class BoardController {
         } else {
             aupGUI.setMaxCards(selectedUnits.size());
             aupGUI.setAttackingArea(attackingArea);
-            roundResultsGUI rrGUI = new roundResultsGUI();
-            rrGUI.setTextInfo(attacker, attackerCard.getName(), Arrays.toString(attackerRolls), defender, defenderCard.getName(), Arrays.toString(defenderRolls), victor);
         }
     }
 
