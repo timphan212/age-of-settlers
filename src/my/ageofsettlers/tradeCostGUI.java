@@ -17,6 +17,9 @@ public class tradeCostGUI extends javax.swing.JFrame {
      */
     public tradeCostGUI() {
         this.board = BoardController.getInstance();
+        this.norsePlayer = Norse.getInstance();
+        this.egyptianPlayer = Egyptian.getInstance();
+        this.greekPlayer = Greek.getInstance();
         initComponents();
     }
 
@@ -177,21 +180,18 @@ public class tradeCostGUI extends javax.swing.JFrame {
 
         if(sum1 == sum2) {
             if(board.getPlayerCulture().compareTo("Norse") == 0) {
-                Norse norsePlayer = Norse.getInstance();
                 norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount);
                 norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount);
                 norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount);
                 norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount);
             }
             else if(board.getPlayerCulture().compareTo("Greek") == 0) {
-                Greek greekPlayer = Greek.getInstance();
                 greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
                 greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
                 greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
                 greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
             }
             else {
-                Egyptian egyptianPlayer = Egyptian.getInstance();
                 egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
                 egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
                 egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
@@ -227,21 +227,18 @@ public class tradeCostGUI extends javax.swing.JFrame {
         String[] goldCount;
         
         if(culture.compareTo("Norse") == 0) {
-            Norse norsePlayer = Norse.getInstance();
             foodCount = new String[norsePlayer.getFood()+1];
             favorCount = new String[norsePlayer.getFavor()+1];
             woodCount = new String[norsePlayer.getWood()+1];
             goldCount = new String[norsePlayer.getGold()+1];
         }
         else if(culture.compareTo("Greek") == 0) {
-            Greek greekPlayer = Greek.getInstance();
             foodCount = new String[greekPlayer.getFood()+1];
             favorCount = new String[greekPlayer.getFavor()+1];
             woodCount = new String[greekPlayer.getWood()+1];
             goldCount = new String[greekPlayer.getGold()+1];
         }
         else {
-            Egyptian egyptianPlayer = Egyptian.getInstance();
             foodCount = new String[egyptianPlayer.getFood()+1];
             favorCount = new String[egyptianPlayer.getFavor()+1];
             woodCount = new String[egyptianPlayer.getWood()+1];
@@ -302,6 +299,9 @@ public class tradeCostGUI extends javax.swing.JFrame {
     }
 
     private BoardController board;
+    private Greek greekPlayer;
+    private Norse norsePlayer;
+    private Egyptian egyptianPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
