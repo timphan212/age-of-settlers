@@ -1507,8 +1507,8 @@ public class BoardController {
                                 norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
                                 norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
 
-                                board.updateResources("Greek");
-                                board.updateResources("Norse");
+                                updateResources("Greek");
+                                updateResources("Norse");
                             }
 
                         }
@@ -1537,8 +1537,8 @@ public class BoardController {
                                     greekPlayer.setFood(greekFood);
                                     int egyptFood = egyptianPlayer.getFood() + 2;
                                     egyptianPlayer.setFood(egyptFood);
-                                    board.updateResources("Greek");
-                                    board.updateResources("Egyptian");
+                                    updateResources("Greek");
+                                    updateResources("Egyptian");
                                 }
                             } else if (tahGreekResource == 1) {
                                 if (greekPlayer.getWood() >= 2) {
@@ -1546,8 +1546,8 @@ public class BoardController {
                                     greekPlayer.setWood(greekWood);
                                     int egyptWood = egyptianPlayer.getWood() + 2;
                                     egyptianPlayer.setWood(egyptWood);
-                                    board.updateResources("Greek");
-                                    board.updateResources("Egyptian");
+                                    updateResources("Greek");
+                                    updateResources("Egyptian");
                                 }
                             } else if (tahGreekResource == 2) {
                                 if (greekPlayer.getGold() >= 2) {
@@ -1555,8 +1555,8 @@ public class BoardController {
                                     greekPlayer.setGold(greekGold);
                                     int egyptGold = egyptianPlayer.getGold() + 2;
                                     egyptianPlayer.setGold(egyptGold);
-                                    board.updateResources("Greek");
-                                    board.updateResources("Egyptian");
+                                    updateResources("Greek");
+                                    updateResources("Egyptian");
                                 }
                             } else {
                                 if (greekPlayer.getFavor() >= 2) {
@@ -1564,8 +1564,8 @@ public class BoardController {
                                     greekPlayer.setFavor(greekFavor);
                                     int egyptFavor = egyptianPlayer.getFavor() + 2;
                                     egyptianPlayer.setFavor(egyptFavor);
-                                    board.updateResources("Greek");
-                                    board.updateResources("Egyptian");
+                                    updateResources("Greek");
+                                    updateResources("Egyptian");
                                 }
                             }
 //                            tahExploreGUI eGUI = new tahExploreGUI();
@@ -1591,7 +1591,7 @@ public class BoardController {
                         System.out.println("Greek AI has used God Power card of Recruit, Apollo");
                         int newFavor = greekPlayer.getFavor() - 1;
                         greekPlayer.setFavor(newFavor);
-                        board.updateResources("Greek");
+                        updateResources("Greek");
                         List<UnitCard> greekUnitCards = greekPlayer.getCurrentUnitList();
                         List<UnitCard> greekTotalUnitList = greekPlayer.getTotalUnitList();
                         UnitCard card = greekTotalUnitList.get(4);
@@ -1616,7 +1616,7 @@ public class BoardController {
                     UnitCard card = norseTotalUnitList.get(1);
                     norseUnitCards.add(card);
                     norsePlayer.setCurrentUnitList(norseUnitCards);
-                    board.updateResources("Norse");
+                    updateResources("Norse");
                 }
                 if (cards == 0) {
                     int newFavor = norsePlayer.getFavor() - 1;
@@ -1626,7 +1626,7 @@ public class BoardController {
                     UnitCard card = norseTotalUnitList.get(7);
                     norseUnitCards.add(card);
                     norsePlayer.setCurrentUnitList(norseUnitCards);
-                    board.updateResources("Norse");
+                    updateResources("Norse");
                     System.out.println("Norse AI has used God power card of recruit, Hel");
                 } else {
                     System.out.println("Norse AI has not used God power card of recruit, Hel");
