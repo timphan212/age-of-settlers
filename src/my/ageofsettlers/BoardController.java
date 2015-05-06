@@ -2819,7 +2819,7 @@ public class BoardController {
         Bank bank = Bank.getInstance();
         
         //game ends if..
-         if(bank.getVictory() == 0){
+         if(bank.getVictory() <= 0){
              // having "the most buildings" card at the end of the game 
             String buildingCubes = calculateBuildingCubes();
             if(buildingCubes.equalsIgnoreCase("Greek"))
