@@ -1497,56 +1497,64 @@ public class BoardController {
                         norsePlayer.setFavor(norsePlayer.getFavor() - 1);
                         updateResources(culture);
                         int lokiOpponent = randLoki.nextInt(2);
-                        if (lokiOpponent == 0) {
-                            int playerFoodCount = randLoki.nextInt(6);
-                            int playerFavorCount = randLoki.nextInt(6);
-                            int playerWoodCount = randLoki.nextInt(6);
-                            int playerGoldCount = randLoki.nextInt(6);
+                        int sum2 = 5;
+                            int sum1 = 0;
+                            int playerFoodCount =0;
+                            int playerFavorCount=0;
+                            int playerWoodCount=0;
+                            int playerGoldCount=0;
+                            int sumOfOpponent = greekPlayer.getFood() + greekPlayer.getFavor() + greekPlayer.getGold()+greekPlayer.getWood();
+                            
+                            if(sumOfOpponent >= 5) {
+                                for(;;){
+                                playerFoodCount = randLoki.nextInt(greekPlayer.getFood());
+                                playerFavorCount = randLoki.nextInt(greekPlayer.getFavor());
+                                playerWoodCount = randLoki.nextInt(greekPlayer.getWood());
+                                playerGoldCount = randLoki.nextInt(greekPlayer.getGold());
 
-                            int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
-                            int sum2 = 5;
+                                sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
 
-                            if (sum1 == sum2) {
-                                egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
-                                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
-                                egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
-                                egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount);
-
-                                norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
-                                norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
-                                norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
-                                norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
-
-                                board.updateResources("Egyptian");
-                                board.updateResources("Norse");
+                                if(sum1 == 5)
+                                    break;
+                            
+                               }
+                                
                             }
+                            if (lokiOpponent == 0) {
 
-                        } else {
+                                if (sum1 == sum2) {
+                                    egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
+                                    egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
+                                    egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
+                                    egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount);
 
-                            int playerFoodCount = randLoki.nextInt(6);
-                            int playerFavorCount = randLoki.nextInt(6);
-                            int playerWoodCount = randLoki.nextInt(6);
-                            int playerGoldCount = randLoki.nextInt(6);
+                                    norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
+                                    norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
+                                    norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
+                                    norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
 
-                            int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
-                            int sum2 = 5;
+                                    board.updateResources("Egyptian");
+                                    board.updateResources("Norse");
+                                }
 
-                            if (sum1 == sum2) {
-                                greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
-                                greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
-                                greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
-                                greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
+                            } else {
+                            
+                                if (sum1 == sum2) {
+                                    greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
+                                    greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
+                                    greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
+                                    greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
 
-                                norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
-                                norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
-                                norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
-                                norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
+                                    norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
+                                    norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
+                                    norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
+                                    norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
 
-                                updateResources("Greek");
-                                updateResources("Norse");
+                                    updateResources("Greek");
+                                    updateResources("Norse");
+                                }
+
                             }
-
-                        }
 
                         System.out.println("Norse AI used God power for Trade, Loki");
                     }
@@ -2811,33 +2819,24 @@ public class BoardController {
     }
 
     private void winnerNorse() {
+         System.out.println("Norse wins");
         WinnerGUI winner = new WinnerGUI(); //games end here
         winner.setVisible(true);
-        try {
-            Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+        bGUI.setVisible(false);
     }
 
     private void winnerGreek() {
+        System.out.println("Greek wins");
         WinnerGreekGUI winner = new WinnerGreekGUI(); //games end here
         winner.setVisible(true);
-        try {
-            Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+        bGUI.setVisible(false);
     }
 
     private void winnerEgyptian() {
+         System.out.println("Egyptians wins");
         WinnerEgyptianGUI winner = new WinnerEgyptianGUI(); //games end here
         winner.setVisible(true);
-        try {
-            Thread.sleep(500000);                 //stalling the game until user exits the game (need to change).
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+        bGUI.setVisible(false);
     }
 
     private void spoilage() {
@@ -2897,15 +2896,16 @@ public class BoardController {
             //deciding the winner
             if (norsePlayer.getVictory() > egyptianPlayer.getVictory()) {
                 if (norsePlayer.getVictory() > greekPlayer.getVictory()) {
+                    System.out.println("Norse");
                     winnerNorse();
-                } else {
+                } else { System.out.println("Greek");
                     winnerGreek();
                 }
             } else {
                 if (egyptianPlayer.getVictory() > greekPlayer.getVictory()) {
-                    winnerEgyptian();
+                    System.out.println("Egypt");winnerEgyptian();
                 } else {
-                    winnerGreek();
+                    winnerGreek(); System.out.println("Greek");
                 }
             }
          }  else{
