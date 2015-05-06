@@ -781,7 +781,7 @@ public class BoardController {
                     }
                 } else if (culture.equalsIgnoreCase("Greek")) {
                     randBuild = randBuilding.nextInt(14);
-                    System.out.println("Greek AI played permanent build card");
+                    System.out.println("Greek AI played permanent build card ");
 
                     if (randBuild == 0) {
                         if (greekPlayer.isQuarry() == true) {
@@ -908,10 +908,10 @@ public class BoardController {
             str = getRandomGatherType();
             //System.out.println("AI " + culture + " gathered the " + str);
             playGatherCard(str, playerCulture);
-            System.out.println("AI played permanent gather card");
+            System.out.println("AI & human played permanent gather card");
 
         } else if (actionCard == 3) {
-            System.out.println("AI played permanent explore card");
+            System.out.println("AI & human played permanent explore card");
             //            terrainList = pickExploreTerrains(eGUI, 4);
 
             //ai plays explore
@@ -933,12 +933,13 @@ public class BoardController {
             bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
 
         } else if (actionCard == 4) {
-            System.out.println("AI played permanent next age card");
 
             if (culture.compareTo("Norse") == 0) {
                 int reqResources = findAge(norsePlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
+                                System.out.println("Norse AI played permanent next age card");
+
                     norsePlayer.setWood(norsePlayer.getWood() - reqResources);
                     norsePlayer.setGold(norsePlayer.getGold() - reqResources);
                     norsePlayer.setFood(norsePlayer.getFood() - reqResources);
@@ -948,6 +949,8 @@ public class BoardController {
 
                 }
             } else if (culture.compareTo("Greek") == 0) {
+                            System.out.println("Greek AI played permanent next age card");
+
                 int reqResources = findAge(greekPlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
@@ -959,6 +962,8 @@ public class BoardController {
                     bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
                 }
             } else {
+                            System.out.println("Egyptian AI played permanent next age card");
+
                 int reqResources = findAge(egyptianPlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
@@ -972,9 +977,8 @@ public class BoardController {
             }
             //ai plays nextage
         } else if (actionCard == 5) {
-            System.out.println("AI played permanent trade card");
 
-            boolean market = false;
+            boolean market;
             if (culture.compareTo("Norse") == 0) {
                 market = norsePlayer.isMarket();
             } else if (culture.compareTo("Greek") == 0) {
@@ -983,7 +987,7 @@ public class BoardController {
                 market = egyptianPlayer.isMarket();
             }
 
-            if (market == true) {
+            if (market) {
                 tradeGUI trade = new tradeGUI();
                 trade.setupTradeGUI(culture);
                 Bank bank = Bank.getInstance();
@@ -998,7 +1002,7 @@ public class BoardController {
                 int bankWoodCount = randTradeCard.nextInt(4);
                 int bankGoldCount = randTradeCard.nextInt(4);
                 int bankVictoryCount = randTradeCard.nextInt(4);
-                boolean victoryTradeFail = false;
+                boolean victoryTradeFail;
 
                 if (culture.compareTo("Norse") == 0) {
                     if (bankVictoryCount > 0) {
@@ -1046,16 +1050,22 @@ public class BoardController {
 
                 if (sum1 == sum2 && victoryTradeFail == false) {
                     if (culture.compareTo("Norse") == 0) {
+                                    System.out.println("Norse AI played permanent trade card");
+
                         norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCount);
                         norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount + bankFavorCount);
                         norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount + bankWoodCount);
                         norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount + bankGoldCount);
                     } else if (culture.compareTo("Greek") == 0) {
+                                    System.out.println(" Greek AI played permanent trade card");
+
                         greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount + bankFoodCount);
                         greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount + bankFavorCount);
                         greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount + bankWoodCount);
                         greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount + bankGoldCount);
                     } else {
+                                    System.out.println("Egyptian AI played permanent trade card");
+
                         egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount + bankFoodCount);
                         egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount + bankFavorCount);
                         egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount + bankWoodCount);
@@ -1081,16 +1091,22 @@ public class BoardController {
 
                 if (sum1 == sum2) {
                     if (culture.compareTo("Norse") == 0) {
+                                    System.out.println("Norse AI played permanent trade card");
+
                         norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount);
                         norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount);
                         norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount);
                         norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount);
                     } else if (culture.compareTo("Greek") == 0) {
+                                    System.out.println("Greek AI played permanent trade card");
+
                         greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
                         greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
                         greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
                         greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
                     } else {
+                                    System.out.println("Egyptian AI played permanent trade card");
+
                         egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
                         egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
                         egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
@@ -1147,7 +1163,6 @@ public class BoardController {
             System.out.println("AI played god attack card");
             //ai plays god power attack
         } else if (actionCard == 8) {
-            System.out.println("AI played god build card");
             if (culture.equalsIgnoreCase("Greek")) {
                 Random randHera = new Random(System.nanoTime());
                 int hera = randHera.nextInt(2);
@@ -1172,7 +1187,7 @@ public class BoardController {
                         updateResources("Norse");
                         int njordOpponent = randNjord.nextInt(2);
                         if (njordOpponent == 0) {
-                            List<String> buildings = new ArrayList<String>();
+                            List<String> buildings = new ArrayList<>();
                             buildings.add("House.png");
                             buildings.add("Armor.png");
                             buildings.add("GoldMint.png");
@@ -1248,7 +1263,7 @@ public class BoardController {
 
                         }
                         if (njordOpponent == 1) {
-                            List<String> buildings = new ArrayList<String>();
+                            List<String> buildings = new ArrayList<>();
                             buildings.add("House.png");
                             buildings.add("Armor.png");
                             buildings.add("GoldMint.png");
@@ -1327,9 +1342,9 @@ public class BoardController {
                     System.out.println("Norse AI has used God power for Build, Njord");
                 } else {
                     System.out.println("Norse AI has not used God power for Build, Njord");
+                    actionCard = 2;
+                    playAuxAICard(culture, actionCard);
                 }
-                actionCard = 2;
-                playAuxAICard(culture, actionCard);
             }
             //ai plays god power build
 
@@ -1589,7 +1604,6 @@ public class BoardController {
             }
 
         } else if (actionCard == 11) {
-            System.out.println("AI played god next age card");
             //ai plays god power next age
             if (culture.equals("Norse")) {
                 Random randOdin = new Random(System.nanoTime());
@@ -1642,7 +1656,7 @@ public class BoardController {
                             bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
                         }
                     }
-                    System.out.println("Greek AI didn't use God Power");
+                    System.out.println("Greek AI didn't use God Power Next age");
                 } else if (zeus == 1) {
                     //board.setFourthCard(true);
                     if (greekPlayer.getAge() == 1) {
@@ -1665,7 +1679,7 @@ public class BoardController {
                         greekPlayer.setCurrentUnitList(greekUnitCards);
                     }
 
-                    System.out.println("Greek AI used God Power: Greek AI is going to gain a free hero");
+                    System.out.println("Greek AI used God Power Next age: going to gain a free hero");
 
                 }
             } else if (culture.equals("Egyptian")) {
@@ -1686,11 +1700,11 @@ public class BoardController {
                         egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
                         bGUI.changeAgeTextAI("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
                     }
-                    System.out.println("Egyptian AI didn't use God Power");
+                    System.out.println("Egyptian AI didn't use God Power next age");
 
                 } else if (hathor == 1) {
                     egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 1);
-                    System.out.println("Egyptian AI used God Power: Egyptian AI is going to eliminate one food producing tile from another player's board");
+                    System.out.println("Egyptian AI used God Power next age: Egyptian AI is going to eliminate one food producing tile from another player's board");
                     if (norsePlayer.getNorseTerrains().contains(terrainList.get(0))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(0));
                         System.out.println("Egyptian AI eliminated one food producing tile from Norse");
@@ -4076,9 +4090,10 @@ public class BoardController {
         maxBattleUnit = n;
     }
 
-    public List<TerrainTiles> getTerrain(){
+    public List<TerrainTiles> getTerrain() {
         return terrainList;
     }
+
     public int getMaxBattleUnit() {
         return maxBattleUnit;
     }
