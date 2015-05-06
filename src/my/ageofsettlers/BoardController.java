@@ -2714,6 +2714,9 @@ public class BoardController {
                 if (culture.equalsIgnoreCase("egyptian")) {
                     int temp = victoryCards[0] + victoryCards[1] + victoryCards[2] + egyptianPlayer.getVictory();
                     egyptianPlayer.setVictory(temp);
+                }
+            }
+        }
        //game ends if..
         
         // if a player builds the wonder building 
@@ -2727,12 +2730,9 @@ public class BoardController {
                 greekPlayer.setVictory(wonderCube);
             }
             else {
-                if(culture.equalsIgnoreCase("egyptian")) {
                 int wonderCube = victoryCards[2]+egyptianPlayer.getVictory();
                 egyptianPlayer.setVictory(wonderCube);
-                }
-            }
-            
+            }            
             int buildingCubes = calculateBuildingCubes();
         }
         
@@ -4416,10 +4416,13 @@ public class BoardController {
         if(greekPlayer.isWoodworkshop() == true)
             greekCubes++;
         
+        int max = 0;
         //compare which is the highest
-        if (greekCubes >=  && greekCubes >= c) max= greekCubes;
-        else if (b >= greekCubes && b >= greekCubes) max = greekCubes;
-        else if (c >= greekCubes && c >= b) max= c;
+        if (greekCubes >=egyptianCubes  && greekCubes >= norseCubes) max= greekCubes;
+        else if (egyptianCubes >= greekCubes && egyptianCubes >= greekCubes) max = greekCubes;
+        else if (egyptianCubes >= greekCubes && egyptianCubes >= egyptianCubes) max= egyptianCubes;
+        
+        return max;
         
     }
 
