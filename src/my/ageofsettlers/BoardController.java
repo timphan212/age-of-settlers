@@ -917,18 +917,16 @@ public class BoardController {
             //ai plays explore
             Random terrain = new Random(System.nanoTime());
             int index = terrain.nextInt(4);
+            
             TerrainTiles selectedTerrain = getTerrainTile(index);
-
             Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
             bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
 
             selectedTerrain = getTerrainTile((index + 1) % 4);
-
             Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
             bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
 
             selectedTerrain = getTerrainTile((index + 2) % 4);
-
             Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
             bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
 

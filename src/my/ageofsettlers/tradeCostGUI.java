@@ -254,20 +254,33 @@ public class tradeCostGUI extends javax.swing.JFrame {
         String[] goldCount;
         
         if(culture.compareTo("Norse") == 0) {
+            int fave = 1;
+            if(norsePlayer.getFavor()>0){
+                fave = norsePlayer.getFavor() + 1;
+            }
             foodCount = new String[norsePlayer.getFood()+1];
-            favorCount = new String[norsePlayer.getFavor()+1];
+            favorCount = new String[fave];
             woodCount = new String[norsePlayer.getWood()+1];
             goldCount = new String[norsePlayer.getGold()+1];
         }
         else if(culture.compareTo("Greek") == 0) {
+            int fave = 1;
+            if(greekPlayer.getFavor()>0){
+                fave = greekPlayer.getFavor() + 1;
+            }
             foodCount = new String[greekPlayer.getFood()+1];
-            favorCount = new String[greekPlayer.getFavor()+1];
+            favorCount = new String[fave];
             woodCount = new String[greekPlayer.getWood()+1];
             goldCount = new String[greekPlayer.getGold()+1];
         }
         else {
+            int fave = 1;
+            if(egyptianPlayer.getFavor()>0){
+                fave = egyptianPlayer.getFavor() + 1;
+            }
+            
             foodCount = new String[egyptianPlayer.getFood()+1];
-            favorCount = new String[egyptianPlayer.getFavor()+1];
+            favorCount = new String[fave];
             woodCount = new String[egyptianPlayer.getWood()+1];
             goldCount = new String[egyptianPlayer.getGold()+1];
         }
@@ -276,6 +289,8 @@ public class tradeCostGUI extends javax.swing.JFrame {
             foodCount[i] = String.valueOf(i);
         }
         playerFoodSelection.setModel(new javax.swing.DefaultComboBoxModel(foodCount));
+        
+        
         for(int i = 0; i < favorCount.length; i++) {
             favorCount[i] = String.valueOf(i);
         }
