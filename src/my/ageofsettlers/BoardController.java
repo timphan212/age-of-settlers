@@ -2552,21 +2552,28 @@ public class BoardController {
         bGUI.setupBuildingIcon(culture, building);
         Bank bank = Bank.getInstance();
        //game ends if..
-        if(building.compareToIgnoreCase("Wonder.png") == 0) {
+        
+        // if a player builds the wonder building 
+        if(building.compareToIgnoreCase("Wonder.png") == 0 || bank.getVictory() == 0) {
             if(culture.equalsIgnoreCase("norse")) {
-                int temp = victoryCards[0]+victoryCards[1]+victoryCards[2]+norsePlayer.getVictory();
-                norsePlayer.setVictory(temp);
+                int wonderCube = victoryCards[2]+norsePlayer.getVictory();
+                norsePlayer.setVictory(wonderCube);    
             }
             else if(culture.equalsIgnoreCase("greek")) {
-                int temp = victoryCards[0]+victoryCards[1]+victoryCards[2]+greekPlayer.getVictory();
-                greekPlayer.setVictory(temp);
+               int wonderCube = victoryCards[2]+greekPlayer.getVictory();
+                greekPlayer.setVictory(wonderCube);
             }
             else {
                 if(culture.equalsIgnoreCase("egyptian")) {
-                int temp = victoryCards[0]+victoryCards[1]+victoryCards[2]+egyptianPlayer.getVictory();
-                egyptianPlayer.setVictory(temp);
+                int wonderCube = victoryCards[2]+egyptianPlayer.getVictory();
+                egyptianPlayer.setVictory(wonderCube);
                 }
             }
+            
+            int buildingCubes = calculateBuildingCubes();
+        }
+        
+        
             victoryCards[0] = 0;
             victoryCards[1] = 0;
             victoryCards[2] = 0;
@@ -2582,7 +2589,7 @@ public class BoardController {
                  else
                     winnerGreek();
             }
-        }
+        
     }
 
     private void winnerNorse() {
@@ -2622,6 +2629,10 @@ public class BoardController {
     private void cleanupTurns() {
         currentPlayerTurn = 0;
         roundcounter = 0;
+        Bank bank = Bank.getInstance();
+         if(bank.getVictory() == 0){
+             
+         }
         setupRounds();
     }
 
@@ -4149,6 +4160,103 @@ public class BoardController {
             rGUI.setMaxRecruits(2);
             //ai plays recruit
         } //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private int calculateBuildingCubes() {
+        
+        int norseCubes = 0;
+        int egyptianCubes = 0;
+        int greekCubes = 0;
+        
+        // total buildings of Norse
+        if(norsePlayer.isArmory()== true)
+            norseCubes++;
+        if(norsePlayer.isGoldmint() == true)
+            norseCubes++;
+        if(norsePlayer.isGranary() == true)
+            norseCubes++;
+        if(norsePlayer.isGreattemple() == true)
+            norseCubes++;
+        if(norsePlayer.isMarket() == true)
+            norseCubes++;
+        if(norsePlayer.isMonument() == true)
+            norseCubes++;
+        if(norsePlayer.isQuarry() == true)
+            norseCubes++;
+        if(norsePlayer.isSiegeworkshop() == true)
+            norseCubes++;
+        if(norsePlayer.isStorehouse() == true)
+            norseCubes++;
+        if(norsePlayer.isTower() == true)
+            norseCubes++;
+        if(norsePlayer.isWall() == true)
+            norseCubes++;
+        if(norsePlayer.isWonder() == true)
+            norseCubes++;
+        if(norsePlayer.isWoodworkshop() == true)
+            norseCubes++;
+        
+        //for Egyptians
+        if(egyptianPlayer.isArmory()== true)
+            egyptianCubes++;
+        if(egyptianPlayer.isGoldmint() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isGranary() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isGreattemple() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isMarket() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isMonument() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isQuarry() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isSiegeworkshop() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isStorehouse() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isTower() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isWall() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isWonder() == true)
+            egyptianCubes++;
+        if(egyptianPlayer.isWoodworkshop() == true)
+            egyptianCubes++;
+        
+        //for Greeks
+        if(greekPlayer.isArmory()== true)
+            greekCubes++;
+        if(greekPlayer.isGoldmint() == true)
+            greekCubes++;
+        if(greekPlayer.isGranary() == true)
+            greekCubes++;
+        if(greekPlayer.isGreattemple() == true)
+            greekCubes++;
+        if(greekPlayer.isMarket() == true)
+            greekCubes++;
+        if(greekPlayer.isMonument() == true)
+            greekCubes++;
+        if(greekPlayer.isQuarry() == true)
+            greekCubes++;
+        if(greekPlayer.isSiegeworkshop() == true)
+            greekCubes++;
+        if(greekPlayer.isStorehouse() == true)
+            greekCubes++;
+        if(greekPlayer.isTower() == true)
+            greekCubes++;
+        if(greekPlayer.isWall() == true)
+            greekCubes++;
+        if(greekPlayer.isWonder() == true)
+            greekCubes++;
+        if(greekPlayer.isWoodworkshop() == true)
+            greekCubes++;
+        
+        //compare which is the highest
+        if (greekCubes >=  && greekCubes >= c) max= greekCubes;
+        else if (b >= greekCubes && b >= greekCubes) max = greekCubes;
+        else if (c >= greekCubes && c >= b) max= c;
+        
     }
 
 }
