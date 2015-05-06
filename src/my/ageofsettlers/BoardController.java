@@ -2701,26 +2701,9 @@ public class BoardController {
 
     public void buildBuilding(String culture, String building) {
         bGUI.setupBuildingIcon(culture, building);
-        Bank bank = Bank.getInstance();
-        //game ends if..
-        if (building.compareToIgnoreCase("Wonder.png") == 0) {
-            if (culture.equalsIgnoreCase("norse")) {
-                int temp = victoryCards[0] + victoryCards[1] + victoryCards[2] + norsePlayer.getVictory();
-                norsePlayer.setVictory(temp);
-            } else if (culture.equalsIgnoreCase("greek")) {
-                int temp = victoryCards[0] + victoryCards[1] + victoryCards[2] + greekPlayer.getVictory();
-                greekPlayer.setVictory(temp);
-            } else {
-                if (culture.equalsIgnoreCase("egyptian")) {
-                    int temp = victoryCards[0] + victoryCards[1] + victoryCards[2] + egyptianPlayer.getVictory();
-                    egyptianPlayer.setVictory(temp);
-                }
-            }
-        }
-       //game ends if..
-        
-        // if a player builds the wonder building 
-        if(building.compareToIgnoreCase("Wonder.png") == 0 || bank.getVictory() == 0) {
+
+       //game ends if a player builds the wonder building 
+        if(building.compareToIgnoreCase("Wonder.png") == 0) {
             if(culture.equalsIgnoreCase("norse")) {
                 int wonderCube = victoryCards[2]+norsePlayer.getVictory();
                 norsePlayer.setVictory(wonderCube);    
@@ -2732,14 +2715,51 @@ public class BoardController {
             else {
                 int wonderCube = victoryCards[2]+egyptianPlayer.getVictory();
                 egyptianPlayer.setVictory(wonderCube);
-            }            
-            int buildingCubes = calculateBuildingCubes();
+            }   
+            
+            // having "the most buildings" card at the end of the game 
+            String buildingCubes = calculateBuildingCubes();
+            if(buildingCubes.equalsIgnoreCase("Greek"))
+            {
+                int buildings = victoryCards[1]+greekPlayer.getVictory();
+                greekPlayer.setVictory(buildings);
+            }
+            else if(buildingCubes.equalsIgnoreCase("Norse"))
+            {
+                int buildings = victoryCards[1]+norsePlayer.getVictory();
+                norsePlayer.setVictory(buildings);   
+            }
+            else if(buildingCubes.equalsIgnoreCase("Egyptian"))
+            {
+                int buildings = victoryCards[1]+egyptianPlayer.getVictory();
+                egyptianPlayer.setVictory(buildings);   
+            }
+            
+            //having "the largest army" card at the end of the game
+            String army = calculateUnits();
+            if(army.equalsIgnoreCase("Greek"))
+            {
+                int units = victoryCards[0]+greekPlayer.getVictory();
+                greekPlayer.setVictory(units);
+            }
+            else if(army.equalsIgnoreCase("Norse"))
+            {
+                int units = victoryCards[0]+norsePlayer.getVictory();
+                norsePlayer.setVictory(units);   
+            }
+            else if(army.equalsIgnoreCase("Egyptian"))
+            {
+                int units = victoryCards[0]+egyptianPlayer.getVictory();
+                egyptianPlayer.setVictory(units);   
+            }
         }
         
         
             victoryCards[0] = 0;
             victoryCards[1] = 0;
             victoryCards[2] = 0;
+            
+            //deciding the winner
             if (norsePlayer.getVictory() > egyptianPlayer.getVictory()) {
                 if (norsePlayer.getVictory() > greekPlayer.getVictory()) {
                     winnerNorse();
@@ -2795,11 +2815,68 @@ public class BoardController {
     private void cleanupTurns() {
         currentPlayerTurn = 0;
         roundcounter = 0;
+        
         Bank bank = Bank.getInstance();
+        
+        //game ends if..
          if(bank.getVictory() == 0){
-             
-         }
-        setupRounds();
+             // having "the most buildings" card at the end of the game 
+            String buildingCubes = calculateBuildingCubes();
+            if(buildingCubes.equalsIgnoreCase("Greek"))
+            {
+                int buildings = victoryCards[1]+greekPlayer.getVictory();
+                greekPlayer.setVictory(buildings);
+            }
+            else if(buildingCubes.equalsIgnoreCase("Norse"))
+            {
+                int buildings = victoryCards[1]+norsePlayer.getVictory();
+                norsePlayer.setVictory(buildings);   
+            }
+            else if(buildingCubes.equalsIgnoreCase("Egyptian"))
+            {
+                int buildings = victoryCards[1]+egyptianPlayer.getVictory();
+                egyptianPlayer.setVictory(buildings);   
+            }
+            
+            //having "the largest army" card at the end of the game
+            String army = calculateUnits();
+            if(army.equalsIgnoreCase("Greek"))
+            {
+                int units = victoryCards[0]+greekPlayer.getVictory();
+                greekPlayer.setVictory(units);
+            }
+            else if(army.equalsIgnoreCase("Norse"))
+            {
+                int units = victoryCards[0]+norsePlayer.getVictory();
+                norsePlayer.setVictory(units);   
+            }
+            else if(army.equalsIgnoreCase("Egyptian"))
+            {
+                int units = victoryCards[0]+egyptianPlayer.getVictory();
+                egyptianPlayer.setVictory(units);   
+            }
+      
+            victoryCards[0] = 0;
+            victoryCards[1] = 0;
+            victoryCards[2] = 0;
+            
+            //deciding the winner
+            if (norsePlayer.getVictory() > egyptianPlayer.getVictory()) {
+                if (norsePlayer.getVictory() > greekPlayer.getVictory()) {
+                    winnerNorse();
+                } else {
+                    winnerGreek();
+                }
+            } else {
+                if (egyptianPlayer.getVictory() > greekPlayer.getVictory()) {
+                    winnerEgyptian();
+                } else {
+                    winnerGreek();
+                }
+            }
+         }  else{
+                setupRounds();
+            }           
     }
 
     private void spoilageNorse() {
@@ -4326,7 +4403,7 @@ public class BoardController {
         } //To change body of generated methods, choose Tools | Templates.
     }
 
-    private int calculateBuildingCubes() {
+    private String calculateBuildingCubes() {
         
         int norseCubes = 0;
         int egyptianCubes = 0;
@@ -4416,14 +4493,27 @@ public class BoardController {
         if(greekPlayer.isWoodworkshop() == true)
             greekCubes++;
         
-        int max = 0;
+        String max = "";
         //compare which is the highest
-        if (greekCubes >=egyptianCubes  && greekCubes >= norseCubes) max= greekCubes;
-        else if (egyptianCubes >= greekCubes && egyptianCubes >= greekCubes) max = greekCubes;
-        else if (egyptianCubes >= greekCubes && egyptianCubes >= egyptianCubes) max= egyptianCubes;
+        if (greekCubes >=egyptianCubes  && greekCubes >= norseCubes) max= "Greek";
+        else if (egyptianCubes >= greekCubes && egyptianCubes >= greekCubes) max = "Egyptian";
+        else if (norseCubes >= greekCubes && norseCubes >= egyptianCubes) max= "Norse";
         
-        return max;
+       return max;
+    }
+
+    private String calculateUnits() {
+        int greekArmy    = greekPlayer.getCurrentUnitList().size();
+        int norseArmy    = norsePlayer.getCurrentUnitList().size();
+        int egyptianArmy = egyptianPlayer.getCurrentUnitList().size();
+    
+        String max = "";
+        //compare which is the highest
+        if (greekArmy >=egyptianArmy  && greekArmy >= norseArmy) max= "Greek";
+        else if (egyptianArmy >= greekArmy && egyptianArmy >= greekArmy) max = "Egyptian";
+        else if (norseArmy >= greekArmy && norseArmy >= egyptianArmy) max= "Norse";
         
+       return max;
     }
 
 }
