@@ -2752,7 +2752,6 @@ public class BoardController {
                 int units = victoryCards[0]+egyptianPlayer.getVictory();
                 egyptianPlayer.setVictory(units);   
             }
-        }
         
         
             victoryCards[0] = 0;
@@ -2773,7 +2772,7 @@ public class BoardController {
                     winnerGreek();
                 }
             }
-        
+        }
     }
 
     private void winnerNorse() {
