@@ -1165,22 +1165,46 @@ public class BoardController {
                             + woodTradeOut
                             + goldTradeOut;
                     if (culture.compareTo("Norse") == 0) {
-                        foodTradeIn = randTrade.nextInt(norsePlayer.getFood());
-                        favorTradeIn = randTrade.nextInt(norsePlayer.getFavor());
-                        woodTradeIn = randTrade.nextInt(norsePlayer.getWood());
-                        goldTradeIn = randTrade.nextInt(norsePlayer.getGold());
+                        if (norsePlayer.getFood() > 0) {
+                            foodTradeIn = randTrade.nextInt(norsePlayer.getFood());
+                        }
+                        if (norsePlayer.getFavor() > 0) {
+                            favorTradeIn = randTrade.nextInt(norsePlayer.getFavor());
+                        }
+                        if (norsePlayer.getWood() > 0) {
+                            woodTradeIn = randTrade.nextInt(norsePlayer.getWood());
+                        }
+                        if (norsePlayer.getGold() > 0) {
+                            goldTradeIn = randTrade.nextInt(norsePlayer.getGold());
+                        }
                     }
                     if (culture.compareTo("Greek") == 0) {
-                        foodTradeIn = randTrade.nextInt(greekPlayer.getFood());
-                        favorTradeIn = randTrade.nextInt(greekPlayer.getFavor());
-                        woodTradeIn = randTrade.nextInt(greekPlayer.getWood());
-                        goldTradeIn = randTrade.nextInt(greekPlayer.getGold());
+                         if (greekPlayer.getFood() > 0) {
+                            foodTradeIn = randTrade.nextInt(greekPlayer.getFood());
+                        }
+                        if (greekPlayer.getFavor() > 0) {
+                            favorTradeIn = randTrade.nextInt(greekPlayer.getFavor());
+                        }
+                        if (greekPlayer.getWood() > 0) {
+                            woodTradeIn = randTrade.nextInt(greekPlayer.getWood());
+                        }
+                        if (greekPlayer.getGold() > 0) {
+                            goldTradeIn = randTrade.nextInt(greekPlayer.getGold());
+                        }
                     }
                     if (culture.compareTo("Egypt") == 0) {
-                        foodTradeIn = randTrade.nextInt(egyptianPlayer.getFood());
-                        favorTradeIn = randTrade.nextInt(egyptianPlayer.getFavor());
-                        woodTradeIn = randTrade.nextInt(egyptianPlayer.getWood());
-                        goldTradeIn = randTrade.nextInt(egyptianPlayer.getGold());
+                        if (egyptianPlayer.getFood() > 0) {
+                            foodTradeIn = randTrade.nextInt(egyptianPlayer.getFood());
+                        }
+                        if (egyptianPlayer.getFavor() > 0) {
+                            favorTradeIn = randTrade.nextInt(egyptianPlayer.getFavor());
+                        }
+                        if (egyptianPlayer.getWood() > 0) {
+                            woodTradeIn = randTrade.nextInt(egyptianPlayer.getWood());
+                        }
+                        if (egyptianPlayer.getGold() > 0) {
+                            goldTradeIn = randTrade.nextInt(egyptianPlayer.getGold());
+                        }
                     }
 
                     sumTradeIn = foodTradeIn + favorTradeIn
