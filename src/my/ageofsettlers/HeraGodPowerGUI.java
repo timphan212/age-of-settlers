@@ -85,27 +85,24 @@ public class HeraGodPowerGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        BoardGUI bGUI = new BoardGUI();
         if (gPlayer.getFavor() >= 1) {
             int newFavor = gPlayer.getFavor() - 1;
             gPlayer.setFavor(newFavor);
             board.updateResources("Greek");
-            bGUI.setupBuildingIcon("Greek", "House.png");
-             buildingGUI buildGUI = new buildingGUI();
-            buildGUI.setVisible(true);
-        } else {
-                //board.initPlayPermCards();
-                board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+            board.buildBuilding("Greek", "House.png");
         }
-        
+        this.setVisible(false);
+        buildingGUI buildGUI = new buildingGUI();
+        buildGUI.setVisible(true);
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-         buildingGUI buildGUI = new buildingGUI();
-            buildGUI.setVisible(true);
+        buildingGUI buildGUI = new buildingGUI();
+        buildGUI.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -143,7 +140,7 @@ public class HeraGodPowerGUI extends javax.swing.JFrame {
             }
         });
     }
-    
+
     private BoardController board;
     private Greek gPlayer;
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -364,7 +364,7 @@ public class BoardController {
         Random rand = new Random(System.nanoTime());
         int actionCard = rand.nextInt(14);
 
-        if (actionCard < 0) {
+        if (actionCard == 0) {
             System.out.println("AI played permanent attack card");
             Random randArea = new Random(System.nanoTime());
             int areaCard = randArea.nextInt(3);
@@ -557,125 +557,358 @@ public class BoardController {
             }
         } else if (actionCard == 1) //build card
         {
-            System.out.println("AI played permanent build card");
 
             Random randBuilding = new Random(System.nanoTime());
-            int randBuild = randBuilding.nextInt(14);
 
             QuarryGUI quarry = new QuarryGUI();
             buildingGUI build = new buildingGUI();
-            if (randBuild == 0) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+            if (culture.equalsIgnoreCase("norse")) {
+                int randBuild = randBuilding.nextInt(14);
+                System.out.println("Norse AI played permanent build card");
 
-                }
+                if (randBuild == 0) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
 
-            } else if (randBuild == 1) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
-                }
+                    }
 
-            } else if (randBuild == 2) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
-                }
+                } else if (randBuild == 1) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                    }
 
-            } else if (randBuild == 3) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
-                }
+                } else if (randBuild == 2) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                    }
 
-            } else if (randBuild == 4) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
-                }
+                } else if (randBuild == 3) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                    }
 
-            } else if (randBuild == 5) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
-                }
+                } else if (randBuild == 4) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                    }
 
-            } else if (randBuild == 6) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
-                }
+                } else if (randBuild == 5) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                    }
 
-            } else if (randBuild == 7) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
-                }
+                } else if (randBuild == 6) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                    }
 
-            } else if (randBuild == 8) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
-                }
+                } else if (randBuild == 7) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                    }
 
-            } else if (randBuild == 9) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
-                }
-            } else if (randBuild == 10) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
-                }
+                } else if (randBuild == 8) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                    }
 
-            } else if (randBuild == 11) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
-                }
+                } else if (randBuild == 9) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                    }
+                } else if (randBuild == 10) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                    }
 
-            } else if (randBuild == 12) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
-                }
+                } else if (randBuild == 11) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                    }
 
-            } else if (randBuild == 13) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
-                }
+                } else if (randBuild == 12) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                    }
 
+                } else if (randBuild == 13) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                    }
+                }
+            } else if (culture.equalsIgnoreCase("Egyptian")) {
+                int randBuild = randBuilding.nextInt(14);
+                System.out.println("Egyptian AI played permanent build card");
+
+                if (randBuild == 0) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+
+                    }
+
+                } else if (randBuild == 1) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                    }
+
+                } else if (randBuild == 2) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                    }
+
+                } else if (randBuild == 3) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                    }
+
+                } else if (randBuild == 4) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                    }
+
+                } else if (randBuild == 5) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                    }
+
+                } else if (randBuild == 6) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                    }
+
+                } else if (randBuild == 7) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                    }
+
+                } else if (randBuild == 8) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                    }
+
+                } else if (randBuild == 9) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                    }
+                } else if (randBuild == 10) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                    }
+
+                } else if (randBuild == 11) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                    }
+
+                } else if (randBuild == 12) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                    }
+
+                } else if (randBuild == 13) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                    }
+                } else if (culture.equalsIgnoreCase("Greek")) {
+                    randBuild = randBuilding.nextInt(14);
+                    System.out.println("Greek AI played permanent build card");
+
+                    if (randBuild == 0) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+
+                        }
+                    } else if (randBuild == 1) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                        }
+
+                    } else if (randBuild == 2) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                        }
+
+                    } else if (randBuild == 3) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                        }
+
+                    } else if (randBuild == 4) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                        }
+
+                    } else if (randBuild == 5) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                        }
+
+                    } else if (randBuild == 6) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                        }
+
+                    } else if (randBuild == 7) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                        }
+
+                    } else if (randBuild == 8) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                        }
+
+                    } else if (randBuild == 9) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                        }
+                    } else if (randBuild == 10) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                        }
+
+                    } else if (randBuild == 11) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                        }
+
+                    } else if (randBuild == 12) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                        }
+
+                    } else if (randBuild == 13) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                        }
+                    }
+                }
             }
             //ai plays build
         } else if (actionCard == 2) {
@@ -1472,42 +1705,33 @@ public class BoardController {
                 } else if (hathor == 1) {
                     egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 1);
                     System.out.println("Egyptian AI used God Power: Egyptian AI is going to eliminate one food producing tile from another player's board");
-                    if(norsePlayer.getNorseTerrains().contains(terrainList.get(0)))
-                    {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(0));
+                    if (norsePlayer.getNorseTerrains().contains(terrainList.get(0))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(0));
                         System.out.println("Egyptian AI eliminated one food producing tile from Norse");
-                    }
-                    else if(norsePlayer.getNorseTerrains().contains(terrainList.get(5))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(5));
+                    } else if (norsePlayer.getNorseTerrains().contains(terrainList.get(5))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(5));
                         System.out.println("Egyptian AI eliminated one food producing tile from Norse");
-                    }
-                    else if(norsePlayer.getNorseTerrains().contains(terrainList.get(9))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(9));
+                    } else if (norsePlayer.getNorseTerrains().contains(terrainList.get(9))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(9));
                         System.out.println("Egyptian AI eliminated one food producing tile from Norse");
-                    }
-                    else if(norsePlayer.getNorseTerrains().contains(terrainList.get(18))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(18));
+                    } else if (norsePlayer.getNorseTerrains().contains(terrainList.get(18))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(18));
                         System.out.println("Egyptian AI eliminated one food producing tile from Norse");
-                    }
-                    
-                    else if(greekPlayer.getGreekTerrains().contains(terrainList.get(0))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(0));
+                    } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(0))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(0));
                         System.out.println("Egyptian AI eliminated one food producing tile from Greek");
-                    }
-                    else if(greekPlayer.getGreekTerrains().contains(terrainList.get(5))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(5));
+                    } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(5))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(5));
                         System.out.println("Egyptian AI eliminated one food producing tile from Greek");
-                    }
-                    else if(greekPlayer.getGreekTerrains().contains(terrainList.get(9))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(9));
+                    } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(9))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(9));
                         System.out.println("Egyptian AI eliminated one food producing tile from Greek");
-                    }
-                    else if(greekPlayer.getGreekTerrains().contains(terrainList.get(18))) {
-                        bGUI.setupRemoveTerrainTile("Norse",terrainList.get(18));
+                    } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(18))) {
+                        bGUI.setupRemoveTerrainTile("Norse", terrainList.get(18));
                         System.out.println("Egyptian AI eliminated one food producing tile from Greek");
-                    }
-                    else
+                    } else {
                         System.out.println("Neither Norse nor Greek has food producing tile!");
+                    }
                 }
             }
         } else if (actionCard == 12) {
@@ -3944,197 +4168,197 @@ public class BoardController {
 
     private void playAuxAICard(String culture, int actionCard) {
 
-        if (actionCard < 0) {
+        if (actionCard == 0) {
             System.out.println("AI played permanent attack card");
-            Random randArea = new Random(System.nanoTime());
-            int areaCard = randArea.nextInt(3);
-
-            if (areaCard == 0) {
-                Random randOp = new Random(System.nanoTime());
-                int opponentCard = randOp.nextInt(2);
-                if (culture.compareTo("Norse") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        norseCurrentUnits.remove(playerCard);
-                    }
-                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Greek", "city");
-                    }
-
-                    if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Egyptian", "city");
-                    }
-                } else if (culture.compareTo("Greek") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        greekCurrentUnits.remove(playerCard);
-                    }
-                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Norse", "city");
-                    }
-
-                    if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Egyptian", "city");
-                    }
-                } else if (culture.compareTo("Egyptian") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        egyptianCurrentUnits.remove(playerCard);
-                    }
-                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Greek", "city");
-                    }
-
-                    if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Norse", "city");
-                    }
-                }
-            } else if (areaCard == 1) //production area
-            {
-                Random randOp = new Random(System.nanoTime());
-                int opponentCard = randOp.nextInt(2);
-                if (culture.compareTo("Norse") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        norseCurrentUnits.remove(playerCard);
-                    }
-                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Greek", "production");
-                    } else if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Egyptian", "production");
-                    }
-                    selectedUnits.clear();
-                } else if (culture.compareTo("Greek") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        greekCurrentUnits.remove(playerCard);
-                    }
-                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Norse", "production");
-                    } else if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Egyptian", "production");
-                    }
-                    selectedUnits.clear();
-                } else if (culture.compareTo("Egyptian") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        egyptianCurrentUnits.remove(playerCard);
-                    }
-                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Greek", "production");
-                    } else if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Norse", "production");
-                    }
-                    selectedUnits.clear();
-                }
-            } else if (areaCard == 2) //holding area
-            {
-                Random randOp = new Random(System.nanoTime());
-                int opponentCard = randOp.nextInt(2);
-                if (culture.compareTo("Norse") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        norseCurrentUnits.remove(playerCard);
-                    }
-                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Greek", "holding");
-                    } else if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Egyptian", "holding");
-                    }
-                } else if (culture.compareTo("Greek") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
-                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        greekCurrentUnits.remove(playerCard);
-                    }
-                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Norse", "holding");
-                    } else if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Egyptian", "holding");
-                    }
-                } else if (culture.compareTo("Egyptian") == 0) {
-                    List<UnitCard> selectedUnits = new ArrayList<>();
-                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
-                    Random randAttackUnit = new Random(System.nanoTime());
-                    for (int i = 0; i < 3; i++) {
-                        int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
-                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
-                        selectedUnits.add(playerCard);
-                        egyptianCurrentUnits.remove(playerCard);
-                    }
-                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
-                    if (opponentCard == 0) //Greek as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Greek", "holding");
-                    } else if (opponentCard == 1) //Egypt as opponent
-                    {
-                        setupBattleAI(selectedUnits, "Norse", "holding");
-                    }
-                }
-            }
+//            Random randArea = new Random(System.nanoTime());
+//            int areaCard = randArea.nextInt(3);
+//
+//            if (areaCard == 0) {
+//                Random randOp = new Random(System.nanoTime());
+//                int opponentCard = randOp.nextInt(2);
+//                if (culture.compareTo("Norse") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        norseCurrentUnits.remove(playerCard);
+//                    }
+//                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Greek", "city");
+//                    }
+//
+//                    if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Egyptian", "city");
+//                    }
+//                } else if (culture.compareTo("Greek") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        greekCurrentUnits.remove(playerCard);
+//                    }
+//                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Norse", "city");
+//                    }
+//
+//                    if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Egyptian", "city");
+//                    }
+//                } else if (culture.compareTo("Egyptian") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        egyptianCurrentUnits.remove(playerCard);
+//                    }
+//                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Greek", "city");
+//                    }
+//
+//                    if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Norse", "city");
+//                    }
+//                }
+//            } else if (areaCard == 1) //production area
+//            {
+//                Random randOp = new Random(System.nanoTime());
+//                int opponentCard = randOp.nextInt(2);
+//                if (culture.compareTo("Norse") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        norseCurrentUnits.remove(playerCard);
+//                    }
+//                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Greek", "production");
+//                    } else if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Egyptian", "production");
+//                    }
+//                    selectedUnits.clear();
+//                } else if (culture.compareTo("Greek") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        greekCurrentUnits.remove(playerCard);
+//                    }
+//                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Norse", "production");
+//                    } else if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Egyptian", "production");
+//                    }
+//                    selectedUnits.clear();
+//                } else if (culture.compareTo("Egyptian") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        egyptianCurrentUnits.remove(playerCard);
+//                    }
+//                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Greek", "production");
+//                    } else if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Norse", "production");
+//                    }
+//                    selectedUnits.clear();
+//                }
+//            } else if (areaCard == 2) //holding area
+//            {
+//                Random randOp = new Random(System.nanoTime());
+//                int opponentCard = randOp.nextInt(2);
+//                if (culture.compareTo("Norse") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> norseCurrentUnits = norsePlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = norsePlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        norseCurrentUnits.remove(playerCard);
+//                    }
+//                    norsePlayer.setCurrentUnitList(norseCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Greek", "holding");
+//                    } else if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Egyptian", "holding");
+//                    }
+//                } else if (culture.compareTo("Greek") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> greekCurrentUnits = greekPlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(3); //picks any one of 6 cards
+//                        UnitCard playerCard = greekPlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        greekCurrentUnits.remove(playerCard);
+//                    }
+//                    greekPlayer.setCurrentUnitList(greekCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Norse", "holding");
+//                    } else if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Egyptian", "holding");
+//                    }
+//                } else if (culture.compareTo("Egyptian") == 0) {
+//                    List<UnitCard> selectedUnits = new ArrayList<>();
+//                    List<UnitCard> egyptianCurrentUnits = egyptianPlayer.getCurrentUnitList();
+//                    Random randAttackUnit = new Random(System.nanoTime());
+//                    for (int i = 0; i < 3; i++) {
+//                        int attackUnit = randAttackUnit.nextInt(4); //picks any one of 6 cards
+//                        UnitCard playerCard = egyptianPlayer.getTotalUnitList().get(attackUnit);
+//                        selectedUnits.add(playerCard);
+//                        egyptianCurrentUnits.remove(playerCard);
+//                    }
+//                    egyptianPlayer.setCurrentUnitList(egyptianCurrentUnits);
+//                    if (opponentCard == 0) //Greek as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Greek", "holding");
+//                    } else if (opponentCard == 1) //Egypt as opponent
+//                    {
+//                        setupBattleAI(selectedUnits, "Norse", "holding");
+//                    }
+//                }
+//            }
         } else if (actionCard == 1) //build card
         {
             System.out.println("AI played permanent build card");
