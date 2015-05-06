@@ -696,6 +696,23 @@ public class BoardController {
             //            terrainList = pickExploreTerrains(eGUI, 4);
 
             //ai plays explore
+            Random terrain = new Random(System.nanoTime());
+            int index = terrain.nextInt(4);
+            TerrainTiles selectedTerrain = getTerrainTile(index);
+
+            Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+            bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+            selectedTerrain = getTerrainTile((index + 1) % 4);
+
+            Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+            bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+            selectedTerrain = getTerrainTile((index + 2) % 4);
+
+            Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+            bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
         } else if (actionCard == 4) {
             System.out.println("AI played permanent next age card");
 
@@ -1188,6 +1205,138 @@ public class BoardController {
         } else if (actionCard == 10) {
             System.out.println("AI played god explore card");
             //ai plays god power explore
+            if (culture.equals("Norse")) {
+                Random randBaldr = new Random(System.nanoTime());
+                Random terrain = new Random(System.nanoTime());
+
+                int baldr = randBaldr.nextInt(2);
+                int index = terrain.nextInt(4);
+                if (norsePlayer.getFavor() < 1) {
+                    baldr = 0;
+                }
+                if (baldr == 0) {
+                    System.out.println("Norse AI didn't use God Power");
+                    TerrainTiles selectedTerrain = getTerrainTile(index);
+
+                    Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+                    bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 1) % 4);
+
+                    Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+                    bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 2) % 4);
+
+                    Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+                    bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
+                } else if (baldr == 1) {
+                    norsePlayer.setFavor(norsePlayer.getFavor() - 1);
+                    TerrainTiles selectedTerrain = getTerrainTile(index);
+                    Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+                    bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+                    System.out.println("Norse AI used God Power: Other players don't get to select a tile");
+                }
+                updateResources("Norse");
+            } else if (culture.equals("Greek")) {
+                Random randArtemis = new Random(System.nanoTime());
+                Random terrain = new Random(System.nanoTime());
+
+                int artemis = randArtemis.nextInt(2);
+                int index = terrain.nextInt(4);
+                if (greekPlayer.getFavor() < 1) {
+                    artemis = 0;
+                }
+                if (artemis == 0) {
+                    System.out.println("Greek AI didn't use God Power");
+                    TerrainTiles selectedTerrain = getTerrainTile(index);
+
+                    Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+                    bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 1) % 4);
+
+                    Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+                    bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 2) % 4);
+
+                    Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+                    bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
+                } else if (artemis == 1) {
+                    greekPlayer.setFavor(greekPlayer.getFavor() - 1);
+
+                    TerrainTiles selectedTerrain = getTerrainTile(index);
+                    Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+                    bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 3) % 4);
+                    greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+                    bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 1) % 4);
+                    Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+                    bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 2) % 4);
+                    Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+                    bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+                    System.out.println("Greek AI used God Power: Greek AI selects 2 tiles beore other players");
+                }
+                updateResources("Greek");
+
+            } else if (culture.equals("Egyptian")) {
+                
+                Random randPtah = new Random(System.nanoTime());
+                Random terrain = new Random(System.nanoTime());
+
+                int ptah = randPtah.nextInt(2);
+                int index = terrain.nextInt(4);
+                if (egyptianPlayer.getFavor() < 1) {
+                    ptah = 0;
+                }
+                if (ptah == 0) {
+                    System.out.println("Egyptian AI didn't use God Power");
+                    TerrainTiles selectedTerrain = getTerrainTile(index);
+
+                    Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+                    bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 1) % 4);
+
+                    Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+                    bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 2) % 4);
+
+                    Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+                    bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
+                } else if (ptah == 1) {
+                    egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 1);
+
+                    TerrainTiles selectedTerrain = getTerrainTile(index);
+                    Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+                    bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 3) % 4);
+                    egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+                    bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 1) % 4);
+                    Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+                    bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+                    selectedTerrain = getTerrainTile((index + 2) % 4);
+                    Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+                    bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+                    System.out.println("Egyptian AI used God Power: Egyptian AI selects 2 tiles beore other players");
+                }
+                updateResources("Egyptian");
+            }
+
         } else if (actionCard == 11) {
             System.out.println("AI played god next age card");
             //ai plays god power next age

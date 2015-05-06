@@ -7841,6 +7841,15 @@ public class BoardGUI extends javax.swing.JFrame {
         }
     }
     
+    public javax.swing.JPanel getNorseTerrain(){
+        return norseTerrain;
+    }
+    public javax.swing.JPanel getGreekTerrain(){
+        return greekTerrain;
+    }
+    public javax.swing.JPanel getEgyptianTerrain(){
+        return egyptTerrain;
+    }
     public void selectCultureTerrain(java.awt.event.MouseEvent evt) {
         String index = evt.getComponent().getAccessibleContext().getAccessibleDescription();
         TerrainTiles selectedTerrain = boardController.getTerrainTile(Integer.parseInt(index));
