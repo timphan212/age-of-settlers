@@ -4419,7 +4419,45 @@ public class BoardController {
                     }
 
                     updateResources(culture);
+                    Random randTrade = new Random(System.nanoTime());
                     
+                    int bankFoodCountAI = randTrade.nextInt(2);
+                    int bankFavorCountAI = randTrade.nextInt(2);
+                    int bankWoodCountAI = randTrade.nextInt(2);
+                    int bankGoldCountAI = randTrade.nextInt(2);
+                    boolean victoryTradeFailAI = false;
+
+
+                    int sum1AI = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
+                    int sum2AI = bankFoodCountAI + bankFavorCountAI + bankWoodCountAI + bankGoldCountAI;
+
+                    if(sum1AI == sum2AI && victoryTradeFailAI == false) {
+                        if(this.playerCulture.compareTo("Norse") == 0) {
+                            norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCountAI);
+                            norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount + bankFavorCountAI);
+                            norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount + bankWoodCountAI);
+                            norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount + bankGoldCountAI);
+                        }
+                        else if(this.playerCulture.compareTo("Greek") == 0) {
+                            greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount + bankFoodCountAI);
+                            greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount + bankFavorCountAI);
+                            greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount + bankWoodCountAI);
+                            greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount + bankGoldCountAI);
+                        }
+                        else {
+                            egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount + bankFoodCountAI);
+                            egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount + bankFavorCountAI);
+                            egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount + bankWoodCountAI);
+                            egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount + bankGoldCountAI);
+                        }
+                        Bank bank = Bank.getInstance();
+                        bank.setFood(bank.getFood() + playerFoodCount - bankFoodCountAI);
+                        bank.setFavor(bank.getFavor() + playerFavorCount - bankFavorCountAI);
+                        bank.setWood(bank.getWood() + playerWoodCount - bankWoodCountAI);
+                        bank.setGold(bank.getGold() + playerGoldCount - bankGoldCountAI);
+                        updateResources(this.playerCulture);
+                        configureTurnFormation(getCurrentPlayerTurn()+1);
+                    }
                 }
             }
 
