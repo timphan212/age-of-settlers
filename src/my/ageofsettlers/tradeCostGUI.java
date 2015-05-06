@@ -49,8 +49,13 @@ public class tradeCostGUI extends javax.swing.JFrame {
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(255,255,255,1));
-        jTextField1.setText("Pay resources to play the build card:");
+        jTextField1.setText("Pay resources to play the trade card:");
         jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         playerFoodText.setEditable(false);
         playerFoodText.setBackground(new java.awt.Color(255,255,255,1));
@@ -70,6 +75,11 @@ public class tradeCostGUI extends javax.swing.JFrame {
         playerFavorText.setBorder(null);
 
         playerFavorSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        playerFavorSelection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerFavorSelectionActionPerformed(evt);
+            }
+        });
 
         playerWoodText.setEditable(false);
         playerWoodText.setBackground(new java.awt.Color(255,255,255,1));
@@ -77,6 +87,11 @@ public class tradeCostGUI extends javax.swing.JFrame {
         playerWoodText.setBorder(null);
 
         playerWoodSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        playerWoodSelection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerWoodSelectionActionPerformed(evt);
+            }
+        });
 
         playerGoldText.setEditable(false);
         playerGoldText.setBackground(new java.awt.Color(255,255,255,1));
@@ -220,6 +235,18 @@ public class tradeCostGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_playerFoodSelectionActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void playerFavorSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerFavorSelectionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_playerFavorSelectionActionPerformed
+
+    private void playerWoodSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerWoodSelectionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_playerWoodSelectionActionPerformed
+
     public void setupTradeCostGUI(String culture) {
         String[] foodCount;
         String[] favorCount;
@@ -261,6 +288,7 @@ public class tradeCostGUI extends javax.swing.JFrame {
            goldCount[i] = String.valueOf(i);
         }
         playerGoldSelection.setModel(new javax.swing.DefaultComboBoxModel(goldCount));
+        
     }
     
     /**
