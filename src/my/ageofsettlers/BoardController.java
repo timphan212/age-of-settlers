@@ -938,7 +938,7 @@ public class BoardController {
                 int reqResources = findAge(norsePlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
-                                System.out.println("Norse AI played permanent next age card");
+                    System.out.println("Norse AI played permanent next age card");
 
                     norsePlayer.setWood(norsePlayer.getWood() - reqResources);
                     norsePlayer.setGold(norsePlayer.getGold() - reqResources);
@@ -949,7 +949,7 @@ public class BoardController {
 
                 }
             } else if (culture.compareTo("Greek") == 0) {
-                            System.out.println("Greek AI played permanent next age card");
+                System.out.println("Greek AI played permanent next age card");
 
                 int reqResources = findAge(greekPlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
@@ -962,7 +962,7 @@ public class BoardController {
                     bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
                 }
             } else {
-                            System.out.println("Egyptian AI played permanent next age card");
+                System.out.println("Egyptian AI played permanent next age card");
 
                 int reqResources = findAge(egyptianPlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
@@ -1050,21 +1050,21 @@ public class BoardController {
 
                 if (sum1 == sum2 && victoryTradeFail == false) {
                     if (culture.compareTo("Norse") == 0) {
-                                    System.out.println("Norse AI played permanent trade card");
+                        System.out.println("Norse AI played permanent trade card");
 
                         norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCount);
                         norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount + bankFavorCount);
                         norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount + bankWoodCount);
                         norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount + bankGoldCount);
                     } else if (culture.compareTo("Greek") == 0) {
-                                    System.out.println(" Greek AI played permanent trade card");
+                        System.out.println(" Greek AI played permanent trade card");
 
                         greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount + bankFoodCount);
                         greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount + bankFavorCount);
                         greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount + bankWoodCount);
                         greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount + bankGoldCount);
                     } else {
-                                    System.out.println("Egyptian AI played permanent trade card");
+                        System.out.println("Egyptian AI played permanent trade card");
 
                         egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount + bankFoodCount);
                         egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount + bankFavorCount);
@@ -1091,21 +1091,21 @@ public class BoardController {
 
                 if (sum1 == sum2) {
                     if (culture.compareTo("Norse") == 0) {
-                                    System.out.println("Norse AI played permanent trade card");
+                        System.out.println("Norse AI played permanent trade card");
 
                         norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount);
                         norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount);
                         norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount);
                         norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount);
                     } else if (culture.compareTo("Greek") == 0) {
-                                    System.out.println("Greek AI played permanent trade card");
+                        System.out.println("Greek AI played permanent trade card");
 
                         greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
                         greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
                         greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
                         greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
                     } else {
-                                    System.out.println("Egyptian AI played permanent trade card");
+                        System.out.println("Egyptian AI played permanent trade card");
 
                         egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
                         egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
@@ -1154,11 +1154,16 @@ public class BoardController {
             }
 
         } else if (actionCard == 6) {
-            System.out.println("AI played permanent recruit card");
             recruitGUI rGUI = new recruitGUI();
             rGUI.setupRecruitGUI(culture);
             rGUI.setMaxRecruits(2);
-            //ai plays recruit
+            if (culture.equalsIgnoreCase("Greek")) {
+                System.out.println("Greek AI played permanent recruit card");
+            } else if (culture.equalsIgnoreCase("Norse")) {
+                System.out.println("Norse AI played permanent recruit card");
+            } else if (culture.equalsIgnoreCase("Egyptian")) {
+                System.out.println("Egyptian AI played permanent recruit card");
+            }
         } else if (actionCard == 7) {
             System.out.println("AI played god attack card");
             //ai plays god power attack
