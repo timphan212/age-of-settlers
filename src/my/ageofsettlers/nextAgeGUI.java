@@ -38,6 +38,11 @@ public class nextAgeGUI extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(255,255,255,1));
         jTextField1.setText("You have advanced to the");
         jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,6 +83,10 @@ public class nextAgeGUI extends javax.swing.JFrame {
         //board.initPlayPermCards();
         board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     public javax.swing.JTextField getTextField() {
         return jTextField1;

@@ -908,10 +908,10 @@ public class BoardController {
             str = getRandomGatherType();
             //System.out.println("AI " + culture + " gathered the " + str);
             playGatherCard(str, playerCulture);
-            System.out.println("AI & human played permanent gather card");
+            System.out.println(culture + " AI played permanent gather card");
 
         } else if (actionCard == 3) {
-            System.out.println("AI & human played permanent explore card");
+            System.out.println(culture + " AI played permanent explore card");
             //            terrainList = pickExploreTerrains(eGUI, 4);
 
             //ai plays explore
@@ -1241,7 +1241,7 @@ public class BoardController {
                 System.out.println("Egyptian AI played permanent recruit card");
             }
         } else if (actionCard == 7) {
-            System.out.println("AI played god attack card");
+            System.out.println(culture + " AI played god attack card");
             //ai plays god power attack
         } else if (actionCard == 8) {
             if (culture.equalsIgnoreCase("Greek")) {
@@ -1252,10 +1252,10 @@ public class BoardController {
                         greekPlayer.setFavor(greekPlayer.getFavor() - 1);
                         updateResources("Greek");
                         bGUI.setupBuildingIcon("Greek", "House.png");
-                        System.out.println("Greek AI has used God power card of build, Hera");
+                        System.out.println("Greek AI used God Power for Build: Hera");
                     }
                 } else {
-                    System.out.println("Greek AI has not used God power card of build, Hera");
+                    System.out.println("Greek AI didn't use God Power for Build");
                 }
                 actionCard = 1;
                 playAuxAICard(culture, actionCard);
@@ -1420,9 +1420,9 @@ public class BoardController {
 
                         }
                     }
-                    System.out.println("Norse AI has used God power for Build, Njord");
+                    System.out.println("Norse AI used God Power for Build: Njord");
                 } else {
-                    System.out.println("Norse AI has not used God power for Build, Njord");
+                    System.out.println("Norse AI did not use God Power for Build");
                 }
                 actionCard = 1;
                 playAuxAICard(culture, actionCard);
@@ -1431,7 +1431,7 @@ public class BoardController {
             //ai plays god power build
 
         } else if (actionCard == 9) {
-            System.out.println("AI played god gather card");
+            System.out.println(culture + " AI played god gather card");
             //ai plays god power gather
             if (culture.equals("Norse")) {
                 Random randFreya = new Random(System.nanoTime());
@@ -1450,7 +1450,7 @@ public class BoardController {
                     str = getRandomGatherType();
                     //System.out.println("AI " + culture + " gathered the " + str);
                     playGatherCard(str, playerCulture);
-                    System.out.println("Norse AI didn't use God Power");
+                    System.out.println("Norse AI didn't use God Power for Gather");
 
                 } else if (freya == 1) {
                     norsePlayer.setFavor(norsePlayer.getFavor() - 1);
@@ -1465,7 +1465,7 @@ public class BoardController {
                     str = getRandomGatherType();
                     //System.out.println("AI " + culture + " gathered the " + str);
                     playGatherCard(str, playerCulture);
-                    System.out.println("Norse AI used God Power");
+                    System.out.println("Norse AI used God Power for Gather: Freya");
 
                 }
             } else if (culture.equals("Greek")) {
@@ -1485,7 +1485,7 @@ public class BoardController {
                     str = getRandomGatherType();
                     //System.out.println("AI " + culture + " gathered the " + str);
                     playGatherCard(str, playerCulture);
-                    System.out.println("Greek AI didn't use God Power");
+                    System.out.println("Greek AI didn't use God Power for Gather");
                 } else if (poseidon == 1) {
                     greekPlayer.setFavor(greekPlayer.getFavor() - 1);
                     greekPlayer.setFood(greekPlayer.getFood() + 5);
@@ -1499,7 +1499,7 @@ public class BoardController {
                     str = getRandomGatherType();
                     //System.out.println("AI " + culture + " gathered the " + str);
                     playGatherCard(str, playerCulture);
-                    System.out.println("Greek AI used God Power");
+                    System.out.println("Greek AI used God Power for Gather: Poseidon");
                 }
 
             } else if (culture.equals("Egyptian")) {
@@ -1519,7 +1519,7 @@ public class BoardController {
                     str = getRandomGatherType();
                     //System.out.println("AI " + culture + " gathered the " + str);
                     playGatherCard(str, playerCulture);
-                    System.out.println("Egyptian AI didn't use God Power");
+                    System.out.println("Egyptian AI didn't use God Power for Gather");
                 } else if (ra == 1) {
                     egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 2);
                     egyptianPlayer.setFood(egyptianPlayer.getFood() + 5);
@@ -1536,7 +1536,7 @@ public class BoardController {
                         str = getRandomGatherType();
                         //System.out.println("AI " + culture + " gathered the " + str);
                         playGatherCard(str, playerCulture);
-                        System.out.println("Egyptian AI used God Power");
+                        System.out.println("Egyptian AI used God Power for Gather: Ra");
                     } else if (aiCulture2.equals("Egyptian")) {
                         playGatherCard(str, aiCulture2);
                         str = getRandomGatherType();
@@ -1546,12 +1546,12 @@ public class BoardController {
                         str = getRandomGatherType();
                         //System.out.println("AI " + culture + " gathered the " + str);
                         playGatherCard(str, playerCulture);
-                        System.out.println("Egyptian AI used God Power");
+                        System.out.println("Egyptian AI used God Power for Gather: Ra");
                     }
                 }
             }
         } else if (actionCard == 10) {
-            System.out.println("AI played god explore card");
+            System.out.println(culture + " AI played god explore card");
             //ai plays god power explore
             if (culture.equals("Norse")) {
                 Random randBaldr = new Random(System.nanoTime());
@@ -1563,7 +1563,7 @@ public class BoardController {
                     baldr = 0;
                 }
                 if (baldr == 0) {
-                    System.out.println("Norse AI didn't use God Power");
+                    System.out.println("Norse AI didn't use God Power for Explore");
                     TerrainTiles selectedTerrain = getTerrainTile(index);
 
                     Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
@@ -1584,7 +1584,7 @@ public class BoardController {
                     TerrainTiles selectedTerrain = getTerrainTile(index);
                     Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
                     bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
-                    System.out.println("Norse AI used God Power: Other players don't get to select a tile");
+                    System.out.println("Norse AI used God Power for Explore: Baldr");
                 }
                 updateResources("Norse");
             } else if (culture.equals("Greek")) {
@@ -1597,7 +1597,7 @@ public class BoardController {
                     artemis = 0;
                 }
                 if (artemis == 0) {
-                    System.out.println("Greek AI didn't use God Power");
+                    System.out.println("Greek AI didn't use God Power for Explore");
                     TerrainTiles selectedTerrain = getTerrainTile(index);
 
                     Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
@@ -1631,7 +1631,7 @@ public class BoardController {
                     selectedTerrain = getTerrainTile((index + 2) % 4);
                     Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
                     bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
-                    System.out.println("Greek AI used God Power: Greek AI selects 2 tiles beore other players");
+                    System.out.println("Greek AI used God Power for Explore: Artemis");
                 }
                 updateResources("Greek");
 
@@ -1646,7 +1646,7 @@ public class BoardController {
                     ptah = 0;
                 }
                 if (ptah == 0) {
-                    System.out.println("Egyptian AI didn't use God Power");
+                    System.out.println("Egyptian AI didn't use God Power for Explore");
                     TerrainTiles selectedTerrain = getTerrainTile(index);
 
                     Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
@@ -1680,13 +1680,14 @@ public class BoardController {
                     selectedTerrain = getTerrainTile((index + 2) % 4);
                     Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
                     bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
-                    System.out.println("Egyptian AI used God Power: Egyptian AI selects 2 tiles beore other players");
+                    System.out.println("Egyptian AI used God Power for Explore: Ptah");
                 }
                 updateResources("Egyptian");
             }
 
         } else if (actionCard == 11) {
             //ai plays god power next age
+            System.out.println(culture + " AI played god next age card");
             if (culture.equals("Norse")) {
                 Random randOdin = new Random(System.nanoTime());
                 int odin = randOdin.nextInt(2);
@@ -1708,14 +1709,14 @@ public class BoardController {
 
                         }
                     }
-                    System.out.println("Norse AI didn't use God Power");
+                    System.out.println("Norse AI didn't use God Power for Next Age");
 
                 } else if (odin == 1) {
                     //board.setFourthCard(true);
                     Random randCard = new Random(System.nanoTime());
                     int fourthCard = randCard.nextInt(7);
                     playAuxAICard(culture, fourthCard);
-                    System.out.println("Norse AI used God Power: Norse AI is going to play a fourth card on this turn");
+                    System.out.println("Norse AI used God Power for Next Age: Odin");
 
                 }
             } else if (culture.equals("Greek")) {
@@ -1738,7 +1739,7 @@ public class BoardController {
                             bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
                         }
                     }
-                    System.out.println("Greek AI didn't use God Power Next age");
+                    System.out.println("Greek AI didn't use God Power for Next age");
                 } else if (zeus == 1) {
                     //board.setFourthCard(true);
                     if (greekPlayer.getAge() == 1) {
@@ -1761,7 +1762,7 @@ public class BoardController {
                         greekPlayer.setCurrentUnitList(greekUnitCards);
                     }
 
-                    System.out.println("Greek AI used God Power Next age: going to gain a free hero");
+                    System.out.println("Greek AI used God Power for Next age: Zeus");
 
                 }
             } else if (culture.equals("Egyptian")) {
@@ -1782,42 +1783,43 @@ public class BoardController {
                         egyptianPlayer.setAge(egyptianPlayer.getAge() + 1);
                         bGUI.changeAgeTextAI("Egyptian", egyptianPlayer.getAge(), egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor(), egyptianPlayer.getVictory());
                     }
-                    System.out.println("Egyptian AI didn't use God Power next age");
+                    System.out.println("Egyptian AI didn't use God Power for Next Age");
 
                 } else if (hathor == 1) {
+                    System.out.println("Egyptian AI used God Power for Next Age: Hathor");
                     egyptianPlayer.setFavor(egyptianPlayer.getFavor() - 1);
-                    System.out.println("Egyptian AI used God Power next age: Egyptian AI is going to eliminate one food producing tile from another player's board");
+                    //System.out.println("Egyptian AI used God Power next age: Egyptian AI is going to eliminate one food producing tile from another player's board");
                     if (norsePlayer.getNorseTerrains().contains(terrainList.get(0))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(0));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Norse");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Norse");
                     } else if (norsePlayer.getNorseTerrains().contains(terrainList.get(5))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(5));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Norse");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Norse");
                     } else if (norsePlayer.getNorseTerrains().contains(terrainList.get(9))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(9));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Norse");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Norse");
                     } else if (norsePlayer.getNorseTerrains().contains(terrainList.get(18))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(18));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Norse");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Norse");
                     } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(0))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(0));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Greek");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Greek");
                     } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(5))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(5));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Greek");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Greek");
                     } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(9))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(9));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Greek");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Greek");
                     } else if (greekPlayer.getGreekTerrains().contains(terrainList.get(18))) {
                         bGUI.setupRemoveTerrainTile("Norse", terrainList.get(18));
-                        System.out.println("Egyptian AI eliminated one food producing tile from Greek");
+                        //System.out.println("Egyptian AI eliminated one food producing tile from Greek");
                     } else {
-                        System.out.println("Neither Norse nor Greek has food producing tile!");
+                        //System.out.println("Neither Norse nor Greek has food producing tile!");
                     }
                 }
             }
         } else if (actionCard == 12) {
-            System.out.println("AI played god trade card");
+            System.out.println(culture + " AI played god trade card");
             if (culture.compareTo("Greek") == 0) {
                 Random randHermes = new Random(System.nanoTime());
                 int hathor = randHermes.nextInt(2);
@@ -1827,13 +1829,13 @@ public class BoardController {
                         updateResources(culture);
                         TradeHermesAI her = new TradeHermesAI();
                         her.playAI();
-                        System.out.print("and Greek AI used God power for Trade, Hermes");
+                        System.out.println("Greek AI used God power for Trade: Hermes");
                     }
                 }
                 actionCard = 5;
                 playAuxAICard("Greek", actionCard);
                 if (hathor != 0) {
-                    System.out.print(" and Greek AI has not used God power for Trade");
+                    System.out.println("Greek AI didn't use God power for Trade");
                 }
             } else if (culture.compareTo("Norse") == 0) {
                 Random randLoki = new Random(System.nanoTime());
@@ -1890,13 +1892,13 @@ public class BoardController {
                             updateResources("Norse");
                         }
 
-                        System.out.println("Norse AI used God power for Trade, Loki");
+                        System.out.println("Norse AI used God power for Trade: Loki");
                     }
                 }
                 actionCard = 5;
                 playAuxAICard("Norse", actionCard);
                 if (loki != 0) {
-                    System.out.println("Norse AI has not used God power for Trade");
+                    System.out.println("Norse AI didn't use God power for Trade");
                 }
             } else {
                 Random randTah = new Random(System.nanoTime());
@@ -1948,25 +1950,25 @@ public class BoardController {
 //                            tahExploreGUI eGUI = new tahExploreGUI();
 //                            terrainList =  board.tahPickExploreTerrains(eGUI, 5);
                         }
-                        System.out.println("Egyptian AI has used God power card of Trade, Tah.");
+                        System.out.println("Egyptian AI used God Power for Trade: Tah.");
                     }
 
                 }
 
-                System.out.println("Egyptian AI has not used God power card of trade");
+                System.out.println("Egyptian AI didn't use God Power for Trade");
                 actionCard = 5;
                 playAuxAICard(culture, actionCard);
             }
             //ai plays god power trade
         } else if (actionCard
                 == 13) {
-            System.out.println("AI played god recruit card");
+            System.out.println(culture + " AI played god recruit card");
             if (culture.compareTo("Greek") == 0) {
                 Random randApollo = new Random(System.nanoTime());
                 int apollo = randApollo.nextInt(2);
                 if (apollo == 0) {
                     if (greekPlayer.getFavor() >= 1) {
-                        System.out.println("Greek AI has used God Power card of Recruit, Apollo");
+                        System.out.println("Greek AI used God Power for Recruit: Apollo");
                         int newFavor = greekPlayer.getFavor() - 1;
                         greekPlayer.setFavor(newFavor);
                         updateResources("Greek");
@@ -1981,7 +1983,7 @@ public class BoardController {
                 actionCard = 6;
                 playAuxAICard(culture, actionCard);
                 if (apollo != 0) {
-                    System.out.println("Greek AI has not used God power card of recruit, Apollo");
+                    System.out.println("Greek AI didn't use God Power for Recruit");
                 }
             } else if (culture.compareTo("Norse") == 0) {
                 Random randApollo = new Random(System.nanoTime());
@@ -2005,9 +2007,9 @@ public class BoardController {
                     norseUnitCards.add(card);
                     norsePlayer.setCurrentUnitList(norseUnitCards);
                     updateResources("Norse");
-                    System.out.println("Norse AI has used God power card of recruit, Hel");
+                    System.out.println("Norse AI used God Power for Recruit: Hel");
                 } else {
-                    System.out.println("Norse AI has not used God power card of recruit, Hel");
+                    System.out.println("Norse AI didn't use God Powerfor Recruit");
                 }
                 actionCard = 6;
                 playAuxAICard(culture, actionCard);
@@ -2048,13 +2050,13 @@ public class BoardController {
                             egyptianPlayer.setCurrentUnitList(egyptianUnits);
                         }
                     }
-                    System.out.println("Egyptian AI has used God power for recruit, Osiris");
+                    System.out.println("Egyptian used God Power for Recruit: Osiris");
                 }
                 recruitGUI rGUI = new recruitGUI();
                 rGUI.setupRecruitGUI("Egyptian");
                 rGUI.setMaxRecruits(2);
                 if (osirisP != 0) {
-                    System.out.println("Egyptian AI has not used God power for recruit, Osiris");
+                    System.out.println("Egyptian AI didn't use God Power for Recruit");
                 }
             }
         }
