@@ -83,19 +83,19 @@ public class ApolloGodPowerGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         GreekApolloGUI apollo = new GreekApolloGUI();
-                apollo.addArchers();
-                apollo.setVisible(true);
-       
+        apollo.addArchers();
+        apollo.setVisible(true);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-               recruitGUI rGUI = new recruitGUI();
+        recruitGUI rGUI = new recruitGUI();
         rGUI.setupRecruitGUI("Greek");
         rGUI.setMaxRecruits(2);
         rGUI.setVisible(true);
-        
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
