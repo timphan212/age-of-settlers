@@ -1347,9 +1347,10 @@ public class BoardController {
                     System.out.println("Norse AI has used God power for Build, Njord");
                 } else {
                     System.out.println("Norse AI has not used God power for Build, Njord");
-                    actionCard = 2;
-                    playAuxAICard(culture, actionCard);
                 }
+                actionCard = 1;
+                playAuxAICard(culture, actionCard);
+
             }
             //ai plays god power build
 
@@ -4180,9 +4181,9 @@ public class BoardController {
     BoardController board;
 
     private void playAuxAICard(String culture, int actionCard) {
-
+//To change body of generated methods, choose Tools | Templates.
         if (actionCard == 0) {
-            System.out.println("AI played permanent attack card");
+//            System.out.println("AI played permanent attack card");
 //            Random randArea = new Random(System.nanoTime());
 //            int areaCard = randArea.nextInt(3);
 //
@@ -4374,125 +4375,358 @@ public class BoardController {
 //            }
         } else if (actionCard == 1) //build card
         {
-            System.out.println("AI played permanent build card");
 
             Random randBuilding = new Random(System.nanoTime());
-            int randBuild = randBuilding.nextInt(14);
 
             QuarryGUI quarry = new QuarryGUI();
             buildingGUI build = new buildingGUI();
-            if (randBuild == 0) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+            if (culture.equalsIgnoreCase("norse")) {
+                int randBuild = randBuilding.nextInt(14);
+                System.out.println("Norse AI played permanent build card");
 
-                }
+                if (randBuild == 0) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
 
-            } else if (randBuild == 1) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
-                }
+                    }
 
-            } else if (randBuild == 2) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
-                }
+                } else if (randBuild == 1) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                    }
 
-            } else if (randBuild == 3) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
-                }
+                } else if (randBuild == 2) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                    }
 
-            } else if (randBuild == 4) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
-                }
+                } else if (randBuild == 3) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                    }
 
-            } else if (randBuild == 5) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
-                }
+                } else if (randBuild == 4) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                    }
 
-            } else if (randBuild == 6) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
-                }
+                } else if (randBuild == 5) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                    }
 
-            } else if (randBuild == 7) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
-                }
+                } else if (randBuild == 6) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                    }
 
-            } else if (randBuild == 8) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
-                }
+                } else if (randBuild == 7) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                    }
 
-            } else if (randBuild == 9) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
-                }
-            } else if (randBuild == 10) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
-                }
+                } else if (randBuild == 8) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                    }
 
-            } else if (randBuild == 11) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
-                }
+                } else if (randBuild == 9) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                    }
+                } else if (randBuild == 10) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                    }
 
-            } else if (randBuild == 12) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
-                }
+                } else if (randBuild == 11) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                    }
 
-            } else if (randBuild == 13) {
-                if (norsePlayer.isQuarry() == true) {
-                    quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
-                    quarry.setVisible(true);
-                }
-                if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
-                }
+                } else if (randBuild == 12) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                    }
 
+                } else if (randBuild == 13) {
+                    if (norsePlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                    }
+                }
+            } else if (culture.equalsIgnoreCase("Egyptian")) {
+                int randBuild = randBuilding.nextInt(14);
+                System.out.println("Egyptian AI played permanent build card");
+
+                if (randBuild == 0) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+
+                    }
+
+                } else if (randBuild == 1) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                    }
+
+                } else if (randBuild == 2) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                    }
+
+                } else if (randBuild == 3) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                    }
+
+                } else if (randBuild == 4) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                    }
+
+                } else if (randBuild == 5) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                    }
+
+                } else if (randBuild == 6) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                    }
+
+                } else if (randBuild == 7) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                    }
+
+                } else if (randBuild == 8) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                    }
+
+                } else if (randBuild == 9) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                    }
+                } else if (randBuild == 10) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                    }
+
+                } else if (randBuild == 11) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                    }
+
+                } else if (randBuild == 12) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                    }
+
+                } else if (randBuild == 13) {
+                    if (egyptianPlayer.isQuarry() == true) {
+                        quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                        quarry.setVisible(true);
+                    }
+                    if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                    }
+                } else if (culture.equalsIgnoreCase("Greek")) {
+                    randBuild = randBuilding.nextInt(14);
+                    System.out.println("Greek AI played permanent build card ");
+
+                    if (randBuild == 0) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "House.png", 2, 0, 2, 0);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "House.png", 2, 0, 2, 0)) {
+
+                        }
+                    } else if (randBuild == 1) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Wall.png", 0, 0, 3, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Wall.png", 0, 0, 3, 3)) {
+                        }
+
+                    } else if (randBuild == 2) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Tower.png", 0, 0, 3, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Tower.png", 0, 0, 3, 3)) {
+                        }
+
+                    } else if (randBuild == 3) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Market.png", 0, 2, 0, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Market.png", 0, 2, 0, 3)) {
+                        }
+
+                    } else if (randBuild == 4) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Storehouse.png", 2, 2, 2, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Storehouse.png", 2, 2, 2, 2)) {
+                        }
+
+                    } else if (randBuild == 5) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Armory.png", 0, 0, 3, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Armory.png", 0, 0, 3, 2)) {
+                        }
+
+                    } else if (randBuild == 6) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Quarry.png", 4, 0, 0, 1);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Quarry.png", 4, 0, 0, 1)) {
+                        }
+
+                    } else if (randBuild == 7) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Monument.png", 3, 0, 0, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Monument.png", 3, 0, 0, 2)) {
+                        }
+
+                    } else if (randBuild == 8) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Granary.png", 0, 0, 2, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Granary.png", 0, 0, 2, 3)) {
+                        }
+
+                    } else if (randBuild == 9) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "WoodWork.png", 2, 0, 0, 3);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "WoodWork.png", 2, 0, 0, 3)) {
+                        }
+                    } else if (randBuild == 10) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "GoldMint.png", 3, 0, 2, 0);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "GoldMint.png", 3, 0, 2, 0)) {
+                        }
+
+                    } else if (randBuild == 11) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "SiegeWork.png", 0, 0, 3, 2);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "SiegeWork.png", 0, 0, 3, 2)) {
+                        }
+
+                    } else if (randBuild == 12) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "GreatTemple.png", 4, 4, 4, 4);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "GreatTemple.png", 4, 4, 4, 4)) {
+                        }
+
+                    } else if (randBuild == 13) {
+                        if (greekPlayer.isQuarry() == true) {
+                            quarry.resourceQuarry(culture, "Wonder.png", 10, 10, 10, 10);
+                            quarry.setVisible(true);
+                        }
+                        if (build.checkResources(culture, "Wonder.png", 10, 10, 10, 10)) {
+                        }
+                    }
+                }
             }
             //ai plays build
         } else if (actionCard == 2) {
@@ -4506,19 +4740,38 @@ public class BoardController {
             str = getRandomGatherType();
             //System.out.println("AI " + culture + " gathered the " + str);
             playGatherCard(str, playerCulture);
-            System.out.println("AI played permanent gather card");
+            System.out.println("AI & human played permanent gather card");
 
         } else if (actionCard == 3) {
-            System.out.println("AI played permanent explore card");
+            System.out.println("AI & human played permanent explore card");
+            //            terrainList = pickExploreTerrains(eGUI, 4);
 
             //ai plays explore
+            Random terrain = new Random(System.nanoTime());
+            int index = terrain.nextInt(4);
+            TerrainTiles selectedTerrain = getTerrainTile(index);
+
+            Component[] norseTerrainBoard = bGUI.getNorseTerrain().getComponents();
+            bGUI.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+
+            selectedTerrain = getTerrainTile((index + 1) % 4);
+
+            Component[] greekTerrainBoard = bGUI.getGreekTerrain().getComponents();
+            bGUI.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
+
+            selectedTerrain = getTerrainTile((index + 2) % 4);
+
+            Component[] egyptianTerrainBoard = bGUI.getEgyptianTerrain().getComponents();
+            bGUI.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
+
         } else if (actionCard == 4) {
-            System.out.println("AI played permanent next age card");
 
             if (culture.compareTo("Norse") == 0) {
                 int reqResources = findAge(norsePlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, norsePlayer.getWood(), norsePlayer.getGold(), norsePlayer.getFood(), norsePlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
+                    System.out.println("Norse AI played permanent next age card");
+
                     norsePlayer.setWood(norsePlayer.getWood() - reqResources);
                     norsePlayer.setGold(norsePlayer.getGold() - reqResources);
                     norsePlayer.setFood(norsePlayer.getFood() - reqResources);
@@ -4528,6 +4781,8 @@ public class BoardController {
 
                 }
             } else if (culture.compareTo("Greek") == 0) {
+                System.out.println("Greek AI played permanent next age card");
+
                 int reqResources = findAge(greekPlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
@@ -4539,6 +4794,8 @@ public class BoardController {
                     bGUI.changeAgeTextAI("Greek", greekPlayer.getAge(), greekPlayer.getWood(), greekPlayer.getGold(), greekPlayer.getFood(), greekPlayer.getFavor(), greekPlayer.getVictory());
                 }
             } else {
+                System.out.println("Egyptian AI played permanent next age card");
+
                 int reqResources = findAge(egyptianPlayer.getAge());
                 boolean advanceAge = checkAgeReqs(reqResources, egyptianPlayer.getWood(), egyptianPlayer.getGold(), egyptianPlayer.getFood(), egyptianPlayer.getFavor());
                 if (advanceAge == true && reqResources >= 3) {
@@ -4552,9 +4809,8 @@ public class BoardController {
             }
             //ai plays nextage
         } else if (actionCard == 5) {
-            System.out.println("AI played permanent trade card");
 
-            boolean market = false;
+            boolean market;
             if (culture.compareTo("Norse") == 0) {
                 market = norsePlayer.isMarket();
             } else if (culture.compareTo("Greek") == 0) {
@@ -4563,7 +4819,9 @@ public class BoardController {
                 market = egyptianPlayer.isMarket();
             }
 
-            if (market == true) {
+            if (market) {
+                tradeGUI trade = new tradeGUI();
+                trade.setupTradeGUI(culture);
                 Bank bank = Bank.getInstance();
                 Random randTradeCard = new Random(System.nanoTime());
 
@@ -4576,7 +4834,7 @@ public class BoardController {
                 int bankWoodCount = randTradeCard.nextInt(4);
                 int bankGoldCount = randTradeCard.nextInt(4);
                 int bankVictoryCount = randTradeCard.nextInt(4);
-                boolean victoryTradeFail = false;
+                boolean victoryTradeFail;
 
                 if (culture.compareTo("Norse") == 0) {
                     if (bankVictoryCount > 0) {
@@ -4624,16 +4882,22 @@ public class BoardController {
 
                 if (sum1 == sum2 && victoryTradeFail == false) {
                     if (culture.compareTo("Norse") == 0) {
+                        System.out.println("Norse AI played permanent trade card");
+
                         norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCount);
                         norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount + bankFavorCount);
                         norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount + bankWoodCount);
                         norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount + bankGoldCount);
                     } else if (culture.compareTo("Greek") == 0) {
+                        System.out.println(" Greek AI played permanent trade card");
+
                         greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount + bankFoodCount);
                         greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount + bankFavorCount);
                         greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount + bankWoodCount);
                         greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount + bankGoldCount);
                     } else {
+                        System.out.println("Egyptian AI played permanent trade card");
+
                         egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount + bankFoodCount);
                         egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount + bankFavorCount);
                         egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount + bankWoodCount);
@@ -4659,16 +4923,22 @@ public class BoardController {
 
                 if (sum1 == sum2) {
                     if (culture.compareTo("Norse") == 0) {
+                        System.out.println("Norse AI played permanent trade card");
+
                         norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount);
                         norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount);
                         norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount);
                         norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount);
                     } else if (culture.compareTo("Greek") == 0) {
+                        System.out.println("Greek AI played permanent trade card");
+
                         greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
                         greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
                         greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
                         greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
                     } else {
+                        System.out.println("Egyptian AI played permanent trade card");
+
                         egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
                         egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
                         egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
@@ -4715,13 +4985,7 @@ public class BoardController {
                 }
             }
 
-        } else if (actionCard == 6) {
-            System.out.println("AI played permanent recruit card");
-            recruitGUI rGUI = new recruitGUI();
-            rGUI.setupRecruitGUI(culture);
-            rGUI.setMaxRecruits(2);
-            //ai plays recruit
-        } //To change body of generated methods, choose Tools | Templates.
+        }
     }
 
     private String calculateBuildingCubes() {
