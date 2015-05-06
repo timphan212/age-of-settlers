@@ -313,76 +313,90 @@ public class horusAttackGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         List<String> buildings = new ArrayList<String>();
-        buildings.add("House.png");
-        buildings.add("Armor.png");
-        buildings.add("GoldMint.png");
-        buildings.add("Granary.png");
-        buildings.add("GreatTemple.png");
-        buildings.add("Market.png");
-        buildings.add("Monument.png");
-        buildings.add("Quarry.png");
-        buildings.add("SiegeWork.png");
-        buildings.add("Storehouse.png");
-        buildings.add("Tower.png");
-        buildings.add("Wall.png");
-        buildings.add("Wonder.png");
-        buildings.add("WoodWork.png");
 
-        if(houseSelection.isSelected() == true) {
-            if(g.getHouse() > 0)
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(armorySelection.isSelected() == true) {
-            if(g.isArmory())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(goldmintSelection.isSelected() == true) {
-            if(g.isGoldmint())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(granarySelection.isSelected() == true) {
-            if(g.isGranary())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if (greattempleSelection.isSelected() == true) {
-            if(g.isGreattemple())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(marketSelection.isSelected() == true) {
-            if(g.isMarket())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(monumentSelection.isSelected() == true) {
-            if(g.isMonument())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(quarrySelection.isSelected() == true) {
-            if(g.isQuarry())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(siegeworkshopSelection.isSelected() == true) {
-            if(g.isSiegeworkshop())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(storehouseSelection.isSelected() == true) {
-            if(g.isStorehouse())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(towerSelection.isSelected() == true) {
-            if(g.isTower())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(wallSelection.isSelected() == true) {
-            if(g.isWall())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(wonderSelection.isSelected() == true) {
-            if(g.isWonder())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(woodworkshopSelection.isSelected() == true) {
-            if(g.isWoodworkshop())
-            board.removeBuildingTiles(playerCulture, buildings);
+        if (houseSelection.isSelected() == true) {
+            if (g.getHouse() > 0) {
+                buildings.add("House.png");
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (armorySelection.isSelected() == true) {
+            if (g.isArmory()) {
+                buildings.add("Armory.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (goldmintSelection.isSelected() == true) {
+            if (g.isGoldmint()) {
+                buildings.add("GoldMint.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (granarySelection.isSelected() == true) {
+            if (g.isGranary()) {
+                buildings.add("Granary.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (greattempleSelection.isSelected() == true) {
+            if (g.isGreattemple()) {
+                buildings.add("GreatTemple.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (marketSelection.isSelected() == true) {
+            if (g.isMarket()) {
+                buildings.add("Market.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (monumentSelection.isSelected() == true) {
+            if (g.isMonument()) {
+                buildings.add("Monument.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (quarrySelection.isSelected() == true) {
+            if (g.isQuarry()) {
+                buildings.add("Quarry.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (siegeworkshopSelection.isSelected() == true) {
+            if (g.isSiegeworkshop()) {
+                buildings.add("SiegeWork.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (storehouseSelection.isSelected() == true) {
+            if (g.isStorehouse()) {
+                buildings.add("Storehouse.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (towerSelection.isSelected() == true) {
+            if (g.isTower()) {
+                buildings.add("Tower.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (wallSelection.isSelected() == true) {
+            if (g.isWall()) {
+                buildings.add("Wall.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (wonderSelection.isSelected() == true) {
+            if (g.isWonder()) {
+                buildings.add("Wonder.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
+        } else if (woodworkshopSelection.isSelected() == true) {
+            if (g.isWoodworkshop()) {
+                buildings.add("WoodWork.png");
+
+                board.removeBuildingTiles("Greek", buildings);
+            }
         }
         this.setVisible(false);
         //board.initPlayPermCards();

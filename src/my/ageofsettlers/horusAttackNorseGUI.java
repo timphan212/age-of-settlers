@@ -188,89 +188,103 @@ public class horusAttackNorseGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         List<String> buildings = new ArrayList<String>();
-        buildings.add("House.png");
-        buildings.add("Armor.png");
-        buildings.add("GoldMint.png");
-        buildings.add("Granary.png");
-        buildings.add("GreatTemple.png");
-        buildings.add("Market.png");
-        buildings.add("Monument.png");
-        buildings.add("Quarry.png");
-        buildings.add("SiegeWork.png");
-        buildings.add("Storehouse.png");
-        buildings.add("Tower.png");
-        buildings.add("Wall.png");
-        buildings.add("Wonder.png");
-        buildings.add("WoodWork.png");
 
-        if(houseSelection.isSelected() == true) {
-            if(egyptianPlayer.getHouse() > 0)
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(armorySelection.isSelected() == true) {
-            if(egyptianPlayer.isArmory())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(goldmintSelection.isSelected() == true) {
-            if(egyptianPlayer.isGoldmint())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(granarySelection.isSelected() == true) {
-            if(egyptianPlayer.isGranary())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if (greattempleSelection.isSelected() == true) {
-            if(egyptianPlayer.isGreattemple())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(marketSelection.isSelected() == true) {
-            if(egyptianPlayer.isMarket())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(monumentSelection.isSelected() == true) {
-            if(egyptianPlayer.isMonument())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(quarrySelection.isSelected() == true) {
-            if(egyptianPlayer.isQuarry())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(siegeworkshopSelection.isSelected() == true) {
-            if(egyptianPlayer.isSiegeworkshop())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(storehouseSelection.isSelected() == true) {
-            if(egyptianPlayer.isStorehouse())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(towerSelection.isSelected() == true) {
-            if(egyptianPlayer.isTower())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(wallSelection.isSelected() == true) {
-            if(egyptianPlayer.isWall())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(wonderSelection.isSelected() == true) {
-            if(egyptianPlayer.isWonder())
-            board.removeBuildingTiles(playerCulture, buildings);
-        }
-        else if(woodworkshopSelection.isSelected() == true) {
-            if(egyptianPlayer.isWoodworkshop())
-            board.removeBuildingTiles(playerCulture, buildings);
+        if (houseSelection.isSelected() == true) {
+            if (egyptianPlayer.getHouse() > 0) {
+                buildings.add("House.png");
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (armorySelection.isSelected() == true) {
+            if (egyptianPlayer.isArmory()) {
+                buildings.add("Armory.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (goldmintSelection.isSelected() == true) {
+            if (egyptianPlayer.isGoldmint()) {
+                buildings.add("GoldMint.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (granarySelection.isSelected() == true) {
+            if (egyptianPlayer.isGranary()) {
+                buildings.add("Granary.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (greattempleSelection.isSelected() == true) {
+            if (egyptianPlayer.isGreattemple()) {
+                buildings.add("GreatTemple.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (marketSelection.isSelected() == true) {
+            if (egyptianPlayer.isMarket()) {
+                buildings.add("Market.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (monumentSelection.isSelected() == true) {
+            if (egyptianPlayer.isMonument()) {
+                buildings.add("Monument.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (quarrySelection.isSelected() == true) {
+            if (egyptianPlayer.isQuarry()) {
+                buildings.add("Quarry.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (siegeworkshopSelection.isSelected() == true) {
+            if (egyptianPlayer.isSiegeworkshop()) {
+                buildings.add("SiegeWork.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (storehouseSelection.isSelected() == true) {
+            if (egyptianPlayer.isStorehouse()) {
+                buildings.add("Storehouse.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (towerSelection.isSelected() == true) {
+            if (egyptianPlayer.isTower()) {
+                buildings.add("Tower.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (wallSelection.isSelected() == true) {
+            if (egyptianPlayer.isWall()) {
+                buildings.add("Wall.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (wonderSelection.isSelected() == true) {
+            if (egyptianPlayer.isWonder()) {
+                buildings.add("Wonder.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
+        } else if (woodworkshopSelection.isSelected() == true) {
+            if (egyptianPlayer.isWoodworkshop()) {
+                buildings.add("WoodWork.png");
+
+                board.removeBuildingTiles("Egyptian", buildings);
+            }
         }
         this.setVisible(false);
         buildingGUI buildGUI = new buildingGUI();
         buildGUI.setVisible(true);
         //board.initPlayPermCards();
-       // board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
+        // board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
         buildingGUI buildGUI = new buildingGUI();
-            buildGUI.setVisible(true);
+        buildGUI.setVisible(true);
         //board.initPlayPermCards();
         //board.configureTurnFormation(board.getCurrentPlayerTurn()+1);
     }//GEN-LAST:event_jButton2ActionPerformed
