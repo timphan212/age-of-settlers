@@ -1086,9 +1086,42 @@ public class BoardController {
                 int playerWoodCount = randTradeCard.nextInt(2);
                 int playerGoldCount = randTradeCard.nextInt(2);
 
+                if (norsePlayer.getFood() < playerFoodCount) {
+                    playerFoodCount = norsePlayer.getFood();
+                }
+                if (norsePlayer.getFavor() < playerFavorCount) {
+                    playerFavorCount = norsePlayer.getFavor();
+                }
+                if (norsePlayer.getWood() < playerWoodCount) {
+                    playerWoodCount = norsePlayer.getWood();
+                }
+                if (norsePlayer.getGold() < playerGoldCount) {
+                    playerGoldCount = norsePlayer.getGold();
+                }
                 int sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
                 int sum2 = 2;
+                if (norsePlayer.getFood() + norsePlayer.getFavor() + norsePlayer.getWood() + norsePlayer.getGold() > 1) {
+                    while (sum1 != sum2) {
+                        playerFoodCount = randTradeCard.nextInt(2);
+                        playerFavorCount = randTradeCard.nextInt(2);
+                        playerWoodCount = randTradeCard.nextInt(2);
+                        playerGoldCount = randTradeCard.nextInt(2);
+                        if (norsePlayer.getFood() < playerFoodCount) {
+                            playerFoodCount = norsePlayer.getFood();
+                        }
+                        if (norsePlayer.getFavor() < playerFavorCount) {
+                            playerFavorCount = norsePlayer.getFavor();
+                        }
+                        if (norsePlayer.getWood() < playerWoodCount) {
+                            playerWoodCount = norsePlayer.getWood();
+                        }
+                        if (norsePlayer.getGold() < playerGoldCount) {
+                            playerGoldCount = norsePlayer.getGold();
+                        }
+                        sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
 
+                    }
+                }
                 if (sum1 == sum2) {
                     if (culture.compareTo("Norse") == 0) {
                         System.out.println("Norse AI played permanent trade card");
@@ -1115,39 +1148,82 @@ public class BoardController {
 
                     updateResources(culture);
                     Random randTrade = new Random(System.nanoTime());
+                    int foodTradeIn = 0;
+                    int favorTradeIn = 0;
+                    int woodTradeIn = 0;
+                    int goldTradeIn = 0;
+                    int foodTradeOut = 0;
+                    int favorTradeOut = 0;
+                    int woodTradeOut = 0;
+                    int goldTradeOut = 0;
 
-                    int bankFoodCountAI = randTrade.nextInt(2);
-                    int bankFavorCountAI = randTrade.nextInt(2);
-                    int bankWoodCountAI = randTrade.nextInt(2);
-                    int bankGoldCountAI = randTrade.nextInt(2);
-                    boolean victoryTradeFailAI = false;
+                    int sumTradeIn = foodTradeIn + favorTradeIn
+                            + woodTradeIn
+                            + goldTradeIn;
 
-                    int sum1AI = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
-                    int sum2AI = bankFoodCountAI + bankFavorCountAI + bankWoodCountAI + bankGoldCountAI;
+                    int sumTradeOut = foodTradeOut + favorTradeOut
+                            + woodTradeOut
+                            + goldTradeOut;
+                    if (culture.compareTo("Norse") == 0) {
+                        foodTradeIn = randTrade.nextInt(norsePlayer.getFood());
+                        favorTradeIn = randTrade.nextInt(norsePlayer.getFavor());
+                        woodTradeIn = randTrade.nextInt(norsePlayer.getWood());
+                        goldTradeIn = randTrade.nextInt(norsePlayer.getGold());
+                    }
+                    if (culture.compareTo("Greek") == 0) {
+                        foodTradeIn = randTrade.nextInt(greekPlayer.getFood());
+                        favorTradeIn = randTrade.nextInt(greekPlayer.getFavor());
+                        woodTradeIn = randTrade.nextInt(greekPlayer.getWood());
+                        goldTradeIn = randTrade.nextInt(greekPlayer.getGold());
+                    }
+                    if (culture.compareTo("Egypt") == 0) {
+                        foodTradeIn = randTrade.nextInt(egyptianPlayer.getFood());
+                        favorTradeIn = randTrade.nextInt(egyptianPlayer.getFavor());
+                        woodTradeIn = randTrade.nextInt(egyptianPlayer.getWood());
+                        goldTradeIn = randTrade.nextInt(egyptianPlayer.getGold());
+                    }
 
-                    if (sum1AI == sum2AI && victoryTradeFailAI == false) {
-                        if (this.playerCulture.compareTo("Norse") == 0) {
-                            norsePlayer.setFood(norsePlayer.getFood() - playerFoodCount + bankFoodCountAI);
-                            norsePlayer.setFavor(norsePlayer.getFavor() - playerFavorCount + bankFavorCountAI);
-                            norsePlayer.setWood(norsePlayer.getWood() - playerWoodCount + bankWoodCountAI);
-                            norsePlayer.setGold(norsePlayer.getGold() - playerGoldCount + bankGoldCountAI);
-                        } else if (this.playerCulture.compareTo("Greek") == 0) {
-                            greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount + bankFoodCountAI);
-                            greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount + bankFavorCountAI);
-                            greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount + bankWoodCountAI);
-                            greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount + bankGoldCountAI);
-                        } else {
-                            egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount + bankFoodCountAI);
-                            egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount + bankFavorCountAI);
-                            egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount + bankWoodCountAI);
-                            egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount + bankGoldCountAI);
+                    sumTradeIn = foodTradeIn + favorTradeIn
+                            + woodTradeIn
+                            + goldTradeIn;
+
+                    Bank bank = Bank.getInstance();
+
+                    if (sumTradeIn <= (bank.getFood() + bank.getFavor() + bank.getWood() + bank.getGold())) {
+                        while (sumTradeIn != sumTradeOut) {
+                            foodTradeOut = randTrade.nextInt(bank.getFood());
+                            favorTradeOut = randTrade.nextInt(bank.getFavor());
+                            woodTradeOut = randTrade.nextInt(bank.getWood());
+                            goldTradeOut = randTrade.nextInt(bank.getGold());
+
+                            sumTradeOut = foodTradeOut + favorTradeOut
+                                    + woodTradeOut
+                                    + goldTradeOut;
+
                         }
-                        Bank bank = Bank.getInstance();
-                        bank.setFood(bank.getFood() + playerFoodCount - bankFoodCountAI);
-                        bank.setFavor(bank.getFavor() + playerFavorCount - bankFavorCountAI);
-                        bank.setWood(bank.getWood() + playerWoodCount - bankWoodCountAI);
-                        bank.setGold(bank.getGold() + playerGoldCount - bankGoldCountAI);
-                        updateResources(this.playerCulture);
+                    }
+                    if (sumTradeIn == sumTradeOut) {
+                        if (this.playerCulture.compareTo("Norse") == 0) {
+                            norsePlayer.setFood(norsePlayer.getFood() - foodTradeIn + foodTradeOut);
+                            norsePlayer.setFavor(norsePlayer.getFavor() - favorTradeIn + favorTradeOut);
+                            norsePlayer.setWood(norsePlayer.getWood() - woodTradeIn + woodTradeOut);
+                            norsePlayer.setGold(norsePlayer.getGold() - goldTradeIn + goldTradeOut);
+                        } else if (this.playerCulture.compareTo("Greek") == 0) {
+                            greekPlayer.setFood(greekPlayer.getFood() - foodTradeIn + foodTradeOut);
+                            greekPlayer.setFavor(greekPlayer.getFavor() - favorTradeIn + favorTradeOut);
+                            greekPlayer.setWood(greekPlayer.getWood() - woodTradeIn + woodTradeOut);
+                            greekPlayer.setGold(greekPlayer.getGold() - goldTradeIn + goldTradeOut);
+                        } else {
+                            egyptianPlayer.setFood(egyptianPlayer.getFood() - foodTradeIn + foodTradeOut);
+                            egyptianPlayer.setFavor(egyptianPlayer.getFavor() - favorTradeIn + favorTradeOut);
+                            egyptianPlayer.setWood(egyptianPlayer.getWood() - woodTradeIn + woodTradeOut);
+                            egyptianPlayer.setGold(egyptianPlayer.getGold() - goldTradeIn + goldTradeOut);
+                        }
+                        bank.setFood(bank.getFood() + foodTradeIn - foodTradeOut);
+                        bank.setFavor(bank.getFavor() + favorTradeIn - favorTradeOut);
+                        bank.setWood(bank.getWood() + woodTradeIn - woodTradeOut);
+                        bank.setGold(bank.getGold() + goldTradeIn - goldTradeOut);
+                        updateResources(culture);
                         configureTurnFormation(getCurrentPlayerTurn() + 1);
                     }
                 }
@@ -1766,7 +1842,6 @@ public class BoardController {
                     if (norsePlayer.getFavor() >= 1) {
                         norsePlayer.setFavor(norsePlayer.getFavor() - 1);
                         updateResources(culture);
-                        int lokiOpponent = randLoki.nextInt(2);
                         int sum2 = 5;
                         int sum1 = 0;
                         int playerFoodCount = 0;
@@ -1777,10 +1852,18 @@ public class BoardController {
 
                         if (sumOfOpponent >= 5) {
                             for (;;) {
-                                playerFoodCount = randLoki.nextInt(greekPlayer.getFood());
-                                playerFavorCount = randLoki.nextInt(greekPlayer.getFavor());
-                                playerWoodCount = randLoki.nextInt(greekPlayer.getWood());
-                                playerGoldCount = randLoki.nextInt(greekPlayer.getGold());
+                                if (greekPlayer.getFood() > 0) {
+                                    playerFoodCount = randLoki.nextInt(greekPlayer.getFood());
+                                }
+                                if (greekPlayer.getFavor() > 0) {
+                                    playerFavorCount = randLoki.nextInt(greekPlayer.getFavor());
+                                }
+                                if (greekPlayer.getWood() > 0) {
+                                    playerWoodCount = randLoki.nextInt(greekPlayer.getWood());
+                                }
+                                if (greekPlayer.getGold() > 0) {
+                                    playerGoldCount = randLoki.nextInt(greekPlayer.getGold());
+                                }
 
                                 sum1 = playerFoodCount + playerFavorCount + playerWoodCount + playerGoldCount;
 
@@ -1791,40 +1874,20 @@ public class BoardController {
                             }
 
                         }
-                        if (lokiOpponent == 0) {
 
-                            if (sum1 == sum2) {
-                                egyptianPlayer.setFood(egyptianPlayer.getFood() - playerFoodCount);
-                                egyptianPlayer.setFavor(egyptianPlayer.getFavor() - playerFavorCount);
-                                egyptianPlayer.setWood(egyptianPlayer.getWood() - playerWoodCount);
-                                egyptianPlayer.setGold(egyptianPlayer.getGold() - playerGoldCount);
+                        if (sum1 == sum2) {
+                            greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
+                            greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
+                            greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
+                            greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
 
-                                norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
-                                norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
-                                norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
-                                norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
+                            norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
+                            norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
+                            norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
+                            norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
 
-                                updateResources("Egyptian");
-                                updateResources("Norse");
-                            }
-
-                        } else {
-
-                            if (sum1 == sum2) {
-                                greekPlayer.setFood(greekPlayer.getFood() - playerFoodCount);
-                                greekPlayer.setFavor(greekPlayer.getFavor() - playerFavorCount);
-                                greekPlayer.setWood(greekPlayer.getWood() - playerWoodCount);
-                                greekPlayer.setGold(greekPlayer.getGold() - playerGoldCount);
-
-                                norsePlayer.setFood(norsePlayer.getFood() + playerFoodCount);
-                                norsePlayer.setFavor(norsePlayer.getFavor() + playerFavorCount);
-                                norsePlayer.setWood(norsePlayer.getWood() + playerWoodCount);
-                                norsePlayer.setGold(norsePlayer.getGold() + playerGoldCount);
-
-                                updateResources("Greek");
-                                updateResources("Norse");
-                            }
-
+                            updateResources("Greek");
+                            updateResources("Norse");
                         }
 
                         System.out.println("Norse AI used God power for Trade, Loki");
@@ -1895,7 +1958,8 @@ public class BoardController {
                 playAuxAICard(culture, actionCard);
             }
             //ai plays god power trade
-        } else if (actionCard == 13) {
+        } else if (actionCard
+                == 13) {
             System.out.println("AI played god recruit card");
             if (culture.compareTo("Greek") == 0) {
                 Random randApollo = new Random(System.nanoTime());
@@ -1994,7 +2058,9 @@ public class BoardController {
                 }
             }
         }
-        this.configureTurnFormation(currentPlayerTurn + 1);
+
+        this.configureTurnFormation(currentPlayerTurn
+                + 1);
 
     }
 

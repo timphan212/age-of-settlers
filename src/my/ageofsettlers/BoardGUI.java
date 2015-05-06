@@ -9,7 +9,6 @@ import java.awt.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  *
  * @author Tim
@@ -22,30 +21,28 @@ public class BoardGUI extends javax.swing.JFrame {
     public BoardGUI() {
         initComponents();
     }
-    
+
     public BoardGUI(String boardType) {
         initComponents();
         this.boardController = BoardController.getInstance();
-        if(boardType.compareTo("Norse") == 0) {
+        if (boardType.compareTo("Norse") == 0) {
             jTabbedPane1.setSelectedIndex(0);
             this.boardController.setPlayerCulture(boardType);
             this.boardController.setAiCulture("Greek");
             this.boardController.setAiCulture2("Egyptian");
-        }
-        else if(boardType.compareTo("Greek") == 0) {
+        } else if (boardType.compareTo("Greek") == 0) {
             jTabbedPane1.setSelectedIndex(1);
             this.boardController.setPlayerCulture(boardType);
             this.boardController.setAiCulture("Norse");
             this.boardController.setAiCulture2("Egyptian");
-        }
-        else if(boardType.compareTo("Egyptian") == 0) {
+        } else if (boardType.compareTo("Egyptian") == 0) {
             jTabbedPane1.setSelectedIndex(2);
             this.boardController.setPlayerCulture(boardType);
             this.boardController.setAiCulture("Norse");
             this.boardController.setAiCulture2("Greek");
         }
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -7645,7 +7642,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain1_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain1_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7654,7 +7651,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain2_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain2_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7663,7 +7660,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain3_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain3_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7672,7 +7669,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain4_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain4_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7681,7 +7678,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain5_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain5_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7690,7 +7687,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain6_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain6_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7699,7 +7696,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain7_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain7_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7708,7 +7705,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain8_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain8_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7717,7 +7714,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain9_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain9_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7726,7 +7723,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain10_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain10_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7735,7 +7732,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain11_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain11_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7744,7 +7741,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain12_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain12_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7753,7 +7750,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain13_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain13_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7762,7 +7759,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain14_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain14_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7771,7 +7768,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain15_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain15_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7780,7 +7777,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain16_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain16_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7789,7 +7786,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain17_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain17_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7798,7 +7795,7 @@ public class BoardGUI extends javax.swing.JFrame {
 
     private void terrain18_imgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terrain18_imgMouseClicked
         boolean terrainSuccess = this.boardController.terrainHandler(evt);
-        if(terrainSuccess == true) {
+        if (terrainSuccess == true) {
             this.selectCultureTerrain(evt);
             boardController.incrementPlayerTurnCount();
             callAIHandler();
@@ -7829,67 +7826,67 @@ public class BoardGUI extends javax.swing.JFrame {
     private void egyptianAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_egyptianAgeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_egyptianAgeActionPerformed
-    
+
     private void callAIHandler() {
-        if(boardController.getPlayerTurnCount() == 6) {
+        if (boardController.getPlayerTurnCount() == 6) {
             jTabbedPane2.remove(0);
             ReadyGUI ready = new ReadyGUI();
             ready.setVisible(true);
-        }
-        else if(boardController.getPlayerTurnCount() % 2 != 0) {
+        } else if (boardController.getPlayerTurnCount() % 2 != 0) {
             boardController.aiTurnHandler(jTabbedPane2, terrain.getComponents(), norseTerrain.getComponents(), greekTerrain.getComponents(), egyptTerrain.getComponents());
         }
     }
-    
-    public javax.swing.JPanel getNorseTerrain(){
+
+    public javax.swing.JPanel getNorseTerrain() {
         return norseTerrain;
     }
-    public javax.swing.JPanel getGreekTerrain(){
+
+    public javax.swing.JPanel getGreekTerrain() {
         return greekTerrain;
     }
-    public javax.swing.JPanel getEgyptianTerrain(){
+
+    public javax.swing.JPanel getEgyptianTerrain() {
         return egyptTerrain;
     }
+
     public void selectCultureTerrain(java.awt.event.MouseEvent evt) {
         String index = evt.getComponent().getAccessibleContext().getAccessibleDescription();
         TerrainTiles selectedTerrain = boardController.getTerrainTile(Integer.parseInt(index));
-        
-        if(boardController.getPlayerCulture().compareTo("Norse") == 0) {
+
+        if (boardController.getPlayerCulture().compareTo("Norse") == 0) {
             Component[] norseTerrainBoard = norseTerrain.getComponents();
-            this.drawCultureTerrain(norseTerrainBoard, selectedTerrain);            
-        }
-        else if(boardController.getPlayerCulture().compareTo("Greek") == 0) {
+            this.drawCultureTerrain(norseTerrainBoard, selectedTerrain);
+        } else if (boardController.getPlayerCulture().compareTo("Greek") == 0) {
             Component[] greekTerrainBoard = greekTerrain.getComponents();
             this.drawCultureTerrain(greekTerrainBoard, selectedTerrain);
-        }
-        else if(boardController.getPlayerCulture().compareTo("Egyptian") == 0) {
+        } else if (boardController.getPlayerCulture().compareTo("Egyptian") == 0) {
             Component[] egyptianTerrainBoard = egyptTerrain.getComponents();
             this.drawCultureTerrain(egyptianTerrainBoard, selectedTerrain);
         }
     }
-    
+
     public void drawCultureTerrain(Component[] cultureTerrainBoard, TerrainTiles selectedTerrain) {
-        for(Component terrainComponent : cultureTerrainBoard) {
-                if(terrainComponent instanceof javax.swing.JPanel) {
-                    javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
-                    javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                    
-                    if(label.getAccessibleContext().getAccessibleDescription() != null) {
-                        if(selectedTerrain.getTerrainType().compareTo(label.getAccessibleContext().getAccessibleDescription()) == 0) {
-                            label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + selectedTerrain.getFileName())));
-                            label.getAccessibleContext().setAccessibleDescription("");
-                            label.getAccessibleContext().setAccessibleName(selectedTerrain.getFileName());
-                            return;
-                        }
+        for (Component terrainComponent : cultureTerrainBoard) {
+            if (terrainComponent instanceof javax.swing.JPanel) {
+                javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
+                javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
+
+                if (label.getAccessibleContext().getAccessibleDescription() != null) {
+                    if (selectedTerrain.getTerrainType().compareTo(label.getAccessibleContext().getAccessibleDescription()) == 0) {
+                        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + selectedTerrain.getFileName())));
+                        label.getAccessibleContext().setAccessibleDescription("");
+                        label.getAccessibleContext().setAccessibleName(selectedTerrain.getFileName());
+                        return;
                     }
                 }
             }
+        }
     }
-    
+
     public void setTerrainTabLabelIcon(List<TerrainTiles> terrainList) {
         Component[] terrainComponents = terrain.getComponents();
         int count = 0;
-        
+
         for (Component terrainComponent : terrainComponents) {
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
@@ -7897,67 +7894,63 @@ public class BoardGUI extends javax.swing.JFrame {
                 TerrainTiles terrainSetup = terrainList.get(count);
                 label.getAccessibleContext().setAccessibleDescription(Integer.toString(terrainSetup.getIndex()));
                 label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrainSetup.getFileName())));
-            } 
-            else {
+            } else {
                 count--;
             }
-            
+
             count++;
         }
     }
-    
+
     public void changeAgeText(String culture, int age, int wood, int gold, int food, int favor, int victory) {
         nextAgeGUI naGUI = new nextAgeGUI();
         javax.swing.JTextField field = naGUI.getTextField();
         String str = "";
-        
-        if(culture.compareTo("Norse") == 0) {
+
+        if (culture.compareTo("Norse") == 0) {
             str = setAgeText(norseAge, age);
             changeBoardResources(culture, wood, gold, food, favor, victory);
-        } 
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             str = setAgeText(greekAge, age);
             changeBoardResources(culture, wood, gold, food, favor, victory);
-        }
-        else {
+        } else {
             str = setAgeText(egyptianAge, age);
             changeBoardResources(culture, wood, gold, food, favor, victory);
         }
-        
+
         field.setText(field.getText() + " " + str);
         naGUI.setVisible(true);
     }
-    
+
     public void changeAgeTextAI(String culture, int age, int wood, int gold, int food, int favor, int victory) {
-        
-        if(culture.compareTo("Norse") == 0) {
+        String str = "";
+
+        if (culture.compareTo("Norse") == 0) {
+            str = setAgeText(norseAge, age);
             changeBoardResources(culture, wood, gold, food, favor, victory);
-        } 
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
+            str = setAgeText(greekAge, age);
+            changeBoardResources(culture, wood, gold, food, favor, victory);
+        } else {
+            str = setAgeText(egyptianAge, age);
             changeBoardResources(culture, wood, gold, food, favor, victory);
         }
-        else {
-            changeBoardResources(culture, wood, gold, food, favor, victory);
-        }
-        
     }
-    
+
     public void changeBoardResources(String culture, int wood, int gold, int food, int favor, int victory) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             setResources(norseFoodResources, food);
             setResources(norseWoodResources, wood);
             setResources(norseGoldResources, gold);
             setResources(norseFavorResources, favor);
             setResources(norseVictoryResources, victory);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             setResources(greekFoodResources, food);
             setResources(greekWoodResources, wood);
             setResources(greekGoldResources, gold);
             setResources(greekFavorResources, favor);
             setResources(greekVictoryResources, victory);
-        }
-        else {
+        } else {
             setResources(egyptianFoodResources, food);
             setResources(egyptianWoodResources, wood);
             setResources(egyptianGoldResources, gold);
@@ -7965,125 +7958,113 @@ public class BoardGUI extends javax.swing.JFrame {
             setResources(egyptianVictoryResources, victory);
         }
     }
-    
-    
+
     private String setAgeText(javax.swing.JTextField textField, int age) {
-        if(age == 1) {
+        if (age == 1) {
             textField.setText("Classical Age");
             return "Classical Age";
-        }
-        else if(age == 2) {
+        } else if (age == 2) {
             textField.setText("Heroic Age");
             return "Heroic Age";
-        }
-        else {
+        } else {
             textField.setText("Mythic Age");
             return "Mythic Age";
         }
     }
-    
+
     private void setResources(javax.swing.JPanel resourcePanel, int resourceCount) {
         Component[] resourceComponents = resourcePanel.getComponents();
 
         for (int i = 0; i < resourceComponents.length; i++) {
             if (resourceComponents[i] instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) resourceComponents[i];
-                if(i < resourceCount) {
+                if (i < resourceCount) {
                     panel.setVisible(true);
-                }
-                else {
+                } else {
                     panel.setVisible(false);
                 }
-            } 
+            }
         }
     }
-    
+
     public void setupBuildingIcon(String culture, String building) {
-       
-        if(culture.compareTo("Norse") == 0) {
+
+        if (culture.compareTo("Norse") == 0) {
             setBuildingIcon(norseBuildingPanel, building);
-        }
-        else if(culture.compareTo("Greek") == 0) {
-           
+        } else if (culture.compareTo("Greek") == 0) {
+
             setBuildingIcon(greekBuildingPanel, building);
-        }
-        else {
+        } else {
             setBuildingIcon(egyptianBuildingPanel, building);
         }
     }
-    
+
     private void setBuildingIcon(javax.swing.JPanel buildingPanel, String building) {
         Component[] buildComponents = buildingPanel.getComponents();
         for (Component buildComponent : buildComponents) {
             if (buildComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) buildComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                if(label.getAccessibleContext().getAccessibleName().compareTo("") == 0) {
+                if (label.getAccessibleContext().getAccessibleName().compareTo("") == 0) {
                     label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + building)));
                     label.getAccessibleContext().setAccessibleName(building);
                     break;
                 }
-            } 
+            }
         }
     }
-    
+
     public void setupBuildingRemovalIcon(String culture, List<String> building) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             setBuildingRemovalIcon(norseBuildingPanel, building);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             setBuildingRemovalIcon(greekBuildingPanel, building);
-        }
-        else {
+        } else {
             setBuildingRemovalIcon(egyptianBuildingPanel, building);
         }
     }
-    
+
     private void setBuildingRemovalIcon(javax.swing.JPanel buildingPanel, List<String> building) {
         Component[] buildComponents = buildingPanel.getComponents();
-        
-        for(int i = 0; i < building.size(); i++) {
+
+        for (int i = 0; i < building.size(); i++) {
             for (Component buildComponent : buildComponents) {
                 if (buildComponent instanceof javax.swing.JPanel) {
                     javax.swing.JPanel panel = (javax.swing.JPanel) buildComponent;
                     javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                    if(label.getAccessibleContext().getAccessibleName().compareTo(building.get(i)) == 0) {
+                    if (label.getAccessibleContext().getAccessibleName().compareTo(building.get(i)) == 0) {
                         label.setIcon(null);
                         label.getAccessibleContext().setAccessibleName("");
                         break;
                     }
-                } 
+                }
             }
         }
     }
-    
+
     public void selectAiExploreTerrain(javax.swing.JPanel panel, String culture) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             Norse norsePlayer = Norse.getInstance();
             boardController.findAITerrain("Norse", norseTerrain.getComponents(), panel.getComponents(), norsePlayer.getNorseTerrains());
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             Greek greekPlayer = Greek.getInstance();
             boardController.findAITerrain("Greek", greekTerrain.getComponents(), panel.getComponents(), greekPlayer.getGreekTerrains());
-        }
-        else {
+        } else {
             Egyptian egyptianPlayer = Egyptian.getInstance();
             boardController.findAITerrain("Egyptian", egyptTerrain.getComponents(), panel.getComponents(), egyptianPlayer.getEgyptianTerrains());
         }
     }
-    
+
     public void setupRemoveTerrainTile(String culture, TerrainTiles terrain) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             setRemovalTerrainTile(norseTerrain, terrain);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             setRemovalTerrainTile(greekTerrain, terrain);
-        }
-        else {
+        } else {
             setRemovalTerrainTile(egyptTerrain, terrain);
         }
     }
-    
+
     private void setRemovalTerrainTile(javax.swing.JPanel terrainPanel, TerrainTiles terrain) {
         Component[] terrainComponents = terrainPanel.getComponents();
 
@@ -8091,36 +8072,34 @@ public class BoardGUI extends javax.swing.JFrame {
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                if(label.getAccessibleContext().getAccessibleName().compareTo(terrain.getFileName()) == 0) {
+                if (label.getAccessibleContext().getAccessibleName().compareTo(terrain.getFileName()) == 0) {
                     label.setIcon(null);
                     label.getAccessibleContext().setAccessibleName("");
                     label.getAccessibleContext().setAccessibleDescription(terrain.getTerrainType());
                     break;
                 }
-            } 
+            }
         }
     }
-    
+
     public void setupSpecificTerrainTile(String culture, TerrainTiles terrain) {
-        if(culture.compareTo("Norse") == 0) {
+        if (culture.compareTo("Norse") == 0) {
             setSpecificTerrainTile(norseTerrain, terrain);
-        }
-        else if(culture.compareTo("Greek") == 0) {
+        } else if (culture.compareTo("Greek") == 0) {
             setSpecificTerrainTile(greekTerrain, terrain);
-        }
-        else {
+        } else {
             setSpecificTerrainTile(egyptTerrain, terrain);
         }
     }
-    
+
     private void setSpecificTerrainTile(javax.swing.JPanel terrainPanel, TerrainTiles terrain) {
         Component[] terrainComponents = terrainPanel.getComponents();
         System.out.println(terrain.getFileName());
-        for(Component terrainComponent: terrainComponents) {
+        for (Component terrainComponent : terrainComponents) {
             if (terrainComponent instanceof javax.swing.JPanel) {
                 javax.swing.JPanel panel = (javax.swing.JPanel) terrainComponent;
                 javax.swing.JLabel label = (javax.swing.JLabel) panel.getComponent(0);
-                if(label.getAccessibleContext().getAccessibleDescription().compareTo(terrain.getTerrainType()) == 0) {
+                if (label.getAccessibleContext().getAccessibleDescription().compareTo(terrain.getTerrainType()) == 0) {
                     label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/images/" + terrain.getFileName())));
                     label.getAccessibleContext().setAccessibleDescription("");
                     label.getAccessibleContext().setAccessibleName(terrain.getFileName());
@@ -8128,7 +8107,7 @@ public class BoardGUI extends javax.swing.JFrame {
             }
         }
     }
-    
+
     private BoardController boardController;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel building_img_4;
